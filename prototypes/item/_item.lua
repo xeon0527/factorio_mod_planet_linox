@@ -1,0 +1,9 @@
+require("prototypes.item.advanced-rocket-silo");
+require("prototypes.item.cargo-elevator");
+require("prototypes.item.core-roboport");
+require("prototypes.item.fluid-elevator");
+require("prototypes.item.mantle-extractor")
+require("prototypes.item.rare-earth-ore");
+require("prototypes.item.samarium");
+require("prototypes.item.tungsten-gear-wheel");
+require("prototypes.item.turbo-pump")

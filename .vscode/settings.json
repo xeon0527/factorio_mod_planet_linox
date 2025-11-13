@@ -1,0 +1,19 @@
+{
+  "factorio.versions": [
+    {
+      "name": "2.0.69",
+      "factorioPath": "c:\\factorio\\bin\\x64\\factorio.exe"
+    }
+  ],
+  "Lua.workspace.userThirdParty": [
+    "c:\\Users\\axzs3\\AppData\\Roaming\\Code\\User\\workspaceStorage\\c452e8b2e724d3426f424c9a57f2ab74\\justarandomgeek.factoriomod-debug\\sumneko-3rd"
+  ],
+  "Lua.workspace.checkThirdParty": "ApplyInMemory",
+  "Lua.diagnostics.globals": [
+    "out_of_map_tile_type_names",
+    "circuit_connector_definitions",
+    "default_circuit_wire_max_distance",
+    "pipecoverspictures",
+    "universal_connector_template"
+  ],
+}

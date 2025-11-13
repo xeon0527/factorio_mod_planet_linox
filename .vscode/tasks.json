@@ -1,0 +1,17 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "factorio",
+			"command": "package",
+			"modname": "linox",
+			"problemMatcher": [],
+			"label": "factorio: linox.package",
+			"isBackground": false,
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+}

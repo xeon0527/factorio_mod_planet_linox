@@ -1,0 +1,12 @@
+require("prototypes.recipe.advanced-rocket-silo");
+require("prototypes.recipe.cargo-elevator");
+require("prototypes.recipe.casting-stone-brick");
+require("prototypes.recipe.core-roboport");
+require("prototypes.recipe.fluid-elevator");
+require("prototypes.recipe.mantle-extractor");
+require("prototypes.recipe.rare-earth-refining");
+require("prototypes.recipe.samarium-centrifugation");
+require("prototypes.recipe.stone-extraction");
+require("prototypes.recipe.tungsten-extraction");
+require("prototypes.recipe.tungsten-gear-wheel");
+require("prototypes.recipe.turbo-pump");

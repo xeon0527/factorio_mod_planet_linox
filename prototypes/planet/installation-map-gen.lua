@@ -1,0 +1,60 @@
+data:extend({
+  -- 리녹스 시설 Surface의 특유의 그물 지형을 생성함.
+  {
+    type = "noise-expression",
+    name = "linox_installation_void_size",
+    expression = "64"
+  },
+
+  {
+    type = "noise-expression",
+    name = "linox_installation_alley_size",
+    expression = "16"
+  },
+
+  {
+    type = "noise-expression",
+    name = "linox_installation_center_size",
+    expression = "16"
+  },
+
+  { -- (16 * 2) + 64 = 96
+    type = "noise-expression",
+    name = "linox_installation_cell_size",
+    expression = "(linox_installation_alley_size * 2) + linox_installation_void_size"
+  },
+
+  {
+    type = "noise-function",
+    name = "abs_nz",
+    parameters = {"n"},
+    expression = "abs(n + (n >= 0))"
+  },
+
+  {
+    type = "noise-function",
+    name = "square_check",
+    parameters = {"size", "space", "x", "y"},
+    expression = "((size - space) > x) & (x > space) & ((size - space) > y) & (y > space)",
+  },
+
+  {
+    type = "noise-function",
+    name = "center_fill",
+    parameters = {"size", "x", "y"},
+    expression = "size > x & size > y & -x > -size & -y > -size",
+  },
+
+  {
+    type = "noise-expression",
+    name = "linox_installation_elevation",
+    intended_property = "elevation",
+    local_expressions =
+    {
+      rm_x = "abs_nz(x) %% linox_installation_cell_size", -- 96
+      rm_y = "abs_nz(y) %% linox_installation_cell_size", -- 96
+      alley_div = "linox_installation_alley_size / 2", -- 16 / 2 = 8
+    },
+    expression = "if(square_check(linox_installation_cell_size, alley_div, rm_x, rm_y), 0, 1)"
+  },
+})
