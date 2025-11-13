@@ -4,7 +4,7 @@
   "description": "리녹스는 불카누스보다도 태양에 근접한 대단히 파괴적인 행성입니다. 태양에서 발생하는 코로나와 플레어가 표면까지 도달해 모든 것을 파괴해버리며, 태양의 막강한 중력은 행성 전체를 무자비하게 뒤틀어 극단적인 환경을 조성합니다. 이런 행성에서 무언가 얻을 수 있는게 남아있긴 할까요?",
   "author": "xeon0527",
   "contact": "xeon0527@naver.com",
-  "homepage": "",
+  "homepage": "https://github.com/xeon0527/factorio_mod_planet_linox",
   "version": "0.0.1",
   "factorio_version": "2.0",
   "dependencies": [
