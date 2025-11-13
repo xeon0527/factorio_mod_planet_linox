@@ -173,10 +173,6 @@ data:extend {
               type = "unlock-recipe",
               recipe = "linox-recipe_samarium-centrifugation",
             },
-            {
-              type = "unlock-recipe",
-              recipe = "linox-recipe_turbo-pump",
-            },
           },
           unit =
           {

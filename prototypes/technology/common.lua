@@ -2,7 +2,7 @@ data:extend {
   {
     type = "technology",
     name = "linox-technology_planet-discovery-linox",
-    icon = "__space-exploration-graphics__/graphics/entity/starmap/star.png",
+    icon = "__linox__/graphics/icon/planet-linox.png",
     icon_size = 512,
     essential = true,
     effects =
@@ -31,7 +31,7 @@ data:extend {
   {
     type = "technology",
     name = "linox-technology_exploring-linox-landing-site",
-    icon = "__space-exploration-graphics__/graphics/entity/starmap/star.png",
+    icon = "__linox__/graphics/icon/planet-linox.png",
     icon_size = 512,
     prerequisites = {"linox-technology_planet-discovery-linox"},
     unit =

@@ -31,6 +31,7 @@ linox_lava.name = "linox-tile_superheated-lava";
 linox_lava.autoplace = {
   probability_expression = "elevation == 0",
 };
+linox_lava.tint = { 1.0, 1.0, 0.5 };
 linox_lava.allows_being_covered = false;
 linox_lava.collision_mask = {
   layers = {

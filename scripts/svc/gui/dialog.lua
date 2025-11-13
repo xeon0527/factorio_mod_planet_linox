@@ -5,6 +5,11 @@ __UI_DIALOG_SESSION__ = __UI_DIALOG_SESSION__ or {};
 local prefix_name = "linox-gui-dialog"
 local __MODULE__ = {}
 
+UTIL_create_event_handler(defines.events.on_player_joined_game, function(event)
+  --local player = game.get_player(event.player_index)
+  __MODULE__.close(game.get_player(event.player_index));
+end)
+
 -- dialog의 버튼을 누르면 linox-on-dialog-select 이벤트를 생성함.
 UTIL_create_event_handler(defines.events.on_gui_click, function(event)
   local element = event.element;
@@ -14,7 +19,7 @@ UTIL_create_event_handler(defines.events.on_gui_click, function(event)
   if event.button == defines.mouse_button_type.left and util.string_starts_with(element.name, prefix_name) then
     local session = __UI_DIALOG_SESSION__[player.index];
 
-    if element.name == prefix_name.."-close" then
+    if element.name == prefix_name.."-close" or session == nil then
       __MODULE__.close(player);
     else
       local strStart, strEnd = string.find(element.name, prefix_name.."-talk-select-", 1, true)

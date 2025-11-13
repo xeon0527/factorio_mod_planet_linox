@@ -8,9 +8,9 @@ data:extend(
   {
     type = "planet",
     name = "linox-planet_linox",
-    icon = "__space-exploration-graphics__/graphics/entity/starmap/star.png",--"__space-age__/graphics/icons/vulcanus.png",
+    icon = "__linox__/graphics/icon/planet-linox.png",--"__space-age__/graphics/icons/vulcanus.png",
     icon_size = 512,
-    starmap_icon = "__space-exploration-graphics__/graphics/entity/starmap/star.png",
+    starmap_icon = "__linox__/graphics/icon/planet-linox.png",
     starmap_icon_size = 512,
     gravity_pull = 50,      -- 행성에 근접할 시 행성 중력에 의해 우주선에 가감되는 속도.
     distance = 5,          -- 태양으로부터의 거리. 행성의 크기와는 무관.
@@ -40,8 +40,8 @@ data:extend(
       ["day-night-cycle"] = 0.25 * minute,
       ["magnetic-field"] = 1600,
       ["solar-power"] = 3000,
-      pressure = 10,
-      gravity = 500
+      pressure = 100,
+      gravity = 2
     },
 
     --lightning_properties =

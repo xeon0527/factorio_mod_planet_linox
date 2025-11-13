@@ -1,5 +1,6 @@
 local stor = require("scripts.drv.storage")
 local u_surface = require("scripts.util.surface")
+local db = require("scripts.svc.database");
 
 stor.ensure("story.flag.visited_linox", false)
 stor.ensure("story.flag.cargo_approval", false)
@@ -84,13 +85,16 @@ end
 
 UTIL_create_event_handler(defines.events.on_cargo_pod_started_ascending, function(event)
   local platform = event.cargo_pod.surface.platform;
+  if not platform.space_location then return end;
+
   local loc_name = platform.space_location.name; 
   if loc_name == "linox-planet_linox" then
     local force = event.cargo_pod.force;
     local gps_tag = event.cargo_pod.gps_tag;
 
     if force.technologies["linox-technology_exploring-linox-landing-site"].researched then
-      if event.player_index == nil and storage.story.flag.cargo_approval == false then
+      local cargo_allow = db.get_force(force, "story_lorax_cargo_approval");
+      if event.player_index == nil and cargo_allow ~= true then
         event.cargo_pod.destroy()
         --force.print("[img=virtual-signal.signal-alert] "..gps_tag.." 화물 착륙 패드 제어 권한이 없습니다. 화물이 손실 되었습니다.");
         force.print{"", "[img=virtual-signal.signal-alert] "..gps_tag.." ", {"system.cargo-pod-lost"}};

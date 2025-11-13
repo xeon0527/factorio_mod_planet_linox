@@ -20,8 +20,8 @@ local recipe = {
       },
       {
         property = "gravity",
-        min = 500,
-        max = 500
+        min = 2,
+        max = 2
       }
     },
   results = {{type="item", name="linox-item_turbo-pump", amount=1}}

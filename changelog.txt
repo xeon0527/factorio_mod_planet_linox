@@ -1,0 +1,34 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.0.6
+Date: 13. 11. 2025
+
+---------------------------------------------------------------------------------------------------
+Version: 0.0.5
+Date: 13. 11. 2025
+  Bugfixes:
+    - Fixed a bug where the Turbo Pump was unlocked by the Samarium centrifugation research.
+    - Fixed an issue where robots could not be placed at the center of the Linox surface..
+    - Fixed an issue with incorrect surface properties of the Linox Installation.
+---------------------------------------------------------------------------------------------------
+Version: 0.0.4
+Date: 13. 11. 2025
+  Bugfixes:
+    - Fixed a crash that occurred when attempting to launch or land a cargo pod.
+    - Fixed a crash that occurred when placing or removing entities.
+---------------------------------------------------------------------------------------------------
+Version: 0.0.3
+Date: 13. 11. 2025
+  Bugfixes:
+    - Fixed incorrect text.
+    - Fixed an issue where the cargo landing pad was not being obtained correctly.
+---------------------------------------------------------------------------------------------------
+Version: 0.0.2
+Date: 13. 11. 2025
+  Bugfixes:
+    - Fixed incorrect text.
+    - Fixed an issue where robots consumed an unusually high amount of energy.
+---------------------------------------------------------------------------------------------------
+Version: 0.0.1
+Date: 13. 11. 2025
+  Major Features:
+    - Initial release.

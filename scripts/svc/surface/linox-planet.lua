@@ -10,6 +10,7 @@ local light_entity_types = {
   "inserter", "loader-1x1", "loader", "splitter", "lane-splitter",
   "transport-belt", "underground-belt", "lamp", "constant-combinator", "arithmetic-combinator", "decider-combinator", "power-switch",
   "programmable-speaker", "selector-combinator", "display-panel", "pipe", "pipe-to-ground", "pump", "offshore-pump", "electric-pole",
+  "construction-robot", "logistic-robot", "combat-robot", 
 }
 
 events.create_build_entity_handler(function(event)
@@ -22,7 +23,9 @@ events.create_build_entity_handler(function(event)
 
     if e_type == "rocket-silo" and e_name ~= "linox-entity_advanced-rocket-silo" then
       --player.print("리녹스에서는 고급 로켓 사일로만 사용할 수 있습니다.");
-      player.print{"", "[img=virtual-signal.signal-alert] ", {"system.rocket-silo-limit"}}
+      if player then
+        player.print{"", "[img=virtual-signal.signal-alert] ", {"system.rocket-silo-limit"}}
+      end
       event.pass = false
     elseif e_name == "linox-entity_cargo-elevator" or e_name == "linox-entity_fluid-elevator" then
       for _, tile in pairs(tiles) do
@@ -44,7 +47,9 @@ events.create_build_entity_handler(function(event)
             end
             
             --player.print("이 건물은 리녹스 시설 출입구에 설치하기에는 너무 무겁습니다.");
-            player.print{"", "[img=virtual-signal.signal-alert] ", {"system.heavy-limit"}}
+            if player then
+              player.print{"", "[img=virtual-signal.signal-alert] ", {"system.heavy-limit"}}
+            end
             event.pass = false
             return
           end

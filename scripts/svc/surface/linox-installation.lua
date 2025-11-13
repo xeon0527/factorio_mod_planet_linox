@@ -98,10 +98,10 @@ UTIL_create_event_handler(defines.events.on_surface_created, function(event)
     surface.map_gen_settings = settings;
 
     surface.localised_name = { "space-location-name.linox-surface_linox-installation" }
-    surface.set_property("gravity", 500);
+    surface.set_property("gravity", 2);
     surface.set_property("magnetic-field", 1600);
     surface.set_property("solar-power", 0);
-    surface.set_property("pressure", 10);
+    surface.set_property("pressure", 100);
     surface.daytime = 0.5;
     surface.freeze_daytime = true;
 

@@ -21,8 +21,8 @@ data:extend {
       },
       {
         property = "gravity",
-        min = 500,
-        max = 500
+        min = 2,
+        max = 2
       }
     },
     energy_required = 240,

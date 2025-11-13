@@ -36,8 +36,13 @@ local function __on_entity_build(event)
     entity_name = entity.ghost_name;
   end
 
+  local player = nil;
+  if player_index then
+    player = game.get_player(player_index)
+  end
+
   local event_data = {
-    player = game.get_player(player_index),
+    player = player,
     entity = entity,
     entity_type = entity_type,
     entity_name = entity_name,
@@ -54,7 +59,6 @@ local function __on_entity_build(event)
   -- 설치 금지 판정이 났으면 Player에게 아이템을 반환하거나 바닥에 떨어뜨림.
   if not event_data.pass and event.consumed_items then
     local items = event.consumed_items.get_contents();
-    local player = game.get_player(event.player_index);
     if player then
       --if player.admin then return end;
 
