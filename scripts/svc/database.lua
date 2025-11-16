@@ -39,10 +39,9 @@ __MODULE__.set_player = function(player, key, data)
 
   if not success then
     stor.ensure("player_data."..key, {});
-    --table.insert(storage.player_data[key], player.index);
     storage.player_data[key][player.index] = data;
   end
-  return data;
+  return storage.player_data[key][player.index];
 end
 
 
@@ -64,10 +63,9 @@ __MODULE__.set_force = function(force, key, data)
 
   if not success then
     stor.ensure("force_data."..key, {});
-    --table.insert(storage.force_data[key], force.index);
     storage.force_data[key][force.index] = data;
   end
-  return data;
+  return storage.force_data[key][force.index];
 end
 
 return __MODULE__;

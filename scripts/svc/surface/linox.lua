@@ -13,11 +13,11 @@ __MODULE__.create_rocketsilo_foundation = function()
     u_surface.fill_tile{ surface = surface, tile_name = "linox-tile_linox-installation-foundation",
       x = -17.5, y = -8.5, radius = 9 }
 
-    u_surface.fill_tile{ surface = surface, tile_name = "linox-tile_linox-installation-foundation",
-      x = -17.5, y = 8.5, radius = 9 }
-
-    u_surface.fill_tile{ surface = surface, tile_name = "linox-tile_linox-installation-foundation",
-      x = 17.5, y = -8.5, radius = 9 }
+    --u_surface.fill_tile{ surface = surface, tile_name = "linox-tile_linox-installation-foundation",
+    --  x = -17.5, y = 8.5, radius = 9 }
+--
+    --u_surface.fill_tile{ surface = surface, tile_name = "linox-tile_linox-installation-foundation",
+    --  x = 17.5, y = -8.5, radius = 9 }
 
     u_surface.fill_tile{ surface = surface, tile_name = "linox-tile_linox-installation-foundation",
       x = 17.5, y = 8.5, radius = 9 }
@@ -78,8 +78,11 @@ __MODULE__.create_building = function()
   surface.create_entity{name = "crash-site-spaceship-wreck-medium-1",
     force = "neutral", position = { -5, 9 }}.insert{name = "iron-plate", count = 100};
 
-    surface.create_entity{name = "crash-site-spaceship-wreck-medium-2",
+  surface.create_entity{name = "crash-site-spaceship-wreck-medium-2",
     force = "neutral", position = { 9, 3 }}.insert{name = "copper-plate", count = 100};
+
+  surface.create_entity{name = "crash-site-spaceship-wreck-medium-1",
+    force = "neutral", position = { 4, 9 }}.insert{name = "solar-panel", count = 6};
 end
 
 
@@ -153,6 +156,8 @@ UTIL_create_event_handler(defines.events.on_surface_created, function(event)
     surface.request_to_generate_chunks({0, 0}, 2)
     surface.force_generate_chunk_requests()
     game.forces["player"].chart(surface, {{x = -64, y = -64}, {x = 63, y = 63}})
+
+    surface.create_global_electric_network();
   end
 end)
 

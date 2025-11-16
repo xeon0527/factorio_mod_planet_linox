@@ -10,7 +10,7 @@ local light_entity_types = {
   "inserter", "loader-1x1", "loader", "splitter", "lane-splitter",
   "transport-belt", "underground-belt", "lamp", "constant-combinator", "arithmetic-combinator", "decider-combinator", "power-switch",
   "programmable-speaker", "selector-combinator", "display-panel", "pipe", "pipe-to-ground", "pump", "offshore-pump", "electric-pole",
-  "construction-robot", "logistic-robot", "combat-robot", 
+  "construction-robot", "logistic-robot", "combat-robot", "solar-panel", 
 }
 
 events.create_build_entity_handler(function(event)

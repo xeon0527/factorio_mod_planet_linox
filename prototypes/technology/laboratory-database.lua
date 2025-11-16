@@ -13,6 +13,35 @@ data:extend {
   },
     {
       type = "technology",
+      name = "linox-technology_linox-petrochemicals",
+      icon = "__base__/graphics/technology/advanced-oil-processing.png",
+      icon_size = 256,
+      prerequisites = {"linox-technology_laboratory-database"},
+      unit =
+      {
+        count = 500,
+        ingredients =
+        {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"military-science-pack", 1},
+          {"production-science-pack", 1},
+          {"utility-science-pack", 1},
+          {"space-science-pack", 1},
+          {"metallurgic-science-pack", 1},
+        },
+        time = 60
+      },
+      effects =
+      {
+        { type = "unlock-recipe", recipe = "linox-recipe_rapid-distillation" },
+        { type = "unlock-recipe", recipe = "linox-recipe_lava-based-rocket-fuel" },
+      },
+    },
+
+    {
+      type = "technology",
       name = "linox-technology_recursive-blueprint",
       icon = "__space-age__/graphics/technology/quantum-processor.png",
       icon_size = 256,

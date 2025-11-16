@@ -36,4 +36,22 @@ __MODULE__.fill_tile = function(args)
   args.surface.set_tiles(tiles);
 end
 
+__MODULE__.get_total_consume = function(surface)
+  local consume = 0.0
+  local stat = surface.global_electric_network_statistics;
+  if stat then
+    for name, _ in pairs(stat.input_counts) do
+      consume = consume + stat.get_flow_count {
+        precision_index = defines.flow_precision_index.five_seconds,
+        category = "input",
+        count = false,
+        sample_index = 1,
+        name  = name,
+      }
+    end
+  end
+  return consume
+end
+
+
 return __MODULE__

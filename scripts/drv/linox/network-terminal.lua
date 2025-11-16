@@ -1,5 +1,6 @@
 local bootstrap = require("scripts.drv.bootstrap")
 local circuit = require("scripts.util.circuit")
+local vector = require("scripts.util.vector")
 
 __DRV_LINOX_NETWORK_TERNINAL_ENTITY__ = nil;
 __DRV_LINOX_NETWORK_TERNINAL_OUTPUT_ENTITY__ = nil;
@@ -26,7 +27,7 @@ bootstrap.create_tick_handler(function()
   end
 
   if __DRV_LINOX_NETWORK_TERNINAL_OUTPUT_ENTITY__ == nil or __DRV_LINOX_NETWORK_TERNINAL_OUTPUT_ENTITY__.valid == false then
-    local output_pos = UTIL_add_vector(__DRV_LINOX_NETWORK_TERNINAL_ENTITY__.position, {x = 1.5, y = 0})
+    local output_pos = vector.add(__DRV_LINOX_NETWORK_TERNINAL_ENTITY__.position, {x = 1.5, y = 0})
     
     __DRV_LINOX_NETWORK_TERNINAL_OUTPUT_ENTITY__ = surface.find_entity("linox-entity_npc-network-terminal-output", output_pos);
     if not __DRV_LINOX_NETWORK_TERNINAL_OUTPUT_ENTITY__ then

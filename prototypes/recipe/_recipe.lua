@@ -3,6 +3,8 @@ require("prototypes.recipe.cargo-elevator");
 require("prototypes.recipe.casting-stone-brick");
 require("prototypes.recipe.core-roboport");
 require("prototypes.recipe.fluid-elevator");
+require("prototypes.recipe.linox-petrochemicals");
+require("prototypes.recipe.low-temp-separation-of-calcium");
 require("prototypes.recipe.mantle-extractor");
 require("prototypes.recipe.rare-earth-refining");
 require("prototypes.recipe.samarium-centrifugation");

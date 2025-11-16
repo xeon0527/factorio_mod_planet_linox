@@ -1,14 +1,18 @@
 local util = require("util")
-
-__UI_DIALOG_SESSION__ = __UI_DIALOG_SESSION__ or {};
+local db = require("scripts.svc.database")
 
 local prefix_name = "linox-gui-dialog"
 local __MODULE__ = {}
 
-UTIL_create_event_handler(defines.events.on_player_joined_game, function(event)
-  --local player = game.get_player(event.player_index)
-  __MODULE__.close(game.get_player(event.player_index));
-end)
+local function __get_session(player)
+  return db.get_player(player, prefix_name.."-session", {});
+end
+
+local function __remove_session(player)
+  db.set_player(player, prefix_name.."-session", nil);
+end
+
+
 
 -- dialog의 버튼을 누르면 linox-on-dialog-select 이벤트를 생성함.
 UTIL_create_event_handler(defines.events.on_gui_click, function(event)
@@ -17,18 +21,23 @@ UTIL_create_event_handler(defines.events.on_gui_click, function(event)
 
   -- 좌클릭만 인식, name이 linox-ui-dialog로 시작되는 엘리먼트만 인식
   if event.button == defines.mouse_button_type.left and util.string_starts_with(element.name, prefix_name) then
-    local session = __UI_DIALOG_SESSION__[player.index];
+    local session = __get_session(player);
 
     if element.name == prefix_name.."-close" or session == nil then
       __MODULE__.close(player);
     else
-      local strStart, strEnd = string.find(element.name, prefix_name.."-talk-select-", 1, true)
+      local strStart, strEnd = string.find(element.name, prefix_name.."-talk-select", 1, true)
       if strStart == 1 then
-        local name_id = string.sub(element.name, strEnd + 1)
-        strStart = string.find(name_id, "::::", 1, true)
-        
-        local _name_  = string.sub(name_id, 1, strStart - 1);
-        local _id_    = string.sub(name_id, strStart + 4);
+        local datas = UTIL_string_split(element.name, "::::");
+
+        local _name_    = datas[2]
+        local _id_      = datas[3]
+        local _talker_  = tonumber(datas[4])
+
+        if _talker_ ~= 0 then
+          __MODULE__.add_talk(player, _talker_, element.caption)
+        end
+
         if session.name == _name_ then 
           script.raise_event("linox-custom-event_gui-dialog-on-select", {
             player = player,
@@ -101,7 +110,8 @@ __MODULE__.create = function(player, caption, session_name, sprite)
         type = "button",
         name = prefix_name.."-close",
         caption = "[virtual-signal=shape-diagonal-cross]",
-        style = "red_button"
+        style = "red_button",
+        mouse_button_filter = {"left"},
       }
       title_close.style.size = { 48, 24 }
       title_close.style.padding = 0;
@@ -132,13 +142,13 @@ __MODULE__.create = function(player, caption, session_name, sprite)
         }
         dialog_log_list.style.horizontally_stretchable = true;
   
-  __UI_DIALOG_SESSION__[player.index] = {
+  db.set_player(player, prefix_name.."-session", {
     name = session_name,
     frame = frame,
     partner_image = partner_image,
     log_scroll = dialog_log_scroll,
     log_list = dialog_log_list,
-  }
+  });
 end
 
 __MODULE__.close = function(player)
@@ -146,12 +156,13 @@ __MODULE__.close = function(player)
     if player.gui.screen[prefix_name.."-frame"] then
       player.gui.screen[prefix_name.."-frame"].destroy();
     end
-    __UI_DIALOG_SESSION__[player.index] = nil;
+    
+    __remove_session(player)
   end
 end
 
 __MODULE__.add_talk = function(player, talk, text)
-  local session = __UI_DIALOG_SESSION__[player.index];
+  local session = __get_session(player);
 
   local log_list = session.log_list;
   local log_flow = log_list.add{
@@ -189,17 +200,19 @@ __MODULE__.add_talk = function(player, talk, text)
   session.log_scroll.scroll_to_bottom();
 end
 
-__MODULE__.add_select = function(player, id, text)
-  local session = __UI_DIALOG_SESSION__[player.index];
+__MODULE__.add_select = function(player, id, text, talker)
+  local session = __get_session(player);
   local frame = session.frame;
+  local _talker = talker or 0
 
   local talk_button = frame.add{
     type = "button",
-    name = prefix_name.."-talk-select-"..session.name.."::::"..id,
+    name = prefix_name.."-talk-select::::"..session.name.."::::"..id.."::::".._talker,
     caption = text,
     style = "green_button",
     tooltip = "",
     elem_tooltip = nil,
+    mouse_button_filter = {"left"}
   };
   talk_button.style.height = 30;
   talk_button.style.margin = 4;
@@ -209,11 +222,11 @@ __MODULE__.add_select = function(player, id, text)
 end
 
 __MODULE__.clear_select = function(player)
-  local session = __UI_DIALOG_SESSION__[player.index];
+  local session = __get_session(player);
   local frame = session.frame;
 
   for _, child in pairs(frame.children) do
-    if util.string_starts_with(child.name, prefix_name.."-talk-select-") then
+    if util.string_starts_with(child.name, prefix_name.."-talk-select") then
       child.destroy();
     end
   end

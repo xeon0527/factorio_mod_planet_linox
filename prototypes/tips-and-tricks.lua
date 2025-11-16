@@ -78,17 +78,17 @@ data:extend({
       technology = "linox-technology_exploring-linox-landing-site"
     },
   },
-  {
-    type = "tips-and-tricks-item",
-    name = "linox-tips-and-tricks_power-converter",
-    tag = "[item=accumulator]",
-    category = "linox-tips-and-tricks_category",
-    order = "zd",
-    indent = 1,
-    trigger =
-    {
-      type = "research",
-      technology = "linox-technology_planetary-power-network"
-    },
-  },
+  --{
+  --  type = "tips-and-tricks-item",
+  --  name = "linox-tips-and-tricks_power-converter",
+  --  tag = "[item=accumulator]",
+  --  category = "linox-tips-and-tricks_category",
+  --  order = "zd",
+  --  indent = 1,
+  --  trigger =
+  --  {
+  --    type = "research",
+  --    technology = "linox-technology_planetary-power-network"
+  --  },
+  --},
 })

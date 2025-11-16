@@ -7,6 +7,6 @@ require("scripts.drv.linox.cargo-elevator")
 require("scripts.drv.linox.enter-elevator")
 require("scripts.drv.linox.fluid-elevator")
 require("scripts.drv.linox.network-terminal")
-require("scripts.drv.linox.power-converter")
+--require("scripts.drv.linox.power-converter")
 
-require("scripts.drv.simulation.inductor")
+--require("scripts.drv.simulation.inductor")

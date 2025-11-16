@@ -88,8 +88,12 @@ function UTIL_get_reverse_direction(direction)
   end
 end
 
-function UTIL_add_vector(a, b)
-  return {x = a.x + b.x, y = a.y + b.y}
+function UTIL_string_split(str, sep)
+  local t = {}
+  for str in string.gmatch(str, "([^"..sep.."]+)") do
+    table.insert(t, str)
+  end
+  return t
 end
 
 -- Entity가 배치된 모든 타일을 가져옴.

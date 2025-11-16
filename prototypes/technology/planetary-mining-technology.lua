@@ -10,6 +10,13 @@ data:extend {
       type = "scripted",
       trigger_description = {"technology-description.linox-technology-trigger-description_lorax-talking"}
     },
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "linox-recipe_low-temp-separation-of-calcium",
+      },
+    },
   },
     {
       type = "technology",
@@ -165,7 +172,7 @@ data:extend {
           type = "technology",
           name = "linox-technology_samarium-centrifugation",
           icon = "__space-exploration-graphics__/graphics/technology/iridium-processing.png",
-          icon_size = 128,
+          icon_size = 256,
           prerequisites = {"linox-technology_rare-earth-refining"},
           effects =
           {
@@ -191,4 +198,27 @@ data:extend {
             time = 60
           }
         },
+      {
+        type = "technology",
+        name = "linox-technology_ultra-deep-drilling",
+        icon = "__base__/graphics/technology/advanced-oil-processing.png",
+        icon_size = 256,
+        prerequisites = {"linox-technology_mantle-extraction"},
+        unit =
+        {
+          count = 500,
+          ingredients =
+          {
+            {"automation-science-pack", 1},
+            {"logistic-science-pack", 1},
+            {"chemical-science-pack", 1},
+            {"military-science-pack", 1},
+            {"production-science-pack", 1},
+            {"utility-science-pack", 1},
+            {"space-science-pack", 1},
+            {"metallurgic-science-pack", 1},
+          },
+          time = 60
+        }
+      },
 };

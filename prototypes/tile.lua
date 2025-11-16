@@ -25,6 +25,7 @@ foundation_copy.autoplace = {
   probability_expression = "elevation == 2",
 };
 foundation_copy.walking_speed_modifier = 1;
+foundation_copy.minable = nil;
 
 local linox_lava = table.deepcopy(data.raw.tile["lava-hot"]);
 linox_lava.name = "linox-tile_superheated-lava";
