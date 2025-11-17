@@ -118,14 +118,8 @@ end)
 UTIL_create_event_handler(defines.events.on_cargo_pod_finished_descending, function(event)
   if event.player_index ~= nil and event.cargo_pod.surface.name == "linox-planet_linox" then
     local player = game.players[event.player_index];
-
-    if player.force.technologies["linox-technology_exploring-linox-landing-site"].researched then    
-      if not storage.story.flag.visited_linox then
-        --game.print("착륙 패드를 수색해보니 내부 시설로 내려가는 수상한 엘리베이터를 발견할 수 있었다.");
-        game.print({"system.elevator-found"});
-        storage.story.flag.visited_linox = true;
-      end
-    elseif player.character then
+    if not player.force.technologies["linox-technology_exploring-linox-landing-site"].researched and
+        player.character then
       player.character.die();
 
       game.print{"", "[img=virtual-signal.signal-alert] ", {"system.lava-dive"}, player.name}
@@ -138,6 +132,19 @@ UTIL_create_event_handler(defines.events.on_cargo_pod_finished_descending, funct
       end
       player.teleport({x = 0, y = 0}, target)
       
+    end
+  end
+end)
+
+UTIL_create_event_handler(defines.events.on_cargo_pod_delivered_cargo, function(event)
+  if event.cargo_pod.surface.name == "linox-planet_linox" then
+    local force = game.forces["player"];
+    if force.technologies["linox-technology_exploring-linox-landing-site"].researched then
+      if not storage.story.flag.visited_linox then
+        --game.print("착륙 패드를 수색해보니 내부 시설로 내려가는 수상한 엘리베이터를 발견할 수 있었다.");
+        game.print({"system.elevator-found"});
+        storage.story.flag.visited_linox = true;
+      end
     end
   end
 end)
