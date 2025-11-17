@@ -1,3 +1,5 @@
+local util_icon = require("scripts.util.icon")
+
 data:extend {
   {
     type = "technology",
@@ -214,5 +216,31 @@ data:extend {
         {
           { type = "unlock-recipe", recipe = "linox-recipe_advanced-rocket-silo" },
         },
+      },
+      {
+        type = "technology",
+        name = "linox-technology_safety-of-entering-orbit",
+        icons = util_icon.technology_icon_constant_damage_size("__space-age__/graphics/technology/rocket-part-productivity.png", 256),
+        prerequisites = {
+          "linox-technology_enhanced-space-engineering",
+        },
+        unit =
+        {
+          count_formula = "2^(L-1)*1000",
+          ingredients =
+          {
+            {"automation-science-pack", 1},
+            {"logistic-science-pack", 1},
+            {"chemical-science-pack", 1},
+            {"military-science-pack", 1},
+            {"production-science-pack", 1},
+            {"utility-science-pack", 1},
+            {"space-science-pack", 1},
+            {"metallurgic-science-pack", 1},
+          },
+          time = 60
+        },
+        max_level = 14,
+        upgrade = true,
       },
 };

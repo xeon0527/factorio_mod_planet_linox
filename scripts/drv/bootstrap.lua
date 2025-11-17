@@ -4,6 +4,8 @@ __DRV_BOOTSTRAP_LOAD_HANDLERS__ = {};
 __DRV_BOOTSTRAP_TICK_HANDLERS__ = {};
 
 script.on_init(function()
+  storage.__RANDOM_GENERATOR__ = storage.__RANDOM_GENERATOR__ or game.create_random_generator()
+
   for _, hdrs in pairs(__DRV_BOOTSTRAP_INIT_HANDLERS__) do
     hdrs();
   end

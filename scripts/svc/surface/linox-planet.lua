@@ -78,3 +78,22 @@ UTIL_create_event_handler("linox-custom-event_on-enter-elevator", function(event
     end
   end
 end)
+
+UTIL_create_event_handler(defines.events.on_cargo_pod_finished_ascending, function(event)
+  local pod = event.cargo_pod;
+  if event.player_index == nil and pod.cargo_pod_destination.type == defines.cargo_destination.station then
+    local station = pod.cargo_pod_destination.station;
+    if station.type == "cargo-landing-pad" and station.surface.name == "linox-planet_linox" then
+      local tech = game.forces["player"].technologies["linox-technology_safety-of-entering-orbit"];
+      if not tech.researched then 
+        local inv = pod.get_inventory(defines.inventory.cargo_unit)
+        for i = 1, #inv do
+          local slot = inv[i];
+          if slot.valid_for_read and math.random() > (0.3 + ((tech.level - 1) * 0.05)) then
+            slot.count = 0;
+          end
+        end
+      end
+    end
+  end
+end)

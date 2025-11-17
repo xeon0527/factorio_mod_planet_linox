@@ -119,7 +119,7 @@ data:extend {
           time = 60
         },
         max_level = 7,
-        upgrade = true
+        upgrade = true,
       },
     {
       type = "technology",

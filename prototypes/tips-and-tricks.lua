@@ -78,6 +78,19 @@ data:extend({
       technology = "linox-technology_exploring-linox-landing-site"
     },
   },
+  {
+    type = "tips-and-tricks-item",
+    name = "linox-tips-and-tricks_cargo-loss",
+    tag = "[virtual-signal=signal-alert]",
+    category = "linox-tips-and-tricks_category",
+    order = "zd",
+    indent = 1,
+    trigger =
+    {
+      type = "research",
+      technology = "linox-technology_enhanced-space-engineering"
+    },
+  },
   --{
   --  type = "tips-and-tricks-item",
   --  name = "linox-tips-and-tricks_power-converter",
