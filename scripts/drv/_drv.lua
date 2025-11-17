@@ -8,6 +8,6 @@ require("scripts.drv.linox.enter-elevator")
 require("scripts.drv.linox.fluid-elevator")
 require("scripts.drv.linox.network-terminal")
 --require("scripts.drv.linox.power-converter")
-require("scripts.drv.linox.space-platform-observer")
+require("scripts.drv.linox.linox-orbit-observer")
 
 --require("scripts.drv.simulation.inductor")

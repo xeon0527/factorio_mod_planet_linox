@@ -21,7 +21,7 @@ data:extend(
     subgroup = "planets",
     map_gen_settings = linox_map_gen.linox_crust(),
     pollutant_type = nil,
-    solar_power_in_space = 3000, -- 우주 공간에서 태양광 패널이 얻는 태양광 발전량. 행성의 태양광 발전량과는 무관.
+    solar_power_in_space = __LINOX_PLANET__.solar_power_in_space, -- 우주 공간에서 태양광 패널이 얻는 태양광 발전량. 행성의 태양광 발전량과는 무관.
 
     platform_procession_set =
     {
@@ -38,10 +38,10 @@ data:extend(
     surface_properties =
     {
       ["day-night-cycle"] = 0.25 * minute,
-      ["magnetic-field"] = 1600,
-      ["solar-power"] = 3000,
-      pressure = 100,
-      gravity = 2
+      ["magnetic-field"] = __LINOX_PLANET__.magnetic_field,
+      ["solar-power"] = __LINOX_PLANET__.solar_power,
+      pressure = __LINOX_PLANET__.pressure,
+      gravity = __LINOX_PLANET__.gravity
     },
 
     --lightning_properties =

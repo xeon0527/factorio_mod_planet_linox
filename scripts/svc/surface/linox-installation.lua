@@ -121,10 +121,10 @@ UTIL_create_event_handler(defines.events.on_surface_created, function(event)
     surface.map_gen_settings = settings;
 
     surface.localised_name = { "space-location-name.linox-surface_linox-installation" }
-    surface.set_property("gravity", 2);
-    surface.set_property("magnetic-field", 1600);
+    surface.set_property("gravity", __LINOX_PLANET__.gravity);
+    surface.set_property("magnetic-field", __LINOX_PLANET__.magnetic_field);
     surface.set_property("solar-power", 0);
-    surface.set_property("pressure", 100);
+    surface.set_property("pressure", __LINOX_PLANET__.pressure);
     surface.daytime = 0.5;
     surface.freeze_daytime = true;
     surface.create_global_electric_network();
@@ -251,7 +251,7 @@ __MODULE__.expand_facility = function(level)
       end
 
       local deployer = surface.find_entities_filtered{name = "blueprint-deployer2", position = { 0, -64 }, radius = 25, limit = 1}
-      if deployer then
+      if deployer and #deployer > 0 then
         deployer = deployer[1]
         deployer.insert{ name = "blueprint" }
         local iv = deployer.get_inventory(defines.inventory.chest);

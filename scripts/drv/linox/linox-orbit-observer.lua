@@ -14,7 +14,7 @@ end
 local function __check_research()
   local force = game.forces["player"]
   if force.current_research and force.current_research.name == "linox-technology_exploring-linox-landing-site" and not __check_linox_orbit() then
-    game.print("SYSTEM :: 리녹스 착륙 지점 탐색 연구는 리녹스 행성 궤도에 우주선이 있어야 합니다. 연구가 취소 되었습니다.");
+    game.print({"linox-orbit"});
     force.cancel_current_research()
   end
 end
