@@ -53,7 +53,7 @@ data:extend({
   {
     type = "tips-and-tricks-item",
     name = "linox-tips-and-tricks_exploration-log-1",
-    tag = "[item=radar]",
+    tag = "[virtual-signal=signal-info]",
     category = "linox-tips-and-tricks_category",
     order = "zb",
     indent = 1,
@@ -67,7 +67,7 @@ data:extend({
   {
     type = "tips-and-tricks-item",
     name = "linox-tips-and-tricks_exploration-log-2",
-    tag = "[item=radar]",
+    tag = "[virtual-signal=signal-info]",
     category = "linox-tips-and-tricks_category",
     order = "zc",
     indent = 1,
