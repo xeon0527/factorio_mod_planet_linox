@@ -1,3 +1,5 @@
+require("global.planet");
+
 require("prototypes.entity._entity")
 require("prototypes.item._item")
 require("prototypes.recipe._recipe")

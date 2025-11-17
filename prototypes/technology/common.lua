@@ -1,9 +1,10 @@
+local util_icon = require("scripts.util.icon")
+
 data:extend {
   {
     type = "technology",
     name = "linox-technology_planet-discovery-linox",
-    icon = "__linox__/graphics/icon/planet-linox.png",
-    icon_size = 512,
+    icons = util_icon.technology_icon_constant_planet_size("__linox__/graphics/icon/planet-linox.png", 512),
     essential = true,
     effects =
     {
@@ -31,8 +32,7 @@ data:extend {
   {
     type = "technology",
     name = "linox-technology_exploring-linox-landing-site",
-    icon = "__linox__/graphics/icon/planet-linox.png",
-    icon_size = 512,
+    icons = util_icon.technology_icon_constant_damage_size("__linox__/graphics/icon/planet-linox.png", 512),
     prerequisites = {"linox-technology_planet-discovery-linox"},
     unit =
     {

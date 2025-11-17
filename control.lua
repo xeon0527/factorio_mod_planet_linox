@@ -1,3 +1,5 @@
+require("global.planet");
+
 require("scripts.util");
 require("scripts.drv._drv");
 require("scripts.svc._svc");
