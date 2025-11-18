@@ -3,7 +3,7 @@ local function __check_linox_orbit()
     if surface.platform and surface.platform.hub and surface.platform.state ~= defines.space_platform_state.on_the_path then
       local platform = surface.platform
 ---@diagnostic disable-next-line: need-check-nil
-      if platform.space_location and platform.space_location.name == "linox-planet_linox" then
+      if platform.space_location and platform.space_location.name == __LINOX_SURFACE__.planet then
         return true;
       end
     end
@@ -11,7 +11,7 @@ local function __check_linox_orbit()
   return false;
 end
 
-local function __check_research()
+local function __check_research(event)
   local force = game.forces["player"]
   if force.current_research and force.current_research.name == "linox-technology_exploring-linox-landing-site" and not __check_linox_orbit() then
     game.print({"linox-orbit"});
@@ -20,10 +20,5 @@ local function __check_research()
 end
 
 
-UTIL_create_event_handler(defines.events.on_space_platform_changed_state, function(event)
-  __check_research()
-end)
-
-UTIL_create_event_handler(defines.events.on_research_started, function(event)
-  __check_research()
-end)
+UTIL_create_event_handler(defines.events.on_space_platform_changed_state, __check_research)
+UTIL_create_event_handler(defines.events.on_research_started, __check_research)

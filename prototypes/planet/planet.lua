@@ -19,7 +19,7 @@ data:extend(
     label_orientation = 0.0, -- 행성 이름의 위치. 0~1 사이의 값으로, 0은 태양에서 오른쪽, 0.25는 태양에서 위쪽, 0.5는 태양에서 왼쪽, 0.75는 태양에서 아래쪽.
     order = "d[vulcanus]",   -- 행성의 순서. starmap에서 행성의 위치에 영향을 줌.
     subgroup = "planets",
-    map_gen_settings = linox_map_gen.linox_crust(),
+    map_gen_settings = linox_map_gen.ground(),
     pollutant_type = nil,
     solar_power_in_space = __LINOX_PLANET__.solar_power_in_space, -- 우주 공간에서 태양광 패널이 얻는 태양광 발전량. 행성의 태양광 발전량과는 무관.
 

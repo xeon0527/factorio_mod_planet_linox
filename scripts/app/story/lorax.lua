@@ -1,5 +1,6 @@
 local db = require("scripts.svc.database");
-local linox_inst = require("scripts.svc.surface.linox-installation")
+local linox_ground = require("scripts.svc.surface.linox-ground")
+local linox_facility = require("scripts.svc.surface.linox-facility")
 
 --DRV_storage_create("story.flag.cargo_approval", false)
 --DRV_storage_create("story.lorax", nil)
@@ -21,6 +22,11 @@ UTIL_create_event_handler("linox-custom-event_on-entity-click", function(event)
   end
 end)
 
+local function __running_lorax()
+  local surface = linox_ground.get()
+  return surface and (#surface.find_entities_filtered{name="solar-panel"} >= 3)
+end
+
 
 
 __MODULE__.show = function(player)
@@ -35,7 +41,7 @@ __MODULE__.show = function(player)
     dialog.add_talk(player, dialog.talker.narration, {"npc-talk.lorax_s0-0_t2"})
     dialog.add_talk(player, dialog.talker.narration, {"npc-talk.lorax_s0-0_t3"})
 
-    if linox_inst.running_lorax() then
+    if __running_lorax() then
       dialog.add_select(player, "1-2", {"npc-talk.lorax_s0-0_s0"});
     else
       dialog.add_select(player, "1-1", {"npc-talk.lorax_s0-0_s0"});
@@ -58,22 +64,8 @@ __MODULE__.show = function(player)
       dialog.add_talk(player, dialog.talker.partner, {"npc-talk.lorax_s2-2_t2"})
       dialog.add_talk(player, dialog.talker.partner, {"npc-talk.lorax_s2-2_t3"})
 
-      local surface = game.surfaces["linox-surface_linox-installation"];
-      surface.daytime = 0;
-      surface.freeze_daytime = true;
-
-      local radar = surface.find_entity("linox-entity_hidden-radar", {0,0});
-      if radar == nil then
-        radar = surface.create_entity{
-          name = "linox-entity_hidden-radar",
-          position = {0,0},
-          force = "player",
-          create_build_effect_smoke = false,
-        }
-      end
-      radar.destructible = false;
-      radar.minable = false;
-      radar.operable = false;
+      linox_facility.set_lighting(true)
+      linox_facility.create_radar()
 
       script.raise_event("linox-custom-event_gui-dialog-on-select", { player = player, select_id = "1" });
 
@@ -312,8 +304,7 @@ UTIL_create_event_handler("linox-custom-event_gui-dialog-on-select", function(ev
         player.force.print({"system.cargo-allow"});
         player.force.print({"system.cargo-pad-allow"});
       end
-      local pad = game.surfaces["linox-planet_linox"].find_entity("linox-entity_cargo-landing-pad", {0,0});
-      pad.operable = true;
+      linox_ground.obtain_cargo_landing_pad()
 
     elseif sel_id == "5-1" then
       dialog.add_talk(player, dialog.talker.partner, {"npc-talk.lorax_s3-5-1_t0"})

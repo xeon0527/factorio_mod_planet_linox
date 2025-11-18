@@ -1,13 +1,50 @@
-local linox = require("scripts.svc.surface.linox")
-local linox_ist = require("scripts.svc.surface.linox-installation")
+local linox_ground = require("scripts.svc.surface.linox-ground")
+local linox_facility = require("scripts.svc.surface.linox-facility")
+local linox_global = require("scripts.svc.surface.linox-global")
 
-UTIL_create_event_handler(defines.events.on_research_finished, function(event)
+
+local function __update_technology(event)
+  local force = game.forces["player"]
+  local tech = force.technologies
   local research = event.research
-  if research.name == "linox-technology_exploring-linox-landing-site" then
-    local surface = UTIL_ensure_surface("linox-planet_linox")
-    event.research.force.chart(surface, {{x = -64, y = -64}, {x = 63, y = 63}})
-    linox.create_building();
-  
+
+  if not tech["linox-technology_planet-discovery-linox"].researched then return end
+  linox_ground.create()
+
+  if not tech["linox-technology_exploring-linox-landing-site"].researched then return end
+  linox_facility.create()
+  if not linox_ground.has_building() then
+    linox_ground.create_building();
+    linox_global.connect_surfaces();
+  end
+
+  local expand_facility_level = 0
+  if tech["linox-technology_facility-factoryizing"].researched then
+    expand_facility_level = 1
+    if tech["linox-technology_expanding-factory"].researched then
+      expand_facility_level = 8
+    else
+      expand_facility_level = tech["linox-technology_expanding-factory"].level;
+    end
+  end
+
+  for level = 0, expand_facility_level do
+    linox_facility.expand_facility(level)
+  end
+
+  if tech["linox-technology_rocket-silo-foundation"].researched then
+    linox_ground.create_rocketsilo_foundation();
+  end
+
+  if tech["linox-technology_ultra-deep-drilling"].researched then
+    linox_facility.obtain_pumpjacks();
+  end
+end
+
+UTIL_create_event_handler(defines.events.on_research_finished, __update_technology)
+UTIL_create_event_handler(defines.events.on_research_reversed, __update_technology)
+
+
 
 
   -- elseif research.name == "linox-technology_planetary-power-network" then
@@ -71,33 +108,3 @@ UTIL_create_event_handler(defines.events.on_research_finished, function(event)
   --     end
   --     cur_battery_count = cur_battery_count - 1;
   --   end
-
-  elseif research.name == "linox-technology_facility-factoryizing" then
-    linox_ist.expand_facility(1);
-
-  elseif research.name == "linox-technology_expanding-factory" then
-    if research.researched then
-      linox_ist.expand_facility(8);
-    else
-      linox_ist.expand_facility(research.level);
-    end
-  
-
-
-  elseif research.name == "linox-technology_rocket-silo-foundation" then
-    linox.create_rocketsilo_foundation();
-
-
-
-  elseif research.name == "linox-technology_ultra-deep-drilling" then
-    local surface = UTIL_ensure_surface("linox-surface_linox-installation");
-
-    if surface then
-      local pumpjack = surface.find_entity("linox-entity_deep-oil-pumpjack", { -10.5, 10.5 })
-      if pumpjack then pumpjack.force = "player" end
-
-      pumpjack = surface.find_entity("linox-entity_sulfuric-acid-pumpjack", { 10.5, 10.5 })
-      if pumpjack then pumpjack.force = "player" end
-    end
-  end
-end)

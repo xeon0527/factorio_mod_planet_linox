@@ -5,7 +5,7 @@ require("prototypes.item._item")
 require("prototypes.recipe._recipe")
 require("prototypes.technology._technology")
 
-require("prototypes.planet.installation-map-gen")
+--require("prototypes.planet.installation-map-gen")
 require("prototypes.planet.map-gen")
 require("prototypes.planet.planet")
 

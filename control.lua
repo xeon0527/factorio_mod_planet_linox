@@ -1,4 +1,4 @@
-require("global.planet");
+require("global._global");
 
 require("scripts.util");
 require("scripts.drv._drv");

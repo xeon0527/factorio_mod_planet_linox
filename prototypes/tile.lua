@@ -20,7 +20,7 @@ lab_dark_2_copy.autoplace = {
 };
 
 local foundation_copy = table.deepcopy(data.raw.tile["foundation"]);
-foundation_copy.name = "linox-tile_linox-installation-foundation";
+foundation_copy.name = "linox-tile_linox-foundation";
 foundation_copy.autoplace = {
   probability_expression = "elevation == 2",
 };
@@ -49,7 +49,7 @@ linox_lava.collision_mask = {
 };
 
 local refined_concrete_copy = table.deepcopy(data.raw.tile["refined-concrete"]);
-refined_concrete_copy.name = "linox-tile_linox-installation-terminal-platform";
+refined_concrete_copy.name = "linox-tile_linox-terminal-platform";
 refined_concrete_copy.minable = nil;
 refined_concrete_copy.allows_being_covered = false;
 refined_concrete_copy.can_be_part_of_blueprint = false;
@@ -59,7 +59,7 @@ refined_concrete_copy.map_color = { r = 0.07, g = 0.07, b = 0.07, a = 1.0 };
 refined_concrete_copy.tint = { 0.3, 0.3, 0.3 };
 
 local refined_hazard_concrete_copy = table.deepcopy(data.raw.tile["refined-hazard-concrete-left"]);
-refined_hazard_concrete_copy.name = "linox-tile_linox-installation-hazard-terminal-platform";
+refined_hazard_concrete_copy.name = "linox-tile_linox-hazard-terminal-platform";
 refined_hazard_concrete_copy.minable = nil;
 refined_hazard_concrete_copy.allows_being_covered = false;
 refined_hazard_concrete_copy.can_be_part_of_blueprint = false;
@@ -69,7 +69,7 @@ refined_hazard_concrete_copy.map_color = { r = 0.386, g = 0.153, b = 0.121, a = 
 refined_hazard_concrete_copy.tint = { 1.0, 0.5, 0.5 };
 
 local tutorial_grid_copy = table.deepcopy(data.raw.tile["tutorial-grid"]);
-tutorial_grid_copy.name = "linox-tile_linox-installation-corridor";
+tutorial_grid_copy.name = "linox-tile_linox-corridor";
 tutorial_grid_copy.walking_speed_modifier = 3;
 tutorial_grid_copy.minable = nil;
 tutorial_grid_copy.allows_being_covered = false;

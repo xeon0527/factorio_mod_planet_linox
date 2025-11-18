@@ -1,31 +1,56 @@
 local stor = require("scripts.drv.storage")
 local u_surface = require("scripts.util.surface")
 local db = require("scripts.svc.database");
+local linox_global = require("scripts.svc.surface.linox-global")
 
 stor.ensure("story.flag.visited_linox", false)
 stor.ensure("story.flag.cargo_approval", false)
 
 local __MODULE__ = {};
 
+local __rocketsilo_foundation_tile = "linox-tile_linox-foundation"
+local __base_foundation_tile = "linox-tile_linox-foundation"
+local __base_border_tile = "linox-tile_linox-hazard-terminal-platform"
+
+__MODULE__.get = function()
+  return game.get_surface(__LINOX_SURFACE__.ground)
+end
+
+__MODULE__.create = function()
+  return UTIL_ensure_surface(__LINOX_SURFACE__.ground)
+end
+
+__MODULE__.has_building = function()
+  local surface = __MODULE__.get()
+  return (surface.find_entity("linox-entity_cargo-landing-pad", {0,0}) ~= nil)
+end
+
+__MODULE__.obtain_cargo_landing_pad = function()
+  local surface = __MODULE__.get()
+  local pad = surface.find_entity("linox-entity_cargo-landing-pad", {0,0});
+  pad.operable = true;
+end
+
 __MODULE__.create_rocketsilo_foundation = function()
-  local surface = game.get_surface("linox-planet_linox");
-  if surface then
-    u_surface.fill_tile{ surface = surface, tile_name = "linox-tile_linox-installation-foundation",
-      x = -17.5, y = -8.5, radius = 9 }
+  local surface = game.get_surface(__LINOX_SURFACE__.ground);
+  if not surface then return end
+  
+  u_surface.fill_tile{ surface = surface, tile_name = __rocketsilo_foundation_tile,
+    x = -17.5, y = -8.5, radius = 9 }
 
-    --u_surface.fill_tile{ surface = surface, tile_name = "linox-tile_linox-installation-foundation",
-    --  x = -17.5, y = 8.5, radius = 9 }
---
-    --u_surface.fill_tile{ surface = surface, tile_name = "linox-tile_linox-installation-foundation",
-    --  x = 17.5, y = -8.5, radius = 9 }
+  --u_surface.fill_tile{ surface = surface, tile_name = __rocketsilo_foundation_tile,
+  --  x = -17.5, y = 8.5, radius = 9 }
 
-    u_surface.fill_tile{ surface = surface, tile_name = "linox-tile_linox-installation-foundation",
-      x = 17.5, y = 8.5, radius = 9 }
-  end
+  --u_surface.fill_tile{ surface = surface, tile_name = __rocketsilo_foundation_tile
+  --  x = 17.5, y = -8.5, radius = 9 }
+
+  u_surface.fill_tile{ surface = surface, tile_name = __rocketsilo_foundation_tile,
+    x = 17.5, y = 8.5, radius = 9 }
 end
 
 __MODULE__.create_building = function()
-  local surface = game.surfaces["linox-planet_linox"];
+  local surface = game.get_surface(__LINOX_SURFACE__.ground);
+  if not surface then return end
 
   -- 청크 먼저 생성해주고 타일을 깔아야됨. 안깔면 청크가 생성되면서 타일이 다 덮어씌워짐
   surface.request_to_generate_chunks({0, 0}, 2)
@@ -42,12 +67,12 @@ __MODULE__.create_building = function()
           yy == -center_size or yy == center_size - 1 then
         table.insert(modify_tiles, {
           position = { x = xx, y = yy },
-          name = "linox-tile_linox-installation-hazard-terminal-platform"
+          name = __base_border_tile
         });
       else
         table.insert(modify_tiles, {
           position = { x = xx, y = yy },
-          name = "linox-tile_linox-installation-terminal-platform"
+          name = __base_foundation_tile
         });
       end
     end
@@ -55,34 +80,45 @@ __MODULE__.create_building = function()
   surface.set_tiles(modify_tiles);
 
 
-  local cargo_pad = surface.find_entity("linox-entity_cargo-landing-pad", {0,0})
-  if cargo_pad == nil then
-    cargo_pad = surface.create_entity{
-      name = "linox-entity_cargo-landing-pad",
-      position = {0,0},
-      force = "player",
-      create_build_effect_smoke = false,
-    }
-  end
-
+  local cargo_pad = UTIL_ensure_entity(surface, {
+    name = "linox-entity_cargo-landing-pad",
+    position = {0,0},
+    force = "player",
+    create_build_effect_smoke = false,
+  });
   cargo_pad.destructible = false;
   cargo_pad.minable = false;
   cargo_pad.operable = false;
 
-  surface.create_entity{name = "crash-site-spaceship-wreck-medium-1",
-    force = "neutral", position = { -4, -7 }}.insert{name = "iron-plate", count = 100};
+  UTIL_ensure_entity(surface, {
+    name = "crash-site-spaceship-wreck-medium-1",
+    force = "neutral",
+    position = { -4, -7 }
+  }).insert{name = "iron-plate", count = 100};
 
-  surface.create_entity{name = "crash-site-spaceship-wreck-medium-2",
-    force = "neutral", position = { -8, -4 }}.insert{name = "copper-plate", count = 100};
-    
-  surface.create_entity{name = "crash-site-spaceship-wreck-medium-1",
-    force = "neutral", position = { -5, 9 }}.insert{name = "iron-plate", count = 100};
+  UTIL_ensure_entity(surface, {
+    name = "crash-site-spaceship-wreck-medium-2",
+    force = "neutral",
+    position = { -8, -4 }
+  }).insert{name = "copper-plate", count = 100};
 
-  surface.create_entity{name = "crash-site-spaceship-wreck-medium-2",
-    force = "neutral", position = { 9, 3 }}.insert{name = "copper-plate", count = 100};
+  UTIL_ensure_entity(surface, {
+    name = "crash-site-spaceship-wreck-medium-1",
+    force = "neutral",
+    position = { -5, 9 }
+  }).insert{name = "iron-plate", count = 100};
 
-  surface.create_entity{name = "crash-site-spaceship-wreck-medium-1",
-    force = "neutral", position = { 4, 9 }}.insert{name = "solar-panel", count = 6};
+  UTIL_ensure_entity(surface, {
+    name = "crash-site-spaceship-wreck-medium-2",
+    force = "neutral",
+    position = { 9, 3 }
+  }).insert{name = "copper-plate", count = 100};
+
+  UTIL_ensure_entity(surface, {
+    name = "crash-site-spaceship-wreck-medium-1",
+    force = "neutral",
+    position = { 4, 9 }
+  }).insert{name = "solar-panel", count = 6};
 end
 
 
@@ -91,7 +127,7 @@ UTIL_create_event_handler(defines.events.on_cargo_pod_started_ascending, functio
   if not platform.space_location then return end;
 
   local loc_name = platform.space_location.name; 
-  if loc_name == "linox-planet_linox" then
+  if loc_name == __LINOX_SURFACE__.ground then
     local force = event.cargo_pod.force;
     local gps_tag = event.cargo_pod.gps_tag;
 
@@ -116,7 +152,7 @@ UTIL_create_event_handler(defines.events.on_cargo_pod_started_ascending, functio
 end)
 
 UTIL_create_event_handler(defines.events.on_cargo_pod_finished_descending, function(event)
-  if event.player_index ~= nil and event.cargo_pod.surface.name == "linox-planet_linox" then
+  if event.player_index ~= nil and event.cargo_pod.surface.name == __LINOX_SURFACE__.ground then
     local player = game.players[event.player_index];
     if not player.force.technologies["linox-technology_exploring-linox-landing-site"].researched and
         player.character then
@@ -137,7 +173,7 @@ UTIL_create_event_handler(defines.events.on_cargo_pod_finished_descending, funct
 end)
 
 UTIL_create_event_handler(defines.events.on_cargo_pod_delivered_cargo, function(event)
-  if event.cargo_pod.surface.name == "linox-planet_linox" then
+  if event.cargo_pod.surface.name == __LINOX_SURFACE__.ground then
     local force = game.forces["player"];
     if force.technologies["linox-technology_exploring-linox-landing-site"].researched then
       if not storage.story.flag.visited_linox then
@@ -152,8 +188,8 @@ end)
 
 UTIL_create_event_handler(defines.events.on_surface_created, function(event)
   local surface = game.get_surface(event.surface_index);
-
-  if surface and surface.name == "linox-planet_linox" then
+  if surface and surface.name == __LINOX_SURFACE__.ground then
+    local force = game.forces["player"]
     local settings = surface.map_gen_settings;
     settings.seed = 0;
     settings.width = 128;
@@ -162,9 +198,14 @@ UTIL_create_event_handler(defines.events.on_surface_created, function(event)
 
     surface.request_to_generate_chunks({0, 0}, 2)
     surface.force_generate_chunk_requests()
-    game.forces["player"].chart(surface, {{x = -64, y = -64}, {x = 63, y = 63}})
-
+    force.chart(surface, {{x = -64, y = -64}, {x = 63, y = 63}})
     surface.create_global_electric_network();
+
+    local tech = force.technologies
+    if tech["linox-technology_exploring-linox-landing-site"].researched then
+      __MODULE__.create_building()
+      linox_global.connect_surfaces();
+    end
   end
 end)
 

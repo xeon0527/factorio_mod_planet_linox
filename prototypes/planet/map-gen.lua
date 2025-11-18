@@ -1,6 +1,6 @@
 local map_gen = {};
 
-function map_gen.linox_crust()
+function map_gen.ground()
     return
     {
         default_enable_all_autoplace_controls = false,
@@ -16,7 +16,7 @@ function map_gen.linox_crust()
     }
 end
 
-function map_gen.linox_installation()
+function map_gen.facility()
     return
     {
         default_enable_all_autoplace_controls = false,

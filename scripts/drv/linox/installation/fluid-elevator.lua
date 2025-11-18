@@ -1,17 +1,22 @@
+local __entity_name = "linox-entity_fluid-elevator"
+local __link_id = 25702570
+
 local function __fluid_elevator_construct_event_proc(event)
   local entity = event.entity or event.destination
   if (not (entity and entity.valid)) or (entity.type == "entity-ghost") or
-      (entity.name ~= "linox-entity_fluid-elevator") then return end
+      (entity.name ~= __entity_name) then return end
 
-  local surface = entity.surface;
-  local dst_surface = nil;
-  if surface.name == "linox-planet_linox" then
-    dst_surface = UTIL_ensure_surface("linox-surface_linox-installation");
-  elseif surface.name == "linox-surface_linox-installation" then
-    dst_surface = UTIL_ensure_surface("linox-planet_linox");
+  local surface_src = entity.surface
+  local surface_dst = nil
+  if surface_src.name == __LINOX_SURFACE__.ground then
+    surface_dst = game.get_surface(__LINOX_SURFACE__.facility)
+  elseif surface_src.name == __LINOX_SURFACE__.facility then
+    surface_dst = game.get_surface(__LINOX_SURFACE__.ground)
   else
-    return;
+    return
   end
+  
+  if not surface_dst then return end
 
   local entity_bak = {
     position = entity.position,
@@ -21,8 +26,8 @@ local function __fluid_elevator_construct_event_proc(event)
   }
   entity.destroy();
 
-  entity = surface.create_entity{
-    name = "linox-entity_fluid-elevator-input",
+  entity = surface_src.create_entity{
+    name = __entity_name.."-input",
     position = entity_bak.position,
     direction = entity_bak.direction,
     force = entity_bak.force,
@@ -30,10 +35,10 @@ local function __fluid_elevator_construct_event_proc(event)
   };
 
 
-  local dst_entity = dst_surface.find_entity("linox-entity_fluid-elevator-output", entity.position);
-  if dst_entity == nil then
-    dst_entity = dst_surface.create_entity{
-      name = "linox-entity_fluid-elevator-output",
+  local entity_dst = surface_dst.find_entity(__entity_name.."-output", entity.position);
+  if entity_dst == nil then
+    entity_dst = surface_dst.create_entity{
+      name = __entity_name.."-output",
       position = entity.position,
       direction = entity.direction,
       force = entity.force,
@@ -41,8 +46,8 @@ local function __fluid_elevator_construct_event_proc(event)
     };
   end
 
-  if dst_entity then
-    entity.fluidbox.add_linked_connection(25702570, dst_entity, 25702570);
+  if entity_dst then
+    entity.fluidbox.add_linked_connection(__link_id, entity_dst, __link_id);
   end
 end
 
@@ -55,27 +60,29 @@ UTIL_create_event_handler(defines.events.on_entity_cloned,               __fluid
 
 local function __fluid_elevator_deconstruct_event_proc(event)
   local entity = event.entity;
-  if (not entity.valid) or ((entity.name ~= "linox-entity_fluid-elevator-input") and
-      (entity.name ~= "linox-entity_fluid-elevator-output")) then return end;
+  if (not entity.valid) or ((entity.name ~= __entity_name.."-input") and
+      (entity.name ~= __entity_name.."-output")) then return end;
 
-  local surface = entity.surface;
-  local dst_surface = nil;
-  if surface.name == "linox-planet_linox" then
-    dst_surface = UTIL_ensure_surface("linox-surface_linox-installation");
-  elseif surface.name == "linox-surface_linox-installation" then
-    dst_surface = UTIL_ensure_surface("linox-planet_linox");
+  local surface_src = entity.surface
+  local surface_dst = nil
+  if surface_src.name == __LINOX_SURFACE__.ground then
+    surface_dst = game.get_surface(__LINOX_SURFACE__.facility)
+  elseif surface_src.name == __LINOX_SURFACE__.facility then
+    surface_dst = game.get_surface(__LINOX_SURFACE__.ground)
   else
-    return;
+    return
+  end
+  
+  if not surface_dst then return end
+
+  local entity_dst_name = __entity_name.."-output";
+  if entity.name == __entity_name.."-output" then
+    entity_dst_name = __entity_name.."-input";
   end
 
-  local dst_entity_name = "linox-entity_fluid-elevator-output";
-  if entity.name == "linox-entity_fluid-elevator-output" then
-    dst_entity_name = "linox-entity_fluid-elevator-input";
-  end
-
-  local dst_entity = dst_surface.find_entity(dst_entity_name, entity.position);
-  if dst_entity then
-    dst_entity.destroy();
+  local entity_dst = surface_dst.find_entity(entity_dst_name, entity.position);
+  if entity_dst then
+    entity_dst.destroy();
   end
 end
 

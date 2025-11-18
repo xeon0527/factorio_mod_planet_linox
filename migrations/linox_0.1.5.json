@@ -1,0 +1,8 @@
+{
+  "tile":[
+    ["linox-tile_linox-installation-foundation", "linox-tile_linox-foundation"],
+    ["linox-tile_linox-installation-terminal-platform", "linox-tile_linox-terminal-platform"],
+    ["linox-tile_linox-installation-hazard-terminal-platform", "linox-tile_linox-hazard-terminal-platform"],
+    ["linox-tile_linox-installation-corridor", "linox-tile_linox-corridor"]
+  ]
+}

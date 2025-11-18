@@ -1,39 +1,43 @@
+local __entity_name = "linox-entity_cargo-elevator"
+
 local function __cargo_elevator_construct_event_proc(event)
   local entity = event.entity or event.destination
   if (not (entity and entity.valid)) or (entity.type == "entity-ghost") or
-      (entity.name ~= "linox-entity_cargo-elevator") then return end
+      (entity.name ~= __entity_name) then return end
 
-  local surface = entity.surface;
-  local dst_surface = nil;
-  if surface.name == "linox-planet_linox" then
-    dst_surface = UTIL_ensure_surface("linox-surface_linox-installation");
-  elseif surface.name == "linox-surface_linox-installation" then
-    dst_surface = UTIL_ensure_surface("linox-planet_linox");
+  local surface_src = entity.surface
+  local surface_dst = nil
+  if surface_src.name == __LINOX_SURFACE__.ground then
+    surface_dst = game.get_surface(__LINOX_SURFACE__.facility)
+  elseif surface_src.name == __LINOX_SURFACE__.facility then
+    surface_dst = game.get_surface(__LINOX_SURFACE__.ground)
   else
-    return;
+    return
   end
 
-  local dst_entity = dst_surface.find_entity("linox-entity_cargo-elevator", entity.position);
-  if dst_entity == nil then
-    dst_entity = dst_surface.create_entity{
-      name = "linox-entity_cargo-elevator",
+  if not surface_dst then return end
+
+  local entity_dst = surface_dst.find_entity(__entity_name, entity.position);
+  if entity_dst == nil then
+    entity_dst = surface_dst.create_entity{
+      name = __entity_name,
       position = entity.position,
       direction = UTIL_get_reverse_direction(entity.direction),
       force = entity.force,
       player = entity.last_user,
     };
   else
-    dst_entity.disconnect_linked_belts();
+    entity_dst.disconnect_linked_belts();
   end
 
-  if dst_entity then
+  if entity_dst then
     if entity.linked_belt_type == "input" then
-      dst_entity.linked_belt_type = "output";
+      entity_dst.linked_belt_type = "output";
     else
-      dst_entity.linked_belt_type = "input";
+      entity_dst.linked_belt_type = "input";
     end
-    entity.connect_linked_belts(dst_entity);
-    dst_entity.connect_linked_belts(entity);
+    entity.connect_linked_belts(entity_dst);
+    entity_dst.connect_linked_belts(entity);
   end
 end
 
@@ -46,21 +50,23 @@ UTIL_create_event_handler(defines.events.on_entity_cloned,               __cargo
 
 local function __cargo_elevator_deconstruct_event_proc(event)
   local entity = event.entity;
-  if (not entity.valid) or (entity.name ~= "linox-entity_cargo-elevator") then return end;
+  if (not entity.valid) or (entity.name ~= __entity_name) then return end;
 
-  local surface = entity.surface;
-  local dst_surface = nil;
-  if surface.name == "linox-planet_linox" then
-    dst_surface = UTIL_ensure_surface("linox-surface_linox-installation");
-  elseif surface.name == "linox-surface_linox-installation" then
-    dst_surface = UTIL_ensure_surface("linox-planet_linox");
+  local surface_src = entity.surface
+  local surface_dst = nil
+  if surface_src.name == __LINOX_SURFACE__.ground then
+    surface_dst = game.get_surface(__LINOX_SURFACE__.facility)
+  elseif surface_src.name == __LINOX_SURFACE__.facility then
+    surface_dst = game.get_surface(__LINOX_SURFACE__.ground)
   else
-    return;
+    return
   end
 
-  local dst_entity = dst_surface.find_entity("linox-entity_cargo-elevator", entity.position);
-  if dst_entity then
-    dst_entity.destroy();
+  if not surface_dst then return end
+
+  local entity_dst = surface_dst.find_entity(__entity_name, entity.position);
+  if entity_dst then
+    entity_dst.destroy();
   end
 end
 

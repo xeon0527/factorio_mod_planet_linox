@@ -54,12 +54,12 @@ __MODULE__.linox_exploration_log_2 = {
             yy == -center_size or yy == center_size - 1 then
           table.insert(modify_tiles, {
             position = { x = xx, y = yy },
-            name = "linox-tile_linox-installation-hazard-terminal-platform"
+            name = "linox-tile_linox-hazard-terminal-platform"
           });
         else
           table.insert(modify_tiles, {
             position = { x = xx, y = yy },
-            name = "linox-tile_linox-installation-terminal-platform"
+            name = "linox-tile_linox-terminal-platform"
           });
         end
       end
