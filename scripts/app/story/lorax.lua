@@ -303,6 +303,7 @@ UTIL_create_event_handler("linox-custom-event_gui-dialog-on-select", function(ev
       dialog.add_talk(player, dialog.talker.partner, {"npc-talk.lorax_s3-5_t0"})
       dialog.add_talk(player, dialog.talker.partner, {"npc-talk.lorax_s3-5_t1"})
       dialog.add_talk(player, dialog.talker.partner, {"npc-talk.lorax_s3-5_t2"})
+      dialog.add_talk(player, dialog.talker.partner, {"npc-talk.lorax_s3-5_t3"})
       dialog.add_select(player, "5-1", {"npc-talk.lorax_s3-5_s0"}, dialog.talker.player)
 
       if not db.get_force(player.force, __DB_CARGO_APPROVAL__) then

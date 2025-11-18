@@ -1,86 +1,95 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.4
+Date: 18. 11. 2025
+  Major Features:
+    - The English translation is now officially supported.
+
+  Changes:
+    - Some lines of dialogue have been revised.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.1.3
 Date: 18. 11. 2025
   Major Features:
-    - 화물 손실이 추가되었습니다. 이제 Linox 궤도에서 화물을 보내면 약 30%의 아이템만이 착륙에 성공합니다.
-    - 궤도 진입 안전성 연구가 추가되었습니다. 레벨당 화물 착륙 성공률을 5%p 상승시킵니다.
-    - 화물 손실 관련 팁을 추가했습니다.
+    - Cargo loss has been added. Now, when sending cargo from Linox orbit, only about 30% of the items will successfully land.
+    - Orbital Entry Safety research has been added. Each level increases the cargo landing success rate by 5 percentage points.
+    - Added tips related to cargo loss.
 
   Changes:
-    - 일부 연구에 서브 아이콘을 추가했습니다.
-    - 팁 아이콘들을 변경했습니다.
-    - 엘리베이터 발견 메시지 출력 시점을 변경했습니다.
+    - Added sub-icons to some research items.
+    - Updated the tip icons.
+    - Changed the timing of the elevator discovery message.
 
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.2
 Date: 17. 11. 2025
   Bugfixes:
-    - /cheat 명령 시 crash가 발생하던 문제를 수정했습니다. 그러나 연구 효과가 오작동하므로 linox 관련 연구들은 초기화 후 다시 진행해주어야 정상적으로 반영됩니다.
+    - Fixed a crash that occurred when using the /cheat command. However, since research effects may malfunction, Linox-related research must be reset and completed again to take effect properly.
 
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.1
 Date: 17. 11. 2025
   Bugfixes:
-    - 리녹스 착륙 지점 탐색 연구가 실제로 우주선 정박을 요구하지 않던 문제를 수정했습니다.
-    - settings 내용 오류로 인해 로드가 실패하던 문제를 수정했습니다.
+    - Fixed an issue where the Linox landing site survey research did not actually require a spaceship to be docked.
+    - Fixed an issue where loading would fail due to errors in the settings.
 
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.0
 Date: 17. 11. 2025
   Info:
-    - Recursive Blueprint의 지도 설정에서 "X, Y 좌표" 설정을 "센터"로 설정해야 합니다. 그렇지 않으면 첫 공장 부지의 샘플이 오작동합니다.
-    - 이전 버전의 세이브는 올바르게 호환 되지 않을 것입니다. 정상적으로 게임을 진행하려면 새로운 게임을 생성해야 합니다.
-    - 이미 진행 중인 게임에서 이 버전을 이용하시려면 Mod를 잠시 제거하여 세이브에서 데이터를 완전히 제거하고 다시 Mod를 추가해야 합니다.
+    - In the Recursive Blueprints Mod map settings, the "X, Y Coordinates" must be set to "Center"; otherwise, the sample of the first factory site may malfunction.
+    - Saves from previous versions will not be properly compatible. To play the game correctly, you must start a new game.
+    - To use this version in an ongoing game, you need to temporarily remove the mod to completely clear its data from the save, then add the mod again.
 
   Major Features:
-    - 이제 L.O.R.A.X와의 대화를 통해 첫 공장 부지를 무료로 확보할 수 있으며, 이 곳에 철 판과 구리 판을 생산하는 자동화 공장 예제가 생성됩니다.
-    - 자동화 공장 예제와 함께 게임 초반을 쉽게 해결할 수 있는 다양한 자원과 건물들이 제공 되어 난이도가 크게 하락했습니다.
-    - 이제 지형 생성 시점부터 즉시 지상과 지하의 전역 전력망이 연결 됩니다. 연구가 필요하지 않습니다.
-    - 이제 지상에서 태양 전지판을 사용할 수 있습니다.
-    - 공장 부지 주변의 회로를 위한 보조 공간의 크기를 넓혔습니다.
+    - You can now secure your first factory site for free by talking to L.O.R.A.X, and an example automated factory producing iron and copper plates will be generated there.
+    - With the example automated factory, various resources and buildings are now provided to ease the early game, significantly reducing the difficulty.
+    - The surface and underground power grids are now connected globally from the moment terrain is generated, with no research required.
+    - Solar panels can now be used on the surface.
+    - Expanded the size of the auxiliary space around factory sites for circuits.
 
   Changes:
-    - L.O.R.A.X의 대사 및 이미지가 변경되었습니다.
-    - Linox 행성 이미지가 변경되었습니다.
-    - 이제 연구를 통해 원유와 황산 및 유용한 전용 레시피들을 제공 받을 수 있습니다. 이론적으로 자립이 가능해졌습니다.
-    - 파워 컨버터가 삭제되었습니다.
+    - Updated L.O.R.A.X's dialogue and images.
+    - Updated the Linox planet images.
+    - You can now obtain crude oil, sulfuric acid, and useful specialized recipes through research, making self-sufficiency theoretically possible.
+    - The power converter has been removed.
 
   Balancing:
-    - 벽돌 주조 레시피의 돌 소비량 1 -> 2로 조정했습니다.
-    - Linox 로켓 격납고 토대 연구로 제공되던 토지 수를 4개 -> 2개로 조정했습니다.
+    - Adjusted the stone consumption in the casting stone brick recipe from 1 to 2.
+    - Adjusted the number of land plots provided by the Linox rocket silo foundation research from 4 to 2.
 
   Bugfixes:
-    - GUI가 열려있던 상태에서 자동 세이브가 생성되었을 때, 이 세이브를 로드하면 Crash가 발생하던 문제를 수정했습니다.
-    - Linox 시설의 토대 타일이 강제 철거가 가능했던 문제를 수정했습니다.
+    - Fixed an issue where manipulating the GUI after loading a save that was saved while the GUI was open would cause a crash.
+    - Fixed an issue where the foundation tiles of Linox installations could be forcibly removed.
 
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.5
 Date: 13. 11. 2025
   Bugfixes:
-    - 사마륨 원심분리 연구가 터보 펌프 잠금을 해제하던 문제를 수정했습니다.
-    - Linox 관련 Surface들의 중심부에 로봇을 배치할 수 없던 문제를 해결했습니다.
-    - Linox 시설의 속성이 잘못 되었던 문제를 수정했습니다.
+    - Fixed an issue where the Samarium centrifugation research was incorrectly unlocking the turbo pump.
+    - Fixed an issue where robots could not be placed at the center of Linox-related surfaces.
+    - Fixed an issue where the properties of Linox installation surfaces were incorrect.
 
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.4
 Date: 13. 11. 2025
   Bugfixes:
-    - 화물 포드 이착륙 시 특정 상황에서 Crash가 발생하던 문제를 수정했습니다.
-    - Entity가 배치되거나 제거될 때 발생하던 Crash를 수정했습니다.
+    - Fixed an issue where a crash occurred in certain situations during cargo pod takeoff or landing.
+    - Fixed a crash that occurred when entities were placed or removed.
 
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.3
 Date: 13. 11. 2025
   Bugfixes:
-    - 잘못된 텍스트를 수정했습니다.
-    - 화물 착륙 패드가 정상적으로 확보 되지 않는 문제를 해결했습니다.
+    - Fixed incorrect text entries.
+    - Fixed an issue where cargo landing pad were not being properly taken over.
 
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.2
 Date: 13. 11. 2025
   Bugfixes:
-    - 잘못된 텍스트를 수정했습니다.
-    - 로봇의 소비전력이 과도한 문제를 해결했습니다.
+    - Fixed incorrect text entries.
+    - Fixed an issue where robots consumed excessive power.
 
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.1
