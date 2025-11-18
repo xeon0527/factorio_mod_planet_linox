@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.5
+Date: 19. 11. 2025
+  Changes:
+    - Adjusted some of the English translations to be more appropriate.
+    - Updated the thumbnail image.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.1.4
 Date: 18. 11. 2025
   Major Features:
