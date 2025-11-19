@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.7
+Date: 19. 11. 2025
+  Changes:
+    - Corrected incorrect names.
+    - Fixed an issue where certain research effects were not being applied correctly in some situations.
+    - Fixed an issue where the first Expanding Factory research was not applied correctly.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.1.6
 Date: 19. 11. 2025
   Changes:
