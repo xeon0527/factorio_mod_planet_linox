@@ -91,6 +91,22 @@ data:extend({
       technology = "linox-technology_enhanced-space-engineering"
     },
   },
+  {
+    type = "tips-and-tricks-item",
+    name = "linox-tips-and-tricks_placement_restriction",
+    tag = "[item=foundation]",
+    category = "linox-tips-and-tricks_category",
+    order = "ze",
+    indent = 1,
+    simulation = simulation.linox_placement_restriction,
+    trigger =
+    {
+      type = "research",
+      technology = "linox-technology_exploring-linox-landing-site"
+    },
+  },
+
+
   --{
   --  type = "tips-and-tricks-item",
   --  name = "linox-tips-and-tricks_power-converter",
