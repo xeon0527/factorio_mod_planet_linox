@@ -1,6 +1,7 @@
 require("prototypes.item.advanced-rocket-silo");
 require("prototypes.item.cargo-elevator");
 require("prototypes.item.core-roboport");
+require("prototypes.item.enable-entity");
 require("prototypes.item.fluid-elevator");
 require("prototypes.item.mantle-extractor")
 require("prototypes.item.rare-earth-ore");

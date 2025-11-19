@@ -1,3 +1,11 @@
+
+---------------------------------------------------------------------------------------------------
+Version: 0.1.8
+Date: 19. 11. 2025
+  Changes:
+    - Replaced the image of the Network Terminal.
+    - The Network Terminal now actually activates at the moment L.O.R.A.X attempts to power it.
+
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.7
 Date: 19. 11. 2025

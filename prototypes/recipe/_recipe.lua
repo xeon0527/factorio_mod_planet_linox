@@ -2,6 +2,7 @@ require("prototypes.recipe.advanced-rocket-silo");
 require("prototypes.recipe.cargo-elevator");
 require("prototypes.recipe.casting-stone-brick");
 require("prototypes.recipe.core-roboport");
+require("prototypes.recipe.enable-entity");
 require("prototypes.recipe.fluid-elevator");
 require("prototypes.recipe.linox-petrochemicals");
 require("prototypes.recipe.low-temp-separation-of-calcium");

@@ -21,6 +21,7 @@ data:extend {
     collision_box = {{structure_size/-2+0.3, structure_size/-2+0.3}, {structure_size/2-0.3, structure_size/2-0.3}},
     selection_box = {{-structure_size/2, -structure_size/2}, {structure_size/2, structure_size/2}},
     display_box = {{-structure_size/2, -structure_size/2-2}, {structure_size/2, structure_size/2}},
+    map_color = { 1.0, 1.0, 0.0 },
 
     animations ={
       layers = {

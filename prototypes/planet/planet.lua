@@ -8,9 +8,9 @@ data:extend(
   {
     type = "planet",
     name = "linox-planet_linox",
-    icon = "__linox__/graphics/icon/planet-linox.png",--"__space-age__/graphics/icons/vulcanus.png",
+    icon = "__linox__/graphics/icons/planet-linox.png",--"__space-age__/graphics/icons/vulcanus.png",
     icon_size = 512,
-    starmap_icon = "__linox__/graphics/icon/planet-linox.png",
+    starmap_icon = "__linox__/graphics/icons/planet-linox.png",
     starmap_icon_size = 512,
     gravity_pull = 50,      -- 행성에 근접할 시 행성 중력에 의해 우주선에 가감되는 속도.
     distance = 5,          -- 태양으로부터의 거리. 행성의 크기와는 무관.

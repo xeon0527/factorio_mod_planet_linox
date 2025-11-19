@@ -4,7 +4,7 @@ data:extend {
   {
     type = "technology",
     name = "linox-technology_planet-discovery-linox",
-    icons = util_icon.technology_icon_constant_planet_size("__linox__/graphics/icon/planet-linox.png", 512),
+    icons = util_icon.technology_icon_constant_planet_size("__linox__/graphics/icons/planet-linox.png", 512),
     essential = true,
     effects =
     {
@@ -32,7 +32,7 @@ data:extend {
   {
     type = "technology",
     name = "linox-technology_exploring-linox-landing-site",
-    icons = util_icon.technology_icon_constant_damage_size("__linox__/graphics/icon/planet-linox.png", 512),
+    icons = util_icon.technology_icon_constant_damage_size("__linox__/graphics/icons/planet-linox.png", 512),
     prerequisites = {"linox-technology_planet-discovery-linox"},
     unit =
     {
