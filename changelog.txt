@@ -2,9 +2,10 @@
 Version: 0.1.7
 Date: 19. 11. 2025
   Changes:
-    - Corrected incorrect names.
-    - Fixed an issue where certain research effects were not being applied correctly in some situations.
-    - Fixed an issue where the first Expanding Factory research was not applied correctly.
+    - There are no longer any placement restrictions in the Linox corridors.
+    - Added placement restriction tips for certain tiles.
+    - The radar range provided by L.O.R.A.X for Linox facilities has been increased by 1
+    - Added logic to check the settings of the Recursive Blueprints mod.
 
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.6
