@@ -5,7 +5,7 @@ local __MODULE__ = {};
 local weak_tiles = {
   "linox-tile_linox-terminal-platform",
   "linox-tile_linox-hazard-terminal-platform",
-  "linox-tile_linox-corridor",
+  --"linox-tile_linox-corridor",
 }
 
 local light_entity_types = {

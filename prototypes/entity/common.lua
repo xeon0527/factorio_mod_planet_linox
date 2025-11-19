@@ -11,7 +11,7 @@ data:extend {
     energy_source = {type = "void"},
     energy_usage = "100W",
     max_distance_of_sector_revealed = 0,
-    max_distance_of_nearby_sector_revealed = 2,
+    max_distance_of_nearby_sector_revealed = 3,
     localised_name = "",
     max_health = 1,
     connects_to_other_radars = false,
