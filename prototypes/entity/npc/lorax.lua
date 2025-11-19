@@ -1,10 +1,6 @@
-local original_graphic_size = 8
-local structure_size = 4
-local shift_y = 0.75
-
 data:extend {
   {
-    type = "simple-entity-with-force",
+    type = "furnace",
     name = "linox-entity_npc-lorax",
     flags = {
       "not-rotatable",
@@ -13,36 +9,71 @@ data:extend {
       "get-by-unit-number", 
       "not-deconstructable",
       "not-blueprintable", 
+      "hide-alt-info",
+      "no-automated-item-removal",
+      "no-automated-item-insertion",
+      "not-upgradable",
+      "not-in-made-in",
     },
 
     icon = "__space-exploration-graphics__/graphics/icons/nexus.png",
-    icon_size = 64,
     max_health = 1000,
-    collision_box = {{structure_size/-2+0.3, structure_size/-2+0.3}, {structure_size/2-0.3, structure_size/2-0.3}},
-    selection_box = {{-structure_size/2, -structure_size/2}, {structure_size/2, structure_size/2}},
-    display_box = {{-structure_size/2, -structure_size/2-2}, {structure_size/2, structure_size/2}},
     map_color = { 1.0, 1.0, 0.0 },
+    collision_box = {{-1.8, -1.8}, {1.8, 1.8}},
+    selection_box = {{-2, -2}, {2, 2}},
+    hidden = true,
+    hidden_in_factoriopedia = true,
+    drawing_box_vertical_extension = 0.7,
+    source_inventory_size = 1,
+    result_inventory_size = 1,
+    energy_usage = "1J",
+    crafting_speed = 0.00000000000000000000000000000000001,
+    energy_source = { type = "void" },
+    crafting_categories = { "linox-recipe-category_enable-entity" },
+    match_animation_speed_to_activity = false,
+    draw_entity_info_icon_background = false,
+    show_recipe_icon = false,
+    show_recipe_icon_on_map = false,
 
-    animations ={
-      layers = {
+    circuit_wire_max_distance = 10.0,
+    circuit_connector = nil,
+
+    graphics_set = {
+      animation = {
+        layers = {
+          {
+            filename = "__linox__/graphics/entity/lorax/item-extractor-hr-animation-1.png",
+            width = 530,
+            height = 530,
+            scale = 0.24,
+            --shift = util.by_pixel(0, -40),
+          },
+          {
+            filename = "__linox__/graphics/entity/lorax/item-extractor-hr-shadow.png",
+            width = 1000,
+            height = 666,
+            scale = 0.24,
+            --shift = util.by_pixel(0, -40),
+            draw_as_shadow = true,
+          },
+        }
+      },
+      working_visualisations = {
         {
-          filename = "__space-exploration-graphics-3__/graphics/entity/nexus/nexus-inactive.png",
-          frame_count = 1,
-          height = 541,
-          width = 467,
-          repeat_count = 64,
-          shift = { 0/32, -12/32+shift_y},
-          scale = 0.5 * structure_size/original_graphic_size,
-        },
-        {
-          draw_as_shadow = true,
-          filename = "__space-exploration-graphics-3__/graphics/entity/nexus/nexus-shadow.png",
-          frame_count = 1,
-          width = 599,
-          height = 345,
-          repeat_count = 64,
-          shift = { 1.40625, 0.34375 +shift_y},
-          scale = 0.5 * structure_size/original_graphic_size,
+          animation = {
+            layers = {
+              {
+                filename = "__linox__/graphics/entity/lorax/item-extractor-hr-emission-1.png",
+                width = 530,
+                height = 530,
+                scale = 0.24,
+                --shift = util.by_pixel(0, -40),
+                draw_as_glow = true,
+                blend_mode = "additive",
+                tint = { 0.0, 1.0, 0.0 },
+              },
+            }
+          }
         }
       }
     },

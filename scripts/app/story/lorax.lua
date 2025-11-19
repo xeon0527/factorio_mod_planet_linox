@@ -102,6 +102,9 @@ UTIL_create_event_handler("linox-custom-event_gui-dialog-on-select", function(ev
       dialog.add_select(player, "2", {"npc-talk.lorax_s0-1_s0"}, dialog.talker.player);
     
     elseif sel_id == "2" then
+      local lorax = npc.get(npc.type.lorax, linox_facility.get())
+      lorax.insert { name = "linox-item_enable-entity", count = 1000 }
+
       dialog.add_talk(player, dialog.talker.partner_friendly, {"npc-talk.lorax_s0-2_t0"})
       dialog.add_talk(player, dialog.talker.partner, {"npc-talk.lorax_s0-2_t1"})
       dialog.add_talk(player, dialog.talker.narration, {"npc-talk.lorax_s0-2_t2"})

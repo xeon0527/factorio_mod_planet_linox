@@ -6,4 +6,9 @@ if linox_facility.get() then
   if network_terminal then
     network_terminal.insert { name = "linox-item_enable-entity", count = 1000 }
   end
+
+  local lorax = npc.get(npc.type.lorax, linox_facility.get())
+  if lorax then
+    lorax.insert { name = "linox-item_enable-entity", count = 1000 }
+  end
 end

@@ -5,6 +5,8 @@ Date: 19. 11. 2025
   Changes:
     - Replaced the image of the Network Terminal.
     - The Network Terminal now actually activates at the moment L.O.R.A.X attempts to power it.
+    - Updated L.O.R.A.X's images.
+    - L.O.R.A.X now displays a green lighting effect when it boots up.
 
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.7
