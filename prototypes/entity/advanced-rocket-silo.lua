@@ -1,4 +1,5 @@
 local tint = { 1.0, 0.66, 0.66 };
+local speed_ratio = 4.0
 
 local entity = table.deepcopy(data.raw["rocket-silo"]["rocket-silo"]);
 entity.name = "linox-entity_advanced-rocket-silo";
@@ -14,13 +15,13 @@ entity.base_front_sprite.tint = tint;
 --entity.door_back_sprite.tint = tint;
 --entity.door_front_sprite.tint = tint;
 
-entity.door_opening_speed = (4 / (4.25 * 60));
-entity.doors_sound.speed = 4.0;
-entity.raise_rocket_sound.speed = 4.0;
-entity.open_sound.speed = 4.0;
-entity.close_sound.speed = 4.0;
-entity.open_sound.speed = 4.0;
-entity.close_sound.speed = 4.0;
+entity.door_opening_speed = (speed_ratio / (4.25 * 60));
+entity.doors_sound.speed = speed_ratio;
+entity.raise_rocket_sound.speed = speed_ratio;
+entity.open_sound.speed = speed_ratio;
+entity.close_sound.speed = speed_ratio;
+entity.open_sound.speed = speed_ratio;
+entity.close_sound.speed = speed_ratio;
 entity.alarm_sound = nil;
 entity.quick_alarm_sound = nil;
 
@@ -38,9 +39,9 @@ data:extend{ entity, }
 local entity2 = table.deepcopy(data.raw["rocket-silo-rocket"]["rocket-silo-rocket"]);
 entity2.name = "linox-entity_advanced-rocket-silo-rocket";
 
-entity2.rising_speed = 4 / (7 * 60);
-entity2.engine_starting_speed = 4 / (5.5 * 60);
-entity2.flying_speed = 4 / (2000 * 60);
+entity2.rising_speed = speed_ratio / (7 * 60);
+entity2.engine_starting_speed = speed_ratio / (5.5 * 60);
+entity2.flying_speed = speed_ratio / (2000 * 60);
 entity2.flying_acceleration = 0.04;
 
 entity2.rocket_sprite.layers[1].tint = tint;
