@@ -5,7 +5,6 @@ local entity = table.deepcopy(data.raw["rocket-silo"]["rocket-silo"]);
 entity.name = "linox-entity_advanced-rocket-silo";
 
 entity.crafting_speed = 1;
-entity.to_be_inserted_to_rocket_inventory_size = 1;
 entity.module_slots = 6;
 entity.rocket_entity = "linox-entity_advanced-rocket-silo-rocket";
 entity.minable = {mining_time = 1, result = "linox-item_advanced-rocket-silo"};
