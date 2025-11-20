@@ -56,7 +56,7 @@ refined_concrete_copy.can_be_part_of_blueprint = false;
 refined_concrete_copy.is_foundation = true;
 refined_concrete_copy.hidden = true;
 refined_concrete_copy.map_color = { r = 0.07, g = 0.07, b = 0.07, a = 1.0 };
-refined_concrete_copy.tint = { 0.3, 0.3, 0.3 };
+refined_concrete_copy.tint = { 0.33, 0.33, 0.33 };
 
 local refined_hazard_concrete_copy = table.deepcopy(data.raw.tile["refined-hazard-concrete-left"]);
 refined_hazard_concrete_copy.name = "linox-tile_linox-hazard-terminal-platform";
@@ -76,6 +76,18 @@ tutorial_grid_copy.allows_being_covered = false;
 tutorial_grid_copy.can_be_part_of_blueprint = false;
 tutorial_grid_copy.is_foundation = true;
 tutorial_grid_copy.hidden = true;
+
+local tile = table.deepcopy(data.raw.tile["refined-concrete"]);
+tile.name = "linox-tile_linox-datacenter";
+tile.minable = nil;
+tile.allows_being_covered = false;
+tile.can_be_part_of_blueprint = false;
+tile.is_foundation = true;
+tile.hidden = true;
+tile.map_color = { r = 0.07, g = 0.07, b = 0.07, a = 1.0 };
+tile.tint = { 0.66, 0.66, 0.66 };
+
+data:extend { tile }
 
 data:extend(
 {

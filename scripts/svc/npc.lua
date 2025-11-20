@@ -46,7 +46,7 @@ local function __create_lorax(surface, position)
       surface = surface,
       target = {
           entity = entity_lorax,
-          offset = { 0, 2.5 },
+          offset = { 0, 4.5 },
       },
       color = { 1, 1, 0, 1},
       alignment = "center",

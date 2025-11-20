@@ -105,6 +105,34 @@ data:extend({
       technology = "linox-technology_exploring-linox-landing-site"
     },
   },
+  {
+    type = "tips-and-tricks-item",
+    name = "linox-tips-and-tricks_planetary-power-network",
+    tag = "[item=substation]",
+    category = "linox-tips-and-tricks_category",
+    order = "zf",
+    indent = 1,
+    simulation = simulation.linox_planetary_power_network,
+    trigger =
+    {
+      type = "research",
+      technology = "linox-technology_exploring-linox-landing-site"
+    },
+  },
+  {
+    type = "tips-and-tricks-item",
+    name = "linox-tips-and-tricks_npc-system",
+    tag = "[virtual-signal=signal-star]",
+    category = "linox-tips-and-tricks_category",
+    order = "zg",
+    indent = 1,
+    simulation = simulation.npc_system,
+    trigger =
+    {
+      type = "research",
+      technology = "linox-technology_exploring-linox-landing-site"
+    },
+  },
 
 
   --{

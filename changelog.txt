@@ -1,4 +1,18 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.10
+Date: 20. 11. 2025
+  Features:
+    - Added tips regarding the planetary power network.
+    - Added tips regarding the NPC system.
+
+  Balancing:
+    - Quality modules can now be used in the Samarium Centrifugation recipe.
+
+  Changes:
+    - Adjusted the positions of L.O.R.A.X and the Network Terminal. NPCs will no longer occupy the central area.
+    - Adjusted the size of L.O.R.A.X to be more fitting for a planetary AI.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.1.9
 Date: 20. 11. 2025
   Balancing:

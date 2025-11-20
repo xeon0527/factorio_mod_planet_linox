@@ -22,9 +22,11 @@ effects.clouds_effect_properties =
       detail_sample_1 = { scale = 1.709 / 32, wind_speed_factor = 0.2 / 1.709 },
       detail_sample_2 = { scale = 2.179 / 32, wind_speed_factor = 0.2 / 2.179 },
 
-      scale = 1,
-      movement_speed_multiplier = 5.0,
-      opacity = 0.25,
+      color1 = {1.0, 0.0, 0.0},
+      color2 = {0.0, 1.0, 0.0},
+      scale = 0.25,
+      movement_speed_multiplier = 20.0,
+      opacity = 0.1,
       shape_warp_strength = 0.06,
       shape_warp_weight = 0.4,
       detail_sample_morph_duration = 256,
@@ -45,9 +47,10 @@ effects.clouds_effect_properties =
           filename = "__core__/graphics/clouds-detail-noise.png",
           size = 2048
         },
-        color1 = {1.0, 0.2706, 0.302},
-        color2 = {1.0, 0.2706, 0.2902},
+        color1 = {1.0, 0.0, 0.0},
+        color2 = {0.0, 1.0, 0.0},
         tick_factor = 0.005,
+        opacity = 1.0,
       }
     end
 

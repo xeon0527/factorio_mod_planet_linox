@@ -3,6 +3,7 @@ local sample_bp = require("scripts.svc.surface.sample.bp")
 local sample_bp_book = require("scripts.svc.surface.sample.book")
 local linox_global = require("scripts.svc.surface.linox-global")
 local factory_builder = require("scripts.svc.surface.builder.factory-builder")
+local util_surface = require("scripts.util.surface")
 
 local __MODULE__ = {};
 
@@ -54,6 +55,24 @@ UTIL_create_event_handler(defines.events.on_surface_created, function(event)
       end
     end
     surface.set_tiles(modify_tiles);
+
+    util_surface.fill_tile {
+      surface = surface,
+      tile_name = "linox-tile_linox-datacenter",
+      x1 = -21,
+      y1 = -21,
+      x2 = -14,
+      y2 = -11,
+    }
+
+    util_surface.fill_tile {
+      surface = surface,
+      tile_name = "linox-tile_linox-datacenter",
+      x1 = 13,
+      y1 = -17,
+      x2 = 16,
+      y2 = -11,
+    }
 
 
     -- cargo landing pad 생성
