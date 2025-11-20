@@ -1,3 +1,14 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.1.9
+Date: 20. 11. 2025
+  Balancing:
+    - The Rare Earth Refining recipe no longer returns 99 stone.
+    - The Rare Earth Refining recipe can now only be used on Linox.
+    - New recipe - Advanced acid neutrallisation
+
+  Bugfixes:
+    - Fixed an issue where the Rare Earth Refining recipe did not receive productivity module effects.
+    - Fixed an issue where the text for the controls.linox-custom-input_click keybind was missing.
 
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.8

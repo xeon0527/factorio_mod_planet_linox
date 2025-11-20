@@ -16,6 +16,10 @@ data:extend {
         type = "unlock-recipe",
         recipe = "linox-recipe_low-temp-separation-of-calcium",
       },
+      {
+        type = "unlock-recipe",
+        recipe = "linox-recipe_advanced-acid-neutralisation",
+      },
     },
   },
     {

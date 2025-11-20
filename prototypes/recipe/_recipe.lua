@@ -1,3 +1,4 @@
+require("prototypes.recipe.advanced-acid-neutralisation");
 require("prototypes.recipe.advanced-rocket-silo");
 require("prototypes.recipe.cargo-elevator");
 require("prototypes.recipe.casting-stone-brick");

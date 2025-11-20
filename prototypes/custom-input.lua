@@ -6,6 +6,8 @@ data:extend({
     consuming = "none",
     include_selected_prototype = true,
     action = "lua",
+    hidden = true,
+    hidden_in_factoriopedia = true,
   },
 
   {
