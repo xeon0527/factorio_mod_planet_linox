@@ -12,6 +12,15 @@ local function __remove_session(player)
   db.set_player(player, prefix_name.."-session", nil);
 end
 
+local function __is_gui_opened(player)
+  for _, gui in pairs(player.gui.screen.children) do
+    if gui.valid and gui.name == (prefix_name.."-frame") then
+      return true
+    end
+  end
+  return false
+end
+
 UTIL_create_event_handler(defines.events.on_gui_click, function(event)
   local element = event.element;
   local player = game.players[event.player_index];
@@ -201,6 +210,8 @@ local function __create_tech_list(frame)
 end
 
 __MODULE__.create = function(player, caption)
+  if __is_gui_opened(player) then return false end
+
   local frame = __create_frame(player)
   __create_title_bar(frame, caption);
   local tech_list = __create_tech_list(frame)
@@ -212,6 +223,7 @@ __MODULE__.create = function(player, caption)
     tech_btns = {},
     temp_data = nil,
   });
+  return true
 end
 
 __MODULE__.add_tech = function(player, sprite, tech_name, tech_cost)

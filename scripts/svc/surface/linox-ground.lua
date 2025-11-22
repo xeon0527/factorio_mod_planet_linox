@@ -9,7 +9,7 @@ stor.ensure("story.flag.cargo_approval", false)
 local __MODULE__ = {};
 
 local __rocketsilo_foundation_tile = "linox-tile_linox-foundation"
-local __base_foundation_tile = "linox-tile_linox-foundation"
+local __base_foundation_tile = "linox-tile_linox-terminal-platform"
 local __base_border_tile = "linox-tile_linox-hazard-terminal-platform"
 
 __MODULE__.get = function()

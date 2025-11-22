@@ -12,7 +12,14 @@ local function __remove_session(player)
   db.set_player(player, prefix_name.."-session", nil);
 end
 
-
+local function __is_gui_opened(player)
+  for _, gui in pairs(player.gui.screen.children) do
+    if gui.valid and gui.name == (prefix_name.."-frame") then
+      return true
+    end
+  end
+  return false
+end
 
 -- dialog의 버튼을 누르면 linox-on-dialog-select 이벤트를 생성함.
 UTIL_create_event_handler(defines.events.on_gui_click, function(event)
@@ -68,6 +75,8 @@ __MODULE__.talker = {
 
 
 __MODULE__.create = function(player, caption, session_name, sprite)
+  if __is_gui_opened(player) then return false end
+
   __MODULE__.close(player);
 
   local frame = player.gui.screen.add {
@@ -150,6 +159,7 @@ __MODULE__.create = function(player, caption, session_name, sprite)
     log_list = dialog_log_list,
     temp_data = nil,
   });
+  return true
 end
 
 __MODULE__.close = function(player)

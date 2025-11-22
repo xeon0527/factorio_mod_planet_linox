@@ -14,7 +14,7 @@ end
 local function __check_research(event)
   local force = game.forces["player"]
   if force.current_research and force.current_research.name == "linox-technology_exploring-linox-landing-site" and not __check_linox_orbit() then
-    game.print({"linox-orbit"});
+    game.print({"system.linox-orbit"});
     force.cancel_current_research()
   end
 end

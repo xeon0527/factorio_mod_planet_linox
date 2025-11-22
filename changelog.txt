@@ -1,3 +1,12 @@
+
+---------------------------------------------------------------------------------------------------
+Version: 0.2.1
+Date: 22. 11. 2025
+  Bugfixes:
+    - Fixed an issue where the spaceship orbit requirement message was not displayed correctly.
+    - Fixed an issue where incorrect tiles were placed on the surface of Linox during the first visit to the planet.
+    - Fixed an issue where L.O.R.A.X dialogue windows and other GUIs would not open due to a duplicate-check bug.
+
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.0
 Date: 22. 11. 2025

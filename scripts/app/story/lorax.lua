@@ -17,9 +17,7 @@ local __DB_CARGO_APPROVAL__ = "story_lorax_cargo_approval"
 -- lorax를 클릭하면 대화상자 켜기
 UTIL_create_event_handler("linox-custom-event_on-entity-click", function(event)
   if event.entity == npc.get(npc.type.lorax, event.player.surface) then
-    if #event.player.gui.screen.children == 0 then
-      __MODULE__.show(event.player);
-    end
+    __MODULE__.show(event.player);
   end
 end)
 
@@ -52,7 +50,7 @@ end
 
 __MODULE__.show = function(player)
   --dialog.create(player, "L.O.R.A.X", "lorax", "linox-sprite_lorax");
-  dialog.create(player, {"npc-name.lorax"}, "lorax", "linox-sprite_lorax");
+  if not dialog.create(player, {"npc-name.lorax"}, "lorax", "linox-sprite_lorax") then return end
 
   local scene_id = db.get_player(player, __DB_SCENE_ID__, 0);
 
@@ -395,7 +393,8 @@ UTIL_create_event_handler("linox-custom-event_gui-dialog-on-select", function(ev
     elseif sel_id == "2" then
       dialog.close(player);
       
-      techshop.create(player, {"system.lorax-tech-shop"})
+      if not techshop.create(player, {"system.lorax-tech-shop"}) then return end
+
       techshop.add_tech(player,
         "linox-sprite_tungsten-extraction",
         "linox-technology_tungsten-extraction",
