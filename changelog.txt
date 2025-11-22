@@ -1,3 +1,8 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.2.2
+Date: 22. 11. 2025
+  Bugfixes:
+    - Fixed an issue where day and night cycles repeated on the surface of Linox. The surface of Linox should always be daytime.
 
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.1

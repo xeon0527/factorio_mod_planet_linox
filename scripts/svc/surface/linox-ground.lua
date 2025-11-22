@@ -195,6 +195,9 @@ UTIL_create_event_handler(defines.events.on_surface_created, function(event)
     settings.width = 128;
     settings.height = 128;
     surface.map_gen_settings = settings;
+    
+    surface.daytime = 0;
+    surface.freeze_daytime = true;
 
     surface.request_to_generate_chunks({0, 0}, 2)
     surface.force_generate_chunk_requests()
