@@ -15,23 +15,51 @@ data:extend {
   },
     {
       type = "technology",
-      name = "linox-technology_linox-petrochemicals",
-      icon = "__base__/graphics/technology/advanced-oil-processing.png",
-      icon_size = 256,
+      name = "linox-technology_recursive-blueprint",
+      icon = "__rec-blue-plus__/graphics/blueprint-deployer-icon.png",
+      icon_size = 64,
       prerequisites = {"linox-technology_laboratory-database"},
+      research_trigger = {
+        type = "scripted",
+        trigger_description = {"technology-description.linox-technology-trigger-description_lorax-purchase"}
+      },
+      effects =
+      {
+        { type = "unlock-recipe", recipe = "blueprint-deployer" },
+        { type = "unlock-recipe", recipe = "blueprint-deployer2" },
+        { type = "unlock-recipe", recipe = "recursive-blueprints-scanner" },
+      },
+    },
+    {
+      type = "technology",
+      name = "linox-technology_linox-supercomputer",
+      icon = "__space-exploration-graphics__/graphics/technology/supercomputer-3.png",
+      icon_size = 128,
+      prerequisites = {"linox-technology_laboratory-database"},
+      research_trigger = {
+        type = "scripted",
+        trigger_description = {"technology-description.linox-technology-trigger-description_lorax-purchase"}
+      },
+      effects =
+      {
+        { type = "unlock-recipe", recipe = "linox-recipe_linox-supercomputer" },
+        { type = "unlock-recipe", recipe = "linox-recipe_lava-data-card" },
+      },
+    },
+
+
+    {
+      type = "technology",
+      name = "linox-technology_linox-petrochemicals",
+      icon = "__base__/graphics/technology/oil-processing.png",
+      icon_size = 256,
+      prerequisites = {"linox-technology_ultra-deep-drilling"},
       unit =
       {
-        count = 500,
+        count = 250,
         ingredients =
         {
-          {"automation-science-pack", 1},
-          {"logistic-science-pack", 1},
-          {"chemical-science-pack", 1},
-          {"military-science-pack", 1},
-          {"production-science-pack", 1},
-          {"utility-science-pack", 1},
-          {"space-science-pack", 1},
-          {"metallurgic-science-pack", 1},
+          {"linox-item_lava-data-card", 1},
         },
         time = 60
       },
@@ -41,64 +69,38 @@ data:extend {
         { type = "unlock-recipe", recipe = "linox-recipe_lava-based-rocket-fuel" },
       },
     },
-
     {
       type = "technology",
-      name = "linox-technology_recursive-blueprint",
-      icon = "__space-age__/graphics/technology/quantum-processor.png",
+      name = "linox-technology_samarium-data-card",
+      icon = "__space-exploration-graphics__/graphics/technology/catalogue/energy-catalogue-1.png",
       icon_size = 256,
-      prerequisites = {"linox-technology_laboratory-database"},
+      prerequisites = {
+        "linox-technology_tungsten-processing",
+        "linox-technology_samarium-centrifugation",
+        "linox-technology_linox-petrochemicals",
+      },
       unit =
       {
-        count = 500,
+        count = 250,
         ingredients =
         {
-          {"automation-science-pack", 1},
-          {"logistic-science-pack", 1},
-          {"chemical-science-pack", 1},
-          {"military-science-pack", 1},
-          {"production-science-pack", 1},
-          {"utility-science-pack", 1},
-          {"space-science-pack", 1},
-          {"metallurgic-science-pack", 1},
+          {"linox-item_lava-data-card", 1},
+          {"linox-item_rare-earth-data-card", 1},
         },
         time = 60
       },
       effects =
       {
-        { type = "unlock-recipe", recipe = "blueprint-deployer" },
-        { type = "unlock-recipe", recipe = "blueprint-deployer2" },
-        { type = "unlock-recipe", recipe = "recursive-blueprints-scanner" },
+        { type = "unlock-recipe", recipe = "linox-recipe_samarium-data-card" },
       },
     },
 
-    {
-      type = "technology",
-      name = "linox-technology_tungsten-processing",
-      icon = "__space-age__/graphics/technology/tungsten-steel.png",
-      icon_size = 256,
-      prerequisites = {"linox-technology_laboratory-database"},
-      unit =
-      {
-        count = 500,
-        ingredients =
-        {
-          {"automation-science-pack", 1},
-          {"logistic-science-pack", 1},
-          {"chemical-science-pack", 1},
-          {"military-science-pack", 1},
-          {"production-science-pack", 1},
-          {"utility-science-pack", 1},
-          {"space-science-pack", 1},
-          {"metallurgic-science-pack", 1},
-        },
-        time = 60
-      },
-      effects =
-      {
-        { type = "unlock-recipe", recipe = "linox-recipe_tungsten-gear-wheel" },
-      },
-    },
+
+
+
+
+
+
       {
         type = "technology",
         name = "linox-technology_turbo-pump",
@@ -107,20 +109,15 @@ data:extend {
         prerequisites = {
           "linox-technology_tungsten-processing",
           "linox-technology_samarium-centrifugation",
+          "linox-technology_linox-petrochemicals",
         },
         unit =
         {
-          count = 500,
+          count = 250,
           ingredients =
           {
-            {"automation-science-pack", 1},
-            {"logistic-science-pack", 1},
-            {"chemical-science-pack", 1},
-            {"military-science-pack", 1},
-            {"production-science-pack", 1},
-            {"utility-science-pack", 1},
-            {"space-science-pack", 1},
-            {"metallurgic-science-pack", 1},
+            {"linox-item_lava-data-card", 1},
+            {"linox-item_rare-earth-data-card", 1},
           },
           time = 60
         },
@@ -143,14 +140,8 @@ data:extend {
           count = 500,
           ingredients =
           {
-            {"automation-science-pack", 1},
-            {"logistic-science-pack", 1},
-            {"chemical-science-pack", 1},
-            {"military-science-pack", 1},
-            {"production-science-pack", 1},
-            {"utility-science-pack", 1},
-            {"space-science-pack", 1},
-            {"metallurgic-science-pack", 1},
+            {"linox-item_lava-data-card", 1},
+            {"linox-item_rare-earth-data-card", 1},
           },
           time = 60
         },
@@ -173,14 +164,7 @@ data:extend {
         count = 500,
         ingredients =
         {
-          {"automation-science-pack", 1},
-          {"logistic-science-pack", 1},
-          {"chemical-science-pack", 1},
-          {"military-science-pack", 1},
-          {"production-science-pack", 1},
-          {"utility-science-pack", 1},
-          {"space-science-pack", 1},
-          {"metallurgic-science-pack", 1},
+          {"linox-item_lava-data-card", 1},
         },
         time = 60
       },
@@ -195,20 +179,18 @@ data:extend {
           "linox-technology_enhanced-space-engineering",
           "linox-technology_tungsten-processing",
           "linox-technology_samarium-centrifugation",
+          "linox-technology_rocket-silo-foundation",
+          "linox-technology_linox-petrochemicals",
+          "linox-technology_samarium-data-card",
         },
         unit =
         {
-          count = 2500,
+          count = 1500,
           ingredients =
           {
-            {"automation-science-pack", 1},
-            {"logistic-science-pack", 1},
-            {"chemical-science-pack", 1},
-            {"military-science-pack", 1},
-            {"production-science-pack", 1},
-            {"utility-science-pack", 1},
-            {"space-science-pack", 1},
-            {"metallurgic-science-pack", 1},
+            {"linox-item_lava-data-card", 1},
+            {"linox-item_rare-earth-data-card", 1},
+            {"linox-item_samarium-data-card", 1},
           },
           time = 60
         },
@@ -226,17 +208,11 @@ data:extend {
         },
         unit =
         {
-          count_formula = "2^(L-1)*1000",
+          count_formula = "2^(L-1)*500",
           ingredients =
           {
-            {"automation-science-pack", 1},
-            {"logistic-science-pack", 1},
-            {"chemical-science-pack", 1},
-            {"military-science-pack", 1},
-            {"production-science-pack", 1},
-            {"utility-science-pack", 1},
-            {"space-science-pack", 1},
-            {"metallurgic-science-pack", 1},
+            {"linox-item_lava-data-card", 1},
+            {"linox-item_rare-earth-data-card", 1},
           },
           time = 60
         },

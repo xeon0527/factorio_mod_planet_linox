@@ -1,4 +1,23 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.0
+Date: 22. 11. 2025
+  Major Features:
+    - The early-game progression has been completely revamped. Some basic research can now be purchased from L.O.R.A.X.
+    - A Linox-exclusive science pack has been added. A supercomputer for conducting research on Linox has also been added.
+    - The tech tree order has been adjusted to better suit progression.
+    - Most Linox research costs have been revamped to use the dedicated science pack.
+
+  Balancing:
+    - The recipe for the Cargo Elevator has been simplified.
+    - The recipe for the Fluid Elevator has been simplified.
+
+  Changes:
+    - Adjusted dialog text to automatically wrap when it becomes too long.
+    - Fixed an issue where button text was cut off at the bottom in languages other than Korean.
+    - Mech Armor can no longer fly over the out-of-map tiles in the Linox Facility.
+    - The recommended settings for Recursive Blueprints are now enforced. These settings are no longer visible in the options menu.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.1.13
 Date: 21. 11. 2025
   Changes:

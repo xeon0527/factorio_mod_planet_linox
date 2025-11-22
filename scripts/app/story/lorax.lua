@@ -6,6 +6,7 @@ local linox_facility = require("scripts.svc.surface.linox-facility")
 --DRV_storage_create("story.lorax", nil)
 
 local dialog = require("scripts.svc.gui.dialog")
+local techshop = require("scripts.svc.gui.techshop")
 local npc = require("scripts.svc.npc")
 
 local __MODULE__ = {}
@@ -22,12 +23,32 @@ UTIL_create_event_handler("linox-custom-event_on-entity-click", function(event)
   end
 end)
 
+-- 창을 닫았을 때 
+UTIL_create_event_handler("linox-custom-event_gui-dialog-on-close", function(event)
+  local player = event.player
+
+  if player and event.session_name == "lorax" then
+    local scene_id = db.get_player(player, __DB_SCENE_ID__, 0);
+    local techs = game.forces["player"].technologies
+
+    if scene_id == 3 and
+      techs["linox-technology_facility-upgrade"].researched and
+      techs["linox-technology_facility-factoryizing"].researched and
+      techs["linox-technology_laboratory-database"].researched and
+      techs["linox-technology_planetary-mining-technology"].researched
+    then
+      db.set_player(player, __DB_SCENE_ID__, 4);
+      player.print({"system.lorax-help"})
+    end
+  end
+end)
+
+
+
 local function __running_lorax()
   local surface = linox_ground.get()
   return surface and (#surface.find_entities_filtered{name="solar-panel"} >= 3)
 end
-
-
 
 __MODULE__.show = function(player)
   --dialog.create(player, "L.O.R.A.X", "lorax", "linox-sprite_lorax");
@@ -75,6 +96,16 @@ __MODULE__.show = function(player)
     end
   elseif scene_id == 3 then
     script.raise_event("linox-custom-event_gui-dialog-on-select", { player = player, select_id = "1" });
+
+  elseif scene_id == 4 then
+      dialog.add_talk(player, dialog.talker.partner, {"npc-talk.lorax_s4-0_t0"})
+      dialog.add_talk(player, dialog.talker.narration, {"npc-talk.lorax_s4-0_t1"})
+      dialog.add_select(player, "1", {"npc-talk.lorax_s4-0_s0"}, dialog.talker.player);
+
+  elseif scene_id == 5 then
+    dialog.add_talk(player, dialog.talker.partner, {"npc-talk.lorax_s5-0_t0"})
+    dialog.add_select(player, "1", {"npc-talk.lorax_s5-0_s0"}, dialog.talker.player);
+    dialog.add_select(player, "2", {"npc-talk.lorax_s5-0_s1"}, dialog.talker.player);
   end
 end
 
@@ -234,7 +265,7 @@ UTIL_create_event_handler("linox-custom-event_gui-dialog-on-select", function(ev
       dialog.add_select(player, "0", {"npc-talk.lorax_end"}, dialog.talker.player);
     end
 
-  elseif scene_id == 3 then
+  elseif scene_id == 3 or (scene_id == 5 and dialog.get_temp_data(player) == "5-3-1") then
     if sel_id == "1" then
       dialog.add_talk(player, dialog.talker.partner, {"npc-talk.lorax_s3-1_t0"})
       dialog.add_select(player, "2", {"npc-talk.lorax_s3-1_s0"}, dialog.talker.player);
@@ -336,6 +367,61 @@ UTIL_create_event_handler("linox-custom-event_gui-dialog-on-select", function(ev
       dialog.add_select(player, "1", {"npc-talk.lorax_back"});
 
       player.force.script_trigger_research("linox-technology_facility-factoryizing");
+    end
+  elseif scene_id == 4 then
+    if sel_id == "1" then
+      dialog.add_talk(player, dialog.talker.partner, {"npc-talk.lorax_s4-1_t0"})
+      dialog.add_select(player, "2", {"npc-talk.lorax_s4-1_s0"}, dialog.talker.player)
+
+    elseif sel_id == "2" then
+      dialog.add_talk(player, dialog.talker.partner, {"npc-talk.lorax_s4-2_t0"})
+      dialog.add_talk(player, dialog.talker.partner, {"npc-talk.lorax_s4-2_t1"})
+      dialog.add_talk(player, dialog.talker.partner, {"npc-talk.lorax_s4-2_t2"})
+      dialog.add_talk(player, dialog.talker.partner, {"npc-talk.lorax_s4-2_t3"})
+      dialog.add_select(player, "3", {"npc-talk.lorax_s4-2_s0"}, dialog.talker.player)
+
+    elseif sel_id == "3" then
+      dialog.add_talk(player, dialog.talker.partner, {"npc-talk.lorax_s4-3_t0"})
+      dialog.add_talk(player, dialog.talker.partner, {"npc-talk.lorax_s4-3_t1"})
+      dialog.add_talk(player, dialog.talker.partner, {"npc-talk.lorax_s4-3_t2"})
+      dialog.add_talk(player, dialog.talker.partner, {"npc-talk.lorax_s4-3_t3"})
+      dialog.add_select(player, "0", {"npc-talk.lorax_end"});
+      db.set_player(player, __DB_SCENE_ID__, 5);
+    end
+  elseif scene_id == 5 then
+    if sel_id == "1" then
+      dialog.set_temp_data(player, "5-3-1")
+      script.raise_event("linox-custom-event_gui-dialog-on-select", { player = player, select_id = "1" });
+    elseif sel_id == "2" then
+      dialog.close(player);
+      
+      techshop.create(player, {"system.lorax-tech-shop"})
+      techshop.add_tech(player,
+        "linox-sprite_tungsten-extraction",
+        "linox-technology_tungsten-extraction",
+        "[item=iron-plate] 1000    [item=copper-plate] 1000")
+
+      techshop.add_tech(player,
+        "linox-sprite_tungsten-processing",
+        "linox-technology_tungsten-processing",
+        "[item=tungsten-ore] 1000    [item=tungsten-plate] 1000")
+
+      techshop.add_tech(player,
+        "linox-sprite_recursive-blueprint",
+        "linox-technology_recursive-blueprint",
+        "[item=electronic-circuit] 2000")
+
+      techshop.add_tech(player,
+        "linox-sprite_expanding-factory",
+        "linox-technology_expanding-factory-1",
+        "[item=linox-item_tungsten-gear-wheel] 1000    [item=linox-item_tungsten-stick] 1000")
+
+      techshop.add_tech(player,
+        "linox-sprite_linox-supercomputer",
+        "linox-technology_linox-supercomputer",
+        "[item=electronic-circuit] 500    [item=linox-item_tungsten-gear-wheel] 500    [item=linox-item_tungsten-stick] 500")
+
+      techshop.refresh(player)
     end
   end
 end)

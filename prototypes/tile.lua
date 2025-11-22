@@ -1,11 +1,15 @@
+data:extend{{type = "collision-layer", name = "linox-collision-layer_flying",}}
+
+local collision_masks = data.raw["utility-constants"].default["default_collision_masks"]["character/flying"]
+collision_masks.layers["linox-collision-layer_flying"] = true
 
 table.insert(out_of_map_tile_type_names, "linox-tile_out-of-map");
-
 local out_of_map_copy = table.deepcopy(data.raw.tile["out-of-map"]);
 out_of_map_copy.name = "linox-tile_out-of-map";
 out_of_map_copy.autoplace = {
   probability_expression =  "elevation == 0",
 };
+out_of_map_copy.collision_mask.layers["linox-collision-layer_flying"] = true
 
 local lab_dark_1_copy = table.deepcopy(data.raw.tile["lab-dark-1"]);
 lab_dark_1_copy.name = "linox-tile_lab-dark-1";
@@ -84,8 +88,8 @@ tile.allows_being_covered = false;
 tile.can_be_part_of_blueprint = false;
 tile.is_foundation = true;
 tile.hidden = true;
-tile.map_color = { r = 0.07, g = 0.07, b = 0.07, a = 1.0 };
-tile.tint = { 0.66, 0.66, 0.66 };
+tile.map_color = { 0.85, 0.85, 0.85 };
+tile.tint = { 0.8, 1.0, 0.8 };
 
 data:extend { tile }
 

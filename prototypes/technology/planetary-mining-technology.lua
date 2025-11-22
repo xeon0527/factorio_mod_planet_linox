@@ -12,16 +12,69 @@ data:extend {
     },
     effects =
     {
-      {
-        type = "unlock-recipe",
-        recipe = "linox-recipe_low-temp-separation-of-calcium",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "linox-recipe_advanced-acid-neutralisation",
-      },
+      { type = "unlock-recipe", recipe = "linox-recipe_low-temp-separation-of-calcium", },
     },
   },
+    {
+      type = "technology",
+      name = "linox-technology_tungsten-extraction",
+      icon = "__space-age__/graphics/icons/tungsten-ore-3.png",
+      icon_size = 64,
+      prerequisites = {"linox-technology_planetary-mining-technology"},
+      research_trigger = {
+        type = "scripted",
+        trigger_description = {"technology-description.linox-technology-trigger-description_lorax-purchase"}
+      },
+      effects =
+      {
+        { type = "unlock-recipe", recipe = "linox-recipe_tungsten-extraction", },
+      },
+    },
+      {
+        type = "technology",
+        name = "linox-technology_tungsten-processing",
+        icon = "__space-age__/graphics/technology/tungsten-steel.png",
+        icon_size = 256,
+        prerequisites = {"linox-technology_tungsten-extraction"},
+        research_trigger = {
+          type = "scripted",
+          trigger_description = {"technology-description.linox-technology-trigger-description_lorax-purchase"}
+        },
+        effects =
+        {
+          { type = "unlock-recipe", recipe = "linox-recipe_tungsten-gear-wheel" },
+          { type = "unlock-recipe", recipe = "linox-recipe_tungsten-stick" },
+        },
+      },
+      {
+        type = "technology",
+        name = "linox-technology_stone-extraction",
+        icon = "__base__/graphics/icons/stone.png",
+        icon_size = 64,
+        prerequisites = {"linox-technology_planetary-mining-technology"},
+        effects =
+        {
+          {
+            type = "unlock-recipe",
+            recipe = "linox-recipe_stone-extraction",
+          },
+          {
+            type = "unlock-recipe",
+            recipe = "linox-recipe_casting-stone-brick",
+          },
+        },
+        unit =
+        {
+          count = 300,
+          ingredients =
+          {
+            {"linox-item_lava-data-card", 1},
+          },
+          time = 60
+        }
+      },
+
+
     {
       type = "technology",
       name = "linox-technology_mantle-extraction",
@@ -37,111 +90,14 @@ data:extend {
       },
       unit =
       {
-        count = 1000,
+        count = 500,
         ingredients =
         {
-          {"automation-science-pack", 1},
-          {"logistic-science-pack", 1},
-          {"chemical-science-pack", 1},
-          {"military-science-pack", 1},
-          {"production-science-pack", 1},
-          {"utility-science-pack", 1},
-          {"space-science-pack", 1},
-          {"metallurgic-science-pack", 1},
+          {"linox-item_lava-data-card", 1},
         },
         time = 60
       }
     },
-      {
-        type = "technology",
-        name = "linox-technology_stone-extraction",
-        icon = "__base__/graphics/icons/stone.png",
-        icon_size = 64,
-        prerequisites = {"linox-technology_mantle-extraction"},
-        effects =
-        {
-          {
-            type = "unlock-recipe",
-            recipe = "linox-recipe_stone-extraction",
-          },
-        },
-        unit =
-        {
-          count = 500,
-          ingredients =
-          {
-            {"automation-science-pack", 1},
-            {"logistic-science-pack", 1},
-            {"chemical-science-pack", 1},
-            {"military-science-pack", 1},
-            {"production-science-pack", 1},
-            {"utility-science-pack", 1},
-            {"space-science-pack", 1},
-            {"metallurgic-science-pack", 1},
-          },
-          time = 60
-        }
-      },
-      {
-        type = "technology",
-        name = "linox-technology_tungsten-extraction",
-        icon = "__space-age__/graphics/icons/tungsten-ore.png",
-        icon_size = 64,
-        prerequisites = {"linox-technology_mantle-extraction"},
-        effects =
-        {
-          {
-            type = "unlock-recipe",
-            recipe = "linox-recipe_tungsten-extraction",
-          },
-        },
-        unit =
-        {
-          count = 500,
-          ingredients =
-          {
-            {"automation-science-pack", 1},
-            {"logistic-science-pack", 1},
-            {"chemical-science-pack", 1},
-            {"military-science-pack", 1},
-            {"production-science-pack", 1},
-            {"utility-science-pack", 1},
-            {"space-science-pack", 1},
-            {"metallurgic-science-pack", 1},
-          },
-          time = 60
-        }
-      },
-      {
-        type = "technology",
-        name = "linox-technology_casting-stone-brick",
-        icon = "__base__/graphics/icons/stone-brick.png",
-        icon_size = 64,
-        prerequisites = {"linox-technology_mantle-extraction"},
-        effects =
-        {
-          {
-            type = "unlock-recipe",
-            recipe = "linox-recipe_casting-stone-brick",
-          },
-        },
-        unit =
-        {
-          count = 500,
-          ingredients =
-          {
-            {"automation-science-pack", 1},
-            {"logistic-science-pack", 1},
-            {"chemical-science-pack", 1},
-            {"military-science-pack", 1},
-            {"production-science-pack", 1},
-            {"utility-science-pack", 1},
-            {"space-science-pack", 1},
-            {"metallurgic-science-pack", 1},
-          },
-          time = 60
-        }
-      },
       {
         type = "technology",
         name = "linox-technology_rare-earth-refining",
@@ -154,20 +110,17 @@ data:extend {
             type = "unlock-recipe",
             recipe = "linox-recipe_rare-earth-refining",
           },
+          {
+            type = "unlock-recipe",
+            recipe = "linox-recipe_rare-earth-data-card",
+          },
         },
         unit =
         {
           count = 500,
           ingredients =
           {
-            {"automation-science-pack", 1},
-            {"logistic-science-pack", 1},
-            {"chemical-science-pack", 1},
-            {"military-science-pack", 1},
-            {"production-science-pack", 1},
-            {"utility-science-pack", 1},
-            {"space-science-pack", 1},
-            {"metallurgic-science-pack", 1},
+            {"linox-item_lava-data-card", 1},
           },
           time = 60
         }
@@ -187,17 +140,11 @@ data:extend {
           },
           unit =
           {
-            count = 500,
+            count = 350,
             ingredients =
             {
-              {"automation-science-pack", 1},
-              {"logistic-science-pack", 1},
-              {"chemical-science-pack", 1},
-              {"military-science-pack", 1},
-              {"production-science-pack", 1},
-              {"utility-science-pack", 1},
-              {"space-science-pack", 1},
-              {"metallurgic-science-pack", 1},
+              {"linox-item_lava-data-card", 1},
+              {"linox-item_rare-earth-data-card", 1},
             },
             time = 60
           }
@@ -205,24 +152,24 @@ data:extend {
       {
         type = "technology",
         name = "linox-technology_ultra-deep-drilling",
-        icon = "__base__/graphics/technology/advanced-oil-processing.png",
+        icon = "__base__/graphics/technology/oil-gathering.png",
         icon_size = 256,
         prerequisites = {"linox-technology_mantle-extraction"},
+        effects =
+        {
+          {
+            type = "unlock-recipe",
+            recipe = "linox-recipe_advanced-acid-neutralisation",
+          },
+        },
         unit =
         {
-          count = 500,
+          count = 250,
           ingredients =
           {
-            {"automation-science-pack", 1},
-            {"logistic-science-pack", 1},
-            {"chemical-science-pack", 1},
-            {"military-science-pack", 1},
-            {"production-science-pack", 1},
-            {"utility-science-pack", 1},
-            {"space-science-pack", 1},
-            {"metallurgic-science-pack", 1},
+            {"linox-item_lava-data-card", 1},
           },
           time = 60
-        }
+        },
       },
 };

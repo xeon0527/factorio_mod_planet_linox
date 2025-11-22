@@ -5,10 +5,10 @@ local recipe = {
   enabled = false,
   ingredients =
   {
-    {type = "item", name = "linox-item_tungsten-gear-wheel", amount = 50},
-    {type = "item", name = "tungsten-plate", amount = 10},
-    {type = "item", name = "electric-engine-unit", amount = 5},
-    {type = "item", name = "processing-unit", amount = 5},
+    {type = "item", name = "linox-item_tungsten-gear-wheel", amount = 25},
+    {type = "item", name = "electronic-circuit", amount = 10},
+    {type = "item", name = "iron-plate", amount = 10},
+    {type = "item", name = "copper-plate", amount = 10},
   },
   surface_conditions =
   {

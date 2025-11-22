@@ -3,8 +3,13 @@ require("prototypes.item.cargo-elevator");
 require("prototypes.item.core-roboport");
 require("prototypes.item.enable-entity");
 require("prototypes.item.fluid-elevator");
+require("prototypes.item.lava-data-card")
+require("prototypes.item.linox-supercomputer")
 require("prototypes.item.mantle-extractor")
+require("prototypes.item.rare-earth-data-card");
 require("prototypes.item.rare-earth-ore");
+require("prototypes.item.samarium-data-card");
 require("prototypes.item.samarium");
 require("prototypes.item.tungsten-gear-wheel");
+require("prototypes.item.tungsten-stick");
 require("prototypes.item.turbo-pump")

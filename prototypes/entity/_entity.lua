@@ -11,4 +11,5 @@ require("prototypes.entity.deep-oil-pumpjack");
 require("prototypes.entity.fluid-elevator");
 require("prototypes.entity.mantle-extractor")
 require("prototypes.entity.sulfuric-acid-pumpjack")
+require("prototypes.entity.linox-supercomputer")
 require("prototypes.entity.turbo-pump");

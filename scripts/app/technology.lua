@@ -21,10 +21,17 @@ local function __update_technology(event)
   local expand_facility_level = 0
   if tech["linox-technology_facility-factoryizing"].researched then
     expand_facility_level = 1
-    if tech["linox-technology_expanding-factory"].researched then
-      expand_facility_level = 8
-    else
-      expand_facility_level = tech["linox-technology_expanding-factory"].level;
+
+    if tech["linox-technology_expanding-factory-1"].researched then
+      expand_facility_level = expand_facility_level + 1
+    end
+
+    if tech["linox-technology_expanding-factory-2"].researched then
+      expand_facility_level = expand_facility_level + 1
+    end
+
+    if tech["linox-technology_expanding-factory-3"].researched then
+      expand_facility_level = expand_facility_level + 1
     end
   end
 

@@ -1,7 +1,6 @@
 local tint = { 1.0, 0.33, 0.33 };
 
-data:extend
-{
+data:extend {
   {
     type = "offshore-pump",
     name = "linox-entity_sulfuric-acid-pumpjack",

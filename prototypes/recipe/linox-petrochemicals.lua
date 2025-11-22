@@ -26,7 +26,7 @@ data:extend {
       }
     },
     results = {
-      { type = "item", name = "coal", amount = 1 },
+      { type = "item", name = "coal", amount = 5 },
     },
     allow_productivity = true,
   },

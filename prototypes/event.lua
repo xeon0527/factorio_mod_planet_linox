@@ -10,6 +10,11 @@ data:extend {{
 
 data:extend {{
   type = "custom-event",
+  name = "linox-custom-event_gui-dialog-on-close",
+}}
+
+data:extend {{
+  type = "custom-event",
   name = "linox-custom-event_on-enter-elevator",
 }}
 

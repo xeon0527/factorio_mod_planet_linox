@@ -13,3 +13,15 @@ end
 for i = #effects_idx, 1, -1 do
   table.remove(data.raw.technology["construction-robotics"].effects, effects_idx[i]);
 end
+
+local recipe_dp1 = data.raw["recipe"]["blueprint-deployer"];
+recipe_dp1.ingredients = {
+  {type = "item", name = "electronic-circuit", amount = 1},
+  {type = "item", name = "iron-plate", amount = 10},
+}
+
+local recipe_dp2 = data.raw["recipe"]["blueprint-deployer2"];
+recipe_dp2.ingredients = {
+  {type = "item", name = "electronic-circuit", amount = 1},
+  {type = "item", name = "iron-plate", amount = 10},
+}

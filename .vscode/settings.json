@@ -14,6 +14,7 @@
     "circuit_connector_definitions",
     "default_circuit_wire_max_distance",
     "pipecoverspictures",
-    "universal_connector_template"
+    "universal_connector_template",
+    "PlanetsLib"
   ],
 }

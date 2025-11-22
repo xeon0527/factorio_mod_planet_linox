@@ -24,7 +24,7 @@ data:extend {
     ingredients =
     {
       {type="item", name="stone", amount=100},
-      {type = "fluid", name = "sulfuric-acid", amount = 25},
+      {type = "fluid", name = "sulfuric-acid", amount = 400},
     },
     results = {
       {type="item", name="linox-item_rare-earth-ore", amount = 1},

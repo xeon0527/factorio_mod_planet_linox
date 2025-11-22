@@ -20,13 +20,13 @@ UTIL_create_event_handler(defines.events.on_gui_click, function(event)
   local player = game.players[event.player_index];
 
   -- 좌클릭만 인식, name이 linox-ui-dialog로 시작되는 엘리먼트만 인식
-  if event.button == defines.mouse_button_type.left and util.string_starts_with(element.name, prefix_name) then
+  if element.valid and event.button == defines.mouse_button_type.left and util.string_starts_with(element.name, prefix_name) then
     local session = __get_session(player);
 
     if element.name == prefix_name.."-close" or session == nil then
       __MODULE__.close(player);
     else
-      local strStart, strEnd = string.find(element.name, prefix_name.."-talk-select", 1, true)
+      local strStart = string.find(element.name, prefix_name.."-talk-select", 1, true)
       if strStart == 1 then
         local datas = UTIL_string_split(element.name, "::::");
 
@@ -51,7 +51,7 @@ UTIL_create_event_handler(defines.events.on_gui_click, function(event)
 end)
 
 UTIL_create_event_handler(defines.events.on_gui_closed, function(event)
-  if event.player_index and event.element and event.element.name == prefix_name.."-frame" then
+  if event.player_index and event.element and event.element.valid and event.element.name == prefix_name.."-frame" then
     __MODULE__.close(game.get_player(event.player_index));
   end
 end)
@@ -131,7 +131,7 @@ __MODULE__.create = function(player, caption, session_name, sprite)
       local dialog_log_scroll = frame.add{
         type = "scroll-pane",
         horizontal_scroll_policy = "never",
-        vertical_scroll_policy = "auto-and-reserve-space"
+        vertical_scroll_policy = "always"
       }
       dialog_log_scroll.style.horizontally_stretchable = true;
       dialog_log_scroll.style.height = 250;
@@ -148,6 +148,7 @@ __MODULE__.create = function(player, caption, session_name, sprite)
     partner_image = partner_image,
     log_scroll = dialog_log_scroll,
     log_list = dialog_log_list,
+    temp_data = nil,
   });
 end
 
@@ -155,6 +156,11 @@ __MODULE__.close = function(player)
   if player ~= nil then
     if player.gui.screen[prefix_name.."-frame"] then
       player.gui.screen[prefix_name.."-frame"].destroy();
+
+      script.raise_event("linox-custom-event_gui-dialog-on-close", {
+        player = player,
+        session_name = __get_session(player).name,
+      })
     end
     
     __remove_session(player)
@@ -169,9 +175,9 @@ __MODULE__.add_talk = function(player, talk, text)
     type = "flow",
     direction = "vertical",
   };
-  log_flow.style.height = 24;
+  log_flow.style.natural_height = 24;
   log_flow.style.margin = 0;
-  log_flow.style.padding = 4;
+  log_flow.style.padding = 3;
   log_flow.style.vertical_align = "center";
   log_flow.style.horizontally_stretchable = true;
 
@@ -179,6 +185,8 @@ __MODULE__.add_talk = function(player, talk, text)
   log.style.margin = 0;
   log.style.padding = 0;
   log.style.horizontally_stretchable = true;
+  log.style.single_line = false;
+  --log.style.vertically_stretchable = true;
 
   if talk == __MODULE__.talker.player then
     log.style.font_color = { 1, 1, 0, 1 };
@@ -215,10 +223,18 @@ __MODULE__.add_select = function(player, id, text, talker)
     mouse_button_filter = {"left"}
   };
   talk_button.style.height = 30;
-  talk_button.style.margin = 4;
-  talk_button.style.padding = 4;
+  talk_button.style.margin = 2;
+  talk_button.style.padding = 2;
   talk_button.style.horizontal_align = "center";
   talk_button.style.horizontally_stretchable = true;
+end
+
+__MODULE__.get_temp_data = function(player)
+  return __get_session(player).temp_data
+end
+
+__MODULE__.set_temp_data = function(player, temp_data)
+  __get_session(player).temp_data = temp_data
 end
 
 __MODULE__.clear_select = function(player)
