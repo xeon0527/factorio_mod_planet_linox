@@ -73,7 +73,7 @@ data:extend {
       type = "technology",
       name = "linox-technology_samarium-data-card",
       icon = "__space-exploration-graphics__/graphics/technology/catalogue/energy-catalogue-1.png",
-      icon_size = 256,
+      icon_size = 128,
       prerequisites = {
         "linox-technology_tungsten-processing",
         "linox-technology_samarium-centrifugation",

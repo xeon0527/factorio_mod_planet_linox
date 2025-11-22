@@ -129,7 +129,7 @@ data:extend {
           type = "technology",
           name = "linox-technology_samarium-centrifugation",
           icon = "__space-exploration-graphics__/graphics/technology/iridium-processing.png",
-          icon_size = 256,
+          icon_size = 128,
           prerequisites = {"linox-technology_rare-earth-refining"},
           effects =
           {
