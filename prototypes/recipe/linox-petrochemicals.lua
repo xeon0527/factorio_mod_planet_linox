@@ -6,7 +6,6 @@ data:extend {
     energy_required = 5,
     enabled = false,
     category = "oil-processing",
-    subgroup = "vulcanus-processes",
     ingredients =
     {
       {type = "fluid", name = "lava", amount = 150, fluidbox_index = 1},
@@ -37,7 +36,6 @@ data:extend {
     energy_required = 5,
     enabled = false,
     category = "chemistry",
-    subgroup = "vulcanus-processes",
     ingredients =
     {
       { type = "fluid", name = "lava", amount = 100 },

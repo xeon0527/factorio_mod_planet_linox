@@ -7,7 +7,6 @@ data:extend {
     enabled = false,
     auto_recycle = false,
     category = "chemistry-or-cryogenics",
-    subgroup = "vulcanus-processes",
     surface_conditions =
     {
       {

@@ -6,7 +6,6 @@ data:extend {
     enabled = false,
     auto_recycle = false,
     category = "centrifuging",
-    subgroup = "vulcanus-processes",
     ingredients =
     {
       {type = "item", name = "linox-item_rare-earth-ore", amount = 10},

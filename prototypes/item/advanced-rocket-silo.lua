@@ -2,6 +2,7 @@ local tint = { 1.0, 0.66, 0.66 };
 
 local item = table.deepcopy(data.raw["item"]["rocket-silo"]);
 item.name = "linox-item_advanced-rocket-silo";
+item.order = "z-aa"
 item.icon = nil;
 item.icons = {{
   icon = "__base__/graphics/icons/rocket-silo.png",

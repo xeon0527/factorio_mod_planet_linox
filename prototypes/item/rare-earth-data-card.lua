@@ -9,7 +9,7 @@ data:extend {
     icon = "__space-exploration-graphics__/graphics/icons/data/teleportation.png",
     subgroup = "science-pack",
     color_hint = { text = "R" },
-    order = "d[chemical-science-pack]",
+    order = "lb",
     inventory_move_sound = item_sounds.science_inventory_move,
     pick_sound = item_sounds.science_inventory_pickup,
     drop_sound = item_sounds.science_inventory_move,

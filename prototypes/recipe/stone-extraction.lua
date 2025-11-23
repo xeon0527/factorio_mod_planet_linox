@@ -5,7 +5,6 @@ data:extend {
     energy_required = 16,
     enabled = false,
     category = "metallurgy",
-    subgroup = "vulcanus-processes",
     ingredients =
     {
       {type = "fluid", name = "lava", amount = 500},

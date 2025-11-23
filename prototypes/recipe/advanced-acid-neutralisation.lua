@@ -5,7 +5,7 @@ data:extend {
     icon = "__space-age__/graphics/icons/fluid/acid-neutralisation.png",
     category = "chemistry-or-cryogenics",
     subgroup = "fluid-recipes",
-    order = "d[other-chemistry]-a[acid-neutralisation]",
+    order = "d[other-chemistry]-aa[acid-neutralisation]",
     auto_recycle = false,
     enabled = false,
     surface_conditions =

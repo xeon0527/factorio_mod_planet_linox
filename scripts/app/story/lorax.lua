@@ -403,17 +403,17 @@ UTIL_create_event_handler("linox-custom-event_gui-dialog-on-select", function(ev
       techshop.add_tech(player,
         "linox-sprite_tungsten-processing",
         "linox-technology_tungsten-processing",
-        "[item=tungsten-ore] 1000    [item=tungsten-plate] 1000")
+        "[item=tungsten-ore] 500    [item=tungsten-plate] 500")
 
       techshop.add_tech(player,
         "linox-sprite_recursive-blueprint",
         "linox-technology_recursive-blueprint",
-        "[item=electronic-circuit] 2000")
+        "[item=electronic-circuit] 1000")
 
       techshop.add_tech(player,
         "linox-sprite_expanding-factory",
         "linox-technology_expanding-factory-1",
-        "[item=linox-item_tungsten-gear-wheel] 1000    [item=linox-item_tungsten-stick] 1000")
+        "[item=linox-item_tungsten-gear-wheel] 500    [item=linox-item_tungsten-stick] 500")
 
       techshop.add_tech(player,
         "linox-sprite_linox-supercomputer",

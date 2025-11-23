@@ -9,7 +9,7 @@ data:extend {
     icon = "__space-exploration-graphics__/graphics/icons/data/hot-thermodynamics.png",
     subgroup = "science-pack",
     color_hint = { text = "L" },
-    order = "d[chemical-science-pack]",
+    order = "la",
     inventory_move_sound = item_sounds.science_inventory_move,
     pick_sound = item_sounds.science_inventory_pickup,
     drop_sound = item_sounds.science_inventory_move,

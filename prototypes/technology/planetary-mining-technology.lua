@@ -71,7 +71,8 @@ data:extend {
             {"linox-item_lava-data-card", 1},
           },
           time = 60
-        }
+        },
+        ignore_tech_cost_multiplier = true,
       },
 
 
@@ -96,7 +97,8 @@ data:extend {
           {"linox-item_lava-data-card", 1},
         },
         time = 60
-      }
+      },
+      ignore_tech_cost_multiplier = true,
     },
       {
         type = "technology",
@@ -123,7 +125,8 @@ data:extend {
             {"linox-item_lava-data-card", 1},
           },
           time = 60
-        }
+        },
+        ignore_tech_cost_multiplier = true,
       },
         {
           type = "technology",
@@ -147,7 +150,8 @@ data:extend {
               {"linox-item_rare-earth-data-card", 1},
             },
             time = 60
-          }
+          },
+          ignore_tech_cost_multiplier = true,
         },
       {
         type = "technology",
@@ -171,5 +175,6 @@ data:extend {
           },
           time = 60
         },
+        ignore_tech_cost_multiplier = true,
       },
 };

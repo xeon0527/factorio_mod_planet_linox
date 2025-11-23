@@ -3,7 +3,6 @@ data:extend {
     type = "recipe",
     name = "linox-recipe_casting-stone-brick",
     category = "metallurgy",
-    subgroup = "vulcanus-processes",
     energy_required = 3.2,
     enabled = true,
     ingredients = {{type = "item", name = "stone", amount = 2}},

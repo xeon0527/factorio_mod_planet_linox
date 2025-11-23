@@ -68,6 +68,7 @@ data:extend {
         { type = "unlock-recipe", recipe = "linox-recipe_rapid-distillation" },
         { type = "unlock-recipe", recipe = "linox-recipe_lava-based-rocket-fuel" },
       },
+      ignore_tech_cost_multiplier = true,
     },
     {
       type = "technology",
@@ -93,6 +94,7 @@ data:extend {
       {
         { type = "unlock-recipe", recipe = "linox-recipe_samarium-data-card" },
       },
+      ignore_tech_cost_multiplier = true,
     },
 
 
@@ -125,6 +127,7 @@ data:extend {
         {
           { type = "unlock-recipe", recipe = "linox-recipe_turbo-pump" },
         },
+        ignore_tech_cost_multiplier = true,
       },
       {
         type = "technology",
@@ -134,6 +137,7 @@ data:extend {
         prerequisites = {
           "linox-technology_tungsten-processing",
           "construction-robotics",
+          "linox-technology_rare-earth-refining",
         },
         unit =
         {
@@ -149,6 +153,7 @@ data:extend {
         {
           { type = "unlock-recipe", recipe = "linox-recipe_core-roboport" },
         },
+        ignore_tech_cost_multiplier = true,
       },
 
 
@@ -168,6 +173,7 @@ data:extend {
         },
         time = 60
       },
+      ignore_tech_cost_multiplier = true,
     },
       {
         type = "technology",
@@ -185,7 +191,7 @@ data:extend {
         },
         unit =
         {
-          count = 1500,
+          count = 750,
           ingredients =
           {
             {"linox-item_lava-data-card", 1},
@@ -198,6 +204,7 @@ data:extend {
         {
           { type = "unlock-recipe", recipe = "linox-recipe_advanced-rocket-silo" },
         },
+        ignore_tech_cost_multiplier = true,
       },
       {
         type = "technology",
@@ -205,10 +212,11 @@ data:extend {
         icons = util_icon.technology_icon_constant_damage_size("__space-age__/graphics/technology/rocket-part-productivity.png", 256),
         prerequisites = {
           "linox-technology_enhanced-space-engineering",
+          "linox-technology_rare-earth-refining",
         },
         unit =
         {
-          count_formula = "2^(L-1)*500",
+          count_formula = "L*250",
           ingredients =
           {
             {"linox-item_lava-data-card", 1},
@@ -218,5 +226,6 @@ data:extend {
         },
         max_level = 14,
         upgrade = true,
+        ignore_tech_cost_multiplier = true,
       },
 };

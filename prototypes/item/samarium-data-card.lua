@@ -9,7 +9,7 @@ data:extend {
     icon = "__space-exploration-graphics__/graphics/icons/data/electromagnetic-field.png",
     subgroup = "science-pack",
     color_hint = { text = "S" },
-    order = "d[chemical-science-pack]",
+    order = "lc",
     inventory_move_sound = item_sounds.science_inventory_move,
     pick_sound = item_sounds.science_inventory_pickup,
     drop_sound = item_sounds.science_inventory_move,

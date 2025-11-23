@@ -1,4 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.4
+Date: 23. 11. 2025
+  Balancing:
+    - Reduced the tungsten-related costs to half for the technologies sold by L.O.R.A.X.
+    - Research costs for some technologies have become cheaper.
+    - Linox technologies are no longer affected by the tech cost multiplier, since the factory cannot be expanded infinitely.
+
+  Bugfixes:
+    - Adjusted a few incorrect tech tree connections. This does not affect game progression.
+    - Fixed an issue where items were poorly sorted. Items may still appear duplicated in Factoriopedia, which will be addressed in a future update.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.2.3
 Date: 23. 11. 2025
   Bugfixes:

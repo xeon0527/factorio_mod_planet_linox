@@ -2,10 +2,11 @@ data:extend {
   {
     type = "recipe",
     name = "linox-recipe_tungsten-extraction",
+    subgroup = "vulcanus-processes",
+    order = "c[tungsten]-aa",
     energy_required = 16,
     enabled = false,
     category = "metallurgy",
-    subgroup = "vulcanus-processes",
     ingredients =
     {
       {type = "fluid", name = "lava", amount = 500},

@@ -54,6 +54,7 @@ data:extend {
             time = 60
           },
           upgrade = true,
+          ignore_tech_cost_multiplier = true,
         },
           {
             type = "technology",
@@ -65,14 +66,16 @@ data:extend {
             },
             unit =
             {
-              count = 500,
+              count = 250,
               ingredients =
               {
                 {"linox-item_lava-data-card", 1},
+                {"linox-item_rare-earth-data-card", 1},
               },
               time = 60
             },
             upgrade = true,
+            ignore_tech_cost_multiplier = true,
           },
 
 
@@ -84,13 +87,14 @@ data:extend {
       prerequisites = {"linox-technology_facility-upgrade", "linox-technology_enhanced-space-engineering"},
       unit =
       {
-        count = 1000,
+        count = 700,
         ingredients =
         {
           {"linox-item_lava-data-card", 1},
         },
         time = 60
-      }
+      },
+      ignore_tech_cost_multiplier = true,
     },
     --{
     --  type = "technology",
@@ -199,6 +203,7 @@ data:extend {
           {"linox-item_lava-data-card", 1},
         },
         time = 60
-      }
+      },
+      ignore_tech_cost_multiplier = true,
     },
 };

@@ -49,26 +49,26 @@ UTIL_create_event_handler(defines.events.on_gui_click, function(event)
               player.print({"system.lorax-tech-shop-item-shortage"})
             end
           elseif tech.name == "linox-technology_tungsten-processing" then
-            if inv.get_item_count("tungsten-ore") >= 1000 and inv.get_item_count("tungsten-plate") >= 1000 then
-              inv.remove{name="tungsten-ore", count = 1000}
-              inv.remove{name="tungsten-plate", count = 1000}
+            if inv.get_item_count("tungsten-ore") >= 500 and inv.get_item_count("tungsten-plate") >= 500 then
+              inv.remove{name="tungsten-ore", count = 500}
+              inv.remove{name="tungsten-plate", count = 500}
               player.force.script_trigger_research(tech.name);
               __MODULE__.refresh(player)
             else
               player.print({"system.lorax-tech-shop-item-shortage"})
             end
           elseif tech.name == "linox-technology_recursive-blueprint" then
-            if inv.get_item_count("electronic-circuit") >= 2000 then
-              inv.remove{name="electronic-circuit", count = 2000}
+            if inv.get_item_count("electronic-circuit") >= 1000 then
+              inv.remove{name="electronic-circuit", count = 1000}
               player.force.script_trigger_research(tech.name);
               __MODULE__.refresh(player)
             else
               player.print({"system.lorax-tech-shop-item-shortage"})
             end
           elseif tech.name == "linox-technology_expanding-factory-1" then
-            if inv.get_item_count("linox-item_tungsten-gear-wheel") >= 1000 and inv.get_item_count("linox-item_tungsten-stick") >= 1000 then
-              inv.remove{name="linox-item_tungsten-gear-wheel", count = 1000}
-              inv.remove{name="linox-item_tungsten-stick", count = 1000}
+            if inv.get_item_count("linox-item_tungsten-gear-wheel") >= 500 and inv.get_item_count("linox-item_tungsten-stick") >= 500 then
+              inv.remove{name="linox-item_tungsten-gear-wheel", count = 500}
+              inv.remove{name="linox-item_tungsten-stick", count = 500}
               player.force.script_trigger_research(tech.name);
               __MODULE__.refresh(player)
             else
