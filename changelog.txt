@@ -1,4 +1,18 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.3
+Date: 24. 11. 2025
+  Minor Features:
+    - Auxiliary icons have been added to researchable technologies via script.
+    - Added Linox planet auxiliary icons to technology icons that use vanilla icons.
+
+  Bugfixes:
+    - Fixed an issue where the Core Roboport was missing in the first example due to a built-in blueprint error.
+
+  Changes:
+    - Slightly increased the size of Linox as it appears on the starmap.
+    - Moved the Linox label slightly to the right on the starmap.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.3.2
 Date: 24. 11. 2025
   Bugfixes:

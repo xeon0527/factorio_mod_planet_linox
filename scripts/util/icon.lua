@@ -30,5 +30,37 @@ local __MODULE__ = {
       }
     }
   end,
+
+  technology_icon_script_research = function(technology_icon, size)
+    return {
+      {
+        icon = technology_icon,
+        icon_size = size,
+      },
+      {
+        icon = "__core__/graphics/icons/technology/effect-constant/effect-constant-upgrade-planner.png",
+        icon_size = 64,
+        scale = 1,
+        shift = {30, 30},
+        floating = true
+      }
+    }
+  end,
+
+  technology_icon_linox_mod = function(technology_icon, size)
+    return {
+      {
+        icon = technology_icon,
+        icon_size = size,
+      },
+      {
+        icon = "__linox__/graphics/icons/planet-linox-64.png",
+        icon_size = 64,
+        scale = 0.5,
+        shift = {46, 46},
+        floating = true
+      }
+    }
+  end,
 }
 return __MODULE__

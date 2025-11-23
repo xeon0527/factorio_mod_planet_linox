@@ -1,9 +1,10 @@
+local util_icon = require("scripts.util.icon")
+
 data:extend {
   {
     type = "technology",
     name = "linox-technology_facility-upgrade",
-    icon = "__base__/graphics/technology/gate.png",
-    icon_size = 256,
+    icons = util_icon.technology_icon_script_research("__base__/graphics/technology/gate.png", 256),
     essential = true,
     prerequisites = {"linox-technology_exploring-linox-landing-site"},
     research_trigger = {
@@ -14,8 +15,7 @@ data:extend {
     {
       type = "technology",
       name = "linox-technology_facility-factoryizing",
-      icon = "__base__/graphics/technology/stone-wall.png",
-      icon_size = 256,
+      icons = util_icon.technology_icon_script_research("__base__/graphics/technology/stone-wall.png", 256),
       prerequisites = {"linox-technology_facility-upgrade"},
       research_trigger = {
         type = "scripted",
@@ -25,8 +25,7 @@ data:extend {
       {
         type = "technology",
         name = "linox-technology_expanding-factory-1",
-        icon = "__base__/graphics/technology/stone-wall.png",
-        icon_size = 256,
+        icons = util_icon.technology_icon_script_research("__base__/graphics/technology/stone-wall.png", 256),
         prerequisites = {
           "linox-technology_facility-factoryizing"
         },
@@ -39,8 +38,7 @@ data:extend {
         {
           type = "technology",
           name = "linox-technology_expanding-factory-2",
-          icon = "__base__/graphics/technology/stone-wall.png",
-          icon_size = 256,
+          icons = util_icon.technology_icon_linox_mod("__base__/graphics/technology/stone-wall.png", 256),
           prerequisites = {
             "linox-technology_expanding-factory-1"
           },
@@ -59,8 +57,7 @@ data:extend {
           {
             type = "technology",
             name = "linox-technology_expanding-factory-3",
-            icon = "__base__/graphics/technology/stone-wall.png",
-            icon_size = 256,
+            icons = util_icon.technology_icon_linox_mod("__base__/graphics/technology/stone-wall.png", 256),
             prerequisites = {
               "linox-technology_expanding-factory-2",
               "linox-technology_samarium-centrifugation",
@@ -83,8 +80,7 @@ data:extend {
     {
       type = "technology",
       name = "linox-technology_rocket-silo-foundation",
-      icon = "__space-age__/graphics/technology/foundation.png",
-      icon_size = 256,
+      icons = util_icon.technology_icon_linox_mod("__space-age__/graphics/technology/foundation.png", 256),
       prerequisites = {"linox-technology_facility-upgrade", "linox-technology_enhanced-space-engineering"},
       unit =
       {
@@ -179,8 +175,7 @@ data:extend {
     {
       type = "technology",
       name = "linox-technology-cargo-elevator",
-      icon = "__base__/graphics/technology/engine.png",
-      icon_size = 256,
+      icons = util_icon.technology_icon_linox_mod("__base__/graphics/technology/engine.png", 256),
       prerequisites = {
         "linox-technology_facility-upgrade",
         "linox-technology_tungsten-processing",

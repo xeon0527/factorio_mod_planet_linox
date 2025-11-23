@@ -1,9 +1,10 @@
+local util_icon = require("scripts.util.icon")
+
 data:extend {
   {
     type = "technology",
     name = "linox-technology_planetary-mining-technology",
-    icon = "__space-age__/graphics/technology/big-mining-drill.png",
-    icon_size = 256,
+    icons = util_icon.technology_icon_script_research("__space-age__/graphics/technology/big-mining-drill.png", 256),
     essential = true,
     prerequisites = {"linox-technology_exploring-linox-landing-site"},
     research_trigger = {
@@ -18,8 +19,7 @@ data:extend {
     {
       type = "technology",
       name = "linox-technology_tungsten-extraction",
-      icon = "__space-age__/graphics/icons/tungsten-ore-3.png",
-      icon_size = 64,
+      icons = util_icon.technology_icon_script_research("__space-age__/graphics/icons/tungsten-ore-3.png", 64),
       prerequisites = {"linox-technology_planetary-mining-technology"},
       research_trigger = {
         type = "scripted",
@@ -33,8 +33,7 @@ data:extend {
       {
         type = "technology",
         name = "linox-technology_tungsten-processing",
-        icon = "__space-age__/graphics/technology/tungsten-steel.png",
-        icon_size = 256,
+        icons = util_icon.technology_icon_script_research("__space-age__/graphics/technology/tungsten-steel.png", 256),
         prerequisites = {"linox-technology_tungsten-extraction"},
         research_trigger = {
           type = "scripted",
@@ -49,8 +48,7 @@ data:extend {
       {
         type = "technology",
         name = "linox-technology_stone-extraction",
-        icon = "__base__/graphics/icons/stone.png",
-        icon_size = 64,
+        icons = util_icon.technology_icon_linox_mod("__base__/graphics/icons/stone.png", 64),
         prerequisites = {"linox-technology_planetary-mining-technology"},
         effects =
         {
@@ -79,8 +77,8 @@ data:extend {
     {
       type = "technology",
       name = "linox-technology_mantle-extraction",
-      icon = "__space-age__/graphics/technology/foundry.png",
-      icon_size = 256,
+      icon = "__space-exploration-graphics__/graphics/technology/core-miner.png",
+      icon_size = 128,
       prerequisites = {"linox-technology_planetary-mining-technology"},
       effects =
       {
@@ -161,8 +159,7 @@ data:extend {
       {
         type = "technology",
         name = "linox-technology_ultra-deep-drilling",
-        icon = "__base__/graphics/technology/oil-gathering.png",
-        icon_size = 256,
+        icons = util_icon.technology_icon_linox_mod("__base__/graphics/technology/oil-gathering.png", 256),
         prerequisites = {"linox-technology_mantle-extraction"},
         effects =
         {

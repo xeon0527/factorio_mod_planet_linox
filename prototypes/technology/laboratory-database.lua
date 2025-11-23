@@ -4,8 +4,7 @@ data:extend {
   {
     type = "technology",
     name = "linox-technology_laboratory-database",
-    icon = "__base__/graphics/technology/space-science-pack.png",
-    icon_size = 256,
+    icons = util_icon.technology_icon_script_research("__base__/graphics/technology/space-science-pack.png", 256),
     essential = true,
     prerequisites = {"linox-technology_exploring-linox-landing-site"},
     research_trigger = {
@@ -16,8 +15,7 @@ data:extend {
     {
       type = "technology",
       name = "linox-technology_recursive-blueprint",
-      icon = "__rec-blue-plus__/graphics/blueprint-deployer-icon.png",
-      icon_size = 64,
+      icons = util_icon.technology_icon_script_research("__rec-blue-plus__/graphics/blueprint-deployer-icon.png", 64),
       prerequisites = {"linox-technology_laboratory-database"},
       research_trigger = {
         type = "scripted",
@@ -33,8 +31,7 @@ data:extend {
     {
       type = "technology",
       name = "linox-technology_linox-supercomputer",
-      icon = "__space-exploration-graphics__/graphics/technology/supercomputer-3.png",
-      icon_size = 128,
+      icons = util_icon.technology_icon_script_research("__space-exploration-graphics__/graphics/technology/supercomputer-3.png", 128),
       prerequisites = {"linox-technology_laboratory-database"},
       research_trigger = {
         type = "scripted",
@@ -51,8 +48,7 @@ data:extend {
     {
       type = "technology",
       name = "linox-technology_linox-petrochemicals",
-      icon = "__base__/graphics/technology/oil-processing.png",
-      icon_size = 256,
+      icons = util_icon.technology_icon_linox_mod("__base__/graphics/technology/oil-processing.png", 256),
       prerequisites = {"linox-technology_ultra-deep-drilling"},
       unit =
       {
@@ -106,8 +102,7 @@ data:extend {
       {
         type = "technology",
         name = "linox-technology_turbo-pump",
-        icon = "__base__/graphics/technology/fluid-handling.png",
-        icon_size = 256,
+        icons = util_icon.technology_icon_linox_mod("__base__/graphics/technology/fluid-handling.png", 256),
         prerequisites = {
           "linox-technology_tungsten-processing",
           "linox-technology_sintering-machine",
@@ -162,8 +157,7 @@ data:extend {
     {
       type = "technology",
       name = "linox-technology_enhanced-space-engineering",
-      icon = "__base__/graphics/technology/rocket-silo.png",
-      icon_size = 256,
+      icons = util_icon.technology_icon_linox_mod("__base__/graphics/technology/rocket-silo.png", 256),
       prerequisites = {"linox-technology_laboratory-database"},
       unit =
       {
@@ -179,8 +173,20 @@ data:extend {
       {
         type = "technology",
         name = "linox-technology_advanced-rocket-silo",
-        icon = "__base__/graphics/technology/rocket-silo.png",
-        icon_size = 256,
+        icons = {
+          {
+            icon = "__base__/graphics/technology/rocket-silo.png",
+            icon_size = 256,
+            tint = {1.0, 0.66, 0.66},
+          },
+          {
+            icon = "__linox__/graphics/icons/planet-linox-64.png",
+            icon_size = 64,
+            scale = 0.5,
+            shift = {46, 46},
+            floating = true
+          }
+        },
         essential = true,
         prerequisites = {
           "linox-technology_enhanced-space-engineering",
@@ -210,7 +216,7 @@ data:extend {
       {
         type = "technology",
         name = "linox-technology_safety-of-entering-orbit",
-        icons = util_icon.technology_icon_constant_damage_size("__space-age__/graphics/technology/rocket-part-productivity.png", 256),
+        icons = util_icon.technology_icon_linox_mod("__space-age__/graphics/technology/rocket-part-productivity.png", 256),
         prerequisites = {
           "linox-technology_enhanced-space-engineering",
           "linox-technology_rare-earth-refining",

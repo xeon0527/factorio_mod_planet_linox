@@ -21,8 +21,8 @@ PlanetsLib:extend {
 
     --distance = 5,          -- 태양으로부터의 거리. 행성의 크기와는 무관.
     --orientation = 0.1,    -- 행성의 현재 위치. 0~1 사이의 값으로, 0은 태양에서 오른쪽, 0.25는 태양에서 위쪽, 0.5는 태양에서 왼쪽, 0.75는 태양에서 아래쪽.
-    magnitude = 0.5,        -- 행성의 크기. 행성의 거리와는 무관.
-    label_orientation = 0.0, -- 행성 이름의 위치. 0~1 사이의 값으로, 0은 태양에서 오른쪽, 0.25는 태양에서 위쪽, 0.5는 태양에서 왼쪽, 0.75는 태양에서 아래쪽.
+    magnitude = 0.8,        -- 행성의 크기. 행성의 거리와는 무관.
+    label_orientation = 0.25, -- 행성 이름의 위치. 0~1 사이의 값으로, 0은 태양에서 오른쪽, 0.25는 태양에서 위쪽, 0.5는 태양에서 왼쪽, 0.75는 태양에서 아래쪽.
     order = "d[vulcanus]",   -- 행성의 순서. starmap에서 행성의 위치에 영향을 줌.
     subgroup = "planets",
     map_gen_settings = linox_map_gen.ground(),
