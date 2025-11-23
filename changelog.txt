@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.1
+Date: 24. 11. 2025
+  Balancing:
+    - The tungsten extraction recipe can now only be used on Linox.
+
+  Bugfixes:
+    - Fixed an issue where the installation requirements for the mantle extractor were missing. It can now only be placed on surfaces with a pressure of 10 or higher and gravity of 1 or higher.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.3.0
 Date: 24. 11. 2025
   Major Features:

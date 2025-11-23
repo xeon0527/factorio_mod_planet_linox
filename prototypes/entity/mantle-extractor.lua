@@ -34,6 +34,11 @@ data:extend {
     energy_usage = "100MW",
     vector_to_place_result = { 0, -5.85 },
     --module_slots = 4,
+
+    surface_conditions = {
+      { property = "pressure", min = 10 },
+      { property = "gravity", min = 1 }
+    },
     
     fluid_box =
     {

@@ -7,6 +7,19 @@ data:extend {
     energy_required = 16,
     enabled = false,
     category = "metallurgy",
+    surface_conditions =
+    {
+      {
+        property = "magnetic-field",
+        min = 1600,
+        max = 1600,
+      },
+      {
+        property = "gravity",
+        min = 2,
+        max = 2
+      }
+    },
     ingredients =
     {
       {type = "fluid", name = "lava", amount = 500},
