@@ -22,12 +22,12 @@ end
 
 __MODULE__.has_building = function()
   local surface = __MODULE__.get()
-  return (surface.find_entity("linox-entity_cargo-landing-pad", {0,0}) ~= nil)
+  return (surface.find_entity("linox-building_cargo-landing-pad", {0,0}) ~= nil)
 end
 
 __MODULE__.obtain_cargo_landing_pad = function()
   local surface = __MODULE__.get()
-  local pad = surface.find_entity("linox-entity_cargo-landing-pad", {0,0});
+  local pad = surface.find_entity("linox-building_cargo-landing-pad", {0,0});
   pad.operable = true;
 end
 
@@ -81,7 +81,7 @@ __MODULE__.create_building = function()
 
 
   local cargo_pad = UTIL_ensure_entity(surface, {
-    name = "linox-entity_cargo-landing-pad",
+    name = "linox-building_cargo-landing-pad",
     position = {0,0},
     force = "player",
     create_build_effect_smoke = false,

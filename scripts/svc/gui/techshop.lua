@@ -152,42 +152,6 @@ local function __create_title_bar(parent, caption)
   title_close.style.margin = 0;
 end
 
---local function __create_tab(tab_pane, tab)
---  local _tab = tab_pane.add {
---    type = "tab",
---    caption = tab.caption,
---  }
---
---  local flow = tab_pane.add {
---    type = "flow",
---    direction = "vertical"
---  }
---  flow.style.horizontally_stretchable = true;
---  flow.style.vertically_stretchable = true;
---  --scroll_pane.style.padding = 10
---  flow.style.margin = 8
---
---  local btn1 = flow.add {
---    type = "button",
---  }
---  btn1.style.horizontally_stretchable = true;
---  btn1.style.vertically_stretchable = true;
---  
---  local btn2 = flow.add {
---    type = "button",
---  }
---  btn2.style.horizontally_stretchable = true;
---  btn2.style.vertically_stretchable = true;
---
---  local btn3 = flow.add {
---    type = "button",
---  }
---  btn3.style.horizontally_stretchable = true;
---  btn3.style.vertically_stretchable = true;
---
---  tab_pane.add_tab(_tab, flow)
---end
-
 local function __create_tech_list(frame)
   local list_scroll = frame.add{
     type = "scroll-pane",

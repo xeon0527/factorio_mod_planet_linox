@@ -16,7 +16,7 @@ end
 data:extend({
   {
     type = "roboport",
-    name = "linox-entity_core-roboport",
+    name = "linox-building_core-roboport",
     logistics_radius = 16,
     logistics_connection_distance = 16,
     robot_slots_count = 4,
@@ -24,7 +24,7 @@ data:extend({
     construction_radius = 16,
     minable = {
       mining_time = 0.1,
-      result = "linox-item_core-roboport",
+      result = "linox-building_core-roboport",
     },
     icon = "__space-exploration-graphics__/graphics/icons/supercharger.png",
     icon_size = 64,
@@ -153,3 +153,55 @@ data:extend({
     default_roboport_count_output_signal = {type = "virtual", name = "signal-R"},
   },
 })
+
+
+
+local item = {
+  type = "item",
+  name = "linox-building_core-roboport",
+  subgroup = "logistic-network",
+  order = "c[signal]-b[core-roboport]",
+  icon = "__space-exploration-graphics__/graphics/icons/supercharger.png",
+  icon_size = 64,
+  stack_size = 20,
+  weight = 50 * kg,
+  place_result = "linox-building_core-roboport",
+  default_import_location = "linox-planet_linox",
+};
+
+data:extend { item, }
+
+
+
+local recipe = {
+  type = "recipe",
+  name = "linox-building_core-roboport",
+  energy_required = 10,
+  enabled = false,
+  ingredients =
+  {
+    {type = "item", name = "steel-plate", amount = 25},
+    {type = "item", name = "linox-item_tungsten-gear-wheel", amount = 25},
+    {type = "item", name = "advanced-circuit", amount = 25},
+    {type = "item", name = "processing-unit", amount = 10},
+    {type = "item", name = "tungsten-carbide", amount = 10},
+  },
+  surface_conditions =
+    {
+      {
+        property = "magnetic-field",
+        min = 1600,
+        max = 1600,
+      },
+      {
+        property = "gravity",
+        min = 2,
+        max = 2
+      }
+    },
+  results = {{type="item", name="linox-building_core-roboport", amount=1}},
+  icon = "__space-exploration-graphics__/graphics/icons/supercharger.png",
+  icon_size = 64,
+}
+
+data:extend { recipe, }

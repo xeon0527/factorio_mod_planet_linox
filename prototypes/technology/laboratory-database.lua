@@ -42,8 +42,8 @@ data:extend {
       },
       effects =
       {
-        { type = "unlock-recipe", recipe = "linox-recipe_linox-supercomputer" },
-        { type = "unlock-recipe", recipe = "linox-recipe_lava-data-card" },
+        { type = "unlock-recipe", recipe = "linox-building_linox-supercomputer" },
+        { type = "unlock-recipe", recipe = "linox-item_lava-data-card" },
       },
     },
 
@@ -77,7 +77,7 @@ data:extend {
       icon_size = 128,
       prerequisites = {
         "linox-technology_tungsten-processing",
-        "linox-technology_samarium-centrifugation",
+        "linox-technology_sintering-machine",
         "linox-technology_linox-petrochemicals",
       },
       unit =
@@ -92,7 +92,7 @@ data:extend {
       },
       effects =
       {
-        { type = "unlock-recipe", recipe = "linox-recipe_samarium-data-card" },
+        { type = "unlock-recipe", recipe = "linox-item_samarium-data-card" },
       },
       ignore_tech_cost_multiplier = true,
     },
@@ -110,7 +110,7 @@ data:extend {
         icon_size = 256,
         prerequisites = {
           "linox-technology_tungsten-processing",
-          "linox-technology_samarium-centrifugation",
+          "linox-technology_sintering-machine",
           "linox-technology_linox-petrochemicals",
         },
         unit =
@@ -125,7 +125,7 @@ data:extend {
         },
         effects =
         {
-          { type = "unlock-recipe", recipe = "linox-recipe_turbo-pump" },
+          { type = "unlock-recipe", recipe = "linox-building_turbo-pump" },
         },
         ignore_tech_cost_multiplier = true,
       },
@@ -138,6 +138,7 @@ data:extend {
           "linox-technology_tungsten-processing",
           "construction-robotics",
           "linox-technology_rare-earth-refining",
+          "linox-technology_linox-petrochemicals",
         },
         unit =
         {
@@ -151,7 +152,7 @@ data:extend {
         },
         effects =
         {
-          { type = "unlock-recipe", recipe = "linox-recipe_core-roboport" },
+          { type = "unlock-recipe", recipe = "linox-building_core-roboport" },
         },
         ignore_tech_cost_multiplier = true,
       },
@@ -202,7 +203,7 @@ data:extend {
         },
         effects =
         {
-          { type = "unlock-recipe", recipe = "linox-recipe_advanced-rocket-silo" },
+          { type = "unlock-recipe", recipe = "linox-building_advanced-rocket-silo" },
         },
         ignore_tech_cost_multiplier = true,
       },
@@ -226,6 +227,33 @@ data:extend {
         },
         max_level = 14,
         upgrade = true,
+        ignore_tech_cost_multiplier = true,
+      },
+
+      {
+        type = "technology",
+        name = "linox-technology_sintering-machine",
+        icon = "__linox__/graphics/technology/sintering-machine.png",
+        icon_size = 640,
+        prerequisites = {
+          "linox-technology_tungsten-processing",
+          "linox-technology_samarium-centrifugation",
+        },
+        unit =
+        {
+          count = 150,
+          ingredients =
+          {
+            {"linox-item_lava-data-card", 2},
+            {"linox-item_rare-earth-data-card", 2},
+          },
+          time = 60
+        },
+        effects =
+        {
+          { type = "unlock-recipe", recipe = "linox-building_sintering-machine" },
+          { type = "unlock-recipe", recipe = "linox-item_samarium" },
+        },
         ignore_tech_cost_multiplier = true,
       },
 };

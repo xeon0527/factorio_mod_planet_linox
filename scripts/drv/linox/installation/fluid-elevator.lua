@@ -1,4 +1,4 @@
-local __entity_name = "linox-entity_fluid-elevator"
+local __entity_name = "linox-building_fluid-elevator"
 local __link_id = 25702570
 
 local function __fluid_elevator_construct_event_proc(event)

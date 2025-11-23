@@ -67,7 +67,7 @@ __MODULE__.linox_exploration_log_2 = {
     surface.set_tiles(modify_tiles);
 
     surface.create_entity{
-      name = "linox-entity_cargo-landing-pad",
+      name = "linox-building_cargo-landing-pad",
       position = {0,0},
       force = "player",
       create_build_effect_smoke = false,
@@ -203,17 +203,17 @@ __MODULE__.linox_placement_restriction = {
     }
 
     surface.create_entity{
-      name = "linox-entity_cargo-elevator",
+      name = "linox-building_cargo-elevator",
       position = {0, 3},
     }
 
     surface.create_entity{
-      name = "linox-entity_fluid-elevator",
+      name = "linox-building_fluid-elevator",
       position = {2, 3},
     }
 
     surface.create_entity{
-      name = "linox-entity_turbo-pump",
+      name = "linox-building_turbo-pump",
       position = {4, 3},
     }
 
@@ -263,7 +263,7 @@ __MODULE__.linox_planetary_power_network = {
     surface.set_tiles(modify_tiles);
 
     surface.create_entity{
-      name = "linox-entity_cargo-landing-pad",
+      name = "linox-building_cargo-landing-pad",
       position = {0,0},
       force = "player",
       create_build_effect_smoke = false,
@@ -298,7 +298,7 @@ __MODULE__.linox_planetary_power_network = {
     surface2.set_tiles(modify_tiles);
 
     surface2.create_entity{
-      name = "linox-entity_cargo-landing-pad",
+      name = "linox-building_cargo-landing-pad",
       position = {0,0},
       create_build_effect_smoke = false,
     }
@@ -430,14 +430,14 @@ __MODULE__.npc_system = {
     }
 
     local entity_lorax = surface.create_entity{
-      name = "linox-entity_npc-lorax",
+      name = "linox-npc_lorax",
       position = {-17, -17},
       force = "neutral",
       create_build_effect_smoke = false,
     };
 
     rendering.draw_text{
-      text = {"entity-name.linox-entity_npc-lorax"},
+      text = {"entity-name.linox-npc_lorax"},
       surface = surface,
       target = {
           entity = entity_lorax,

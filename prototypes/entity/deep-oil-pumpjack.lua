@@ -4,7 +4,7 @@ data:extend
 {
   {
     type = "offshore-pump",
-    name = "linox-entity_deep-oil-pumpjack",
+    name = "linox-building_deep-oil-pumpjack",
     icon = "__base__/graphics/icons/pumpjack.png",
     flags = {"placeable-neutral", "player-creation"},
     max_health = 5000,

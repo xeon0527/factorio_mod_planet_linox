@@ -3,7 +3,7 @@ local tint = { 1.0, 0.33, 0.33 };
 data:extend {
   {
     type = "offshore-pump",
-    name = "linox-entity_sulfuric-acid-pumpjack",
+    name = "linox-building_sulfuric-acid-pumpjack",
     icon = "__base__/graphics/icons/pumpjack.png",
     flags = {"placeable-neutral", "player-creation"},
     max_health = 5000,

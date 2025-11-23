@@ -3,11 +3,11 @@ local sounds = require("__base__.prototypes.entity.sounds")
 data:extend {
   {
     type = "lab",
-    name = "linox-entity_linox-supercomputer",
+    name = "linox-building_linox-supercomputer",
     icon = "__space-exploration-graphics__/graphics/icons/supercomputer-3.png",
     icon_size = 64,
     flags = {"placeable-player", "player-creation"},
-    minable = {mining_time = 0.5, result = "linox-item_linox-supercomputer"},
+    minable = {mining_time = 0.5, result = "linox-building_linox-supercomputer"},
 
     fast_replaceable_group = "lab",
     impact_category = "metal-large",
@@ -129,3 +129,53 @@ data:extend {
     },
   }
 }
+
+
+
+data:extend {
+  {
+    type = "item",
+    name = "linox-building_linox-supercomputer",
+    icon = "__space-exploration-graphics__/graphics/icons/supercomputer-3.png",
+    icon_size = 64,
+    subgroup = "production-machine",
+    order = "z[lab]-a",
+    stack_size = 10,
+    weight = 10 * tons,
+    place_result = "linox-building_linox-supercomputer",
+    default_import_location = "linox-planet_linox",
+  },
+}
+
+
+
+local recipe = {
+  type = "recipe",
+  name = "linox-building_linox-supercomputer",
+  energy_required = 3,
+  enabled = false,
+  ingredients =
+  {
+    {type = "item", name = "linox-item_tungsten-gear-wheel", amount = 10},
+    {type = "item", name = "linox-item_tungsten-stick", amount = 10},
+    {type = "item", name = "electronic-circuit", amount = 25},
+    {type = "item", name = "iron-plate", amount = 10},
+    {type = "item", name = "copper-plate", amount = 10},
+  },
+  surface_conditions =
+    {
+      {
+        property = "magnetic-field",
+        min = 1600,
+        max = 1600,
+      },
+      {
+        property = "gravity",
+        min = 2,
+        max = 2
+      }
+    },
+  results = {{type="item", name="linox-building_linox-supercomputer", amount=1}},
+}
+
+data:extend { recipe, }

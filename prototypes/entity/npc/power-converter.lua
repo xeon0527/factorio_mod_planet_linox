@@ -1,60 +1,60 @@
-local tint = { 1.0, 1.0, 0.5 }
-
-local entity = table.deepcopy(data.raw["accumulator"]["accumulator"])
-entity.name = "linox-entity_npc-power-converter"
-entity.flags = {
-  "not-rotatable",
-  "placeable-neutral",
-  "get-by-unit-number", 
-  "not-deconstructable",
-  "not-blueprintable", 
-}
-
-entity.chargable_graphics.picture.layers[1].tint = tint;
-entity.chargable_graphics.charge_animation.layers[1].layers[1].tint = tint;
-entity.chargable_graphics.discharge_animation.layers[1].layers[1].tint = tint;
-entity.max_health = 1000;
-entity.energy_source =
-{
-  type = "electric",
-  buffer_capacity = "10GJ",
-  usage_priority = "tertiary",
-  input_flow_limit = "10GW",
-  output_flow_limit = "10GW"
-}
-entity.circuit_connector = circuit_connector_definitions.create_single
-(
-  universal_connector_template,
-  { variation = 26, main_offset = util.by_pixel(-18.5, 19), shadow_offset = util.by_pixel(-20.5, 25.5), show_shadow = true }
-)
-
-data:extend { entity }
-
-local output_connection_point = {
-  wire = { red = {0.5, 0.5},   green = {0.5, 0.5}},
-  shadow = { red = {0.5, 0.5},   green = {0.5, 0.5}, },
-}
-
-data:extend {
-  {
-    type = "constant-combinator",
-    name = "linox-entity_npc-power-converter-output",
-    icon = "__base__/graphics/icons/accumulator.png",
-    hidden = true,
-    flags = {"placeable-player", "player-creation", "placeable-off-grid",  "not-rotatable", "not-deconstructable", "hide-alt-info"},
-    max_health = 1000,
-    collision_box = {{-0.5, -1}, {0.5, 1}},
-    selection_box = {{-0.5, -1}, {0.5, 1}},
-    scale_info_icons = false,
-    selectable_in_game = true,
-    selection_priority = 150,
-    item_slot_count = 10,
-    circuit_wire_connection_points = { output_connection_point,  output_connection_point,  output_connection_point,  output_connection_point, },
-    circuit_wire_max_distance = 10,
-    activity_led_light = {
-      intensity = 0.8,
-      size = 1,
-    },
-    activity_led_light_offsets = {{0, 0},{0, 0},{0, 0},{0, 0}},
-  }
-}
+--local tint = { 1.0, 1.0, 0.5 }
+--
+--local entity = table.deepcopy(data.raw["accumulator"]["accumulator"])
+--entity.name = "linox-npc_power-converter"
+--entity.flags = {
+--  "not-rotatable",
+--  "placeable-neutral",
+--  "get-by-unit-number", 
+--  "not-deconstructable",
+--  "not-blueprintable", 
+--}
+--
+--entity.chargable_graphics.picture.layers[1].tint = tint;
+--entity.chargable_graphics.charge_animation.layers[1].layers[1].tint = tint;
+--entity.chargable_graphics.discharge_animation.layers[1].layers[1].tint = tint;
+--entity.max_health = 1000;
+--entity.energy_source =
+--{
+--  type = "electric",
+--  buffer_capacity = "10GJ",
+--  usage_priority = "tertiary",
+--  input_flow_limit = "10GW",
+--  output_flow_limit = "10GW"
+--}
+--entity.circuit_connector = circuit_connector_definitions.create_single
+--(
+--  universal_connector_template,
+--  { variation = 26, main_offset = util.by_pixel(-18.5, 19), shadow_offset = util.by_pixel(-20.5, 25.5), show_shadow = true }
+--)
+--
+--data:extend { entity }
+--
+--local output_connection_point = {
+--  wire = { red = {0.5, 0.5},   green = {0.5, 0.5}},
+--  shadow = { red = {0.5, 0.5},   green = {0.5, 0.5}, },
+--}
+--
+--data:extend {
+--  {
+--    type = "constant-combinator",
+--    name = "linox-npc_power-converter-output",
+--    icon = "__base__/graphics/icons/accumulator.png",
+--    hidden = true,
+--    flags = {"placeable-player", "player-creation", "placeable-off-grid",  "not-rotatable", "not-deconstructable", "hide-alt-info"},
+--    max_health = 1000,
+--    collision_box = {{-0.5, -1}, {0.5, 1}},
+--    selection_box = {{-0.5, -1}, {0.5, 1}},
+--    scale_info_icons = false,
+--    selectable_in_game = true,
+--    selection_priority = 150,
+--    item_slot_count = 10,
+--    circuit_wire_connection_points = { output_connection_point,  output_connection_point,  output_connection_point,  output_connection_point, },
+--    circuit_wire_max_distance = 10,
+--    activity_led_light = {
+--      intensity = 0.8,
+--      size = 1,
+--    },
+--    activity_led_light_offsets = {{0, 0},{0, 0},{0, 0},{0, 0}},
+--  }
+--}

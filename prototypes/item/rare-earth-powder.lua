@@ -1,8 +1,8 @@
 data:extend {
   {
     type = "item",
-    name = "linox-item_rare-earth-ore",
-    icon = "__space-exploration-graphics__/graphics/icons/naquium-ore-crushed.png",
+    name = "linox-item_rare-earth-powder",
+    icon = "__linox__/graphics/icons/rare-earth-powder.png",
     subgroup = "vulcanus-processes",
     order = "c[tungsten]-ab",
     icon_size = 64,

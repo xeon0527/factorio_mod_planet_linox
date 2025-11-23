@@ -12,3 +12,15 @@ item.icons = {{
 }};
 
 data:extend { item, }
+
+
+
+data:extend {
+  {
+    type = "recipe",
+    name = "linox-item_tungsten-stick",
+    ingredients = {{type = "item", name = "tungsten-plate", amount = 1}},
+    results = {{type="item", name="linox-item_tungsten-stick", amount = 2}},
+    allow_productivity = true
+  },
+}

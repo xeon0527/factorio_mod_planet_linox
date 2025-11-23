@@ -1,7 +1,7 @@
 data:extend {
   {
     type = "furnace",
-    name = "linox-entity_npc-lorax",
+    name = "linox-npc_lorax",
     flags = {
       "not-rotatable",
       "placeable-neutral",

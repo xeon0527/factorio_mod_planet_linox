@@ -1,4 +1,29 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.0
+Date: 24. 11. 2025
+  Major Features:
+    - Rare earth ore has been changed to rare earth powder.
+    - Samarium powder has been added.
+    - Sintering research has been added.
+    - The sintering furnace has been added.
+    - Replaced the samarium images.
+    - Replaced the rare earth images.
+
+  Balancing:
+    - Tungsten rods are now produced in batches of 2.
+    - Adjusted the research tree to match the requirements.
+    - The factory expansion research level has been reduced from 8 to 4. This was updated previously but was missing from the changelog.
+
+  Changes:
+    - Most internal names of the mod’s components have been changed. This may cause text display errors or issues with game progression, so please let us know if you encounter any.
+
+  Bugfixes:
+    - Items no longer appear duplicated in Factoriopedia.
+
+  Translation:
+    - All missing Russian translations have been added.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.2.4
 Date: 23. 11. 2025
   Balancing:

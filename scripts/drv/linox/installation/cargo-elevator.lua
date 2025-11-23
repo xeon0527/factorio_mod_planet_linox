@@ -1,4 +1,4 @@
-local __entity_name = "linox-entity_cargo-elevator"
+local __entity_name = "linox-building_cargo-elevator"
 
 local function __cargo_elevator_construct_event_proc(event)
   local entity = event.entity or event.destination

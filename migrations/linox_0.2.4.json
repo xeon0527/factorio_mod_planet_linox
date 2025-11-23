@@ -1,0 +1,56 @@
+{
+  "entity":[
+    ["linox-entity_npc-lorax",                    "linox-npc_lorax"],
+    ["linox-entity_npc-network-terminal",         "linox-npc_network-terminal"],
+    ["linox-entity_npc-power-converter",          "linox-npc_power-converter"],
+
+    ["linox-entity_hidden-radar",                 "linox-hidden_radar"],
+    ["linox-entity_hidden-electric-pole",         "linox-hidden_electric-pole"],
+    
+    ["linox-entity_advanced-rocket-silo",         "linox-building_advanced-rocket-silo"],
+    ["linox-entity_advanced-rocket-silo-rocket",  "linox-building_advanced-rocket-silo-rocket"],
+    ["linox-entity_cargo-elevator",               "linox-building_cargo-elevator"],
+    ["linox-entity_cargo-landing-pad",            "linox-building_cargo-landing-pad"],
+    ["linox-entity_core-roboport",                "linox-building_core-roboport"],
+    ["linox-entity_deep-oil-pumpjack",            "linox-building_deep-oil-pumpjack"],
+    ["linox-entity_fluid-elevator",               "linox-building_fluid-elevator"],
+    ["linox-entity_fluid-elevator-input",         "linox-building_fluid-elevator-input"],
+    ["linox-entity_fluid-elevator-output",        "linox-building_fluid-elevator-output"],
+    ["linox-entity_linox-supercomputer",          "linox-building_linox-supercomputer"],
+    ["linox-entity_mantle-extractor",             "linox-building_mantle-extractor"],
+    ["linox-entity_sulfuric-acid-pumpjack",       "linox-building_sulfuric-acid-pumpjack"],
+    ["linox-entity_turbo-pump",                   "linox-building_turbo-pump"]
+  ],
+
+  "item":[
+    ["linox-item_advanced-rocket-silo",         "linox-building_advanced-rocket-silo"],
+    ["linox-item_advanced-rocket-silo-rocket",  "linox-building_advanced-rocket-silo-rocket"],
+    ["linox-item_cargo-elevator",               "linox-building_cargo-elevator"],
+    ["linox-item_cargo-landing-pad",            "linox-building_cargo-landing-pad"],
+    ["linox-item_core-roboport",                "linox-building_core-roboport"],
+    ["linox-item_deep-oil-pumpjack",            "linox-building_deep-oil-pumpjack"],
+    ["linox-item_fluid-elevator",               "linox-building_fluid-elevator"],
+    ["linox-item_linox-supercomputer",          "linox-building_linox-supercomputer"],
+    ["linox-item_mantle-extractor",             "linox-building_mantle-extractor"],
+    ["linox-item_sulfuric-acid-pumpjack",       "linox-building_sulfuric-acid-pumpjack"],
+    ["linox-item_turbo-pump",                   "linox-building_turbo-pump"],
+
+    ["linox-item_rare-earth-ore",               "linox-item_rare-earth-powder"]
+  ],
+
+  "recipe":[
+    ["linox-recipe_advanced-rocket-silo",         "linox-building_advanced-rocket-silo"],
+    ["linox-recipe_cargo-elevator",               "linox-building_cargo-elevator"],
+    ["linox-recipe_core-roboport",                "linox-building_core-roboport"],
+    ["linox-recipe_deep-oil-pumpjack",            "linox-building_deep-oil-pumpjack"],
+    ["linox-recipe_lava-data-card",               "linox-item_lava-data-card"],
+    ["linox-recipe_fluid-elevator",               "linox-building_fluid-elevator"],
+    ["linox-recipe_linox-supercomputer",          "linox-building_linox-supercomputer"],
+    ["linox-recipe_mantle-extractor",             "linox-building_mantle-extractor"],
+    ["linox-recipe_rare-earth-data-card",         "linox-item_rare-earth-data-card"],
+    ["linox-recipe_samarium-data-card",           "linox-item_samarium-data-card"],
+    ["linox-recipe_tungsten-gear-wheel",          "linox-item_tungsten-gear-wheel"],
+    ["linox-recipe_tungsten-stick",               "linox-item_tungsten-stick"],
+    ["linox-recipe_turbo-pump",                   "linox-building_turbo-pump"]
+  ]
+}

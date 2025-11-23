@@ -1,7 +1,7 @@
 data:extend {
   {
     type = "radar",
-    name = "linox-entity_hidden-radar",
+    name = "linox-hidden_radar",
     selectable_in_game = false,
     flags = {"not-on-map", "hide-alt-info", "not-deconstructable", "not-blueprintable"},
     hidden = true,
@@ -18,7 +18,7 @@ data:extend {
   },
   {
     type = "electric-pole",
-    name = "linox-entity_hidden-electric-pole",
+    name = "linox-hidden_electric-pole",
     selectable_in_game = false,
     flags = {"not-on-map", "hide-alt-info", "placeable-off-grid", "not-deconstructable", "not-blueprintable"},
     hidden = true,

@@ -2,7 +2,7 @@ data:extend {
   {
     type = "recipe",
     name = "linox-recipe_rare-earth-refining",
-    icon = "__space-exploration-graphics__/graphics/icons/naquium-ore-crushed.png",
+    icon = "__linox__/graphics/icons/rare-earth-powder.png",
     energy_required = 30,
     enabled = false,
     auto_recycle = false,
@@ -26,7 +26,7 @@ data:extend {
       {type = "fluid", name = "sulfuric-acid", amount = 400},
     },
     results = {
-      {type="item", name="linox-item_rare-earth-ore", amount = 1},
+      {type="item", name="linox-item_rare-earth-powder", amount = 1},
     },
     allow_decomposition = false,
     allow_productivity = true,

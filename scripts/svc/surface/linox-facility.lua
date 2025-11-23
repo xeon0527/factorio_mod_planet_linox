@@ -1,14 +1,14 @@
-local linox_map_gen = require("prototypes.planet.map-gen")
-local sample_bp = require("scripts.svc.surface.sample.bp")
-local sample_bp_book = require("scripts.svc.surface.sample.book")
-local linox_global = require("scripts.svc.surface.linox-global")
+local linox_map_gen   = require("prototypes.planet.map-gen")
+local sample_bp       = require("scripts.svc.surface.sample.bp")
+local sample_bp_book  = require("scripts.svc.surface.sample.book")
+local linox_global    = require("scripts.svc.surface.linox-global")
 local factory_builder = require("scripts.svc.surface.builder.factory-builder")
-local util_surface = require("scripts.util.surface")
+local util_surface    = require("scripts.util.surface")
 
 local __MODULE__ = {};
 
-local __base_foundation_tile = "linox-tile_linox-terminal-platform"
-local __base_border_tile = "linox-tile_linox-hazard-terminal-platform"
+local __base_foundation_tile  = "linox-tile_linox-terminal-platform"
+local __base_border_tile      = "linox-tile_linox-hazard-terminal-platform"
 
 
 UTIL_create_event_handler(defines.events.on_surface_created, function(event)
@@ -21,7 +21,7 @@ UTIL_create_event_handler(defines.events.on_surface_created, function(event)
     settings.height = 256;
     surface.map_gen_settings = settings;
 
-    surface.localised_name = { "space-location-name.linox-surface_under-1" }
+    surface.localised_name = { "space-location-name."..__LINOX_SURFACE__.facility }
     surface.set_property("gravity", __LINOX_PLANET__.gravity);
     surface.set_property("magnetic-field", __LINOX_PLANET__.magnetic_field);
     surface.set_property("solar-power", 0);
@@ -77,7 +77,7 @@ UTIL_create_event_handler(defines.events.on_surface_created, function(event)
 
     -- cargo landing pad 생성
     local cargo_pad = UTIL_ensure_entity(surface, {
-      name = "linox-entity_cargo-landing-pad",
+      name = "linox-building_cargo-landing-pad",
       position = {0,0},
       force = "neutral",
       create_build_effect_smoke = false,
@@ -89,7 +89,7 @@ UTIL_create_event_handler(defines.events.on_surface_created, function(event)
 
     -- pumpjack 생성
     local pumpjack = UTIL_ensure_entity(surface, {
-      name = "linox-entity_deep-oil-pumpjack",
+      name = "linox-building_deep-oil-pumpjack",
       position = { -10.5, 10.5 },
       force = "enemy",
       create_build_effect_smoke = false,
@@ -100,7 +100,7 @@ UTIL_create_event_handler(defines.events.on_surface_created, function(event)
     pumpjack.rotatable = false;
 
     pumpjack = UTIL_ensure_entity(surface, {
-      name = "linox-entity_sulfuric-acid-pumpjack",
+      name = "linox-building_sulfuric-acid-pumpjack",
       position = { 10.5, 10.5 },
       force = "enemy",
       create_build_effect_smoke = false,
@@ -131,10 +131,10 @@ end
 __MODULE__.obtain_pumpjacks = function()
   local surface = __MODULE__.get()
 
-  local pumpjack = surface.find_entity("linox-entity_deep-oil-pumpjack", { -10.5, 10.5 })
+  local pumpjack = surface.find_entity("linox-building_deep-oil-pumpjack", { -10.5, 10.5 })
   if pumpjack then pumpjack.force = "player" end
 
-  pumpjack = surface.find_entity("linox-entity_sulfuric-acid-pumpjack", { 10.5, 10.5 })
+  pumpjack = surface.find_entity("linox-building_sulfuric-acid-pumpjack", { 10.5, 10.5 })
   if pumpjack then pumpjack.force = "player" end
 end
 
@@ -142,7 +142,7 @@ __MODULE__.create_radar = function()
   local surface = __MODULE__.get()
 
   local radar = UTIL_ensure_entity(surface, {
-    name = "linox-entity_hidden-radar",
+    name = "linox-hidden_radar",
     position = {0,0},
     force = "player",
     create_build_effect_smoke = false,
@@ -245,7 +245,7 @@ __MODULE__.expand_facility = function(level)
     if box3 then
       box3.insert{name = "logistic-robot", count = 500};
       box3.insert{name = "construction-robot", count = 500};
-      box3.insert{name = "linox-item_core-roboport", count = 10};
+      box3.insert{name = "linox-building_core-roboport", count = 10};
       box3.insert{name = "electric-engine-unit", count = 250};
     end
 
@@ -271,8 +271,8 @@ __MODULE__.expand_facility = function(level)
       box6.insert{name = "solar-panel", count = 10};
       box6.insert{name = "electric-furnace", count = 10};
       box6.insert{name = "offshore-pump", count = 4};
-      box6.insert{name = "linox-item_fluid-elevator", count = 2};
-      box6.insert{name = "linox-item_cargo-elevator", count = 2};
+      box6.insert{name = "linox-building_fluid-elevator", count = 2};
+      box6.insert{name = "linox-building_cargo-elevator", count = 2};
       box6.insert{name = "bulk-inserter", count = 50};
     end
 

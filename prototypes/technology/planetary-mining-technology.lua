@@ -42,8 +42,8 @@ data:extend {
         },
         effects =
         {
-          { type = "unlock-recipe", recipe = "linox-recipe_tungsten-gear-wheel" },
-          { type = "unlock-recipe", recipe = "linox-recipe_tungsten-stick" },
+          { type = "unlock-recipe", recipe = "linox-item_tungsten-gear-wheel" },
+          { type = "unlock-recipe", recipe = "linox-item_tungsten-stick" },
         },
       },
       {
@@ -86,7 +86,7 @@ data:extend {
       {
         {
           type = "unlock-recipe",
-          recipe = "linox-recipe_mantle-extractor",
+          recipe = "linox-building_mantle-extractor",
         },
       },
       unit =
@@ -103,8 +103,8 @@ data:extend {
       {
         type = "technology",
         name = "linox-technology_rare-earth-refining",
-        icon = "__space-exploration-graphics__/graphics/technology/sand-processing.png",
-        icon_size = 128,
+        icon = "__linox__/graphics/technology/rare-earth-refining.png",
+        icon_size = 256,
         prerequisites = {"linox-technology_mantle-extraction"},
         effects =
         {
@@ -114,7 +114,7 @@ data:extend {
           },
           {
             type = "unlock-recipe",
-            recipe = "linox-recipe_rare-earth-data-card",
+            recipe = "linox-item_rare-earth-data-card",
           },
         },
         unit =
@@ -131,8 +131,13 @@ data:extend {
         {
           type = "technology",
           name = "linox-technology_samarium-centrifugation",
-          icon = "__space-exploration-graphics__/graphics/technology/iridium-processing.png",
-          icon_size = 128,
+          icons = {
+            {
+              icon = "__linox__/graphics/technology/white-powder.png",
+              icon_size = 256,
+              tint = { 222, 232, 107 }
+            },
+          },
           prerequisites = {"linox-technology_rare-earth-refining"},
           effects =
           {

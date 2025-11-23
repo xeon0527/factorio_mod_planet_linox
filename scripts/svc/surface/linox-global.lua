@@ -24,13 +24,13 @@ events.create_build_entity_handler(function(event)
     local e_name = event.entity_name
     local tiles = event.tiles
 
-    if e_type == "rocket-silo" and e_name ~= "linox-entity_advanced-rocket-silo" then
+    if e_type == "rocket-silo" and e_name ~= "linox-building_advanced-rocket-silo" then
       --player.print("리녹스에서는 고급 로켓 사일로만 사용할 수 있습니다.");
       if player then
         player.print{"", "[img=virtual-signal.signal-alert] ", {"system.rocket-silo-limit"}}
       end
       event.pass = false
-    elseif e_name == "linox-entity_cargo-elevator" or e_name == "linox-entity_fluid-elevator" then
+    elseif e_name == "linox-building_cargo-elevator" or e_name == "linox-building_fluid-elevator" then
       for _, tile in pairs(tiles) do
         if tile.name ~= "linox-tile_linox-terminal-platform" and tile.name ~= "linox-tile_linox-hazard-terminal-platform" then
           --player.print("이 건물은 리녹스 시설 출입구에만 설치할 수 있습니다.");
@@ -107,8 +107,8 @@ __MODULE__.connect_surfaces = function()
   local linox_A = game.get_surface(__LINOX_SURFACE__.ground)
   local linox_B = game.get_surface(__LINOX_SURFACE__.facility)
   if linox_A and linox_B then
-    local lppn1 = UTIL_ensure_entity(linox_A, { name = "linox-entity_hidden-electric-pole"})
-    local lppn2 = UTIL_ensure_entity(linox_B, { name = "linox-entity_hidden-electric-pole"})
+    local lppn1 = UTIL_ensure_entity(linox_A, { name = "linox-hidden_electric-pole"})
+    local lppn2 = UTIL_ensure_entity(linox_B, { name = "linox-hidden_electric-pole"})
     if lppn1 and lppn2 then
       local lppn1_connector = lppn1.get_wire_connector(defines.wire_connector_id.pole_copper, true);
       local lppn2_connector = lppn2.get_wire_connector(defines.wire_connector_id.pole_copper, true);

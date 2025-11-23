@@ -3,9 +3,9 @@
 local __MODULE__ = {}
 
 __MODULE__.type = {
-  lorax             = "linox-entity_npc-lorax",
-  network_terminal  = "linox-entity_npc-network-terminal",
-  power_converter   = "linox-entity_npc-power-converter",
+  lorax             = "linox-npc_lorax",
+  network_terminal  = "linox-npc_network-terminal",
+  power_converter   = "linox-npc_power-converter",
 };
 
 UTIL_create_event_handler("linox-custom-event_on-entity-click", function(event)

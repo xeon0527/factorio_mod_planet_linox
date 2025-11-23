@@ -62,7 +62,8 @@ data:extend {
             icon = "__base__/graphics/technology/stone-wall.png",
             icon_size = 256,
             prerequisites = {
-              "linox-technology_expanding-factory-2"
+              "linox-technology_expanding-factory-2",
+              "linox-technology_samarium-centrifugation",
             },
             unit =
             {
@@ -188,11 +189,11 @@ data:extend {
       {
         {
           type = "unlock-recipe",
-          recipe = "linox-recipe_cargo-elevator",
+          recipe = "linox-building_cargo-elevator",
         },
         {
           type = "unlock-recipe",
-          recipe = "linox-recipe_fluid-elevator",
+          recipe = "linox-building_fluid-elevator",
         },
       },
       unit =

@@ -16,11 +16,11 @@ shadow_anim.repeat_count = 30;
 data:extend {
   {
     type = "offshore-pump",
-    name = "linox-entity_mantle-extractor",
+    name = "linox-building_mantle-extractor",
     icon = "__space-exploration-graphics__/graphics/icons/core-miner.png",
     icon_size = 64,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
-    minable = {mining_time = 0.5, result = "linox-item_mantle-extractor"},
+    minable = {mining_time = 0.5, result = "linox-building_mantle-extractor"},
     max_health = 1000,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
@@ -142,3 +142,54 @@ data:extend {
     },
   }
 }
+
+
+
+data:extend {
+  {
+    type = "item",
+    name = "linox-building_mantle-extractor",
+    icon = "__space-exploration-graphics__/graphics/icons/core-miner.png",
+    icon_size = 64,
+    stack_size = 1,
+    weight = 1 * tons,
+    place_result = "linox-building_mantle-extractor",
+    subgroup = "extraction-machine",
+    order = "a[items]-d[mantle-extractor]",
+    default_import_location = "linox-planet_linox",
+  },
+}
+
+
+
+local recipe = {
+  type = "recipe",
+  name = "linox-building_mantle-extractor",
+  energy_required = 60,
+  enabled = false,
+  category = "metallurgy",
+  ingredients =
+  {
+    {type = "item", name = "tungsten-plate", amount = 250},
+    {type = "item", name = "pumpjack", amount = 10},
+    {type = "item", name = "steel-plate", amount = 100},
+    {type = "item", name = "concrete", amount = 100},
+    {type = "item", name = "pipe", amount = 500},
+  },
+  surface_conditions =
+    {
+      {
+        property = "magnetic-field",
+        min = 1600,
+        max = 1600,
+      },
+      {
+        property = "gravity",
+        min = 2,
+        max = 2
+      }
+    },
+  results = {{type="item", name="linox-building_mantle-extractor", amount=1}}
+}
+
+data:extend { recipe, }
