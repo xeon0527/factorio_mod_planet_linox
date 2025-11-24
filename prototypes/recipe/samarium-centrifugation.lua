@@ -2,7 +2,7 @@ data:extend {
   {
     type = "recipe",
     name = "linox-recipe_samarium-centrifugation",
-    energy_required = 10,
+    energy_required = 3,
     enabled = false,
     auto_recycle = false,
     category = "centrifuging",

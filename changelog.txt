@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.7
+Date: 25. 11. 2025
+  Balancing:
+    - Adjusted the crafting time of the Rare Earth Refining recipe from 30 seconds to 4 seconds.
+    - Adjusted the crafting time of the Samarium Centrifuging recipe from 10 seconds to 3 seconds.
+    - The “Expanding Factory 3” research no longer requires Rare Earth Data Cards.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.3.6
 Date: 25. 11. 2025
   Balancing:
@@ -6,11 +14,12 @@ Date: 25. 11. 2025
     - The rare-earth data card recipe has been buffed. It now consumes only 1 of each required item, and it uses steel plates instead of tungsten ore.
     - The research cost for Mantle Extraction has been reduced by half.
     - The cost of the Samarium Data Card has been significantly reduced.
-    - The number of land plots obtainable from the Rocket Silo Foundation research has been increased to 4.
+    - The number of land plots obtainable from the Rocket silo Foundation research has been increased to 4.
 
   Changes:
     - The internal names of some items have been generalized. Please report any bugs or errors that may occur as a result.
     - Increased the volume of ambient sounds on the surface of Linox. (Not very noticeable, though.)
+    - Added Data Card Productivity research, which can be purchased from L.O.R.A.X.
 
   Bugfixes:
     - Fixed an issue where some text keys were incorrectly linked.

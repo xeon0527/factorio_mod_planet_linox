@@ -3,7 +3,7 @@ data:extend {
     type = "recipe",
     name = "linox-recipe_rare-earth-refining",
     icon = "__linox__/graphics/icons/rare-earth-powder.png",
-    energy_required = 30,
+    energy_required = 4,
     enabled = false,
     auto_recycle = false,
     category = "chemistry-or-cryogenics",

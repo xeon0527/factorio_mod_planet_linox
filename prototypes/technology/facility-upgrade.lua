@@ -44,7 +44,7 @@ data:extend {
           },
           unit =
           {
-            count = 250,
+            count = 200,
             ingredients =
             {
               {"linox-item_lava-data-card", 1},
@@ -60,23 +60,19 @@ data:extend {
             icons = util_icon.technology_icon_linox_mod("__base__/graphics/technology/stone-wall.png", 256),
             prerequisites = {
               "linox-technology_expanding-factory-2",
-              "linox-technology_samarium-centrifugation",
             },
             unit =
             {
-              count = 250,
+              count = 300,
               ingredients =
               {
                 {"linox-item_lava-data-card", 1},
-                {"linox-item_rare-earth-data-card", 1},
               },
               time = 60
             },
             upgrade = true,
             ignore_tech_cost_multiplier = true,
           },
-
-
     {
       type = "technology",
       name = "linox-technology_rocket-silo-foundation",

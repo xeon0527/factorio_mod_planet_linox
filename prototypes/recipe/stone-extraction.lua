@@ -2,7 +2,7 @@ data:extend {
   {
     type = "recipe",
     name = "linox-recipe_stone-extraction",
-    energy_required = 16,
+    energy_required = 12,
     enabled = false,
     category = "metallurgy",
     ingredients =
