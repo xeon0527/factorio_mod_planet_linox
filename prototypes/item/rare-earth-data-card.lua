@@ -32,9 +32,9 @@ local recipe = {
   enabled = false,
   ingredients =
   {
-    {type = "item", name = "linox-item_rare-earth-powder", amount = 2},
-    {type = "item", name = "calcite", amount = 2},
-    {type = "item", name = "tungsten-ore", amount = 2},
+    {type = "item", name = "rare-earth-powder", amount = 1},
+    {type = "item", name = "calcite", amount = 1},
+    {type = "item", name = "steel-plate", amount = 1},
   },
   surface_conditions =
     {

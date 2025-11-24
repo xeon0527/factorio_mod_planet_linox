@@ -413,12 +413,18 @@ UTIL_create_event_handler("linox-custom-event_gui-dialog-on-select", function(ev
       techshop.add_tech(player,
         "linox-sprite_expanding-factory",
         "linox-technology_expanding-factory-1",
-        "[item=linox-item_tungsten-gear-wheel] 500    [item=linox-item_tungsten-stick] 500")
+        "[item=tungsten-gear-wheel] 500    [item=tungsten-stick] 500")
 
       techshop.add_tech(player,
         "linox-sprite_linox-supercomputer",
         "linox-technology_linox-supercomputer",
-        "[item=electronic-circuit] 500    [item=linox-item_tungsten-gear-wheel] 500    [item=linox-item_tungsten-stick] 500")
+        "[item=electronic-circuit] 500    [item=tungsten-gear-wheel] 500    [item=tungsten-stick] 500")
+
+      techshop.add_tech(player,
+        "linox-sprite_lorax-support",
+        "linox-technology_lorax-support",
+        "[item=linox-item_lava-data-card] 1000")
+
 
       techshop.refresh(player)
     end

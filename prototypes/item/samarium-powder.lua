@@ -1,7 +1,7 @@
 data:extend {
   {
     type = "item",
-    name = "linox-item_samarium-powder",
+    name = "samarium-powder",
     icons = {
       {
         icon = "__linox__/graphics/icons/white-powder.png",

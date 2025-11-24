@@ -29,13 +29,13 @@ local recipe = {
   type = "recipe",
   name = "linox-item_lava-data-card",
   category = "crafting-with-fluid",
-  energy_required = 5,
+  energy_required = 2,
   enabled = false,
   ingredients =
   {
-    {type = "item", name = "linox-item_tungsten-gear-wheel", amount = 3},
-    {type = "item", name = "linox-item_tungsten-stick", amount = 6},
-    {type = "fluid", name = "lava", amount = 50},
+    {type = "item", name = "tungsten-gear-wheel", amount = 1},
+    {type = "item", name = "tungsten-stick", amount = 2},
+    {type = "fluid", name = "lava", amount = 25},
   },
   surface_conditions =
     {

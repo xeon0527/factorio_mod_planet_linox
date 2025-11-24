@@ -77,7 +77,7 @@ local recipe = {
   enabled = false,
   ingredients =
   {
-    {type = "item", name = "linox-item_tungsten-gear-wheel", amount = 25},
+    {type = "item", name = "tungsten-gear-wheel", amount = 25},
     {type = "item", name = "electronic-circuit", amount = 10},
     {type = "item", name = "iron-plate", amount = 10},
     {type = "item", name = "copper-plate", amount = 10},

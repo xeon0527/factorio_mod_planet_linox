@@ -1,7 +1,7 @@
 local tint = {1.0, 0.66, 1.0};
 
 local item = table.deepcopy(data.raw.item["iron-stick"]);
-item.name = "linox-item_tungsten-stick";
+item.name = "tungsten-stick";
 item.subgroup = "intermediate-product";
 item.order = "a[basic-intermediates]-bb[tungsten-stick]"
 item.default_import_location = "linox-planet_linox";
@@ -18,9 +18,9 @@ data:extend { item, }
 data:extend {
   {
     type = "recipe",
-    name = "linox-item_tungsten-stick",
+    name = "tungsten-stick",
     ingredients = {{type = "item", name = "tungsten-plate", amount = 1}},
-    results = {{type="item", name="linox-item_tungsten-stick", amount = 2}},
+    results = {{type="item", name="tungsten-stick", amount = 2}},
     allow_productivity = true,
     enabled = false,
   },

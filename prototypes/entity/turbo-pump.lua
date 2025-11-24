@@ -55,8 +55,8 @@ local recipe = {
     {type = "item", name = "pump", amount = 1},
     {type = "item", name = "pipe", amount = 5},
     {type = "item", name = "tungsten-carbide", amount = 2},
-    {type = "item", name = "linox-item_tungsten-gear-wheel", amount = 5},
-    {type = "item", name = "linox-item_samarium", amount = 5},
+    {type = "item", name = "tungsten-gear-wheel", amount = 5},
+    {type = "item", name = "samarium", amount = 5},
   },
   surface_conditions =
     {

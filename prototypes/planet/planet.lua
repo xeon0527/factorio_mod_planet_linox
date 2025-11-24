@@ -63,13 +63,13 @@ PlanetsLib:extend {
 
     persistent_ambient_sounds =
     {
-      base_ambience = {filename = "__space-age__/sound/wind/base-wind-vulcanus.ogg", volume = 0.8},
-      wind = {filename = "__space-age__/sound/wind/wind-vulcanus.ogg", volume = 0.8},
+      base_ambience = {filename = "__space-age__/sound/wind/base-wind-vulcanus.ogg", volume = 5.0},
+      wind = {filename = "__space-age__/sound/wind/wind-vulcanus.ogg", volume = 5.0},
       crossfade =
       {
         order = {"wind", "base_ambience"},
         curve_type = "cosine",
-        from = {control = 0.35, volume_percentage = 0.0},
+        from = {control = 0.35, volume_percentage = 50.0},
         to = {control = 2, volume_percentage = 100.0}
       },
       semi_persistent =

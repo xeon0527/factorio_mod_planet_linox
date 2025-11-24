@@ -101,8 +101,8 @@ data:extend {
       {type = "item", name = "electronic-circuit", amount = 10},
       {type = "item", name = "tungsten-plate", amount = 10},
       {type = "item", name = "steel-plate", amount = 10},
-      {type = "item", name = "linox-item_tungsten-gear-wheel", amount = 10},
-      {type = "item", name = "linox-item_tungsten-stick", amount = 10},
+      {type = "item", name = "tungsten-gear-wheel", amount = 10},
+      {type = "item", name = "tungsten-stick", amount = 10},
     },
     surface_conditions =
       {

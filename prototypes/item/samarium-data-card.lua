@@ -32,10 +32,10 @@ local recipe = {
   enabled = false,
   ingredients =
   {
-    {type = "item", name = "linox-item_samarium", amount = 2},
-    {type = "item", name = "advanced-circuit", amount = 5},
-    {type = "item", name = "processing-unit", amount = 5},
-    {type = "item", name = "tungsten-carbide", amount = 2},
+    {type = "item", name = "samarium", amount = 1},
+    {type = "item", name = "advanced-circuit", amount = 2},
+    {type = "item", name = "processing-unit", amount = 2},
+    {type = "item", name = "tungsten-carbide", amount = 1},
   },
   surface_conditions =
     {

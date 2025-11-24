@@ -26,7 +26,7 @@ data:extend {
       {type = "fluid", name = "sulfuric-acid", amount = 400},
     },
     results = {
-      {type="item", name="linox-item_rare-earth-powder", amount = 1},
+      {type="item", name="rare-earth-powder", amount = 1},
     },
     allow_decomposition = false,
     allow_productivity = true,

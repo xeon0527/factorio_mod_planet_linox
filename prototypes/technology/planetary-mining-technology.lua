@@ -41,8 +41,8 @@ data:extend {
         },
         effects =
         {
-          { type = "unlock-recipe", recipe = "linox-item_tungsten-gear-wheel" },
-          { type = "unlock-recipe", recipe = "linox-item_tungsten-stick" },
+          { type = "unlock-recipe", recipe = "tungsten-gear-wheel" },
+          { type = "unlock-recipe", recipe = "tungsten-stick" },
         },
       },
       {
@@ -89,7 +89,7 @@ data:extend {
       },
       unit =
       {
-        count = 500,
+        count = 250,
         ingredients =
         {
           {"linox-item_lava-data-card", 1},
@@ -125,6 +125,7 @@ data:extend {
           time = 60
         },
         ignore_tech_cost_multiplier = true,
+        essential = true,
       },
         {
           type = "technology",

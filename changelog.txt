@@ -1,4 +1,32 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.6
+Date: 25. 11. 2025
+  Balancing:
+    - Buffed the lava data card recipe: Tungsten stick requirement: 6 → 2, Tungsten gear wheel requirement: 3 → 1.
+    - The rare-earth data card recipe has been buffed. It now consumes only 1 of each required item, and it uses steel plates instead of tungsten ore.
+    - The research cost for Mantle Extraction has been reduced by half.
+    - The cost of the Samarium Data Card has been significantly reduced.
+    - The number of land plots obtainable from the Rocket Silo Foundation research has been increased to 4.
+
+  Changes:
+    - The internal names of some items have been generalized. Please report any bugs or errors that may occur as a result.
+    - Increased the volume of ambient sounds on the surface of Linox. (Not very noticeable, though.)
+
+  Bugfixes:
+    - Fixed an issue where some text keys were incorrectly linked.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.3.5
+Date: 24. 11. 2025
+  Balancing:
+    - Buffed the tungsten extraction recipe: stone output 15 → 10, crafting time 16s → 8s.
+    - Buffed the lava data card recipe: Tungsten stick requirement: 10 → 6, Tungsten gear wheel requirement: 5 → 3, Crafting time: 5s → 2s.
+    - Starting item has been improved. Beacons, modules, and some logistics chests are now provided from the beginning, reducing the need for hand crafting and allowing players to focus more on planning and layout.
+
+  Bugfixes:
+    - A placement restriction has been added for the Core Roboport. It can no longer be placed in space.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.3.4
 Date: 24. 11. 2025
   Balancing:

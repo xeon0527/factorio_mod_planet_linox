@@ -66,19 +66,27 @@ UTIL_create_event_handler(defines.events.on_gui_click, function(event)
               player.print({"system.lorax-tech-shop-item-shortage"})
             end
           elseif tech.name == "linox-technology_expanding-factory-1" then
-            if inv.get_item_count("linox-item_tungsten-gear-wheel") >= 500 and inv.get_item_count("linox-item_tungsten-stick") >= 500 then
-              inv.remove{name="linox-item_tungsten-gear-wheel", count = 500}
-              inv.remove{name="linox-item_tungsten-stick", count = 500}
+            if inv.get_item_count("tungsten-gear-wheel") >= 500 and inv.get_item_count("tungsten-stick") >= 500 then
+              inv.remove{name="tungsten-gear-wheel", count = 500}
+              inv.remove{name="tungsten-stick", count = 500}
               player.force.script_trigger_research(tech.name);
               __MODULE__.refresh(player)
             else
               player.print({"system.lorax-tech-shop-item-shortage"})
             end
           elseif tech.name == "linox-technology_linox-supercomputer" then
-            if inv.get_item_count("electronic-circuit") >= 500 and inv.get_item_count("linox-item_tungsten-gear-wheel") >= 500 and inv.get_item_count("linox-item_tungsten-stick") >= 500 then
+            if inv.get_item_count("electronic-circuit") >= 500 and inv.get_item_count("tungsten-gear-wheel") >= 500 and inv.get_item_count("tungsten-stick") >= 500 then
               inv.remove{name="electronic-circuit", count = 500}
-              inv.remove{name="linox-item_tungsten-gear-wheel", count = 500}
-              inv.remove{name="linox-item_tungsten-stick", count = 500}
+              inv.remove{name="tungsten-gear-wheel", count = 500}
+              inv.remove{name="tungsten-stick", count = 500}
+              player.force.script_trigger_research(tech.name);
+              __MODULE__.refresh(player)
+            else
+              player.print({"system.lorax-tech-shop-item-shortage"})
+            end
+          elseif tech.name == "linox-technology_lorax-support" then
+            if inv.get_item_count("linox-item_lava-data-card") >= 1000 then
+              inv.remove{name="linox-item_lava-data-card", count = 1000}
               player.force.script_trigger_research(tech.name);
               __MODULE__.refresh(player)
             else

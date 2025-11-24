@@ -72,9 +72,9 @@ data:extend {
     {
       {type = "item", name = "rocket-silo", amount = 1},
       {type = "item", name = "refined-concrete", amount = 1000},
-      {type = "item", name = "linox-item_tungsten-gear-wheel", amount = 1000},
+      {type = "item", name = "tungsten-gear-wheel", amount = 1000},
       {type = "item", name = "tungsten-carbide", amount = 500},
-      {type = "item", name = "linox-item_samarium", amount = 100}
+      {type = "item", name = "samarium", amount = 100}
     },
     surface_conditions =
     {

@@ -14,7 +14,12 @@ data:extend {
         use_icon_overlay_constant = true
       }
     },
-    prerequisites = {"planet-discovery-vulcanus"},
+    prerequisites = {
+      "planet-discovery-vulcanus",
+      "construction-robotics",
+      "logistic-system",
+      "metallurgic-science-pack",
+    },
     unit =
     {
       count = 1000,
@@ -36,7 +41,7 @@ data:extend {
     prerequisites = {"linox-technology_planet-discovery-linox"},
     unit =
     {
-      count = 500,
+      count = 250,
       ingredients =
       {
         {"automation-science-pack", 1},

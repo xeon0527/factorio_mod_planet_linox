@@ -27,6 +27,7 @@ data:extend {
         { type = "unlock-recipe", recipe = "blueprint-deployer2" },
         { type = "unlock-recipe", recipe = "recursive-blueprints-scanner" },
       },
+      essential = true,
     },
     {
       type = "technology",
@@ -42,6 +43,7 @@ data:extend {
         { type = "unlock-recipe", recipe = "linox-building_linox-supercomputer" },
         { type = "unlock-recipe", recipe = "linox-item_lava-data-card" },
       },
+      essential = true,
     },
 
 
@@ -91,6 +93,7 @@ data:extend {
         { type = "unlock-recipe", recipe = "linox-item_samarium-data-card" },
       },
       ignore_tech_cost_multiplier = true,
+      essential = true,
     },
 
 
@@ -258,7 +261,7 @@ data:extend {
         effects =
         {
           { type = "unlock-recipe", recipe = "linox-building_sintering-machine" },
-          { type = "unlock-recipe", recipe = "linox-item_samarium" },
+          { type = "unlock-recipe", recipe = "samarium" },
         },
         ignore_tech_cost_multiplier = true,
       },

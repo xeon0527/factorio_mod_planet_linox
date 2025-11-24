@@ -1,7 +1,7 @@
 data:extend {
   {
     type = "item",
-    name = "linox-item_rare-earth-powder",
+    name = "rare-earth-powder",
     icon = "__linox__/graphics/icons/rare-earth-powder.png",
     subgroup = "vulcanus-processes",
     order = "c[tungsten]-ab",

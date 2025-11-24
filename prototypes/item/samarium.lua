@@ -1,7 +1,7 @@
 data:extend {
   {
     type = "item",
-    name = "linox-item_samarium",
+    name = "samarium",
     icons = {
       {
         icon = "__linox__/graphics/icons/white-cube.png",
@@ -20,14 +20,14 @@ data:extend {
 
   {
     type = "recipe",
-    name = "linox-item_samarium",
+    name = "samarium",
     category = "linox-recipe-category_sintering-machine",
     energy_required = 1,
     enabled = false,
     ingredients =
     {
-      {type = "item", name = "linox-item_samarium-powder", amount = 2},
+      {type = "item", name = "samarium-powder", amount = 2},
     },
-    results = {{type="item", name="linox-item_samarium", amount=1}},
+    results = {{type="item", name="samarium", amount=1}},
   }
 }

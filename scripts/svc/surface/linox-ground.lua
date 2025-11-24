@@ -38,11 +38,11 @@ __MODULE__.create_rocketsilo_foundation = function()
   u_surface.fill_tile{ surface = surface, tile_name = __rocketsilo_foundation_tile,
     x = -17.5, y = -8.5, radius = 9 }
 
-  --u_surface.fill_tile{ surface = surface, tile_name = __rocketsilo_foundation_tile,
-  --  x = -17.5, y = 8.5, radius = 9 }
+  u_surface.fill_tile{ surface = surface, tile_name = __rocketsilo_foundation_tile,
+    x = -17.5, y = 8.5, radius = 9 }
 
-  --u_surface.fill_tile{ surface = surface, tile_name = __rocketsilo_foundation_tile
-  --  x = 17.5, y = -8.5, radius = 9 }
+  u_surface.fill_tile{ surface = surface, tile_name = __rocketsilo_foundation_tile,
+    x = 17.5, y = -8.5, radius = 9 }
 
   u_surface.fill_tile{ surface = surface, tile_name = __rocketsilo_foundation_tile,
     x = 17.5, y = 8.5, radius = 9 }

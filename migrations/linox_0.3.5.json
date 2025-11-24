@@ -1,0 +1,15 @@
+{
+  "item":[
+    ["linox-item_rare-earth-powder",    "rare-earth-powder"],
+    ["linox-item_samarium-powder",      "samarium-powder"],
+    ["linox-item_samarium",             "samarium"],
+    ["linox-item_tungsten-gear-wheel",  "tungsten-gear-wheel"],
+    ["linox-item_tungsten-stick",       "tungsten-stick"]
+  ],
+
+  "recipe":[
+    ["linox-item_samarium",             "samarium"],
+    ["linox-item_tungsten-gear-wheel",  "tungsten-gear-wheel"],
+    ["linox-item_tungsten-stick",       "tungsten-stick"]
+  ]
+}

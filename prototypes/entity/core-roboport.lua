@@ -51,6 +51,10 @@ data:extend({
         },
       }
     },
+    surface_conditions = {
+      { property = "pressure", min = 10 },
+      { property = "gravity", min = 1 }
+    },
     base_animation = blank_image,
     base_patch = blank_image,
     charge_approach_distance = 4,
@@ -181,7 +185,7 @@ local recipe = {
   ingredients =
   {
     {type = "item", name = "steel-plate", amount = 25},
-    {type = "item", name = "linox-item_tungsten-gear-wheel", amount = 25},
+    {type = "item", name = "tungsten-gear-wheel", amount = 25},
     {type = "item", name = "advanced-circuit", amount = 25},
     {type = "item", name = "processing-unit", amount = 10},
     {type = "item", name = "tungsten-carbide", amount = 10},

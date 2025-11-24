@@ -41,4 +41,20 @@ data:extend {
     filename = "__space-exploration-graphics__/graphics/technology/supercomputer-3.png",
     size = 128,
   },
+
+  {
+    type = "sprite",
+    name = "linox-sprite_lorax-support",
+    layers = {
+      {
+        filename = "__space-exploration-graphics__/graphics/technology/supercomputer-3.png",
+        size = 128,
+      },
+      {
+        filename = "__core__/graphics/icons/technology/constants/constant-recipe-productivity.png",
+        size = 128,
+        scale = 0.75,
+      },
+    },
+  },
 }

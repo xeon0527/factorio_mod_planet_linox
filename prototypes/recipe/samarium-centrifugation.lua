@@ -8,9 +8,9 @@ data:extend {
     category = "centrifuging",
     ingredients =
     {
-      {type = "item", name = "linox-item_rare-earth-powder", amount = 10},
+      {type = "item", name = "rare-earth-powder", amount = 10},
     },
-    results = {{type="item", name="linox-item_samarium-powder", amount=2}},
+    results = {{type="item", name="samarium-powder", amount=2}},
     allow_decomposition = false,
     allow_productivity = true,
   },
