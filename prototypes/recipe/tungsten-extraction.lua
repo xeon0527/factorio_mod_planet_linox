@@ -4,7 +4,7 @@ data:extend {
     name = "linox-recipe_tungsten-extraction",
     subgroup = "vulcanus-processes",
     order = "c[tungsten]-aa",
-    energy_required = 16,
+    energy_required = 8,
     enabled = false,
     category = "metallurgy",
     surface_conditions =
@@ -26,7 +26,7 @@ data:extend {
       {type = "item", name = "calcite", amount = 1},
     },
     results = {
-      {type = "item", name = "stone", amount = 15},
+      {type = "item", name = "stone", amount = 10},
       {type = "item", name="tungsten-ore", amount=5}
     },
     icon = "__space-age__/graphics/icons/tungsten-ore.png",

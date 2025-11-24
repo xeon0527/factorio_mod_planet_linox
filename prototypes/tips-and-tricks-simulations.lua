@@ -332,8 +332,8 @@ __MODULE__.linox_planetary_power_network = {
     surface.create_global_electric_network()
     surface2.create_global_electric_network()
 
-    local lppn1 = UTIL_ensure_entity(surface, { name = "linox-entity_hidden-electric-pole"})
-    local lppn2 = UTIL_ensure_entity(surface2, { name = "linox-entity_hidden-electric-pole"})
+    local lppn1 = UTIL_ensure_entity(surface, { name = "linox-hidden_electric-pole"})
+    local lppn2 = UTIL_ensure_entity(surface2, { name = "linox-hidden_electric-pole"})
     
     local lppn1_connector = lppn1.get_wire_connector(defines.wire_connector_id.pole_copper, true);
     local lppn2_connector = lppn2.get_wire_connector(defines.wire_connector_id.pole_copper, true);

@@ -33,8 +33,8 @@ local recipe = {
   enabled = false,
   ingredients =
   {
-    {type = "item", name = "linox-item_tungsten-gear-wheel", amount = 5},
-    {type = "item", name = "linox-item_tungsten-stick", amount = 10},
+    {type = "item", name = "linox-item_tungsten-gear-wheel", amount = 3},
+    {type = "item", name = "linox-item_tungsten-stick", amount = 6},
     {type = "fluid", name = "lava", amount = 50},
   },
   surface_conditions =

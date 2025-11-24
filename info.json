@@ -3,7 +3,7 @@
   "title": "Planet Linox",
   "description": "Linox is an extraordinarily destructive world, even closer to the sun than Vulcanus. Solar coronal ejections and flares reach all the way down to the surface, obliterating everything in their path, while the sun’s immense gravitational forces relentlessly twist and deform the entire planet, creating an extreme and hostile environment. Is there really anything left on such a world that could still be worth extracting?",
   "author": "xeon0527",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "homepage": "https://github.com/xeon0527/factorio_mod_planet_linox",
   "factorio_version": "2.0",
   "dependencies": [

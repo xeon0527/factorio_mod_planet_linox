@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.4
+Date: 24. 11. 2025
+  Balancing:
+    - Buffed the tungsten extraction recipe: stone output 15 → 10, crafting time 16s → 8s.
+    - Buffed the lava data card recipe: Tungsten stick requirement: 10 → 6, Tungsten gear wheel requirement: 5 → 3, Crafting time: 5s → 2s.
+    - Starting item has been improved. Beacons, modules, and some logistics chests are now provided from the beginning, reducing the need for hand crafting and allowing players to focus more on planning and layout.
+
+  Bugfixes:
+    - Fixed an issue where the tip about the planetary power network was not displaying correctly.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.3.3
 Date: 24. 11. 2025
   Minor Features:

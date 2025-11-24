@@ -226,19 +226,19 @@ __MODULE__.expand_facility = function(level)
 
     local box1 = surface.create_entity{name = "steel-chest", force = "player", position = { -8, -57 }}
     if box1 then
-      box1.insert{name = "steel-plate", count = 1500};
+      box1.insert{name = "steel-plate", count = 1000};
       box1.insert{name = "electronic-circuit", count = 800};
-      box1.insert{name = "advanced-circuit", count = 800};
+      box1.insert{name = "advanced-circuit", count = 1200};
       box1.insert{name = "processing-unit", count = 600};
-      box1.insert{name = "iron-plate", count = 500};
-      box1.insert{name = "copper-plate", count = 500};
+      box1.insert{name = "iron-plate", count = 300};
+      box1.insert{name = "copper-plate", count = 300};
     end
 
     local box2 = surface.create_entity{name = "steel-chest", force = "player", position = { -8, -58 }}
     if box2 then
-      box2.insert{name = "tungsten-ore", count = 500};
+      box2.insert{name = "tungsten-ore", count = 300};
       box2.insert{name = "tungsten-carbide", count = 500};
-      box2.insert{name = "tungsten-plate", count = 500};
+      box2.insert{name = "tungsten-plate", count = 300};
     end
 
     local box3 = surface.create_entity{name = "steel-chest", force = "player", position = { -8, -59 }}
@@ -265,15 +265,22 @@ __MODULE__.expand_facility = function(level)
 
     local box6 = surface.create_entity{name = "steel-chest", force = "player", position = { -7, -57 }}
     if box6 then
-      box6.insert{name = "foundry", count = 10};
-      box6.insert{name = "assembling-machine-3", count = 20};
+      box6.insert{name = "foundry", count = 15};
+      box6.insert{name = "assembling-machine-3", count = 30};
       box6.insert{name = "chemical-plant", count = 20};
-      box6.insert{name = "solar-panel", count = 10};
+      box6.insert{name = "solar-panel", count = 30};
       box6.insert{name = "electric-furnace", count = 10};
-      box6.insert{name = "offshore-pump", count = 4};
-      box6.insert{name = "linox-building_fluid-elevator", count = 2};
-      box6.insert{name = "linox-building_cargo-elevator", count = 2};
-      box6.insert{name = "bulk-inserter", count = 50};
+      box6.insert{name = "offshore-pump", count = 10};
+      box6.insert{name = "linox-building_fluid-elevator", count = 5};
+      box6.insert{name = "linox-building_cargo-elevator", count = 5};
+      box6.insert{name = "bulk-inserter", count = 100};
+      box6.insert{name = "requester-chest", count = 25 }
+      box6.insert{name = "active-provider-chest", count = 25 }
+      box6.insert{name = "storage-chest", count = 25 }
+      box6.insert{name = "beacon", count = 5 }
+      box6.insert{name = "speed-module-2", count = 25 }
+      box6.insert{name = "productivity-module-2", count = 25 }
+      box6.insert{name = "efficiency-module-2", count = 25 }
     end
 
   elseif level == 2 then
