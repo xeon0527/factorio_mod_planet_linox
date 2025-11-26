@@ -1,8 +1,10 @@
+local util_icon = require("scripts.util.icon")
+
 data:extend {
   {
     type = "recipe",
     name = "linox-recipe_rapid-distillation",
-    icon = "__base__/graphics/icons/fluid/coal-liquefaction.png",
+    icons = util_icon.recipe_icon_linox("__base__/graphics/icons/fluid/coal-liquefaction.png", 64),
     energy_required = 5,
     enabled = false,
     category = "oil-processing",
@@ -32,7 +34,7 @@ data:extend {
   {
     type = "recipe",
     name = "linox-recipe_lava-based-rocket-fuel",
-    icon = "__base__/graphics/icons/rocket-fuel.png",
+    icons = util_icon.recipe_icon_linox("__base__/graphics/icons/rocket-fuel.png", 64),
     energy_required = 5,
     enabled = false,
     category = "chemistry",

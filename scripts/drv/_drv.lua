@@ -9,9 +9,10 @@ require("scripts.drv.badchest-area-viewer")
 require("scripts.drv.linox.installation.cargo-elevator")
 require("scripts.drv.linox.installation.fluid-elevator")
 require("scripts.drv.linox.installation.network-terminal")
---require("scripts.drv.linox.installation.power-converter")
+require("scripts.drv.linox.installation.power-converter")
 
+require("scripts.drv.linox.function.init")
 require("scripts.drv.linox.function.elevator-event")
 require("scripts.drv.linox.function.research-stopper")
 
---require("scripts.drv.simulation.inductor")
+require("scripts.drv.simulation.inductor")

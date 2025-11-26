@@ -22,7 +22,7 @@ data:extend {
     },
     energy_usage = "4.5MW",
 
-    pumping_speed = 10,
+    pumping_speed = 20,
 
     fluid_source_offset = { 0, 0 },
     fluid_box =

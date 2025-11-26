@@ -1,7 +1,10 @@
+local util_icon = require("scripts.util.icon")
+
 data:extend {
   {
     type = "recipe",
     name = "linox-recipe_tungsten-extraction",
+    icons = util_icon.recipe_icon_linox("__space-age__/graphics/icons/tungsten-ore.png", 64),
     subgroup = "vulcanus-processes",
     order = "c[tungsten]-aa",
     energy_required = 8,
@@ -29,8 +32,6 @@ data:extend {
       {type = "item", name = "stone", amount = 10},
       {type = "item", name="tungsten-ore", amount=5}
     },
-    icon = "__space-age__/graphics/icons/tungsten-ore.png",
-    icon_size = 64,
     allow_productivity = true,
   },
 }

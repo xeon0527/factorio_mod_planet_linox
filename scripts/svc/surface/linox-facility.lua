@@ -56,6 +56,7 @@ UTIL_create_event_handler(defines.events.on_surface_created, function(event)
     end
     surface.set_tiles(modify_tiles);
 
+    -- L.O.R.A.X
     util_surface.fill_tile {
       surface = surface,
       tile_name = "linox-tile_linox-datacenter",
@@ -65,6 +66,7 @@ UTIL_create_event_handler(defines.events.on_surface_created, function(event)
       y2 = -11,
     }
 
+    -- Network Terminal
     util_surface.fill_tile {
       surface = surface,
       tile_name = "linox-tile_linox-datacenter",
@@ -72,6 +74,16 @@ UTIL_create_event_handler(defines.events.on_surface_created, function(event)
       y1 = -17,
       x2 = 16,
       y2 = -11,
+    }
+
+    -- power converter
+    util_surface.fill_tile {
+      surface = surface,
+      tile_name = "linox-tile_linox-datacenter",
+      x1 = -17,
+      y1 = 9,
+      x2 = -14,
+      y2 = 16,
     }
 
 
@@ -114,6 +126,10 @@ UTIL_create_event_handler(defines.events.on_surface_created, function(event)
     local tech = force.technologies
     if tech["linox-technology_exploring-linox-landing-site"].researched then
       linox_global.connect_surfaces();
+    end
+
+    if tech["linox-technology_power-converter"].researched then
+      UTIL_ensure_entity(surface, { name = "linox-hidden_reactive-power"}).energy = 1 * 1000 * 1000 * 1000;
     end
 
     script.raise_event("linox-custom-event_on-surface-complete", {surface = surface,});
@@ -272,7 +288,7 @@ __MODULE__.expand_facility = function(level)
       box6.insert{name = "offshore-pump", count = 10};
       box6.insert{name = "linox-building_fluid-elevator", count = 5};
       box6.insert{name = "linox-building_cargo-elevator", count = 5};
-      box6.insert{name = "bulk-inserter", count = 100};
+      box6.insert{name = "bulk-inserter", count = 200};
       box6.insert{name = "requester-chest", count = 25 }
       box6.insert{name = "active-provider-chest", count = 25 }
       box6.insert{name = "storage-chest", count = 25 }

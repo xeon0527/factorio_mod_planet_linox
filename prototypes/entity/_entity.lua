@@ -1,6 +1,6 @@
 require("prototypes.entity.npc.lorax");
 require("prototypes.entity.npc.network-terminal");
---require("prototypes.entity.npc.power-converter");
+require("prototypes.entity.npc.power-converter");
 
 require("prototypes.entity.advanced-rocket-silo");
 require("prototypes.entity.cargo-elevator");

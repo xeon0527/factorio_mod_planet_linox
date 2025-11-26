@@ -92,6 +92,15 @@ UTIL_create_event_handler(defines.events.on_gui_click, function(event)
             else
               player.print({"system.lorax-tech-shop-item-shortage"})
             end
+          elseif tech.name == "linox-technology_power-converter" then
+            if inv.get_item_count("linox-item_lava-data-card") >= 250 and inv.get_item_count("linox-item_rare-earth-data-card") >= 250 then
+              inv.remove{name="linox-item_lava-data-card", count = 250}
+              inv.remove{name="linox-item_rare-earth-data-card", count = 250}
+              player.force.script_trigger_research(tech.name);
+              __MODULE__.refresh(player)
+            else
+              player.print({"system.lorax-tech-shop-item-shortage"})
+            end
           end
         end
       end

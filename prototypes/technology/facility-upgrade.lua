@@ -198,4 +198,15 @@ data:extend {
       },
       ignore_tech_cost_multiplier = true,
     },
+
+    {
+      type = "technology",
+      name = "linox-technology_power-converter",
+      icons = util_icon.technology_icon_script_research("__base__/graphics/technology/electric-energy-acumulators.png", 256),
+      prerequisites = {"linox-technology_rare-earth-refining"},
+      research_trigger = {
+        type = "scripted",
+        trigger_description = {"technology-description.linox-technology-trigger-description_lorax-purchase"}
+      },
+    },
 };

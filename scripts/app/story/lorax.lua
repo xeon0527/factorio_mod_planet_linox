@@ -425,6 +425,10 @@ UTIL_create_event_handler("linox-custom-event_gui-dialog-on-select", function(ev
         "linox-technology_lorax-support",
         "[item=linox-item_lava-data-card] 1000")
 
+      techshop.add_tech(player,
+        "linox-sprite_power-converter",
+        "linox-technology_power-converter",
+        "[item=linox-item_lava-data-card] 250    [item=linox-item_rare-earth-data-card] 250")
 
       techshop.refresh(player)
     end

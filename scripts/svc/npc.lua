@@ -88,7 +88,7 @@ local function __create_power_converter(surface, position)
   local entity = surface.create_entity{
     name = __MODULE__.type.power_converter,
     position = position,
-    force = "enemy",
+    force = "player",
     create_build_effect_smoke = false,
   };
 
@@ -97,7 +97,13 @@ local function __create_power_converter(surface, position)
     entity.minable = false;
     entity.rotatable = false;
     entity.operable = false;
-    entity.energy = 10 * 1000 * 1000 * 1000;
+
+    --entity.electric_buffer_size = 0
+    --entity.power_production = 0
+    --entity.power_usage = 0
+
+    --entity.energy = 10 * 1000 * 1000 * 1000;
+
     rendering.draw_text{
       text = {"entity-name."..__MODULE__.type.power_converter},
       surface = surface,

@@ -1,6 +1,9 @@
+local util_icon = require("scripts.util.icon")
+
 local recipe = {
   type = "recipe",
   name = "linox-recipe_low-temp-separation-of-calcium",
+  icons = util_icon.recipe_icon_linox("__space-age__/graphics/icons/calcite.png", 64),
   energy_required = 3,
   enabled = false,
   category = "chemistry",

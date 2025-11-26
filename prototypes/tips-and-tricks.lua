@@ -169,6 +169,33 @@ data:extend({
     starting_status = "dependencies-not-met",
     dependencies = {"linox-tips-and-tricks_recursive-blurprints"},
   },
+  {
+    type = "tips-and-tricks-item",
+    name = "linox-tips-and-tricks_power-converter",
+    tag = "[item=accumulator]",
+    category = "linox-tips-and-tricks_category",
+    order = "zai",
+    indent = 1,
+    image = "__linox__/graphics/tips-and-tricks/power-converter.png",
+    trigger =
+    {
+      type = "research",
+      technology = "linox-technology_power-converter"
+    },
+  },
+  {
+    type = "tips-and-tricks-item",
+    name = "linox-tips-and-tricks_reactive-power",
+    tag = "[entity=behemoth-worm-turret]",
+    category = "linox-tips-and-tricks_category",
+    order = "zaia",
+    indent = 2,
+    trigger =
+    {
+      type = "research",
+      technology = "linox-technology_power-converter"
+    },
+  },
 
 
   --{

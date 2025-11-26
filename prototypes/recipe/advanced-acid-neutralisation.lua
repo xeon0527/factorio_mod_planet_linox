@@ -1,8 +1,10 @@
+local util_icon = require("scripts.util.icon")
+
 data:extend {
   {
     type = "recipe",
     name = "linox-recipe_advanced-acid-neutralisation",
-    icon = "__space-age__/graphics/icons/fluid/acid-neutralisation.png",
+    icons = util_icon.recipe_icon_linox("__space-age__/graphics/icons/fluid/acid-neutralisation.png", 64),
     category = "chemistry-or-cryogenics",
     subgroup = "fluid-recipes",
     order = "d[other-chemistry]-aa[acid-neutralisation]",

@@ -56,21 +56,27 @@ data:extend {
   --    output_flow_limit = "5GW"
   --  },
   --},
-  --{
-  --  type = "electric-energy-interface",
-  --  name = "linox-entity_reactive-power",
-  --  icon = "__base__/graphics/icons/accumulator.png",
-  --  selectable_in_game = false,
-  --  flags = {"not-on-map", "hide-alt-info", "not-deconstructable", "not-blueprintable"},
-  --  hidden = true,
-  --  collision_mask = {layers = {}},
-  --  energy_source = {
-  --    type = "electric",
-  --    buffer_capacity = "1GJ",
-  --    usage_priority = "secondary-input",
-  --  },
-  --  gui_mode = "admins",
-  --  energy_production = "0kW",
-  --  energy_usage = "0kW",
-  --}
+  {
+    type = "electric-energy-interface",
+    name = "linox-hidden_reactive-power",
+    icons = {
+      {
+        icon = "__base__/graphics/icons/accumulator.png",
+        tint = { 1.0, 0.66, 0.66 },
+      }
+    },
+
+    selectable_in_game = false,
+    flags = {"not-on-map", "hide-alt-info", "not-deconstructable", "not-blueprintable"},
+    hidden = true,
+    collision_mask = {layers = {}},
+    energy_source = {
+      type = "electric",
+      buffer_capacity = "1GJ",
+      usage_priority = "secondary-input",
+    },
+    gui_mode = "none",
+    energy_production = "0kW",
+    energy_usage = "0kW",
+  }
 }

@@ -6,7 +6,6 @@ local linox_global = require("scripts.svc.surface.linox-global")
 local function __update_technology(event)
   local force = game.forces["player"]
   local tech = force.technologies
-  local research = event.research
 
   if not tech["linox-technology_planet-discovery-linox"].researched then return end
   linox_ground.create()
@@ -45,6 +44,10 @@ local function __update_technology(event)
 
   if tech["linox-technology_ultra-deep-drilling"].researched then
     linox_facility.obtain_pumpjacks();
+  end
+
+  if tech["linox-technology_power-converter"].researched then
+    UTIL_ensure_entity(linox_facility.get(), { name = "linox-hidden_reactive-power"}).energy = 1 * 1000 * 1000 * 1000;
   end
 end
 

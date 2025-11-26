@@ -62,5 +62,21 @@ local __MODULE__ = {
       }
     }
   end,
+
+  recipe_icon_linox = function(recipe_icon, size)
+    return {
+      {
+        icon = recipe_icon,
+        icon_size = size,
+      },
+      {
+        icon = "__linox__/graphics/icons/planet-linox-64.png",
+        icon_size = 64,
+        scale = 0.25,
+        shift = {10, 10},
+        floating = true
+      }
+    }
+  end,
 }
 return __MODULE__

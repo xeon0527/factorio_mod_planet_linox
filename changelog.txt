@@ -1,4 +1,17 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.9
+Date: 27. 11. 2025
+  Major Features:
+    - For Linox recipes that previously used vanilla icons, Linox planet icons have been added to make them easier to distinguish.
+    - Added the Power Converter system. This system provides an additional 5 GJ of energy storage capacity. However, according to L.O.R.A.X, something about it doesn’t seem quite right...
+
+  Bugfixes:
+    - Fixed an issue where the shortcut key text for the BAD Chest Area Indicator was missing.
+
+  Balancing:
+    - Increased the output of the Deep Oil Pumpjack and Sulfuric acid Pumpjack to 1200/s.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.3.8
 Date: 26. 11. 2025
   Major Features:

@@ -57,4 +57,11 @@ data:extend {
       },
     },
   },
+
+  {
+    type = "sprite",
+    name = "linox-sprite_power-converter",
+    filename = "__base__/graphics/technology/electric-energy-acumulators.png",
+    size = 256,
+  },
 }
