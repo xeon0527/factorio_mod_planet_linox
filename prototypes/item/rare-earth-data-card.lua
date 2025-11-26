@@ -28,6 +28,7 @@ data:extend {
 local recipe = {
   type = "recipe",
   name = "linox-item_rare-earth-data-card",
+  category = "electronics-or-assembling",
   energy_required = 5,
   enabled = false,
   ingredients =

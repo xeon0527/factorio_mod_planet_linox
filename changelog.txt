@@ -1,4 +1,17 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.8
+Date: 26. 11. 2025
+  Major Features:
+    - Added the BAD Chest area indicator from Recursive Blueprints. You can find it in the shortcuts.
+    - Tips and Tricks for Recursive Blueprints have been added.
+    - The example blueprint has been slightly modified following the Recursive Blueprints mod update. Existing saves are unaffected as long as no settings are changed.
+
+  Balancing:
+    - The cost of the Recursive Blueprints technology has been reduced by half.
+    - Rare Earth Data Cards and Samarium Data Cards can now also be produced at the Electromagnetic Plant.
+    - Adjusted the position and contents of the starter item boxes provided with the early-game example.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.3.7
 Date: 25. 11. 2025
   Balancing:

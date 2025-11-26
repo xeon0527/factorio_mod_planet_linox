@@ -224,7 +224,7 @@ __MODULE__.expand_facility = function(level)
     end
 
 
-    local box1 = surface.create_entity{name = "steel-chest", force = "player", position = { -8, -57 }}
+    local box1 = surface.create_entity{name = "steel-chest", force = "player", position = { -11, -61 }}
     if box1 then
       box1.insert{name = "steel-plate", count = 1000};
       box1.insert{name = "electronic-circuit", count = 800};
@@ -234,14 +234,14 @@ __MODULE__.expand_facility = function(level)
       box1.insert{name = "copper-plate", count = 300};
     end
 
-    local box2 = surface.create_entity{name = "steel-chest", force = "player", position = { -8, -58 }}
+    local box2 = surface.create_entity{name = "steel-chest", force = "player", position = { -11, -60 }}
     if box2 then
       box2.insert{name = "tungsten-ore", count = 300};
       box2.insert{name = "tungsten-carbide", count = 500};
       box2.insert{name = "tungsten-plate", count = 300};
     end
 
-    local box3 = surface.create_entity{name = "steel-chest", force = "player", position = { -8, -59 }}
+    local box3 = surface.create_entity{name = "steel-chest", force = "player", position = { -11, -59 }}
     if box3 then
       box3.insert{name = "logistic-robot", count = 500};
       box3.insert{name = "construction-robot", count = 500};
@@ -249,7 +249,7 @@ __MODULE__.expand_facility = function(level)
       box3.insert{name = "electric-engine-unit", count = 250};
     end
 
-    local box4 = surface.create_entity{name = "steel-chest", force = "player", position = { -8, -60 }}
+    local box4 = surface.create_entity{name = "steel-chest", force = "player", position = { -11, -58 }}
     if box4 then
       box4.insert{name = "rocket-silo", count = 1};
       box4.insert{name = "concrete", count = 1500};
@@ -257,19 +257,18 @@ __MODULE__.expand_facility = function(level)
       box4.insert{name = "electric-engine-unit", count = 250};
     end
 
-    local box5 = surface.create_entity{name = "steel-chest", force = "player", position = { -8, -61 }}
+    local box5 = surface.create_entity{name = "steel-chest", force = "player", position = { -11, -57 }}
     if box5 then
       box5.insert{name = "plastic-bar", count = 1000};
       box5.insert{name = "rocket-fuel", count = 120};
     end
 
-    local box6 = surface.create_entity{name = "steel-chest", force = "player", position = { -7, -57 }}
+    local box6 = surface.create_entity{name = "steel-chest", force = "player", position = { -11, -56 }}
     if box6 then
       box6.insert{name = "foundry", count = 15};
       box6.insert{name = "assembling-machine-3", count = 30};
       box6.insert{name = "chemical-plant", count = 20};
       box6.insert{name = "solar-panel", count = 30};
-      box6.insert{name = "electric-furnace", count = 10};
       box6.insert{name = "offshore-pump", count = 10};
       box6.insert{name = "linox-building_fluid-elevator", count = 5};
       box6.insert{name = "linox-building_cargo-elevator", count = 5};

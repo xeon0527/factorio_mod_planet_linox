@@ -4,6 +4,8 @@ require("scripts.drv.events")
 require("scripts.drv.settings_check")
 require("scripts.drv.storage")
 
+
+require("scripts.drv.badchest-area-viewer")
 require("scripts.drv.linox.installation.cargo-elevator")
 require("scripts.drv.linox.installation.fluid-elevator")
 require("scripts.drv.linox.installation.network-terminal")

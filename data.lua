@@ -8,6 +8,7 @@ require("prototypes.technology._technology")
 require("prototypes.planet.map-gen")
 require("prototypes.planet.planet")
 
+require("prototypes.tool._tool")
 require("prototypes.custom-input")
 require("prototypes.event")
 require("prototypes.recipe-category")

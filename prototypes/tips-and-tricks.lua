@@ -15,47 +15,14 @@ data:extend({
     order = "za",
     indent = 0,
     simulation = simulation.linox_briefing,
-    trigger =
-    {
-      type = "research",
-      technology = "linox-technology_planet-discovery-linox"
-    },
-    skip_trigger =
-    {
-      type = "or",
-      triggers =
-      {
-        {
-          type = "change-surface",
-          surface = "linox-planet_linox"
-        },
-        {
-          type = "sequence",
-          triggers =
-          {
-            {
-              type = "research",
-              technology = "linox-technology_planet-discovery-linox"
-            },
-            {
-              type = "time-elapsed",
-              ticks = 15 * minute
-            },
-            {
-              type = "time-since-last-tip-activation",
-              ticks = 15 * minute
-            }
-          }
-        }
-      },
-    },
+    starting_status = "unlocked",
   },
   {
     type = "tips-and-tricks-item",
     name = "linox-tips-and-tricks_exploration-log-1",
     tag = "[virtual-signal=signal-info]",
     category = "linox-tips-and-tricks_category",
-    order = "zb",
+    order = "zaa",
     indent = 1,
     simulation = simulation.linox_exploration_log_1,
     trigger =
@@ -69,7 +36,7 @@ data:extend({
     name = "linox-tips-and-tricks_exploration-log-2",
     tag = "[virtual-signal=signal-info]",
     category = "linox-tips-and-tricks_category",
-    order = "zc",
+    order = "zab",
     indent = 1,
     simulation = simulation.linox_exploration_log_2,
     trigger =
@@ -83,7 +50,7 @@ data:extend({
     name = "linox-tips-and-tricks_cargo-loss",
     tag = "[virtual-signal=signal-alert]",
     category = "linox-tips-and-tricks_category",
-    order = "zd",
+    order = "zac",
     indent = 1,
     trigger =
     {
@@ -96,7 +63,7 @@ data:extend({
     name = "linox-tips-and-tricks_placement_restriction",
     tag = "[item=foundation]",
     category = "linox-tips-and-tricks_category",
-    order = "ze",
+    order = "zad",
     indent = 1,
     simulation = simulation.linox_placement_restriction,
     trigger =
@@ -110,7 +77,7 @@ data:extend({
     name = "linox-tips-and-tricks_planetary-power-network",
     tag = "[item=substation]",
     category = "linox-tips-and-tricks_category",
-    order = "zf",
+    order = "zae",
     indent = 1,
     simulation = simulation.linox_planetary_power_network,
     trigger =
@@ -124,7 +91,7 @@ data:extend({
     name = "linox-tips-and-tricks_npc-system",
     tag = "[virtual-signal=signal-star]",
     category = "linox-tips-and-tricks_category",
-    order = "zg",
+    order = "zaf",
     indent = 1,
     simulation = simulation.npc_system,
     trigger =
@@ -132,6 +99,75 @@ data:extend({
       type = "research",
       technology = "linox-technology_exploring-linox-landing-site"
     },
+  },
+  {
+    type = "tips-and-tricks-item",
+    name = "linox-tips-and-tricks_recursive-blurprints",
+    tag = "[item=blueprint-deployer2]",
+    category = "linox-tips-and-tricks_category",
+    order = "zag",
+    indent = 1,
+    simulation = simulation.recursive_blueprints,
+    trigger =
+    {
+      type = "research",
+      technology = "linox-technology_facility-factoryizing"
+    },
+  },
+  {
+    type = "tips-and-tricks-item",
+    name = "linox-tips-and-tricks_rs-latch",
+    tag = "[item=decider-combinator]",
+    category = "linox-tips-and-tricks_category",
+    order = "zaga",
+    indent = 2,
+    image = "__linox__/graphics/tips-and-tricks/rs-latch.png",
+    starting_status = "dependencies-not-met",
+    dependencies = {"linox-tips-and-tricks_recursive-blurprints"},
+  },
+  {
+    type = "tips-and-tricks-item",
+    name = "linox-tips-and-tricks_signal-converter",
+    tag = "[item=electronic-circuit]",
+    category = "linox-tips-and-tricks_category",
+    order = "zagb",
+    indent = 2,
+    image = "__linox__/graphics/tips-and-tricks/signal-converter.png",
+    starting_status = "dependencies-not-met",
+    dependencies = {"linox-tips-and-tricks_recursive-blurprints"},
+  },
+  {
+    type = "tips-and-tricks-item",
+    name = "linox-tips-and-tricks_bad-chest",
+    tag = "[item=blueprint-deployer]",
+    category = "linox-tips-and-tricks_category",
+    order = "zagc",
+    indent = 2,
+    image = "__linox__/graphics/tips-and-tricks/bad-chest.png",
+    starting_status = "dependencies-not-met",
+    dependencies = {"linox-tips-and-tricks_recursive-blurprints"},
+  },
+  {
+    type = "tips-and-tricks-item",
+    name = "linox-tips-and-tricks_bad-chest-area-viewer",
+    tag = "[item=blueprint-deployer]",
+    category = "linox-tips-and-tricks_category",
+    order = "zah",
+    indent = 1,
+    image = "__linox__/graphics/tips-and-tricks/bad-chest-area-viewer.png",
+    starting_status = "dependencies-not-met",
+    dependencies = {"linox-tips-and-tricks_recursive-blurprints"},
+  },
+  {
+    type = "tips-and-tricks-item",
+    name = "linox-tips-and-tricks_adjust-blueprint-origin",
+    tag = "[item=blueprint]",
+    category = "linox-tips-and-tricks_category",
+    order = "zaha",
+    indent = 2,
+    image = "__linox__/graphics/tips-and-tricks/adjust-blueprint-origin.png",
+    starting_status = "dependencies-not-met",
+    dependencies = {"linox-tips-and-tricks_recursive-blurprints"},
   },
 
 

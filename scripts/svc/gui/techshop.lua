@@ -58,8 +58,8 @@ UTIL_create_event_handler(defines.events.on_gui_click, function(event)
               player.print({"system.lorax-tech-shop-item-shortage"})
             end
           elseif tech.name == "linox-technology_recursive-blueprint" then
-            if inv.get_item_count("electronic-circuit") >= 1000 then
-              inv.remove{name="electronic-circuit", count = 1000}
+            if inv.get_item_count("electronic-circuit") >= 500 then
+              inv.remove{name="electronic-circuit", count = 500}
               player.force.script_trigger_research(tech.name);
               __MODULE__.refresh(player)
             else

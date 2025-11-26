@@ -408,7 +408,7 @@ UTIL_create_event_handler("linox-custom-event_gui-dialog-on-select", function(ev
       techshop.add_tech(player,
         "linox-sprite_recursive-blueprint",
         "linox-technology_recursive-blueprint",
-        "[item=electronic-circuit] 1000")
+        "[item=electronic-circuit] 500")
 
       techshop.add_tech(player,
         "linox-sprite_expanding-factory",
