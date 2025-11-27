@@ -41,12 +41,13 @@ Turbo pump
 A high-performance pump that consumes a large amount of energy in exchange for superior output.
 
 <br />
-<br />
-I plan to focus on developing this mod for the time being, and I will do my best to address any feedback regarding game balance or bugs as quickly as possible.
 
 Thank you for playing.
+==================================================
+I plan to focus on developing this mod for the time being, and I will do my best to address any feedback regarding game balance or bugs as quickly as possible.
+
 <br />
-<br />
+
 Special Thanks
 ================
  * Earendel - Thank you for providing the Space Exploration assets. (https://www.patreon.com/earendel, https://discord.gg/ymjUVMv)
