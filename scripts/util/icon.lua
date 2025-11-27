@@ -78,5 +78,22 @@ local __MODULE__ = {
       }
     }
   end,
+
+  recipe_icon_sintering = function(recipe_icon, size, tint)
+    return {
+      {
+        icon = recipe_icon,
+        icon_size = size,
+        tint = tint,
+      },
+      {
+        icon = "__linox__/graphics/icons/sintering-machine.png",
+        icon_size = 64,
+        scale = 0.25,
+        shift = {10, 10},
+        floating = true
+      }
+    }
+  end,
 }
 return __MODULE__

@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.10
+Date: 27. 11. 2025
+  Major Features:
+    - Added the Tungsten Sintering Processing recipe. You can now directly produce Tungsten Plates, Tungsten Sticks, and Tungsten Gear Wheels from Tungsten Ore using a Sintering Machine.
+    - The Sintering Machine has been reimplemented based on the Assembling Machine. As a result, it now only works when recipes are explicitly assigned.
+
+  Changes:
+    - The Linox is now technically self-sufficient, so there’s no risk of being stranded. Therefore, I removed the warning about being stranded from the exploration log.
+
+
+---------------------------------------------------------------------------------------------------
 Version: 0.3.9
 Date: 27. 11. 2025
   Major Features:

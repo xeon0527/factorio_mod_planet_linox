@@ -21,7 +21,7 @@ data:extend {
   {
     type = "recipe",
     name = "samarium",
-    category = "linox-recipe-category_sintering-machine",
+    category = "linox-recipe-category_sintering",
     energy_required = 1,
     enabled = false,
     ingredients =

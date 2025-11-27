@@ -265,4 +265,62 @@ data:extend {
         },
         ignore_tech_cost_multiplier = true,
       },
+
+      {
+        type = "technology",
+        name = "linox-technology_tungsten-sintering-processing",
+        icons = {
+          {
+            icon = "__linox__/graphics/technology/sintering-machine.png",
+            icon_size = 640,
+            tint = {0.5, 0.5, 0.5, 0.5},
+          },
+          {
+            icon = "__space-age__/graphics/icons/tungsten-plate.png",
+            icon_size = 64,
+            shift = {0, -25},
+            scale = 0.75,
+            draw_background = true,
+            floating = true,
+          },
+          {
+            icon = "__base__/graphics/icons/iron-gear-wheel.png",
+            icon_size = 64,
+            tint = {1.0, 0.66, 1.0},
+            shift = {-32, 25},
+            scale = 0.75,
+            draw_background = true,
+            floating = true,
+          },
+          {
+            icon = "__base__/graphics/icons/iron-stick.png",
+            icon_size = 64,
+            tint = {1.0, 0.66, 1.0},
+            shift = {32, 25},
+            scale = 0.75,
+            draw_background = true,
+            floating = true,
+          },
+        },
+        prerequisites = {
+          "linox-technology_sintering-machine",
+        },
+        unit =
+        {
+          count = 200,
+          ingredients =
+          {
+            {"linox-item_lava-data-card", 2},
+            {"linox-item_rare-earth-data-card", 2},
+          },
+          time = 60
+        },
+        effects =
+        {
+          { type = "unlock-recipe", recipe = "linox-recipe_tungsten-sintering-plate" },
+          { type = "unlock-recipe", recipe = "linox-recipe_tungsten-sintering-gear-wheel" },
+          { type = "unlock-recipe", recipe = "linox-recipe_tungsten-sintering-stick" },
+        },
+        ignore_tech_cost_multiplier = true,
+      },
 };

@@ -6,3 +6,4 @@ require("prototypes.recipe.rare-earth-refining");
 require("prototypes.recipe.samarium-centrifugation");
 require("prototypes.recipe.stone-extraction");
 require("prototypes.recipe.tungsten-extraction");
+require("prototypes.recipe.tungsten-sintering-processing");
