@@ -9,9 +9,9 @@ entity.energy_source =
 {
   type = "electric",
   usage_priority = "secondary-input",
-  drain = "500kW"
+  drain = "100kW"
 };
-entity.energy_usage = "4.5MW";
+entity.energy_usage = "900kW";
 entity.pumping_speed = 6000 / 60;
 entity.animations.north.tint = tint;
 entity.animations.east.tint = tint;
@@ -26,6 +26,17 @@ entity.icons = {{
   icon = "__base__/graphics/icons/pump.png",
   tint = tint,
 }};
+entity.tile_buildability_rules = {
+  {
+    area = {{-0.29, -0.9}, {0.29, 0.9}},
+    required_tiles = {
+      layers = {
+        ["linox-collision-layer_terminal"] = true},
+      }
+  }
+}
+
+
 
 local entity_input = table.deepcopy(entity);
 entity_input.name = "linox-building_fluid-elevator-input";

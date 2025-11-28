@@ -46,22 +46,25 @@ local function __on_entity_build(event)
     entity = entity,
     entity_type = entity_type,
     entity_name = entity_name,
-    tiles = UTIL_get_entity_tiles(entity),
-    pass = true,
+    set_cancel_message = nil,
   }
 
+  local cancel = false
   for _, proc in pairs(__DRV_EVENT_HANDLERS__["linox-custom-event_on-build-entity"]) do
-    proc(event_data);
+    event_data.set_cancel_message = nil
+    if proc(event_data) == false then
+      cancel = true
+      break
+    end
   end
 
-  --script.raise_event("linox-custom-event_on-build-entity", event_data);
-
-  -- 설치 금지 판정이 났으면 Player에게 아이템을 반환하거나 바닥에 떨어뜨림.
-  if not event_data.pass and event.consumed_items then
+  -- 이벤트가 취소되면 Player에게 아이템을 반환하거나 바닥에 떨어뜨림.
+  if cancel and event.consumed_items then
     local items = event.consumed_items.get_contents();
     if player then
-      --if player.admin then return end;
-
+      if event_data.set_cancel_message then
+        player.print(event_data.set_cancel_message)
+      end
       UTIL_insert_item(player, items)
     else
       for _, item in ipairs(items) do

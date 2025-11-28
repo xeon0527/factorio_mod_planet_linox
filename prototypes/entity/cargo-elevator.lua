@@ -9,6 +9,15 @@ entity.fast_replaceable_group = "transport-belt";
 entity.next_upgrade = nil;
 entity.belt_animation_set = ref_belt.belt_animation_set;
 entity.speed = ref_belt.speed;
+entity.tile_buildability_rules = {
+  {
+    area = {{-0.4, -0.4}, {0.4, 0.4}},
+    required_tiles = {
+      layers = {
+        ["linox-collision-layer_terminal"] = true},
+      }
+  }
+}
 
 data:extend{ entity, }
 

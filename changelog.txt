@@ -1,4 +1,19 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.11
+Date: 29. 11. 2025
+  Major Features:
+    - Redesigned the construction site layout of the Linox facility to feel more open and spacious.
+    - Added Facility Platform and Hazard Facility Platform tiles. These tiles follow nearly the same placement restrictions as the Terminal Platform, but allow the placement of Chests and the Core Roboport.
+    - Widened the Linox corridors connecting each facility area to 4 tiles. Additionally, railing tiles have been added along the corridor edges — players can walk on them, but buildings cannot be placed there.
+
+  Changes:
+    - Added placement checks for the Fluid Elevator and Cargo Elevator. These buildings can no longer be placed on invalid tiles.
+    - Updated the terrain design to better match the facility concept. Some tiles may appear incorrectly as a result, which will be fixed in a future update.
+
+  Balancing:
+    - Reduced the power consumption of the Fluid Elevator to one-fifth of its previous value.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.3.10
 Date: 27. 11. 2025
   Major Features:

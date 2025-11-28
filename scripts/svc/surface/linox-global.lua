@@ -1,19 +1,31 @@
 local events = require("scripts.drv.events")
+local build_filter = require("scripts.drv.build-filter")
 
 local __MODULE__ = {};
 
-local weak_tiles = {
-  "linox-tile_linox-terminal-platform",
-  "linox-tile_linox-hazard-terminal-platform",
-  --"linox-tile_linox-corridor",
-}
 
-local light_entity_types = {
+local filter_entity_types = {
   "inserter", "loader-1x1", "loader", "splitter", "lane-splitter",
   "transport-belt", "underground-belt", "lamp", "constant-combinator", "arithmetic-combinator", "decider-combinator", "power-switch",
   "programmable-speaker", "selector-combinator", "display-panel", "pipe", "pipe-to-ground", "pump", "offshore-pump", "electric-pole",
-  "construction-robot", "logistic-robot", "combat-robot", "solar-panel", 
+  "construction-robot", "logistic-robot", "combat-robot", "solar-panel",
 }
+
+build_filter.add_entity_type("linox-tile_linox-terminal-platform",        filter_entity_types)
+build_filter.add_entity_type("linox-tile_linox-hazard-terminal-platform", filter_entity_types)
+build_filter.add_entity_type("linox-tile_linox-corridor",                 filter_entity_types)
+build_filter.add_entity_type("linox-tile_linox-datacenter",               filter_entity_types)
+
+table.insert(filter_entity_types, "container")
+table.insert(filter_entity_types, "logistic-container")
+--table.insert(filter_entity_types, "proxy-container")
+
+build_filter.add_entity_type("linox-tile_linox-facility-platform",        filter_entity_types)
+build_filter.add_entity_type("linox-tile_linox-hazard-facility-platform", filter_entity_types)
+
+build_filter.add_entity_name("linox-tile_linox-facility-platform",        "linox-building_core-roboport")
+build_filter.add_entity_name("linox-tile_linox-hazard-facility-platform", "linox-building_core-roboport")
+
 
 -- Linox 건설 제한
 events.create_build_entity_handler(function(event)
@@ -29,37 +41,18 @@ events.create_build_entity_handler(function(event)
       if player then
         player.print{"", "[img=virtual-signal.signal-alert] ", {"system.rocket-silo-limit"}}
       end
-      event.pass = false
+      return false
     elseif e_name == "linox-building_cargo-elevator" or e_name == "linox-building_fluid-elevator" then
       for _, tile in pairs(tiles) do
         if tile.name ~= "linox-tile_linox-terminal-platform" and tile.name ~= "linox-tile_linox-hazard-terminal-platform" then
           --player.print("이 건물은 리녹스 시설 출입구에만 설치할 수 있습니다.");
           player.print{"", "[img=virtual-signal.signal-alert] ", {"system.entrance-limit"}}
-          event.pass = false
-          return
-        end
-      end
-    else
-      for _, tile in pairs(tiles) do
-        for _, weak_tile in pairs(weak_tiles) do
-          if tile.name == weak_tile then
-            for _, let in pairs(light_entity_types) do
-              if e_type == let then
-                return
-              end
-            end
-            
-            --player.print("이 건물은 리녹스 시설 출입구에 설치하기에는 너무 무겁습니다.");
-            if player then
-              player.print{"", "[img=virtual-signal.signal-alert] ", {"system.heavy-limit"}}
-            end
-            event.pass = false
-            return
-          end
+          return false
         end
       end
     end
   end
+  return true
 end)
 
 -- Linox 엘리베이터 탑승 처리

@@ -74,6 +74,17 @@ data:extend({
   },
   {
     type = "tips-and-tricks-item",
+    name = "linox-tips-and-tricks_placement_restriction2",
+    tag = "[item=foundation]",
+    category = "linox-tips-and-tricks_category",
+    order = "zada",
+    indent = 2,
+    simulation = simulation.linox_placement_restriction2,
+    starting_status = "dependencies-not-met",
+    dependencies = {"linox-tips-and-tricks_placement_restriction"},
+  },
+  {
+    type = "tips-and-tricks-item",
     name = "linox-tips-and-tricks_planetary-power-network",
     tag = "[item=substation]",
     category = "linox-tips-and-tricks_category",

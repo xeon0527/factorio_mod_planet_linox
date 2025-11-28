@@ -188,12 +188,12 @@ __MODULE__.expand_facility = function(level)
   surface.force_generate_chunk_requests()
 
   if level == 1 then
-    if surface.get_tile(0, -64).name ~= "linox-tile_out-of-map" then
-      return
-    end
+    local create_present = surface.get_tile(0, -64).name == "linox-tile_out-of-map"
 
     factory_builder.create_corridor(surface, {x = 0, y = -13}, "up", 48);
     factory_builder.create(surface, {x = 0, y = -64}, size);
+
+    if not create_present then return end
 
     local bp_entity = surface.create_entity{name = 'item-on-ground', position= {0, -64}, stack = 'blueprint'}
     if bp_entity then 
