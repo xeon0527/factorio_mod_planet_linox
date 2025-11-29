@@ -61,7 +61,7 @@ local function __create_sub_space(surface, center_position, center_size)
       t.position.x = v.x;
       t.position.y = v.y;
     end
-    surface.set_tiles(tiles);
+    surface.set_tiles(tiles, true, false);
     degree = degree + 90
   until degree >= 360
 end
@@ -84,7 +84,7 @@ __MODULE__.create = function(surface, pos, size)
     end
   end
   
-  surface.set_tiles(tiles);
+  surface.set_tiles(tiles, true, false);
   
   __create_sub_space(surface, pos, size);
 end
@@ -153,7 +153,7 @@ __MODULE__.create_corridor = function(surface, start_pos, direction, length)
     end
   end
 
-  surface.set_tiles(tiles);
+  surface.set_tiles(tiles, true, false);
 end
 
 

@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.1
+Date: 29. 11. 2025
+  Bugfixes:
+    - Fixed an issue where certain entities at specific locations would be deleted during technology research.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.4.0
 Date: 29. 11. 2025
   Major Features:
