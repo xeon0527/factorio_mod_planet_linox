@@ -6,8 +6,8 @@ data:extend {
     subgroup = "vulcanus-processes",
     order = "c[tungsten]-ab",
     icon_size = 64,
-    stack_size = 50,
-    weight = 20 * kg,
+    stack_size = 200,
+    weight = 1 * kg,
     default_import_location = "linox-planet_linox",
   },
 }

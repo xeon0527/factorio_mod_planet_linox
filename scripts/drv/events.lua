@@ -6,12 +6,14 @@ UTIL_create_event_handler("linox-custom-input_click", function(event)
   if event.selected_prototype and event.player_index then
     local p = game.players[event.player_index];
     local spt = event.selected_prototype;
-
-    if p ~= nil and p.selected and spt.base_type == "entity" then
-      script.raise_event("linox-custom-event_on-entity-click", {
-        player = p,
-        entity = p.selected,
-      });
+    if p ~= nil and spt.base_type == "entity" then
+      local selected = p.selected
+      if selected and selected.valid and selected.name ~= "entity-ghost" then
+        script.raise_event("linox-custom-event_on-entity-click", {
+          player = p,
+          entity = p.selected,
+        });
+      end
     end
   end
 end)

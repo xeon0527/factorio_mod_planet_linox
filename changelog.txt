@@ -1,4 +1,22 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.0
+Date: 29. 11. 2025
+  Major Features:
+    - Dysprosium technologies and the Dysprosium Exoskeleton have been added.
+    - The Flotation Tank has been added.
+
+  Bugfixes:
+    - Fixed an issue where Storage Tanks could not be placed on Linox facility platform tiles.
+    - Fixed a bug where UPS usage was abnormally high due to an issue in the Click Event handling logic.
+
+  Balancing:
+    - Reduced the amount of sulfuric acid consumed by the Rare Earth Refining recipe by half.
+    - Circuits can no longer be connected to the Sintering Machine.
+
+  Translation:
+    - All missing English translations have been added and corrected.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.3.11
 Date: 29. 11. 2025
   Major Features:

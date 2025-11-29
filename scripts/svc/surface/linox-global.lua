@@ -18,6 +18,7 @@ build_filter.add_entity_type("linox-tile_linox-datacenter",               filter
 
 table.insert(filter_entity_types, "container")
 table.insert(filter_entity_types, "logistic-container")
+table.insert(filter_entity_types, "storage-tank")
 --table.insert(filter_entity_types, "proxy-container")
 
 build_filter.add_entity_type("linox-tile_linox-facility-platform",        filter_entity_types)

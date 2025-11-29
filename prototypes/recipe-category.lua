@@ -7,4 +7,8 @@ data:extend {
     type = "recipe-category",
     name = "linox-recipe-category_sintering"
   },
+  {
+    type = "recipe-category",
+    name = "linox-recipe-category_bubbling"
+  },
 }

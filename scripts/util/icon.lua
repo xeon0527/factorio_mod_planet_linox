@@ -95,5 +95,24 @@ local __MODULE__ = {
       }
     }
   end,
+
+  technology_icon_constant_equipment = function(technology_icon, size, tint)
+    local icons =
+    {
+      {
+        icon = technology_icon,
+        icon_size = size,
+        tint = tint,
+      },
+      {
+        icon = "__core__/graphics/icons/technology/constants/constant-equipment.png",
+        icon_size = 128,
+        scale = 0.5,
+        shift = {50, 50},
+        floating = true
+      }
+    }
+    return icons
+  end
 }
 return __MODULE__

@@ -23,7 +23,7 @@ data:extend {
     ingredients =
     {
       {type="item", name="stone", amount=100},
-      {type = "fluid", name = "sulfuric-acid", amount = 400},
+      {type = "fluid", name = "sulfuric-acid", amount = 200},
     },
     results = {
       {type="item", name="rare-earth-powder", amount = 1},

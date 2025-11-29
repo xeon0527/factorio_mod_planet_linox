@@ -323,4 +323,112 @@ data:extend {
         },
         ignore_tech_cost_multiplier = true,
       },
+
+      {
+        type = "technology",
+        name = "linox-technology_froth-flotation-processing",
+        icon = "__linox__/graphics/technology/bubbling-machine.png",
+        icon_size = 640,
+        prerequisites = {
+          "linox-technology_rare-earth-refining",
+          "linox-technology_linox-petrochemicals",
+        },
+        unit =
+        {
+          count = 500,
+          ingredients =
+          {
+            {"linox-item_lava-data-card", 1},
+            {"linox-item_rare-earth-data-card", 1},
+          },
+          time = 60
+        },
+        effects =
+        {
+          { type = "unlock-recipe", recipe = "linox-building_bubbling-machine" },
+          { type = "unlock-recipe", recipe = "linox-recipe_froth-flotation-processing" },
+        },
+        ignore_tech_cost_multiplier = true,
+      },
+
+      {
+        type = "technology",
+        name = "linox-technology_dysprosium-extraction",
+        icons = {
+          {
+            icon = "__linox__/graphics/technology/white-powder.png",
+            icon_size = 256,
+            tint = { 75, 75, 0 }
+          },
+        },
+        prerequisites = {
+          "linox-technology_froth-flotation-processing",
+        },
+        unit =
+        {
+          count = 500,
+          ingredients =
+          {
+            {"linox-item_lava-data-card", 1},
+            {"linox-item_rare-earth-data-card", 1},
+          },
+          time = 60
+        },
+        effects =
+        {
+          { type = "unlock-recipe", recipe = "dysprosium-powder" },
+        },
+        ignore_tech_cost_multiplier = true,
+      },
+
+      {
+        type = "technology",
+        name = "linox-technology_dysprosium-data-card",
+        icon = "__space-exploration-graphics__/graphics/technology/catalogue/material-catalogue-1.png",
+        icon_size = 128,
+        prerequisites = {
+          "linox-technology_dysprosium-extraction",
+        },
+        unit =
+        {
+          count = 375,
+          ingredients =
+          {
+            {"linox-item_lava-data-card", 1},
+            {"linox-item_rare-earth-data-card", 1},
+          },
+          time = 60
+        },
+        effects =
+        {
+          { type = "unlock-recipe", recipe = "linox-item_dysprosium-data-card" },
+        },
+        ignore_tech_cost_multiplier = true,
+      },
+
+      {
+        type = "technology",
+        name = "linox-technology_dysprosium-exoskeleton-equipment",
+        icons = util_icon.technology_icon_constant_equipment("__base__/graphics/technology/exoskeleton-equipment.png", 256, {175,175,0}),
+        prerequisites = {
+          "linox-technology_dysprosium-data-card",
+          "exoskeleton-equipment",
+        },
+        unit =
+        {
+          count = 500,
+          ingredients =
+          {
+            {"linox-item_lava-data-card", 1},
+            {"linox-item_rare-earth-data-card", 1},
+            {"linox-item_dysprosium-data-card", 1},
+          },
+          time = 60
+        },
+        effects =
+        {
+          { type = "unlock-recipe", recipe = "dysprosium-exoskeleton-equipment" },
+        },
+        ignore_tech_cost_multiplier = true,
+      },
 };

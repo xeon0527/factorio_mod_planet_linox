@@ -12,7 +12,7 @@ data:extend {
     subgroup = "vulcanus-processes",
     order = "c[tungsten]-ac",
     stack_size = 200,
-    weight = 5 * kg,
+    weight = 1 * kg,
     default_import_location = "linox-planet_linox",
   },
 }

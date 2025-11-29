@@ -41,8 +41,8 @@ data:extend {
       emissions_per_minute = { pollution = 1 }
     },
 
-    circuit_wire_max_distance = 10,
-    circuit_connector = circuit_connector_definitions["assembling-machine"],
+    --circuit_wire_max_distance = 10,
+    --circuit_connector = circuit_connector_definitions["assembling-machine"],
 
     graphics_set =
     {
@@ -100,7 +100,7 @@ data:extend {
     stack_size = 20,
     weight = 50 * kg,
     place_result = "linox-building_sintering-machine",
-    subgroup = "smelting-machine",
+    subgroup = "production-machine",
     order = "ca",
     inventory_move_sound = item_sounds.electric_large_inventory_move,
     pick_sound = item_sounds.electric_large_inventory_pickup,
