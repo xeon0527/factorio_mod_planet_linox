@@ -35,7 +35,7 @@ events.create_build_entity_handler(function(event)
     local player = event.player
     local e_type = event.entity_type
     local e_name = event.entity_name
-    local tiles = event.tiles
+    local tiles = UTIL_get_entity_tiles(event.entity)
 
     if e_type == "rocket-silo" and e_name ~= "linox-building_advanced-rocket-silo" then
       --player.print("리녹스에서는 고급 로켓 사일로만 사용할 수 있습니다.");

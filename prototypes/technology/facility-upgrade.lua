@@ -15,7 +15,7 @@ data:extend {
     {
       type = "technology",
       name = "linox-technology_facility-factoryizing",
-      icons = util_icon.technology_icon_script_research("__base__/graphics/technology/stone-wall.png", 256),
+      icons = util_icon.technology_icon_script_research("__linox__/graphics/technology/facility-factoryizing.png", 512),
       prerequisites = {"linox-technology_facility-upgrade"},
       research_trigger = {
         type = "scripted",
@@ -25,7 +25,7 @@ data:extend {
       {
         type = "technology",
         name = "linox-technology_expanding-factory-1",
-        icons = util_icon.technology_icon_script_research("__base__/graphics/technology/stone-wall.png", 256),
+        icons = util_icon.technology_icon_script_research("__linox__/graphics/technology/expanding-factory.png", 500),
         prerequisites = {
           "linox-technology_facility-factoryizing"
         },
@@ -38,7 +38,8 @@ data:extend {
         {
           type = "technology",
           name = "linox-technology_expanding-factory-2",
-          icons = util_icon.technology_icon_linox_mod("__base__/graphics/technology/stone-wall.png", 256),
+          icon = "__linox__/graphics/technology/expanding-factory.png",
+          icon_size = 500,
           prerequisites = {
             "linox-technology_expanding-factory-1"
           },
@@ -57,7 +58,8 @@ data:extend {
           {
             type = "technology",
             name = "linox-technology_expanding-factory-3",
-            icons = util_icon.technology_icon_linox_mod("__base__/graphics/technology/stone-wall.png", 256),
+            icon = "__linox__/graphics/technology/expanding-factory.png",
+            icon_size = 500,
             prerequisites = {
               "linox-technology_expanding-factory-2",
             },

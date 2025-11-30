@@ -398,38 +398,64 @@ UTIL_create_event_handler("linox-custom-event_gui-dialog-on-select", function(ev
       techshop.add_tech(player,
         "linox-sprite_tungsten-extraction",
         "linox-technology_tungsten-extraction",
-        "[item=iron-plate] 1000    [item=copper-plate] 1000")
+        {
+          ["iron-plate"] = 1000,
+          ["copper-plate"] = 1000,
+        }
+      );
 
       techshop.add_tech(player,
         "linox-sprite_tungsten-processing",
         "linox-technology_tungsten-processing",
-        "[item=tungsten-ore] 500    [item=tungsten-plate] 500")
+        {
+          ["tungsten-ore"] = 500,
+          ["tungsten-plate"] = 500,
+        }
+      );
 
       techshop.add_tech(player,
         "linox-sprite_recursive-blueprint",
         "linox-technology_recursive-blueprint",
-        "[item=electronic-circuit] 500")
+        {
+          ["electronic-circuit"] = 500,
+        }
+      );
 
       techshop.add_tech(player,
         "linox-sprite_expanding-factory",
         "linox-technology_expanding-factory-1",
-        "[item=tungsten-gear-wheel] 500    [item=tungsten-stick] 500")
+        {
+          ["tungsten-gear-wheel"] = 500,
+          ["tungsten-stick"] = 500,
+        }
+      );
 
       techshop.add_tech(player,
         "linox-sprite_linox-supercomputer",
         "linox-technology_linox-supercomputer",
-        "[item=electronic-circuit] 500    [item=tungsten-gear-wheel] 500    [item=tungsten-stick] 500")
+        {
+          ["electronic-circuit"] = 500,
+          ["tungsten-gear-wheel"] = 500,
+          ["tungsten-stick"] = 500,
+        }
+      );
 
       techshop.add_tech(player,
         "linox-sprite_lorax-support",
         "linox-technology_lorax-support",
-        "[item=linox-item_lava-data-card] 1000")
+        {
+          ["linox-item_lava-data-card"] = 1000,
+        }
+      );
 
       techshop.add_tech(player,
         "linox-sprite_power-converter",
         "linox-technology_power-converter",
-        "[item=linox-item_lava-data-card] 250    [item=linox-item_rare-earth-data-card] 250")
-
+        {
+          ["linox-item_lava-data-card"] = 250,
+          ["linox-item_rare-earth-data-card"] = 250,
+        }
+      );
       techshop.refresh(player)
     end
   end

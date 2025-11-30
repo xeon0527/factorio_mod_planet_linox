@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.2
+Date: 30. 11. 2025
+  Changes:
+    - Replaced some technology images.
+
+  Bugfixes:
+    - Fixed an issue where the Dysprosium Data Card was not affected by productivity research.
+    - Fixed a crash that occurred when placing certain buildings.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.4.1
 Date: 29. 11. 2025
   Bugfixes:

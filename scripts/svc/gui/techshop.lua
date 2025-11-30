@@ -39,69 +39,22 @@ UTIL_create_event_handler(defines.events.on_gui_click, function(event)
           local inv = player.get_inventory(defines.inventory.character_main)
           if not inv then return end
 
-          if tech.name == "linox-technology_tungsten-extraction" then
-            if inv.get_item_count("iron-plate") >= 1000 and inv.get_item_count("copper-plate") >= 1000 then
-              inv.remove{name="iron-plate", count = 1000}
-              inv.remove{name="copper-plate", count = 1000}
-              player.force.script_trigger_research(tech.name);
-              __MODULE__.refresh(player)
-            else
+          local session = __get_session(player)
+          local costs = session.tech_costs[_tech_name_]
+
+          for item_name, cost in pairs(costs) do
+            if inv.get_item_count(item_name) < cost then
               player.print({"system.lorax-tech-shop-item-shortage"})
-            end
-          elseif tech.name == "linox-technology_tungsten-processing" then
-            if inv.get_item_count("tungsten-ore") >= 500 and inv.get_item_count("tungsten-plate") >= 500 then
-              inv.remove{name="tungsten-ore", count = 500}
-              inv.remove{name="tungsten-plate", count = 500}
-              player.force.script_trigger_research(tech.name);
-              __MODULE__.refresh(player)
-            else
-              player.print({"system.lorax-tech-shop-item-shortage"})
-            end
-          elseif tech.name == "linox-technology_recursive-blueprint" then
-            if inv.get_item_count("electronic-circuit") >= 500 then
-              inv.remove{name="electronic-circuit", count = 500}
-              player.force.script_trigger_research(tech.name);
-              __MODULE__.refresh(player)
-            else
-              player.print({"system.lorax-tech-shop-item-shortage"})
-            end
-          elseif tech.name == "linox-technology_expanding-factory-1" then
-            if inv.get_item_count("tungsten-gear-wheel") >= 500 and inv.get_item_count("tungsten-stick") >= 500 then
-              inv.remove{name="tungsten-gear-wheel", count = 500}
-              inv.remove{name="tungsten-stick", count = 500}
-              player.force.script_trigger_research(tech.name);
-              __MODULE__.refresh(player)
-            else
-              player.print({"system.lorax-tech-shop-item-shortage"})
-            end
-          elseif tech.name == "linox-technology_linox-supercomputer" then
-            if inv.get_item_count("electronic-circuit") >= 500 and inv.get_item_count("tungsten-gear-wheel") >= 500 and inv.get_item_count("tungsten-stick") >= 500 then
-              inv.remove{name="electronic-circuit", count = 500}
-              inv.remove{name="tungsten-gear-wheel", count = 500}
-              inv.remove{name="tungsten-stick", count = 500}
-              player.force.script_trigger_research(tech.name);
-              __MODULE__.refresh(player)
-            else
-              player.print({"system.lorax-tech-shop-item-shortage"})
-            end
-          elseif tech.name == "linox-technology_lorax-support" then
-            if inv.get_item_count("linox-item_lava-data-card") >= 1000 then
-              inv.remove{name="linox-item_lava-data-card", count = 1000}
-              player.force.script_trigger_research(tech.name);
-              __MODULE__.refresh(player)
-            else
-              player.print({"system.lorax-tech-shop-item-shortage"})
-            end
-          elseif tech.name == "linox-technology_power-converter" then
-            if inv.get_item_count("linox-item_lava-data-card") >= 250 and inv.get_item_count("linox-item_rare-earth-data-card") >= 250 then
-              inv.remove{name="linox-item_lava-data-card", count = 250}
-              inv.remove{name="linox-item_rare-earth-data-card", count = 250}
-              player.force.script_trigger_research(tech.name);
-              __MODULE__.refresh(player)
-            else
-              player.print({"system.lorax-tech-shop-item-shortage"})
+              return
             end
           end
+
+          for item_name, cost in pairs(costs) do
+            inv.remove{name=item_name, count = cost}
+          end
+          player.force.script_trigger_research(tech.name);
+          player.force.script_trigger_research(tech.name);
+          __MODULE__.refresh(player)
         end
       end
     end
@@ -207,7 +160,7 @@ __MODULE__.create = function(player, caption)
   return true
 end
 
-__MODULE__.add_tech = function(player, sprite, tech_name, tech_cost)
+__MODULE__.add_tech = function(player, sprite, tech_name, tech_costs)
   local session = __get_session(player);
   local force = game.forces["player"]
   local tech = force.technologies[tech_name]
@@ -295,11 +248,20 @@ __MODULE__.add_tech = function(player, sprite, tech_name, tech_cost)
   tech_cost_flow.style.margin = 0;
   tech_cost_flow.style.padding = 3;
   tech_cost_flow.style.vertical_align = "center";
-  
-  local tech_cost = tech_cost_flow.add { type = "label", caption = tech_cost };
+
+  local tech_cost_text = ""
+
+  for item_name, cost in pairs(tech_costs) do
+    tech_cost_text = tech_cost_text.."[item="..item_name.."] "..tostring(cost).."    "
+  end
+
+  local tech_cost = tech_cost_flow.add { type = "label", caption = tech_cost_text };
   tech_cost.style.margin = 0;
   tech_cost.style.padding = 0;
   tech_cost.style.font_color = {0,0,0}
+
+  session.tech_costs = session.tech_costs or {}
+  session.tech_costs[tech_name] = tech_costs
 
   table.insert(session.tech_btns, {
     btn = tech_btn,

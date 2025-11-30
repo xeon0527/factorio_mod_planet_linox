@@ -45,6 +45,11 @@ data:extend {
         recipe = "linox-item_samarium-data-card",
         change = 0.25
       },
+      {
+        type = "change-recipe-productivity",
+        recipe = "linox-item_dysprosium-data-card",
+        change = 0.25
+      },
     },
   },
 }
