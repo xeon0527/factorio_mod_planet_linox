@@ -74,7 +74,8 @@ data:extend {
       {type = "item", name = "refined-concrete", amount = 1000},
       {type = "item", name = "tungsten-gear-wheel", amount = 1000},
       {type = "item", name = "tungsten-carbide", amount = 500},
-      {type = "item", name = "samarium", amount = 100}
+      {type = "item", name = "samarium", amount = 100},
+      {type = "item", name = "dysprosium-powder", amount = 100},
     },
     surface_conditions =
     {

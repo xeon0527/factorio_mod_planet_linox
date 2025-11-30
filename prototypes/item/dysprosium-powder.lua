@@ -21,7 +21,7 @@ data:extend {
   {
     type = "recipe",
     name = "dysprosium-powder",
-    category = "linox-recipe-category_bubbling",
+    category = "linox-recipe-category_chemical-tank",
     energy_required = 5,
     enabled = false,
     ingredients =

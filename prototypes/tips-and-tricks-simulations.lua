@@ -257,6 +257,11 @@ __MODULE__.linox_placement_restriction2 = {
     end
 
     surface.create_entity{
+      name = "accumulator",
+      position = {-5, -2},
+    }
+
+    surface.create_entity{
       name = "wooden-chest",
       position = {-3, -2},
     }

@@ -48,7 +48,7 @@ data:extend { item, }
 local recipe = {
   type = "recipe",
   name = "linox-building_turbo-pump",
-  energy_required = 5,
+  energy_required = 3,
   enabled = false,
   ingredients =
   {
@@ -56,7 +56,7 @@ local recipe = {
     {type = "item", name = "pipe", amount = 5},
     {type = "item", name = "tungsten-carbide", amount = 2},
     {type = "item", name = "tungsten-gear-wheel", amount = 5},
-    {type = "item", name = "samarium", amount = 5},
+    {type = "item", name = "samarium", amount = 1},
   },
   surface_conditions =
     {

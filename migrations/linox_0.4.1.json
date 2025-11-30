@@ -1,0 +1,13 @@
+{
+  "entity":[
+    ["linox-building_bubbling-machine", "linox-building_chemical-tank"]
+  ],
+
+  "item":[
+    ["linox-building_bubbling-machine", "linox-building_chemical-tank"]
+  ],
+
+  "recipe":[
+    ["linox-building_bubbling-machine", "linox-building_chemical-tank"]
+  ]
+}

@@ -20,7 +20,7 @@ data:extend {
     energy_required = 2,
     enabled = false,
     auto_recycle = false,
-    category = "linox-recipe-category_bubbling",
+    category = "linox-recipe-category_chemical-tank",
     ingredients =
     {
       {type = "item", name = "rare-earth-powder", amount = 2},

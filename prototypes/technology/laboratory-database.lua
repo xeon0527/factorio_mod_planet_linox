@@ -107,9 +107,7 @@ data:extend {
         name = "linox-technology_turbo-pump",
         icons = util_icon.technology_icon_linox_mod("__base__/graphics/technology/fluid-handling.png", 256),
         prerequisites = {
-          "linox-technology_tungsten-processing",
-          "linox-technology_sintering-machine",
-          "linox-technology_linox-petrochemicals",
+          "linox-technology_samarium-data-card",
         },
         unit =
         {
@@ -118,12 +116,14 @@ data:extend {
           {
             {"linox-item_lava-data-card", 1},
             {"linox-item_rare-earth-data-card", 1},
+            {"linox-item_samarium-data-card", 1},
           },
           time = 60
         },
         effects =
         {
           { type = "unlock-recipe", recipe = "linox-building_turbo-pump" },
+          { type = "unlock-recipe", recipe = "linox-building_outlet" },
         },
         ignore_tech_cost_multiplier = true,
       },
@@ -192,11 +192,7 @@ data:extend {
         },
         essential = true,
         prerequisites = {
-          "linox-technology_enhanced-space-engineering",
-          "linox-technology_tungsten-processing",
-          "linox-technology_samarium-centrifugation",
-          "linox-technology_rocket-silo-foundation",
-          "linox-technology_linox-petrochemicals",
+          "linox-technology_dysprosium-data-card",
           "linox-technology_samarium-data-card",
         },
         unit =
@@ -207,6 +203,7 @@ data:extend {
             {"linox-item_lava-data-card", 1},
             {"linox-item_rare-earth-data-card", 1},
             {"linox-item_samarium-data-card", 1},
+            {"linox-item_dysprosium-data-card", 1},
           },
           time = 60
         },
@@ -327,7 +324,7 @@ data:extend {
       {
         type = "technology",
         name = "linox-technology_froth-flotation-processing",
-        icon = "__linox__/graphics/technology/bubbling-machine.png",
+        icon = "__linox__/graphics/technology/chemical-tank.png",
         icon_size = 640,
         prerequisites = {
           "linox-technology_rare-earth-refining",
@@ -345,7 +342,7 @@ data:extend {
         },
         effects =
         {
-          { type = "unlock-recipe", recipe = "linox-building_bubbling-machine" },
+          { type = "unlock-recipe", recipe = "linox-building_chemical-tank" },
           { type = "unlock-recipe", recipe = "linox-recipe_froth-flotation-processing" },
         },
         ignore_tech_cost_multiplier = true,

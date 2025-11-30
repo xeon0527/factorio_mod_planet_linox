@@ -1,18 +1,17 @@
 local hit_effects = require("__base__.prototypes.entity.hit-effects")
-local sounds = require("__base__.prototypes.entity.sounds")
 local item_sounds = require("__base__.prototypes.item_sounds")
 
 data:extend {
   {
     type = "assembling-machine",
-    name = "linox-building_bubbling-machine",
+    name = "linox-building_chemical-tank",
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
-    minable = {mining_time = 0.2, result = "linox-building_bubbling-machine"},
+    minable = {mining_time = 0.2, result = "linox-building_chemical-tank"},
     max_health = 300,
     corpse = "assembling-machine-3-remnants",
     dying_explosion = "assembling-machine-3-explosion",
 
-    icon = "__linox__/graphics/icons/bubbling-machine.png",
+    icon = "__linox__/graphics/icons/chemical-tank.png",
     collision_box = {{-1.8, -1.8}, {1.8, 1.8}},
     selection_box = {{-2, -2}, {2, 2}},
     damaged_trigger_effect = hit_effects.entity(),
@@ -30,7 +29,7 @@ data:extend {
 
     fast_replaceable_group = "assembling-machine",
     crafting_speed = 1,
-    crafting_categories = { "linox-recipe-category_bubbling" },
+    crafting_categories = { "linox-recipe-category_chemical-tank" },
     module_slots = 4,
 
     energy_usage = "250kW",
@@ -41,7 +40,8 @@ data:extend {
       drain = "50kW",
       emissions_per_minute = { pollution = 1 }
     },
-
+    forced_symmetry = "horizontal",
+    
     --circuit_wire_max_distance = 10,
     --circuit_connector = circuit_connector_definitions["assembling-machine"],
 
@@ -85,7 +85,7 @@ data:extend {
         layers =
         {
           {
-            filename = "__linox__/graphics/entity/bubbling-machine/oxidizer-hr-animation-1.png",
+            filename = "__linox__/graphics/entity/chemical-tank/oxidizer-hr-animation-1.png",
             animation_speed = 1,
             width = 280,
             height = 320,
@@ -95,7 +95,7 @@ data:extend {
             shift = util.by_pixel(0, -16),
           },
           {
-            filename = "__linox__/graphics/entity/bubbling-machine/oxidizer-hr-shadow.png",
+            filename = "__linox__/graphics/entity/chemical-tank/oxidizer-hr-shadow.png",
             animation_speed = 1,
             width = 700,
             height = 500,
@@ -106,7 +106,7 @@ data:extend {
             shift = util.by_pixel(0, -16),
           },
           {
-            filename = "__linox__/graphics/entity/bubbling-machine/oxidizer-hr-color1-1.png",
+            filename = "__linox__/graphics/entity/chemical-tank/oxidizer-hr-color1-1.png",
             animation_speed = 1,
             width = 280,
             height = 320,
@@ -116,7 +116,7 @@ data:extend {
             shift = util.by_pixel(0, -16),
           },
           {
-            filename = "__linox__/graphics/entity/bubbling-machine/oxidizer-hr-emission-1.png",
+            filename = "__linox__/graphics/entity/chemical-tank/oxidizer-hr-emission-1.png",
             animation_speed = 1,
             width = 280,
             height = 320,
@@ -136,12 +136,12 @@ data:extend {
 data:extend {
   {
     type = "item",
-    name = "linox-building_bubbling-machine",
-    icon = "__linox__/graphics/icons/bubbling-machine.png",
+    name = "linox-building_chemical-tank",
+    icon = "__linox__/graphics/icons/chemical-tank.png",
     icon_size = 64,
     stack_size = 10,
     weight = 100 * kg,
-    place_result = "linox-building_bubbling-machine",
+    place_result = "linox-building_chemical-tank",
     subgroup = "production-machine",
     order = "ca",
     inventory_move_sound = item_sounds.electric_large_inventory_move,
@@ -154,7 +154,7 @@ data:extend {
 data:extend {
   {
     type = "recipe",
-    name = "linox-building_bubbling-machine",
+    name = "linox-building_chemical-tank",
     energy_required = 3,
     enabled = false,
     ingredients =
@@ -177,6 +177,6 @@ data:extend {
         max = 2
       }
     },
-    results = {{type = "item", name = "linox-building_bubbling-machine", amount = 1}}
+    results = {{type = "item", name = "linox-building_chemical-tank", amount = 1}}
   },
 }

@@ -9,6 +9,10 @@ data:extend {
   },
   {
     type = "recipe-category",
-    name = "linox-recipe-category_bubbling"
+    name = "linox-recipe-category_chemical-tank"
+  },
+  {
+    type = "recipe-category",
+    name = "linox-recipe-category_outlet"
   },
 }

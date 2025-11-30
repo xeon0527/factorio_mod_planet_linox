@@ -1,4 +1,20 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.3
+Date: 30. 11. 2025
+  Minor Features:
+    - The Turbo Pump research has been moved to the Samarium Tech Card tier. The Turbo Pump research now requires Samarium Tech Cards.
+    - The Advanced Rocket Silo research now requires Dysprosium Tech Cards.
+    - Crafting the Advanced Rocket Silo now requires Dysprosium Powder.
+    - Renamed the Flotation Tank to Chemical Tank. This building will now support a wider range of chemical processing.
+    - Added the Outlet. The Outlet allows you to discharge any liquid into the sea and is unlocked with the Turbo Pump research.
+
+  Changes:
+    - Accumulator placement is now allowed on Facility Platform tiles.
+
+  Bugfixes:
+    - Fixed an issue where the Chemical Tank could not be rotated.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.4.2
 Date: 30. 11. 2025
   Changes:
