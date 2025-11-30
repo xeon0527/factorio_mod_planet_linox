@@ -1,4 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.4
+Date: 1. 12. 2025
+  Changes:
+    - Updated the icon for the Expanding Factory research.
+
+  Bugfixes:
+    - Fixed a conflict with certain mods that occurred during the automatic recipe generation for the Outlet.
+
+  Translation:
+    - Fixed an issue where the Battery-related information was missing in Placement Restriction 2 tips.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.4.3
 Date: 30. 11. 2025
   Minor Features:

@@ -9,6 +9,7 @@ require("prototypes.planet.map-gen")
 require("prototypes.planet.planet")
 
 require("prototypes.tool._tool")
+require("prototypes.fluid._fluid")
 require("prototypes.custom-event")
 require("prototypes.custom-input")
 require("prototypes.equipment")
