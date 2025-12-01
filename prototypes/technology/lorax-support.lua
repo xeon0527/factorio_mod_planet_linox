@@ -52,4 +52,28 @@ data:extend {
       },
     },
   },
+
+  {
+    type = "technology",
+    name = "linox-technology_build-data-catalog",
+    icons = util_icon.technology_icon_script_research("__space-exploration-graphics__/graphics/technology/catalogue/universal-catalogue.png", 128),
+    icon = "__space-exploration-graphics__/graphics/technology/catalogue/universal-catalogue.png",
+    icon_size = 128,
+    prerequisites = {
+      "linox-technology_dysprosium-data-card",
+      "linox-technology_samarium-data-card",
+    },
+    research_trigger = {
+      type = "scripted",
+      trigger_description = {"technology-description.linox-technology-trigger-description_lorax-purchase"}
+    },
+    effects =
+    {
+      {
+        type = "change-recipe-productivity",
+        recipe = "linox-item_neodymium-data-card",
+        change = 0.25
+      },
+    },
+  }
 }

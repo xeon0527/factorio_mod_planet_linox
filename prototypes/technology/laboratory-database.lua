@@ -71,7 +71,7 @@ data:extend {
     {
       type = "technology",
       name = "linox-technology_samarium-data-card",
-      icon = "__space-exploration-graphics__/graphics/technology/catalogue/energy-catalogue-1.png",
+      icon = "__space-exploration-graphics__/graphics/technology/catalogue/energy-catalogue-2.png",
       icon_size = 128,
       prerequisites = {
         "linox-technology_tungsten-processing",
@@ -123,7 +123,6 @@ data:extend {
         effects =
         {
           { type = "unlock-recipe", recipe = "linox-building_turbo-pump" },
-          { type = "unlock-recipe", recipe = "linox-building_outlet" },
         },
         ignore_tech_cost_multiplier = true,
       },
@@ -381,7 +380,7 @@ data:extend {
       {
         type = "technology",
         name = "linox-technology_dysprosium-data-card",
-        icon = "__space-exploration-graphics__/graphics/technology/catalogue/material-catalogue-1.png",
+        icon = "__space-exploration-graphics__/graphics/technology/catalogue/material-catalogue-2.png",
         icon_size = 128,
         prerequisites = {
           "linox-technology_dysprosium-extraction",

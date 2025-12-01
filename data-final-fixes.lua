@@ -16,6 +16,7 @@ for _, fluid in pairs(data.raw.fluid) do
           { type = "fluid", name = fluid.name, amount = 100 },
         },
         icon = "__base__/graphics/icons/offshore-pump.png",
+        icon_size = 64,
         results = {},
       }
     }

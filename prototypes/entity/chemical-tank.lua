@@ -12,6 +12,7 @@ data:extend {
     dying_explosion = "assembling-machine-3-explosion",
 
     icon = "__linox__/graphics/icons/chemical-tank.png",
+    icon_size = 64,
     collision_box = {{-1.8, -1.8}, {1.8, 1.8}},
     selection_box = {{-2, -2}, {2, 2}},
     damaged_trigger_effect = hit_effects.entity(),

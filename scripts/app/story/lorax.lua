@@ -456,6 +456,17 @@ UTIL_create_event_handler("linox-custom-event_gui-dialog-on-select", function(ev
           ["linox-item_rare-earth-data-card"] = 250,
         }
       );
+
+      techshop.add_tech(player,
+        "linox-sprite_build-data-catalogue",
+        "linox-technology_build-data-catalog",
+        {
+          ["linox-item_lava-data-card"] = 250,
+          ["linox-item_rare-earth-data-card"] = 250,
+          ["linox-item_samarium-data-card"] = 250,
+          ["linox-item_dysprosium-data-card"] = 250,
+        }
+      );
       techshop.refresh(player)
     end
   end

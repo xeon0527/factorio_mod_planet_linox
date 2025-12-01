@@ -64,4 +64,11 @@ data:extend {
     filename = "__base__/graphics/technology/electric-energy-acumulators.png",
     size = 256,
   },
+
+  {
+    type = "sprite",
+    name = "linox-sprite_build-data-catalogue",
+    filename = "__space-exploration-graphics__/graphics/technology/catalogue/universal-catalogue.png",
+    size = 128,
+  },
 }

@@ -50,6 +50,7 @@ data:extend {
       "linox-item_rare-earth-data-card",
       "linox-item_samarium-data-card",
       "linox-item_dysprosium-data-card",
+      "linox-item_neodymium-data-card",
     },
     module_slots = 4,
     icons_positioning =

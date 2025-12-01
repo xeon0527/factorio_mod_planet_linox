@@ -51,6 +51,7 @@ local recipe = {
       }
     },
   results = {{type="item", name="linox-item_rare-earth-data-card", amount=1}},
+  allow_productivity = true,
 }
 
 data:extend { recipe, }

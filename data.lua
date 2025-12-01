@@ -19,3 +19,6 @@ require("prototypes.sprits")
 require("prototypes.tile")
 require("prototypes.tips-and-tricks")
 require("prototypes.collision-layer")
+
+--local constants = data.raw["utility-constants"].default
+--constants.max_fluid_flow=200

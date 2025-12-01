@@ -4,11 +4,10 @@ local item_tints = require("__base__.prototypes.item-tints")
 data:extend {
   {
     type = "tool",
-    name = "linox-item_samarium-data-card",
-    --localised_description = {"item-description.linox-item_samarium-data-card"},
-    icon = "__space-exploration-graphics__/graphics/icons/data/electromagnetic-field.png",
+    name = "linox-item_neodymium-data-card",
+    icon = "__space-exploration-graphics__/graphics/icons/data/orbital.png",
     subgroup = "science-pack",
-    color_hint = { text = "S" },
+    color_hint = { text = "N" },
     order = "lc",
     inventory_move_sound = item_sounds.science_inventory_move,
     pick_sound = item_sounds.science_inventory_pickup,
@@ -27,16 +26,17 @@ data:extend {
 
 local recipe = {
   type = "recipe",
-  name = "linox-item_samarium-data-card",
+  name = "linox-item_neodymium-data-card",
   category = "electronics-or-assembling",
   energy_required = 5,
   enabled = false,
   ingredients =
   {
+    {type = "item", name = "neodymium-powder", amount = 1},
     {type = "item", name = "samarium", amount = 1},
-    {type = "item", name = "advanced-circuit", amount = 2},
-    {type = "item", name = "processing-unit", amount = 2},
-    {type = "item", name = "tungsten-carbide", amount = 1},
+    {type = "item", name = "dysprosium-powder", amount = 1},
+    {type = "item", name = "rare-earth-powder", amount = 1},
+    {type = "fluid", name = "lubricant", amount = 10},
   },
   surface_conditions =
     {
@@ -51,7 +51,7 @@ local recipe = {
         max = 2
       }
     },
-  results = {{type="item", name="linox-item_samarium-data-card", amount=1}},
+  results = {{type="item", name="linox-item_neodymium-data-card", amount=1}},
   allow_productivity = true,
 }
 
