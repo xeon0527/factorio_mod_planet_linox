@@ -1,4 +1,6 @@
 This mod is in beta. It has reached a relatively stable stage as maintenance continues, but the addition of new systems or entities may still cause changes to gameplay. This mod natively supports English, Korean, and Russian.
+
+You’re welcome to give any feedback, including criticism. I really need feedback. I always consider this mod to be imperfect.
 - - -
 Planet Linox - Probably the smallest planet in Factorio.
 ==================================================
@@ -40,6 +42,12 @@ Rewards
   
  * Neodymium permanent magnet generator
 >A generator that uses neodymium permanent magnets. Thanks to the powerful magnetic force of neodymium, a high-efficiency, high-capacity generator could be compressed down to this size.
+  
+ * Erbium beacon
+>Using Erbium to improve the signal tower efficiency reportedly allows you to equip twice as many modules. Can you feel the immense power of the rare earth elements?  
+  
+ * Chemical plant Productivity Technology
+>Grants chemical plants +10% base productivity per level.
 - - -
 Recommended companion mods
 ==================================================

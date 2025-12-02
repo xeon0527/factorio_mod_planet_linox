@@ -113,7 +113,7 @@ data:extend({
   },
   {
     type = "tips-and-tricks-item",
-    name = "linox-tips-and-tricks_recursive-blurprints",
+    name = "linox-tips-and-tricks_recursive-blueprints",
     tag = "[item=blueprint-deployer2]",
     category = "linox-tips-and-tricks_category",
     order = "zag",
@@ -134,7 +134,7 @@ data:extend({
     indent = 2,
     image = "__linox__/graphics/tips-and-tricks/rs-latch.png",
     starting_status = "dependencies-not-met",
-    dependencies = {"linox-tips-and-tricks_recursive-blurprints"},
+    dependencies = {"linox-tips-and-tricks_recursive-blueprints"},
   },
   {
     type = "tips-and-tricks-item",
@@ -145,7 +145,7 @@ data:extend({
     indent = 2,
     image = "__linox__/graphics/tips-and-tricks/signal-converter.png",
     starting_status = "dependencies-not-met",
-    dependencies = {"linox-tips-and-tricks_recursive-blurprints"},
+    dependencies = {"linox-tips-and-tricks_recursive-blueprints"},
   },
   {
     type = "tips-and-tricks-item",
@@ -156,7 +156,7 @@ data:extend({
     indent = 2,
     image = "__linox__/graphics/tips-and-tricks/bad-chest.png",
     starting_status = "dependencies-not-met",
-    dependencies = {"linox-tips-and-tricks_recursive-blurprints"},
+    dependencies = {"linox-tips-and-tricks_recursive-blueprints"},
   },
   {
     type = "tips-and-tricks-item",
@@ -167,7 +167,7 @@ data:extend({
     indent = 1,
     image = "__linox__/graphics/tips-and-tricks/bad-chest-area-viewer.png",
     starting_status = "dependencies-not-met",
-    dependencies = {"linox-tips-and-tricks_recursive-blurprints"},
+    dependencies = {"linox-tips-and-tricks_recursive-blueprints"},
   },
   {
     type = "tips-and-tricks-item",
@@ -178,7 +178,7 @@ data:extend({
     indent = 2,
     image = "__linox__/graphics/tips-and-tricks/adjust-blueprint-origin.png",
     starting_status = "dependencies-not-met",
-    dependencies = {"linox-tips-and-tricks_recursive-blurprints"},
+    dependencies = {"linox-tips-and-tricks_recursive-blueprints"},
   },
   {
     type = "tips-and-tricks-item",

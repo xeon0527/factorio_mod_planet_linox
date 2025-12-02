@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.6.3
+Date: 3. 12. 2025
+  Bugfixes:
+    - Fixed an issue where some text wasn’t displaying correctly due to a typo in the internal key-value.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.6.2
 Date: 3. 12. 2025
   Bugfixes:
