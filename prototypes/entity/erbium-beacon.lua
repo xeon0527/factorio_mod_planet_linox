@@ -1,7 +1,5 @@
 local item_sounds = require("__base__.prototypes.item_sounds")
 
-data.raw["beacon"]["beacon"].next_upgrade = "linox-building_erbium-beacon"
-
 local entity = table.deepcopy(data.raw["beacon"]["beacon"]);
 entity.name = "linox-building_erbium-beacon"
 entity.icon = "__space-exploration-graphics__/graphics/icons/wide-beacon.png"
@@ -35,6 +33,8 @@ entity.animation = {
   }
 }
 entity.water_reflection = nil
+
+data.raw["beacon"]["beacon"].next_upgrade = "linox-building_erbium-beacon"
 
 data:extend {
   entity,

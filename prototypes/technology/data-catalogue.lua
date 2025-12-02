@@ -168,7 +168,7 @@ data:extend {
     },
     prerequisites = {
       "linox-technology_neodymium-permanent-magnet",
-      "uranium-processing",
+      --"uranium-processing",
     },
     unit =
     {
@@ -302,10 +302,6 @@ data:extend {
       },
       time = 60
     },
-    --effects =
-    --{
-    --  { type = "unlock-recipe", recipe = "linox-building_erbium-beacon" },
-    --},
     max_level = "infinite",
     upgrade = true,
     ignore_tech_cost_multiplier = true,
