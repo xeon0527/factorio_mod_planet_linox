@@ -1,5 +1,3 @@
-
-
 for _, fluid in pairs(data.raw.fluid) do
   if string.sub(fluid.name, 1, 9) ~= "parameter" and fluid.name ~= "fluid-unknown" then
     data:extend {

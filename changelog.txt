@@ -1,4 +1,19 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.6.0
+Date: 2. 12. 2025
+  Major Features:
+    - Added the Erbium tech tree and Erbium beacon research.
+    - Added Expanding Factory 4–7 research.
+    - Added infinite Chemical Plant Productivity research as a final technology.
+
+  Minor Features:
+    - Adjusted the cost of L.O.R.A.X-purchased technologies that previously required Data Cards, replacing them with more appropriate items.
+    - Updated the cost of the “Linox Landing Site Survey” research. It no longer requires unnecessary science packs for progression.
+
+  Translation:
+    - Improved some text for better grammar and clarity.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.5.2
 Date: 2. 12. 2025
   Minor Features:

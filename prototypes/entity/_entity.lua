@@ -9,7 +9,7 @@ require("prototypes.entity.chemical-tank");
 require("prototypes.entity.common");
 require("prototypes.entity.core-roboport");
 require("prototypes.entity.deep-oil-pumpjack");
---require("prototypes.entity.erbium-beacon");
+require("prototypes.entity.erbium-beacon");
 require("prototypes.entity.fluid-elevator");
 require("prototypes.entity.huge-heat-exchanger")
 require("prototypes.entity.linox-supercomputer")

@@ -444,7 +444,9 @@ UTIL_create_event_handler("linox-custom-event_gui-dialog-on-select", function(ev
         "linox-sprite_lorax-support",
         "linox-technology_lorax-support",
         {
-          ["linox-item_lava-data-card"] = 1000,
+          ["electronic-circuit"] = 500,
+          ["advanced-circuit"] = 500,
+          ["coal"] = 250,
         }
       );
 
@@ -452,8 +454,7 @@ UTIL_create_event_handler("linox-custom-event_gui-dialog-on-select", function(ev
         "linox-sprite_power-converter",
         "linox-technology_power-converter",
         {
-          ["linox-item_lava-data-card"] = 250,
-          ["linox-item_rare-earth-data-card"] = 250,
+          ["battery"] = 500,
         }
       );
 
@@ -461,10 +462,10 @@ UTIL_create_event_handler("linox-custom-event_gui-dialog-on-select", function(ev
         "linox-sprite_build-data-catalogue",
         "linox-technology_build-data-catalog",
         {
-          ["linox-item_lava-data-card"] = 250,
-          ["linox-item_rare-earth-data-card"] = 250,
-          ["linox-item_samarium-data-card"] = 250,
-          ["linox-item_dysprosium-data-card"] = 250,
+          ["processing-unit"] = 300,
+          ["solid-fuel"] = 250,
+          ["tungsten-carbide"] = 250,
+          ["flying-robot-frame"] = 500,
         }
       );
       techshop.refresh(player)

@@ -309,21 +309,21 @@ __MODULE__.expand_facility = function(level)
     factory_builder.create(surface, {x = -64, y = 0}, size);
 
   elseif level == 5 then
-    factory_builder.create_corridor(surface, {x = 56, y = -64}, "left", 48);
-    factory_builder.create_corridor(surface, {x = 64, y = -56}, "down", 48);
-    factory_builder.create(surface, {x = 64, y = -64}, size);
+    factory_builder.create_corridor(surface, {x = 49, y = -64}, "left", 36);
+    factory_builder.create_corridor(surface, {x = 64, y = -49}, "down", 36);
+    factory_builder.create(surface, {x = 64, y = -64}, 10);
   elseif level == 6 then
-    factory_builder.create_corridor(surface, {x = 56, y = 64}, "left", 48);
-    factory_builder.create_corridor(surface, {x = 64, y = 56}, "up", 48);
-    factory_builder.create(surface, {x = 64, y = 64}, 8);
+    factory_builder.create_corridor(surface, {x = 49, y = 64}, "left", 36);
+    factory_builder.create_corridor(surface, {x = 64, y = 49}, "up", 36);
+    factory_builder.create(surface, {x = 64, y = 64}, 10);
   elseif level == 7 then
-    factory_builder.create_corridor(surface, {x = -56, y = 64}, "right", 48);
-    factory_builder.create_corridor(surface, {x = -64, y = 56}, "up", 48);
-    factory_builder.create(surface, {x = -64, y = 64}, 8);
+    factory_builder.create_corridor(surface, {x = -49, y = 64}, "right", 36);
+    factory_builder.create_corridor(surface, {x = -64, y = 49}, "up", 36);
+    factory_builder.create(surface, {x = -64, y = 64}, 10);
   elseif level == 8 then
-    factory_builder.create_corridor(surface, {x = -56, y = -64}, "right", 48);
-    factory_builder.create_corridor(surface, {x = -64, y = -56}, "down", 48);
-    factory_builder.create(surface, {x = -64, y = -64}, 8);
+    factory_builder.create_corridor(surface, {x = -49, y = -64}, "right", 36);
+    factory_builder.create_corridor(surface, {x = -64, y = -49}, "down", 36);
+    factory_builder.create(surface, {x = -64, y = -64}, 10);
   end
 end;
 

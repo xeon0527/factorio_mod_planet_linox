@@ -75,6 +75,106 @@ data:extend {
             upgrade = true,
             ignore_tech_cost_multiplier = true,
           },
+          {
+            type = "technology",
+            name = "linox-technology_expanding-factory-4",
+            icon = "__linox__/graphics/technology/expanding-factory.png",
+            icon_size = 500,
+            prerequisites = {
+              "linox-technology_expanding-factory-3",
+              "linox-technology_samarium-data-card",
+              "linox-technology_dysprosium-data-card",
+            },
+            unit =
+            {
+              count = 500,
+              ingredients =
+              {
+                {"linox-item_lava-data-card", 1},
+                {"linox-item_rare-earth-data-card", 1},
+                {"linox-item_samarium-data-card", 1},
+                {"linox-item_dysprosium-data-card", 1},
+              },
+              time = 60
+            },
+            upgrade = true,
+            ignore_tech_cost_multiplier = true,
+          },
+          {
+            type = "technology",
+            name = "linox-technology_expanding-factory-5",
+            icon = "__linox__/graphics/technology/expanding-factory.png",
+            icon_size = 500,
+            prerequisites = {
+              "linox-technology_expanding-factory-4",
+            },
+            unit =
+            {
+              count = 1000,
+              ingredients =
+              {
+                {"linox-item_lava-data-card", 1},
+                {"linox-item_rare-earth-data-card", 1},
+                {"linox-item_samarium-data-card", 1},
+                {"linox-item_dysprosium-data-card", 1},
+              },
+              time = 60
+            },
+            upgrade = true,
+            ignore_tech_cost_multiplier = true,
+          },
+          {
+            type = "technology",
+            name = "linox-technology_expanding-factory-6",
+            icon = "__linox__/graphics/technology/expanding-factory.png",
+            icon_size = 500,
+            prerequisites = {
+              "linox-technology_expanding-factory-5",
+              "linox-technology_neodymium-data-card",
+              "linox-technology_erbium-data-card",
+            },
+            unit =
+            {
+              count = 2000,
+              ingredients =
+              {
+                {"linox-item_lava-data-card", 1},
+                {"linox-item_rare-earth-data-card", 1},
+                {"linox-item_samarium-data-card", 1},
+                {"linox-item_dysprosium-data-card", 1},
+                {"linox-item_neodymium-data-card", 1},
+                {"linox-item_erbium-data-card", 1},
+              },
+              time = 60
+            },
+            upgrade = true,
+            ignore_tech_cost_multiplier = true,
+          },
+          {
+            type = "technology",
+            name = "linox-technology_expanding-factory-7",
+            icon = "__linox__/graphics/technology/expanding-factory.png",
+            icon_size = 500,
+            prerequisites = {
+              "linox-technology_expanding-factory-6",
+            },
+            unit =
+            {
+              count = 4000,
+              ingredients =
+              {
+                {"linox-item_lava-data-card", 1},
+                {"linox-item_rare-earth-data-card", 1},
+                {"linox-item_samarium-data-card", 1},
+                {"linox-item_dysprosium-data-card", 1},
+                {"linox-item_neodymium-data-card", 1},
+                {"linox-item_erbium-data-card", 1},
+              },
+              time = 60
+            },
+            upgrade = true,
+            ignore_tech_cost_multiplier = true,
+          },
     {
       type = "technology",
       name = "linox-technology_rocket-silo-foundation",
@@ -90,6 +190,7 @@ data:extend {
         time = 60
       },
       ignore_tech_cost_multiplier = true,
+      essential = true,
     },
     --{
     --  type = "technology",
@@ -199,6 +300,7 @@ data:extend {
         time = 60
       },
       ignore_tech_cost_multiplier = true,
+      essential = true,
     },
 
     {

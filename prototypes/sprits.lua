@@ -71,4 +71,11 @@ data:extend {
     filename = "__space-exploration-graphics__/graphics/technology/catalogue/universal-catalogue.png",
     size = 128,
   },
+
+  {
+    type = "sprite",
+    name = "linox-sprite_expanding-factory",
+    filename = "__linox__/graphics/technology/expanding-factory.png",
+    size = 500,
+  },
 }

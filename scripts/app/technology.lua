@@ -32,6 +32,22 @@ local function __update_technology(event)
     if tech["linox-technology_expanding-factory-3"].researched then
       expand_facility_level = expand_facility_level + 1
     end
+
+    if tech["linox-technology_expanding-factory-4"].researched then
+      expand_facility_level = expand_facility_level + 1
+    end
+
+    if tech["linox-technology_expanding-factory-5"].researched then
+      expand_facility_level = expand_facility_level + 1
+    end
+
+    if tech["linox-technology_expanding-factory-6"].researched then
+      expand_facility_level = expand_facility_level + 1
+    end
+
+    if tech["linox-technology_expanding-factory-7"].researched then
+      expand_facility_level = expand_facility_level + 1
+    end
   end
 
   for level = 0, expand_facility_level do

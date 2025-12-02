@@ -260,6 +260,7 @@ data:extend {
           { type = "unlock-recipe", recipe = "samarium" },
         },
         ignore_tech_cost_multiplier = true,
+        essential = true,
       },
 
       {
@@ -345,6 +346,7 @@ data:extend {
           { type = "unlock-recipe", recipe = "linox-recipe_froth-flotation-processing" },
         },
         ignore_tech_cost_multiplier = true,
+        essential = true,
       },
 
       {
@@ -400,6 +402,7 @@ data:extend {
           { type = "unlock-recipe", recipe = "linox-item_dysprosium-data-card" },
         },
         ignore_tech_cost_multiplier = true,
+        essential = true,
       },
 
       {

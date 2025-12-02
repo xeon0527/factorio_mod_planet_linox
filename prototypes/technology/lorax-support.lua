@@ -74,6 +74,11 @@ data:extend {
         recipe = "linox-item_neodymium-data-card",
         change = 0.25
       },
+      {
+        type = "change-recipe-productivity",
+        recipe = "linox-item_erbium-data-card",
+        change = 0.25
+      },
     },
   }
 }
