@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.6.4
+Date: 3. 12. 2025
+  Bugfixes:
+    - Fixed an issue where terrain wasn't outputting correctly in the Recursive Blueprints Mod Tips. The actual system functionality within the Tips itself remains unaffected.
+    - Fixed an issue where the Cargo Elevator wasn't installing correctly.
+    - Fixed an issue where the beacon was acquired when deconstructing the Erbium beacon.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.6.3
 Date: 3. 12. 2025
   Bugfixes:

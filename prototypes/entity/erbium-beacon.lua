@@ -4,7 +4,7 @@ local entity = table.deepcopy(data.raw["beacon"]["beacon"]);
 entity.name = "linox-building_erbium-beacon"
 entity.icon = "__space-exploration-graphics__/graphics/icons/wide-beacon.png"
 entity.icon_size = 64
-entity.minable = {mining_time = 0.2, result = "beacon"}
+entity.minable = {mining_time = 0.2, result = "linox-building_erbium-beacon"}
 entity.module_slots = 4
 entity.graphics_set = nil
 entity.animation = {

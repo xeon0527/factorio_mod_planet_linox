@@ -8,7 +8,7 @@ local filter_entity_types = {
   "inserter", "loader-1x1", "loader", "splitter", "lane-splitter",
   "transport-belt", "underground-belt", "lamp", "constant-combinator", "arithmetic-combinator", "decider-combinator", "power-switch",
   "programmable-speaker", "selector-combinator", "display-panel", "pipe", "pipe-to-ground", "pump", "offshore-pump", "electric-pole",
-  "construction-robot", "logistic-robot", "combat-robot", "solar-panel",
+  "construction-robot", "logistic-robot", "combat-robot", "solar-panel", "linked-belt",
 }
 
 build_filter.add_entity_type("linox-tile_linox-terminal-platform",        filter_entity_types)
