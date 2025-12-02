@@ -88,7 +88,7 @@ data:extend {
         property = "gravity",
         min = 2,
         max = 2
-      }
+      },
     },
     energy_required = 240,
     results = {{type="item", name="linox-building_advanced-rocket-silo", amount=1}},

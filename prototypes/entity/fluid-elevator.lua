@@ -26,6 +26,10 @@ entity.icons = {{
   icon = "__base__/graphics/icons/pump.png",
   tint = tint,
 }};
+entity.surface_conditions = {
+  { property = "magnetic-field", min = 1600, max = 1600 },
+  { property = "gravity", min = 2, max = 2, }
+}
 entity.tile_buildability_rules = {
   {
     area = {{-0.29, -0.9}, {0.29, 0.9}},
@@ -104,7 +108,7 @@ local recipe = {
         property = "gravity",
         min = 2,
         max = 2
-      }
+      },
     },
   results = {{type="item", name="linox-building_fluid-elevator", amount=1}},
 }

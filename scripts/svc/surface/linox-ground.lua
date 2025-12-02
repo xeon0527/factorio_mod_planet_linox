@@ -124,7 +124,7 @@ end
 
 UTIL_create_event_handler(defines.events.on_cargo_pod_started_ascending, function(event)
   local platform = event.cargo_pod.surface.platform;
-  if not platform.space_location then return end;
+  if not platform or not platform.space_location then return end;
 
   local loc_name = platform.space_location.name; 
   if loc_name == __LINOX_SURFACE__.ground then

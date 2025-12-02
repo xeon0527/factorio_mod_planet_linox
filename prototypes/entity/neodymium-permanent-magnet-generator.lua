@@ -1,3 +1,4 @@
+---@diagnostic disable: assign-type-mismatch
 local item_sounds = require("__base__.prototypes.item_sounds")
 
 local fan = {
@@ -163,7 +164,7 @@ data:extend {
         property = "gravity",
         min = 2,
         max = 2
-      }
+      },
     },
     results = {{type = "item", name = "linox-building_neodymium-permanent-magnet-generator", amount = 1}},
   },

@@ -1,9 +1,9 @@
-local tint = {100, 100, 100}
+local tint = {255, 175, 225}
 
 data:extend {
   {
     type = "fluid",
-    name = "low-concentration-neodymium-solution",
+    name = "low-concentration-erbium-solution",
     icons = {
       {
         icon = "__space-age__/graphics/icons/fluid/lithium-brine.png",
@@ -21,7 +21,7 @@ data:extend {
 
   {
     type = "recipe",
-    name = "low-concentration-neodymium-solution",
+    name = "low-concentration-erbium-solution",
     icons = {
       {
         icon = "__space-age__/graphics/icons/fluid/lithium-brine.png",
@@ -49,17 +49,17 @@ data:extend {
     },
     ingredients =
     {
-      {type = "item", name = "hydrophobic-rare-earth-powder", amount = 1},
+      {type = "item", name = "hydrophilic-rare-earth-powder", amount = 1},
       {type = "fluid", name = "sulfuric-acid", amount = 100},
     },
     energy_required = 3,
     results =
     {
-      {type = "fluid", name = "low-concentration-neodymium-solution", amount = 10},
+      {type = "fluid", name = "low-concentration-erbium-solution", amount = 10},
       {type = "fluid", name = "waste-water", amount = 90},
     },
 
-    main_product = "low-concentration-neodymium-solution",
+    main_product = "low-concentration-erbium-solution",
 
     allow_productivity = true,
   },

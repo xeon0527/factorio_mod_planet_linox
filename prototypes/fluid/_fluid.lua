@@ -1,4 +1,7 @@
+--require("prototypes.fluid.erbium-solution")
+--require("prototypes.fluid.high-concentration-erbium-solution")
 require("prototypes.fluid.high-concentration-neodymium-solution")
+--require("prototypes.fluid.low-concentration-erbium-solution")
 require("prototypes.fluid.low-concentration-neodymium-solution")
 require("prototypes.fluid.neodymium-solution")
 require("prototypes.fluid.waste-water")

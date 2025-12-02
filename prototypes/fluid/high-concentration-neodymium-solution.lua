@@ -1,4 +1,4 @@
-local tint = {255, 0, 255}
+local tint = {175, 175, 175}
 
 data:extend {
   {

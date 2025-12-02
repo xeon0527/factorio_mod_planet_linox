@@ -201,7 +201,7 @@ local recipe = {
         property = "gravity",
         min = 2,
         max = 2
-      }
+      },
     },
   results = {{type="item", name="linox-building_core-roboport", amount=1}},
   icon = "__space-exploration-graphics__/graphics/icons/supercharger.png",

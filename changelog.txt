@@ -1,4 +1,17 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.5.2
+Date: 2. 12. 2025
+  Minor Features:
+    - Changed the theme color of the Samarium tech tree and Samarium Data Cards to green.
+    - Changed the theme color of the Neodymium tech tree to white.
+
+  Changes:
+    - The Cargo Elevator and Fluid Elevator can now only be installed on Linox.
+
+  Bugfixes:
+    - Fixed an issue where the Cargo Pod landing event could not handle situations without a platform. (Compatibility issue with Rabbasca)
+
+---------------------------------------------------------------------------------------------------
 Version: 0.5.1
 Date: 1. 12. 2025
   Bugfixes:

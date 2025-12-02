@@ -4,10 +4,10 @@ local item_tints = require("__base__.prototypes.item-tints")
 data:extend {
   {
     type = "tool",
-    name = "linox-item_samarium-data-card",
-    icon = "__space-exploration-graphics__/graphics/icons/data/radiation-exposure.png",
+    name = "linox-item_erbium-data-card",
+    icon = "__space-exploration-graphics__/graphics/icons/data/polarisation.png",
     subgroup = "science-pack",
-    color_hint = { text = "S" },
+    color_hint = { text = "E" },
     order = "lc",
     inventory_move_sound = item_sounds.science_inventory_move,
     pick_sound = item_sounds.science_inventory_pickup,
@@ -26,16 +26,17 @@ data:extend {
 
 local recipe = {
   type = "recipe",
-  name = "linox-item_samarium-data-card",
+  name = "linox-item_erbium-data-card",
   category = "electronics-or-assembling",
   energy_required = 5,
   enabled = false,
   ingredients =
   {
-    {type = "item", name = "samarium", amount = 1},
-    {type = "item", name = "advanced-circuit", amount = 2},
-    {type = "item", name = "processing-unit", amount = 2},
-    {type = "item", name = "tungsten-carbide", amount = 1},
+    {type = "item", name = "erbium-powder", amount = 1},
+    {type = "item", name = "coal", amount = 5},
+    {type = "item", name = "rocket-fuel", amount = 2},
+    {type = "item", name = "solid-fuel", amount = 2},
+    {type = "fluid", name = "lava", amount = 100},
   },
   surface_conditions =
     {
@@ -50,7 +51,7 @@ local recipe = {
         max = 2
       }
     },
-  results = {{type="item", name="linox-item_samarium-data-card", amount=1}},
+  results = {{type="item", name="linox-item_erbium-data-card", amount=1}},
   allow_productivity = true,
 }
 

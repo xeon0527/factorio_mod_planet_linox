@@ -175,7 +175,7 @@ local recipe = {
         property = "gravity",
         min = 2,
         max = 2
-      }
+      },
     },
   results = {{type="item", name="linox-building_linox-supercomputer", amount=1}},
 }

@@ -1,10 +1,10 @@
-local tint = {225, 225, 225}
+local tint = {255, 50, 150}
 
 data:extend {
   {
     type = "fluid",
-    name = "neodymium-solution",
-    icon = "__linox__/graphics/icons/neodymium-solution.png",
+    name = "erbium-solution",
+    icon = "__linox__/graphics/icons/erbium-solution.png",
     icon_size = 64,
     subgroup = "fluid",
     --order = "b[new-fluid]-e[aquilo]-a[ammoniacal-solution]",
@@ -16,8 +16,8 @@ data:extend {
 
   {
     type = "recipe",
-    name = "neodymium-solution",
-    icon = "__linox__/graphics/icons/neodymium-solution.png",
+    name = "erbium-solution",
+    icon = "__linox__/graphics/icons/erbium-solution.png",
     icon_size = 64,
     category = "linox-recipe-category_chemical-tank",
     subgroup = "fluid-recipes",
@@ -39,17 +39,17 @@ data:extend {
     },
     ingredients =
     {
-      {type = "fluid", name = "high-concentration-neodymium-solution", amount = 100},
-      {type = "fluid", name = "water", amount = 900},
+      {type = "fluid", name = "high-concentration-erbium-solution", amount = 100},
+      {type = "fluid", name = "steam", amount = 3900},
     },
     energy_required = 10,
     results =
     {
-      {type = "fluid", name = "neodymium-solution", amount = 10},
-      {type = "fluid", name = "waste-water", amount = 990},
+      {type = "fluid", name = "erbium-solution", amount = 10},
+      {type = "fluid", name = "waste-water", amount = 390},
     },
 
-    main_product = "neodymium-solution",
+    main_product = "erbium-solution",
 
     allow_productivity = true,
   },

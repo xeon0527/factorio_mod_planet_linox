@@ -1,15 +1,15 @@
-local tint = {100, 100, 100}
+local tint = {255, 100, 200}
 
 data:extend {
   {
     type = "fluid",
-    name = "low-concentration-neodymium-solution",
+    name = "high-concentration-erbium-solution",
     icons = {
       {
         icon = "__space-age__/graphics/icons/fluid/lithium-brine.png",
         icon_size = 64,
         tint = tint,
-      }
+      },
     },
     subgroup = "fluid",
     --order = "b[new-fluid]-e[aquilo]-a[ammoniacal-solution]",
@@ -21,7 +21,7 @@ data:extend {
 
   {
     type = "recipe",
-    name = "low-concentration-neodymium-solution",
+    name = "high-concentration-erbium-solution",
     icons = {
       {
         icon = "__space-age__/graphics/icons/fluid/lithium-brine.png",
@@ -49,17 +49,17 @@ data:extend {
     },
     ingredients =
     {
-      {type = "item", name = "hydrophobic-rare-earth-powder", amount = 1},
-      {type = "fluid", name = "sulfuric-acid", amount = 100},
+      {type = "fluid", name = "low-concentration-erbium-solution", amount = 100},
+      {type = "fluid", name = "light-oil", amount = 200},
     },
-    energy_required = 3,
+    energy_required = 5,
     results =
     {
-      {type = "fluid", name = "low-concentration-neodymium-solution", amount = 10},
-      {type = "fluid", name = "waste-water", amount = 90},
+      {type = "fluid", name = "high-concentration-erbium-solution", amount = 10},
+      {type = "fluid", name = "waste-water", amount = 290},
     },
 
-    main_product = "low-concentration-neodymium-solution",
+    main_product = "high-concentration-erbium-solution",
 
     allow_productivity = true,
   },

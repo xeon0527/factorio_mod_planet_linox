@@ -1,3 +1,4 @@
+---@diagnostic disable: assign-type-mismatch
 local hit_effects = require("__base__.prototypes.entity.hit-effects")
 local item_sounds = require("__base__.prototypes.item_sounds")
 
@@ -176,7 +177,7 @@ data:extend {
         property = "gravity",
         min = 2,
         max = 2
-      }
+      },
     },
     results = {{type = "item", name = "linox-building_chemical-tank", amount = 1}}
   },

@@ -192,7 +192,7 @@ local recipe = {
         property = "gravity",
         min = 2,
         max = 2
-      }
+      },
     },
   results = {{type="item", name="linox-building_mantle-extractor", amount=1}}
 }
