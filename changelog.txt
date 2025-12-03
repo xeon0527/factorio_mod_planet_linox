@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.6.5
+Date: 3. 12. 2025
+  Changes:
+    - Mantle Extractor and Advanced Rocket Silo are now crafted by hand and in assembling machines. Additionally, the recycling recipe has been normalized.
+
+  Bugfixes:
+    - Fixed an error where research sold by L.O.R.A.X. could be bought while ignoring prerequisite research. Now, all prerequisite research must be completed before the research can be purchased.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.6.4
 Date: 3. 12. 2025
   Bugfixes:

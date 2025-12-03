@@ -67,7 +67,6 @@ data:extend {
     type = "recipe",
     name = "linox-building_advanced-rocket-silo",
     enabled = false,
-    category = "metallurgy",
     ingredients =
     {
       {type = "item", name = "rocket-silo", amount = 1},

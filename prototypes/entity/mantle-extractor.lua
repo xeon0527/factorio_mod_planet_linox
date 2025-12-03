@@ -172,7 +172,6 @@ local recipe = {
   name = "linox-building_mantle-extractor",
   energy_required = 60,
   enabled = false,
-  category = "metallurgy",
   ingredients =
   {
     {type = "item", name = "tungsten-plate", amount = 250},
@@ -194,7 +193,8 @@ local recipe = {
         max = 2
       },
     },
-  results = {{type="item", name="linox-building_mantle-extractor", amount=1}}
+  results = {{type="item", name="linox-building_mantle-extractor", amount=1}},
+  auto_recycle = true,
 }
 
 data:extend { recipe, }

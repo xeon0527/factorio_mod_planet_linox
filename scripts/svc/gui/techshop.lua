@@ -264,6 +264,8 @@ __MODULE__.add_tech = function(player, sprite, tech_name, tech_costs)
   session.tech_costs[tech_name] = tech_costs
 
   table.insert(session.tech_btns, {
+    caption = tech_caption,
+    description = tech_description,
     btn = tech_btn,
     tech = tech,
   })
@@ -273,7 +275,32 @@ __MODULE__.refresh = function(player)
   local session = __get_session(player);
   for _, techs in pairs(session.tech_btns) do
     local tech = techs.tech
-    techs.btn.enabled = not tech.researched
+    if tech.researched then
+      techs.btn.enabled = false
+
+      local caption = techs.caption.caption
+      if #caption == 1 then
+        techs.caption.caption = {
+          "", caption, " [virtual-signal=signal-check]"
+        }
+      elseif #caption > 1 and caption[1] == "" then
+        local check_string = caption[#caption]
+        if check_string ~= " [virtual-signal=signal-check]" then
+          table.insert(caption, " [virtual-signal=signal-check]")
+          techs.caption.caption = caption
+        end
+      end
+    else
+      local force_tech = game.forces["player"].technologies
+      local prerequisites = tech.prerequisites
+      techs.btn.enabled = true
+      for _, p in pairs(prerequisites) do
+        if not force_tech[p.name].researched then
+          techs.btn.enabled = false
+          return
+        end
+      end
+    end
   end
 end
 
