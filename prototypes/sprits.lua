@@ -78,4 +78,32 @@ data:extend {
     filename = "__linox__/graphics/technology/expanding-factory.png",
     size = 500,
   },
+
+  {
+    type = "sprite",
+    name = "linox-sprite_liquid-icon",
+    filename = "__base__/graphics/icons/signal/signal-liquid.png",
+    size = 64,
+  },
+
+  {
+    type = "sprite",
+    name = "linox-sprite_cargo-up-icon",
+    filename = "__base__/graphics/icons/arrows/up-arrow.png",
+    size = 64,
+  },
+
+  {
+    type = "sprite",
+    name = "linox-sprite_cargo-down-icon",
+    filename = "__base__/graphics/icons/arrows/down-arrow.png",
+    size = 64,
+  },
+
+  {
+    type = "sprite",
+    name = "linox-sprite_cargo-frame-icon",
+    filename = "__linox__/graphics/icons/frame.png",
+    size = 64,
+  },
 }

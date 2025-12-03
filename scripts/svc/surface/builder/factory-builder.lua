@@ -6,7 +6,7 @@ local __corridor_tile = "linox-tile_linox-corridor"
 local __MODULE__ = {}
 
 local function __create_sub_space(surface, center_position, center_size)
-  local thickness = 3
+  local thickness = 4
   local offset = center_size + 1.5 + thickness
 
   -- 좌상단 모서리

@@ -246,13 +246,13 @@ data:extend {
         },
         unit =
         {
-          count = 150,
+          count = 300,
           ingredients =
           {
-            {"linox-item_lava-data-card", 2},
-            {"linox-item_rare-earth-data-card", 2},
+            {"linox-item_lava-data-card", 1},
+            {"linox-item_rare-earth-data-card", 1},
           },
-          time = 60
+          time = 30
         },
         effects =
         {
@@ -304,13 +304,13 @@ data:extend {
         },
         unit =
         {
-          count = 200,
+          count = 400,
           ingredients =
           {
-            {"linox-item_lava-data-card", 2},
-            {"linox-item_rare-earth-data-card", 2},
+            {"linox-item_lava-data-card", 1},
+            {"linox-item_rare-earth-data-card", 1},
           },
-          time = 60
+          time = 30
         },
         effects =
         {

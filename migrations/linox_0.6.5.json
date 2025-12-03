@@ -1,0 +1,6 @@
+{
+  "entity":[
+    ["linox-building_fluid-elevator-input", "linox-building_fluid-elevator"],
+    ["linox-building_fluid-elevator-output", "linox-building_fluid-elevator"]
+  ]
+}

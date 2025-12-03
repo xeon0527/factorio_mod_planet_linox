@@ -610,9 +610,9 @@ __MODULE__.recursive_blueprints = {
     }
 
     factory_builder.create(surface, {x = 0, y = 0}, 8);
-    factory_builder.create_corridor(surface, {x = 0, y = 13}, "down", 25);
-    factory_builder.create_corridor(surface, {x = -13, y = 0}, "left", 30);
-    factory_builder.create_corridor(surface, {x = 13, y = 0}, "right", 25);
+    factory_builder.create_corridor(surface, {x = 0, y = 14}, "down", 25);
+    factory_builder.create_corridor(surface, {x = -14, y = 0}, "left", 30);
+    factory_builder.create_corridor(surface, {x = 14, y = 0}, "right", 25);
 
     game.simulation.camera_position = {0, 0}
     game.simulation.camera_zoom = 0.8

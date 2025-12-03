@@ -190,7 +190,7 @@ __MODULE__.expand_facility = function(level)
   if level == 1 then
     local create_present = surface.get_tile(0, -64).name == "linox-tile_out-of-map"
 
-    factory_builder.create_corridor(surface, {x = 0, y = -13}, "up", 48);
+    factory_builder.create_corridor(surface, {x = 0, y = -13}, "up", 37);
     factory_builder.create(surface, {x = 0, y = -64}, size);
 
     if not create_present then return end
@@ -299,30 +299,30 @@ __MODULE__.expand_facility = function(level)
     end
 
   elseif level == 2 then
-    factory_builder.create_corridor(surface, {x = 13, y = 0}, "right", 48);
+    factory_builder.create_corridor(surface, {x = 13, y = 0}, "right", 37);
     factory_builder.create(surface, {x = 64, y = 0}, size);
   elseif level == 3 then
-    factory_builder.create_corridor(surface, {x = 0, y = 13}, "down", 48);
+    factory_builder.create_corridor(surface, {x = 0, y = 13}, "down", 37);
     factory_builder.create(surface, {x = 0, y = 64}, size);
   elseif level == 4 then
-    factory_builder.create_corridor(surface, {x = -13, y = 0}, "left", 48);
+    factory_builder.create_corridor(surface, {x = -13, y = 0}, "left", 37);
     factory_builder.create(surface, {x = -64, y = 0}, size);
 
   elseif level == 5 then
-    factory_builder.create_corridor(surface, {x = 49, y = -64}, "left", 36);
-    factory_builder.create_corridor(surface, {x = 64, y = -49}, "down", 36);
+    factory_builder.create_corridor(surface, {x = 49, y = -64}, "left", 35);
+    factory_builder.create_corridor(surface, {x = 64, y = -49}, "down", 35);
     factory_builder.create(surface, {x = 64, y = -64}, 10);
   elseif level == 6 then
-    factory_builder.create_corridor(surface, {x = 49, y = 64}, "left", 36);
-    factory_builder.create_corridor(surface, {x = 64, y = 49}, "up", 36);
+    factory_builder.create_corridor(surface, {x = 49, y = 64}, "left", 35);
+    factory_builder.create_corridor(surface, {x = 64, y = 49}, "up", 35);
     factory_builder.create(surface, {x = 64, y = 64}, 10);
   elseif level == 7 then
-    factory_builder.create_corridor(surface, {x = -49, y = 64}, "right", 36);
-    factory_builder.create_corridor(surface, {x = -64, y = 49}, "up", 36);
+    factory_builder.create_corridor(surface, {x = -49, y = 64}, "right", 35);
+    factory_builder.create_corridor(surface, {x = -64, y = 49}, "up", 35);
     factory_builder.create(surface, {x = -64, y = 64}, 10);
   elseif level == 8 then
-    factory_builder.create_corridor(surface, {x = -49, y = -64}, "right", 36);
-    factory_builder.create_corridor(surface, {x = -64, y = -49}, "down", 36);
+    factory_builder.create_corridor(surface, {x = -49, y = -64}, "right", 35);
+    factory_builder.create_corridor(surface, {x = -64, y = -49}, "down", 35);
     factory_builder.create(surface, {x = -64, y = -64}, 10);
   end
 end;

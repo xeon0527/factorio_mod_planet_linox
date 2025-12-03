@@ -43,7 +43,7 @@ data:extend { item, }
 local recipe = {
   type = "recipe",
   name = "linox-building_cargo-elevator",
-  energy_required = 10,
+  energy_required = 3,
   enabled = false,
   ingredients =
   {
@@ -65,7 +65,7 @@ local recipe = {
       max = 2
     },
   },
-  results = {{type="item", name="linox-building_cargo-elevator", amount=1}}
+  results = {{type="item", name="linox-building_cargo-elevator", amount=2}}
 }
 
 data:extend { recipe, }

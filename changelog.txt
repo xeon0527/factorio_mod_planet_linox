@@ -1,4 +1,21 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.7.0
+Date: 4. 12. 2025
+  Major Features:
+    - Increased the width of the Linox Facility Platform by 1 tile, allowing more efficient placement of circuits, belts, pipes, and storage tanks around construction areas.
+    - The placement and removal mechanics of the Cargo Elevator and Fluid Elevator have been changed.
+      * The exit is no longer automatically installed on the opposite surface upon placement.
+      * Instead, the location and status of the exit to be installed are now displayed on both surfaces, and you must place the building one more time at this location to complete the connection.
+      * The Fluid Elevator and Cargo Elevator are now produced in quantities of two each.
+      * The Fluid Elevator no longer functions as a pump. It now acts as a simple pipe connection.
+      * All existing Pump-based Fluid Elevators will be migrated to the new entity, but their installation status will be incorrect. All such incorrect entities must be re-installed.
+
+  Changes:
+    - Adjusted the crafting time of the Fluid Elevator and Cargo Elevator to 3 seconds.
+    - Adjusted the research costs of some technologies to make them easier to understand.
+    - The Centrifuge recipe is now unlocked when researching Samarium centrifugation.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.6.5
 Date: 3. 12. 2025
   Changes:

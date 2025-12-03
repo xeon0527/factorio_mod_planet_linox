@@ -1,6 +1,9 @@
 __DRV_EVENT_HANDLERS__ = {
-  ["linox-custom-event_on-build-entity"] = {}
+  ["linox-internel-event_on-build-entity"] = {},
+  ["linox-internel-event_on-destroy-entity"] = {},
 };
+
+
 
 UTIL_create_event_handler("linox-custom-input_click", function(event)
   if event.selected_prototype and event.player_index then
@@ -20,7 +23,7 @@ end)
 
 
 
-local function __on_entity_build(event)
+local function __on_built_entity(event)
   local entity = event.entity or event.destination
   if not (entity and entity.valid) then return end
   local player_index = event.player_index
@@ -45,6 +48,7 @@ local function __on_entity_build(event)
 
   local event_data = {
     player = player,
+    is_ghost = (entity.type == "entity-ghost"),
     entity = entity,
     entity_type = entity_type,
     entity_name = entity_name,
@@ -52,7 +56,7 @@ local function __on_entity_build(event)
   }
 
   local cancel = false
-  for _, proc in pairs(__DRV_EVENT_HANDLERS__["linox-custom-event_on-build-entity"]) do
+  for _, proc in pairs(__DRV_EVENT_HANDLERS__["linox-internel-event_on-build-entity"]) do
     event_data.set_cancel_message = nil
     if proc(event_data) == false then
       cancel = true
@@ -86,17 +90,51 @@ local function __on_entity_build(event)
   end
 end
 
-UTIL_create_event_handler(defines.events.on_built_entity,                __on_entity_build);
-UTIL_create_event_handler(defines.events.on_robot_built_entity,          __on_entity_build);
-UTIL_create_event_handler(defines.events.script_raised_built,            __on_entity_build);
-UTIL_create_event_handler(defines.events.script_raised_revive,           __on_entity_build);
-UTIL_create_event_handler(defines.events.on_space_platform_built_entity, __on_entity_build);
-UTIL_create_event_handler(defines.events.on_entity_cloned,               __on_entity_build);
+UTIL_create_event_handler(defines.events.on_built_entity,                __on_built_entity);
+UTIL_create_event_handler(defines.events.on_robot_built_entity,          __on_built_entity);
+UTIL_create_event_handler(defines.events.script_raised_built,            __on_built_entity);
+UTIL_create_event_handler(defines.events.script_raised_revive,           __on_built_entity);
+--UTIL_create_event_handler(defines.events.on_space_platform_built_entity, __on_built_entity);
+UTIL_create_event_handler(defines.events.on_entity_cloned,               __on_built_entity);
+
+
+local function __on_destroy_entity(event)
+  local entity = event.entity
+  if not (entity and entity.valid) then return end
+  local player_index = event.player_index
+
+  if not player_index and event.robot and event.robot.valid then
+      local cell = event.robot.logistic_cell
+      local owner = cell and cell.owner
+      if owner and owner.is_player() then player_index = owner.player.index end
+  end
+  local player = nil;
+  if player_index then
+    player = game.get_player(player_index)
+  end
+
+  local event_data = {
+    player = player,
+    entity = entity,
+  }
+
+  for _, proc in pairs(__DRV_EVENT_HANDLERS__["linox-internel-event_on-destroy-entity"]) do
+    proc(event_data)
+  end
+end
+
+UTIL_create_event_handler(defines.events.on_player_mined_entity,  __on_destroy_entity);
+UTIL_create_event_handler(defines.events.on_robot_mined_entity,   __on_destroy_entity);
+UTIL_create_event_handler(defines.events.on_entity_died,          __on_destroy_entity);
 
 local __MODULE__ = {}
 
 __MODULE__.create_build_entity_handler = function(proc)
-  table.insert(__DRV_EVENT_HANDLERS__["linox-custom-event_on-build-entity"], proc);
+  table.insert(__DRV_EVENT_HANDLERS__["linox-internel-event_on-build-entity"], proc);
+end
+
+__MODULE__.create_destroy_entity_handler = function(proc)
+  table.insert(__DRV_EVENT_HANDLERS__["linox-internel-event_on-destroy-entity"], proc);
 end
 
 return __MODULE__
