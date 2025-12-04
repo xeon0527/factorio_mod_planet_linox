@@ -1,4 +1,21 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 5. 12. 2025
+  Major Features:
+    - Added Sintering Machine Productivity research.
+    - Added Basic Material Sintering Processing research.
+    - Added the Sintered Carbide recipe. It can be unlocked through the existing Tungsten Sintering Processing research, allowing the production of tungsten carbide in the Sintering Machine.
+
+  Minor Features:
+    - I’ve adjusted the settings for Tips and Tricks so that they trigger at exactly the required moments.
+
+  Changes:
+    - The Cargo Landing Pad Control Secured research has been added. This research was included for the purpose of triggering Tips and Tricks and has no effect on game progression.
+
+  Bugfixes:
+    - Fixed a bug that allowed purchasing research sold by L.O.R.A.X without meeting the prerequisites.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.7.4
 Date: 4. 12. 2025
   Major Features:

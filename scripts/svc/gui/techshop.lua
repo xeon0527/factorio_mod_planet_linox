@@ -297,7 +297,7 @@ __MODULE__.refresh = function(player)
       for _, p in pairs(prerequisites) do
         if not force_tech[p.name].researched then
           techs.btn.enabled = false
-          return
+          break
         end
       end
     end

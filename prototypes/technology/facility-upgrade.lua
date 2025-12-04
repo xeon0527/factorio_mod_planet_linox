@@ -14,6 +14,16 @@ data:extend {
   },
     {
       type = "technology",
+      name = "linox-technology_get-cargo-landing-pad",
+      icons = util_icon.technology_icon_script_research("__space-age__/graphics/technology/space-platform.png", 256),
+      prerequisites = {"linox-technology_exploring-linox-landing-site"},
+      research_trigger = {
+        type = "scripted",
+        trigger_description = {"technology-description.linox-technology-trigger-description_lorax-talking"}
+      },
+    },
+    {
+      type = "technology",
       name = "linox-technology_facility-factoryizing",
       icons = util_icon.technology_icon_script_research("__linox__/graphics/technology/facility-factoryizing.png", 512),
       prerequisites = {"linox-technology_facility-upgrade"},

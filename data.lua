@@ -1,4 +1,4 @@
-require("global.planet");
+require("global._global");
 
 require("prototypes.entity._entity")
 require("prototypes.item._item")

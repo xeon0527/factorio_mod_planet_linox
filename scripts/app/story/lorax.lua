@@ -336,6 +336,7 @@ UTIL_create_event_handler("linox-custom-event_gui-dialog-on-select", function(ev
       if not db.get_force(player.force, __DB_CARGO_APPROVAL__) then
         db.set_force(player.force, __DB_CARGO_APPROVAL__, true);
 
+        player.force.script_trigger_research("linox-technology_get-cargo-landing-pad");
         player.force.print({"system.cargo-allow"});
         player.force.print({"system.cargo-pad-allow"});
       end

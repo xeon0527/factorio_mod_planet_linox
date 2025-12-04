@@ -55,7 +55,7 @@ data:extend({
     trigger =
     {
       type = "research",
-      technology = "linox-technology_enhanced-space-engineering"
+      technology = "linox-technology_get-cargo-landing-pad"
     },
   },
   {
@@ -80,8 +80,11 @@ data:extend({
     order = "zada",
     indent = 2,
     simulation = simulation.linox_placement_restriction2,
-    starting_status = "dependencies-not-met",
-    dependencies = {"linox-tips-and-tricks_placement_restriction"},
+    trigger =
+    {
+      type = "research",
+      technology = "linox-technology_facility-factoryizing"
+    },
   },
   {
     type = "tips-and-tricks-item",
@@ -93,8 +96,8 @@ data:extend({
     simulation = simulation.linox_planetary_power_network,
     trigger =
     {
-      type = "research",
-      technology = "linox-technology_exploring-linox-landing-site"
+      type = "change-surface",
+      surface = __LINOX_SURFACE__.facility,
     },
   },
   {
@@ -107,8 +110,8 @@ data:extend({
     simulation = simulation.npc_system,
     trigger =
     {
-      type = "research",
-      technology = "linox-technology_exploring-linox-landing-site"
+      type = "change-surface",
+      surface = __LINOX_SURFACE__.facility,
     },
   },
   {
@@ -133,7 +136,7 @@ data:extend({
     order = "zaga",
     indent = 2,
     image = "__linox__/graphics/tips-and-tricks/rs-latch.png",
-    starting_status = "dependencies-not-met",
+    --starting_status = "dependencies-not-met",
     dependencies = {"linox-tips-and-tricks_recursive-blueprints"},
   },
   {
@@ -144,7 +147,7 @@ data:extend({
     order = "zagb",
     indent = 2,
     image = "__linox__/graphics/tips-and-tricks/signal-converter.png",
-    starting_status = "dependencies-not-met",
+    --starting_status = "dependencies-not-met",
     dependencies = {"linox-tips-and-tricks_recursive-blueprints"},
   },
   {
@@ -155,7 +158,7 @@ data:extend({
     order = "zagc",
     indent = 2,
     image = "__linox__/graphics/tips-and-tricks/bad-chest.png",
-    starting_status = "dependencies-not-met",
+    --starting_status = "dependencies-not-met",
     dependencies = {"linox-tips-and-tricks_recursive-blueprints"},
   },
   {
@@ -166,7 +169,7 @@ data:extend({
     order = "zah",
     indent = 1,
     image = "__linox__/graphics/tips-and-tricks/bad-chest-area-viewer.png",
-    starting_status = "dependencies-not-met",
+    --starting_status = "dependencies-not-met",
     dependencies = {"linox-tips-and-tricks_recursive-blueprints"},
   },
   {
@@ -177,7 +180,7 @@ data:extend({
     order = "zaha",
     indent = 2,
     image = "__linox__/graphics/tips-and-tricks/adjust-blueprint-origin.png",
-    starting_status = "dependencies-not-met",
+    --starting_status = "dependencies-not-met",
     dependencies = {"linox-tips-and-tricks_recursive-blueprints"},
   },
   {

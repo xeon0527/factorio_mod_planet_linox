@@ -19,6 +19,7 @@ data:extend {
       "construction-robotics",
       "logistic-system",
       "metallurgic-science-pack",
+      "circuit-network",
     },
     unit =
     {

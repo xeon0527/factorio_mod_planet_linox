@@ -314,4 +314,43 @@ data:extend {
     upgrade = true,
     ignore_tech_cost_multiplier = true,
   },
+
+  {
+    type = "technology",
+    name = "linox-technology_sintering-machine-productivity",
+    icons = util_icon.technology_icon_constant_recipe_productivity("__linox__/graphics/technology/sintering-machine.png", 640),
+    prerequisites = {
+      "linox-technology_erbium-data-card",
+      "linox-technology_neodymium-data-card",
+    },
+    unit =
+    {
+      count_formula = "L*1000",
+      ingredients =
+      {
+        {"linox-item_lava-data-card", 1},
+        {"linox-item_rare-earth-data-card", 1},
+        {"linox-item_samarium-data-card", 1},
+        {"linox-item_dysprosium-data-card", 1},
+        {"linox-item_neodymium-data-card", 1},
+        {"linox-item_erbium-data-card", 1},
+      },
+      time = 60
+    },
+    effects =
+    {
+      { type = "change-recipe-productivity", recipe = "linox-recipe_tungsten-sintering-plate", change = 0.1 },
+      { type = "change-recipe-productivity", recipe = "linox-recipe_tungsten-sintering-gear-wheel", change = 0.1 },
+      { type = "change-recipe-productivity", recipe = "linox-recipe_tungsten-sintering-stick", change = 0.1 },
+      { type = "change-recipe-productivity", recipe = "linox-recipe_sintering-iron-plate", change = 0.1 },
+      { type = "change-recipe-productivity", recipe = "linox-recipe_sintering-iron-gear-wheel", change = 0.1 },
+      { type = "change-recipe-productivity", recipe = "linox-recipe_sintering-iron-stick", change = 0.1 },
+      { type = "change-recipe-productivity", recipe = "linox-recipe_sintering-copper-plate", change = 0.1 },
+      { type = "change-recipe-productivity", recipe = "linox-recipe_sintering-copper-cable", change = 0.1 },
+      { type = "change-recipe-productivity", recipe = "linox-recipe_sintered-carbide", change = 0.1 },
+    },
+    max_level = "infinite",
+    upgrade = true,
+    ignore_tech_cost_multiplier = true,
+  },
 }

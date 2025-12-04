@@ -1,10 +1,12 @@
 require("prototypes.recipe.advanced-acid-neutralisation");
+require("prototypes.recipe.basic-material-sintering-processing");
 require("prototypes.recipe.casting-stone-brick");
 require("prototypes.recipe.froth-flotation-processing");
 require("prototypes.recipe.linox-petrochemicals");
 require("prototypes.recipe.low-temp-separation-of-calcium");
 require("prototypes.recipe.rare-earth-refining");
 require("prototypes.recipe.samarium-centrifugation");
+require("prototypes.recipe.sintered-carbide");
 require("prototypes.recipe.stone-extraction");
 require("prototypes.recipe.tungsten-extraction");
 require("prototypes.recipe.tungsten-sintering-processing");

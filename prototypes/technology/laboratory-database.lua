@@ -98,10 +98,6 @@ data:extend {
 
 
 
-
-
-
-
       {
         type = "technology",
         name = "linox-technology_turbo-pump",
@@ -304,7 +300,7 @@ data:extend {
         },
         unit =
         {
-          count = 400,
+          count = 500,
           ingredients =
           {
             {"linox-item_lava-data-card", 1},
@@ -317,6 +313,57 @@ data:extend {
           { type = "unlock-recipe", recipe = "linox-recipe_tungsten-sintering-plate" },
           { type = "unlock-recipe", recipe = "linox-recipe_tungsten-sintering-gear-wheel" },
           { type = "unlock-recipe", recipe = "linox-recipe_tungsten-sintering-stick" },
+          { type = "unlock-recipe", recipe = "linox-recipe_sintered-carbide" },
+        },
+        ignore_tech_cost_multiplier = true,
+      },
+
+      {
+        type = "technology",
+        name = "linox-technology_basic-material-sintering-processing",
+        icons = {
+          {
+            icon = "__linox__/graphics/technology/sintering-machine.png",
+            icon_size = 640,
+            tint = {0.5, 0.5, 0.5, 0.5},
+          },
+          {
+            icon = "__base__/graphics/icons/iron-plate.png",
+            icon_size = 64,
+            shift = {-32, 0},
+            scale = 0.75,
+            draw_background = true,
+            floating = true,
+          },
+          {
+            icon = "__base__/graphics/icons/copper-plate.png",
+            icon_size = 64,
+            shift = {32, 0},
+            scale = 0.75,
+            draw_background = true,
+            floating = true,
+          },
+        },
+        prerequisites = {
+          "linox-technology_sintering-machine",
+        },
+        unit =
+        {
+          count = 500,
+          ingredients =
+          {
+            {"linox-item_lava-data-card", 1},
+            {"linox-item_rare-earth-data-card", 1},
+          },
+          time = 30
+        },
+        effects =
+        {
+          { type = "unlock-recipe", recipe = "linox-recipe_sintering-iron-plate" },
+          { type = "unlock-recipe", recipe = "linox-recipe_sintering-iron-gear-wheel" },
+          { type = "unlock-recipe", recipe = "linox-recipe_sintering-iron-stick" },
+          { type = "unlock-recipe", recipe = "linox-recipe_sintering-copper-plate" },
+          { type = "unlock-recipe", recipe = "linox-recipe_sintering-copper-cable" },
         },
         ignore_tech_cost_multiplier = true,
       },

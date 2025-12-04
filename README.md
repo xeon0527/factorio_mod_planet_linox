@@ -46,8 +46,8 @@ Rewards
  * Erbium beacon
 >Using Erbium to improve the signal tower efficiency reportedly allows you to equip twice as many modules. Can you feel the immense power of the rare earth elements?  
   
- * Chemical plant Productivity Technology
->Grants chemical plants +10% base productivity per level.
+ * Rare earth Productivity Technology
+>It improves rare earth production. and as a small bonus, it also reduces pollution.
 - - -
 Recommended companion mods
 ==================================================
