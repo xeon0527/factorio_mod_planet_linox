@@ -1,4 +1,19 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.7.2
+Date: 4. 12. 2025
+  Balancing:
+    - Adjusted the effect of the Chemical Plant Productivity research from 10% to 2%.
+
+  Compatibility:
+    - The Erbium Beacon now supports the Enhanced Beacons Mod.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.7.1
+Date: 4. 12. 2025
+  Compatibility:
+    - Fixed a compatibility issue with the Planet Vesta Mod.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.7.0
 Date: 4. 12. 2025
   Major Features:

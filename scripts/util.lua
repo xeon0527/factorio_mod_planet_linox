@@ -1,4 +1,5 @@
 require("scripts.util.event-handler")
+local map_gen = require("prototypes.planet.map-gen")
 
 function UTIL_find_gui_element(parent, element_name)
   for _, child in pairs(parent.children) do
@@ -33,6 +34,8 @@ function UTIL_ensure_surface(name)
   if surface == nil then
     if game.planets[name] then
       surface = game.planets[name].create_surface()
+    elseif name == __LINOX_SURFACE__.facility then
+      surface = game.create_surface(name, map_gen.facility());
     else
       surface = game.create_surface(name);
     end
