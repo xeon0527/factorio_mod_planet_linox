@@ -282,8 +282,8 @@ data:extend {
 
   {
     type = "technology",
-    name = "linox-technology_chemical-plant-productivity",
-    icons = util.technology_icon_constant_recipe_productivity("__linox__/graphics/technology/chemical-plant-productivity.png"),
+    name = "linox-technology_rare-earth-powder-productivity",
+    icons = util.technology_icon_constant_recipe_productivity("__linox__/graphics/technology/rare-earth-refining.png"),
     prerequisites = {
       "linox-technology_erbium-data-card",
       "linox-technology_neodymium-data-card",
@@ -301,6 +301,14 @@ data:extend {
         {"linox-item_erbium-data-card", 1},
       },
       time = 60
+    },
+    effects =
+    {
+      {
+        type = "change-recipe-productivity",
+        recipe = "linox-recipe_rare-earth-refining",
+        change = 0.1
+      },
     },
     max_level = "infinite",
     upgrade = true,

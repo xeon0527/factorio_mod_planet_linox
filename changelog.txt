@@ -1,4 +1,21 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.7.4
+Date: 4. 12. 2025
+  Major Features:
+    - Removed the Chemical Plant Productivity research.
+    - Added Rare Earth Productivity research.
+    - Removed the Machine Upgrades Mod dependency.
+
+  Translation:
+    - Updated the Russian translation.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.7.3
+Date: 4. 12. 2025
+  Compatibility:
+    - Due to a compatibility issue with the Machine Upgrades Mod, the effect of the Chemical Plant Productivity research has been readjusted to 5%.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.7.2
 Date: 4. 12. 2025
   Balancing:
