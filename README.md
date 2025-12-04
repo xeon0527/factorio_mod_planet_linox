@@ -1,7 +1,3 @@
-This mod is in beta. It has reached a relatively stable stage as maintenance continues, but the addition of new systems or entities may still cause changes to gameplay. This mod natively supports English, Korean, and Russian.
-
-You’re welcome to give any feedback, including criticism. I really need feedback. I always consider this mod to be imperfect.
-- - -
 Planet Linox - Probably the smallest planet in Factorio.
 ==================================================
 For some reason, this planet orbits extremely close to its sun. Its orbit is astronomically impossible, so something must have happened to this planet.
@@ -47,7 +43,10 @@ Rewards
 >Using Erbium to improve the signal tower efficiency reportedly allows you to equip twice as many modules. Can you feel the immense power of the rare earth elements?  
   
  * Rare earth Productivity Technology
->It improves rare earth production. and as a small bonus, it also reduces pollution.
+>It improves rare earth production. and as a small bonus, it also reduces pollution.  
+  
+ * Sintering machine Productivity
+>Improves the productivity of the sintering machine. It seems like more comes out than the materials you put in… could this be called "creation"?
 - - -
 Recommended companion mods
 ==================================================

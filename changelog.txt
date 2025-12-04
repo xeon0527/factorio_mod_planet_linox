@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+Date: 5. 12. 2025
+  Bugfixes:
+    - Fixed an error occurring in the 0.7.4 migration code.
+    - Fixed an issue where the Cargo Landing Pad Securing research was missing from L.O.R.A.X’s final dialogue requirements.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.0.0
 Date: 5. 12. 2025
   Major Features:
@@ -7,7 +14,7 @@ Date: 5. 12. 2025
     - Added the Sintered Carbide recipe. It can be unlocked through the existing Tungsten Sintering Processing research, allowing the production of tungsten carbide in the Sintering Machine.
 
   Minor Features:
-    - I’ve adjusted the settings for Tips and Tricks so that they trigger at exactly the required moments.
+    - Adjusted the settings of Tips and Tricks to trigger precisely when needed.
 
   Changes:
     - The Cargo Landing Pad Control Secured research has been added. This research was included for the purpose of triggering Tips and Tricks and has no effect on game progression.

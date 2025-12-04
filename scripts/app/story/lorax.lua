@@ -33,7 +33,8 @@ UTIL_create_event_handler("linox-custom-event_gui-dialog-on-close", function(eve
       techs["linox-technology_facility-upgrade"].researched and
       techs["linox-technology_facility-factoryizing"].researched and
       techs["linox-technology_laboratory-database"].researched and
-      techs["linox-technology_planetary-mining-technology"].researched
+      techs["linox-technology_planetary-mining-technology"].researched and
+      techs["linox-technology_get-cargo-landing-pad"].researched
     then
       db.set_player(player, __DB_SCENE_ID__, 4);
       player.print({"system.lorax-help"})
