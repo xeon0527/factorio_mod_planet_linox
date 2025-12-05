@@ -1,3 +1,5 @@
+local bbox = require("scripts.util.bounding-box")
+
 local __MODULE__ = {}
 
 __MODULE__.fill_tile = function(args)
@@ -51,6 +53,17 @@ __MODULE__.get_total_consume = function(surface)
     end
   end
   return consume
+end
+
+__MODULE__.teleport = function(player, area, surface)
+  local character = player.character
+  if not character or not character.valid then return end
+
+  local pos = surface.find_non_colliding_position_in_box(character.name, area, 0.1)
+  if not pos then
+    pos = bbox.get_center(area)
+  end
+  player.teleport(pos, surface)
 end
 
 

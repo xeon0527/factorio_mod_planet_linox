@@ -34,8 +34,8 @@ data:extend {
       {type = "item", name = "dysprosium-powder", probability = 0.25, amount = 1},
       {type = "item", name = "stone", probability = 0.75, amount = 1}
     },
-    allow_productivity = false,
-    allow_quality = false,
+    allow_productivity = true,
+    --allow_quality = false,
     main_product = "dysprosium-powder",
   }
 }

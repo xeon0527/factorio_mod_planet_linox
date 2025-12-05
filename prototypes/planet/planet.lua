@@ -140,7 +140,7 @@ data:extend {
     from = "vulcanus",
     to = "linox-planet_linox",
     order = "a",
-    length = 15000,
+    length = 7500,
 
     asteroid_spawn_influence = 10,
     asteroid_spawn_definitions = asteroid_util.spawn_definitions(asteroid_util.nauvis_vulcanus)

@@ -26,7 +26,7 @@ __MODULE__.get_player = function(player, key, default_value)
     return storage.player_data[key][player.index];
   end)
 
-  if not success then
+  if not success or result == nil then
     result = __MODULE__.set_player(player, key, default_value);
   end
   return result;
@@ -50,7 +50,7 @@ __MODULE__.get_force = function(force, key, default_value)
     return storage.force_data[key][force.index];
   end)
 
-  if not success then
+  if not success or result == nil then
     result = __MODULE__.set_force(force, key, default_value);
   end
   return result;

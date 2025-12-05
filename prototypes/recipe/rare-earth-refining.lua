@@ -28,8 +28,8 @@ data:extend {
     results = {
       {type="item", name="rare-earth-powder", amount = 1},
     },
-    allow_decomposition = false,
+    --allow_decomposition = false,
     allow_productivity = true,
-    allow_quality = false,
+    --allow_quality = false,
   },
 }

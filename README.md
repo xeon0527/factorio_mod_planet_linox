@@ -62,3 +62,4 @@ Special Thanks
  * Earendel - Thank you for providing the Space Exploration assets. (https://www.patreon.com/earendel, https://discord.gg/ymjUVMv)
  * Hurricane046 - Thank you for providing high-quality Factorio-style graphics.
  * Efremiros - Thank you for providing the Russian translation.
+ * [Natha](https://mods.factorio.com/user/natha) - You provided an idea for connecting the two surfaces. Thank you.

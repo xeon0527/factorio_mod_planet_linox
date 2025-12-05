@@ -50,7 +50,7 @@ local recipe = {
         max = 2
       }
     },
-  results = {{type="item", name="linox-item_samarium-data-card", amount=1}},
+  results = {{type="item", name="linox-item_samarium-data-card", amount=2}},
   allow_productivity = true,
 }
 

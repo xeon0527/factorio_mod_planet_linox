@@ -1,5 +1,6 @@
 local events = require("scripts.drv.events")
 local build_filter = require("scripts.drv.build-filter")
+local util_surface = require("scripts.util.surface")
 
 local __MODULE__ = {};
 
@@ -65,13 +66,13 @@ UTIL_create_event_handler("linox-custom-event_on-enter-elevator", function(event
       if pos.x >= -5 and pos.x <= 5 and pos.y >= -5 and pos.y <= 5 then
         --player.print("엘리베이터를 타고 내부 시설로 들어갔다.");
         player.print({"system.elevator-down"});
-        player.teleport({x = 0, y = 5.5}, UTIL_ensure_surface(__LINOX_SURFACE__.facility));
+        util_surface.teleport(player, {{pos.x - 4, pos.y - 4}, {pos.x + 4, pos.y + 4}}, UTIL_ensure_surface(__LINOX_SURFACE__.facility))
       end
     elseif player.surface.name == __LINOX_SURFACE__.facility then
       if pos.x >= -5 and pos.x <= 5 and pos.y >= -5 and pos.y <= 5 then
         --player.print("엘리베이터를 타고 표면으로 올라갔다.");
         player.print({"system.elevator-up"});
-        player.teleport({x = 0, y = 5.5}, UTIL_ensure_surface(__LINOX_SURFACE__.ground));
+        util_surface.teleport(player, {{pos.x - 4, pos.y - 4}, {pos.x + 4, pos.y + 4}}, UTIL_ensure_surface(__LINOX_SURFACE__.ground))
       end
     end
   end

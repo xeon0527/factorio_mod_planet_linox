@@ -16,8 +16,11 @@ local __DB_CARGO_APPROVAL__ = "story_lorax_cargo_approval"
 
 -- lorax를 클릭하면 대화상자 켜기
 UTIL_create_event_handler("linox-custom-event_on-entity-click", function(event)
-  if event.entity.name == npc.type.lorax then --npc.get(npc.type.lorax, event.player.surface) then
-    __MODULE__.show(event.player);
+  if event.entity.name == npc.type.lorax and event.player.character then --npc.get(npc.type.lorax, event.player.surface) then\
+    local surface = event.player.character.surface
+    if surface.name == __LINOX_SURFACE__.facility then
+      __MODULE__.show(event.player);
+    end
   end
 end)
 

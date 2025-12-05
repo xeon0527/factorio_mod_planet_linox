@@ -33,8 +33,8 @@ local recipe = {
   ingredients =
   {
     {type = "item", name = "dysprosium-powder", amount = 1},
-    {type = "item", name = "iron-plate", amount = 50},
-    {type = "item", name = "copper-plate", amount = 50},
+    {type = "item", name = "iron-plate", amount = 25},
+    {type = "item", name = "copper-plate", amount = 25},
     {type = "item", name = "tungsten-ore", amount = 25},
   },
   surface_conditions =
@@ -50,7 +50,7 @@ local recipe = {
         max = 2
       }
     },
-  results = {{type="item", name="linox-item_dysprosium-data-card", amount=1}},
+  results = {{type="item", name="linox-item_dysprosium-data-card", amount=2}},
   allow_productivity = true,
 }
 
