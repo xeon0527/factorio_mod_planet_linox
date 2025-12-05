@@ -1,6 +1,9 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.2
 Date: 6. 12. 2025
+  Minor Features:
+    - You can no longer communicate with L.O.R.A.X remotely. Your character must be on the same surface to interact.
+
   Bugfixes:
     - Fixed an issue where productivity modules could not be used in the Dysprosium Powder recipe.
     - Fixed an issue where conversations with L.O.R.A.X would not function correctly in multiplayer.
