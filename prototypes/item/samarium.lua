@@ -29,5 +29,6 @@ data:extend {
       {type = "item", name = "samarium-powder", amount = 2},
     },
     results = {{type="item", name="samarium", amount=1}},
+    allow_productivity = true,
   }
 }

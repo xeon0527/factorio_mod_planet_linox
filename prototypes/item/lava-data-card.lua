@@ -9,7 +9,7 @@ data:extend {
     icon = "__space-exploration-graphics__/graphics/icons/data/hot-thermodynamics.png",
     subgroup = "science-pack",
     color_hint = { text = "L" },
-    order = "la",
+    order = "linox-a",
     inventory_move_sound = item_sounds.science_inventory_move,
     pick_sound = item_sounds.science_inventory_pickup,
     drop_sound = item_sounds.science_inventory_move,
@@ -52,6 +52,7 @@ local recipe = {
     },
   results = {{type="item", name="linox-item_lava-data-card", amount=1}},
   allow_productivity = true,
+  auto_recycle = false,
 }
 
 data:extend { recipe, }

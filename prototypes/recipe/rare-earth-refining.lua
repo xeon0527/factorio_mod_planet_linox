@@ -3,7 +3,7 @@ data:extend {
     type = "recipe",
     name = "linox-recipe_rare-earth-refining",
     icon = "__linox__/graphics/icons/rare-earth-powder.png",
-    energy_required = 4,
+    energy_required = 1,
     enabled = false,
     auto_recycle = false,
     category = "chemistry-or-cryogenics",
@@ -26,7 +26,7 @@ data:extend {
       {type = "fluid", name = "sulfuric-acid", amount = 200},
     },
     results = {
-      {type="item", name="rare-earth-powder", amount = 1},
+      {type="item", name="rare-earth-powder", amount = 2},
     },
     --allow_decomposition = false,
     allow_productivity = true,

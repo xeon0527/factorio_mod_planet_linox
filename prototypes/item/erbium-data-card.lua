@@ -8,7 +8,7 @@ data:extend {
     icon = "__space-exploration-graphics__/graphics/icons/data/polarisation.png",
     subgroup = "science-pack",
     color_hint = { text = "E" },
-    order = "lc",
+    order = "linox-f",
     inventory_move_sound = item_sounds.science_inventory_move,
     pick_sound = item_sounds.science_inventory_pickup,
     drop_sound = item_sounds.science_inventory_move,
@@ -51,8 +51,9 @@ local recipe = {
         max = 2
       }
     },
-  results = {{type="item", name="linox-item_erbium-data-card", amount=1}},
+  results = {{type="item", name="linox-item_erbium-data-card", amount=4}},
   allow_productivity = true,
+  auto_recycle = false,
 }
 
 data:extend { recipe, }

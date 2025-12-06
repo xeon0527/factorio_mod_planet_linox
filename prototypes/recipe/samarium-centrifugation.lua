@@ -8,7 +8,7 @@ data:extend {
     category = "centrifuging",
     ingredients =
     {
-      {type = "item", name = "rare-earth-powder", amount = 10},
+      {type = "item", name = "rare-earth-powder", amount = 5},
     },
     results = {{type="item", name="samarium-powder", amount=2}},
     --allow_decomposition = false,

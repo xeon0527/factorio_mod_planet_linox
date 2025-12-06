@@ -9,7 +9,7 @@ data:extend {
     icon = "__space-exploration-graphics__/graphics/icons/data/teleportation.png",
     subgroup = "science-pack",
     color_hint = { text = "R" },
-    order = "lb",
+    order = "linox-b",
     inventory_move_sound = item_sounds.science_inventory_move,
     pick_sound = item_sounds.science_inventory_pickup,
     drop_sound = item_sounds.science_inventory_move,
@@ -52,6 +52,7 @@ local recipe = {
     },
   results = {{type="item", name="linox-item_rare-earth-data-card", amount=1}},
   allow_productivity = true,
+  auto_recycle = false,
 }
 
 data:extend { recipe, }

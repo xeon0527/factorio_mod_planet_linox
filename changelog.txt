@@ -1,4 +1,28 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.3
+Date: 6. 12. 2025
+  Bugfixes:
+    - Fixed a multiplayer desync issue caused by the Power Converter.
+    - Fixed an issue where productivity modules could not be used in the Samarium recipe.
+    - Fixed a crash that occurred when a character attempted to move to the Linox surface without available space.
+
+  Changes:
+    - Adjusted the sorting order of the data cards.
+
+  Balancing:
+    - Data Cards can no longer be recycled.
+    - Reduced the crafting time of the Rare Earth Powder recipe from 4s → 1s.
+    - Increased the output of the Rare Earth Powder recipe from 1 → 2 units.
+    - Increased the production chance of the Dysprosium Powder recipe from 25% → 50%.
+    - Reduced the Rare Earth Powder consumption in the Samarium Centrifugation recipe from 10 → 5.
+    - Increased the output of the Dysprosium Data Card from 2 → 3.
+    - Increased the output of the Samarium Data Card from 2 → 3.
+    - The Froth Flotation Processing recipe no longer produces Stone as a byproduct.
+    - The Froth Flotation Processing recipe now guarantees at least 1 output item instead of having a chance to produce nothing.
+    - The Neodymium Data Card recipe output has been increased from 1 → 4.
+    - The Erbium Data Card recipe output has been increased from 1 → 4.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.0.2
 Date: 6. 12. 2025
   Minor Features:

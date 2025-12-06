@@ -8,7 +8,7 @@ data:extend {
     icon = "__space-exploration-graphics__/graphics/icons/data/experimental-alloys.png",
     subgroup = "science-pack",
     color_hint = { text = "D" },
-    order = "lc",
+    order = "linox-d",
     inventory_move_sound = item_sounds.science_inventory_move,
     pick_sound = item_sounds.science_inventory_pickup,
     drop_sound = item_sounds.science_inventory_move,
@@ -50,8 +50,9 @@ local recipe = {
         max = 2
       }
     },
-  results = {{type="item", name="linox-item_dysprosium-data-card", amount=2}},
+  results = {{type="item", name="linox-item_dysprosium-data-card", amount=3}},
   allow_productivity = true,
+  auto_recycle = false,
 }
 
 data:extend { recipe, }

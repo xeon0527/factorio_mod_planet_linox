@@ -31,8 +31,8 @@ data:extend {
       {type = "fluid", name = "water", amount = 100},
     },
     results = {
-      {type = "item", name = "dysprosium-powder", probability = 0.25, amount = 1},
-      {type = "item", name = "stone", probability = 0.75, amount = 1}
+      {type = "item", name = "dysprosium-powder", probability = 0.5, amount = 1},
+      {type = "item", name = "stone", probability = 0.5, amount = 1}
     },
     allow_productivity = true,
     --allow_quality = false,

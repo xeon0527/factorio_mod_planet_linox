@@ -8,7 +8,7 @@ data:extend {
     icon = "__space-exploration-graphics__/graphics/icons/data/orbital.png",
     subgroup = "science-pack",
     color_hint = { text = "N" },
-    order = "lc",
+    order = "linox-e",
     inventory_move_sound = item_sounds.science_inventory_move,
     pick_sound = item_sounds.science_inventory_pickup,
     drop_sound = item_sounds.science_inventory_move,
@@ -51,8 +51,9 @@ local recipe = {
         max = 2
       }
     },
-  results = {{type="item", name="linox-item_neodymium-data-card", amount=1}},
+  results = {{type="item", name="linox-item_neodymium-data-card", amount=4}},
   allow_productivity = true,
+  auto_recycle = false,
 }
 
 data:extend { recipe, }
