@@ -58,6 +58,10 @@ local function __update_technology(event)
     linox_ground.create_rocketsilo_foundation();
   end
 
+  if tech["linox-technology_ground-platform-expansion"].researched then
+    linox_ground.create_ground_platform_expansion();
+  end
+
   if tech["linox-technology_ultra-deep-drilling"].researched then
     linox_facility.obtain_pumpjacks();
   end

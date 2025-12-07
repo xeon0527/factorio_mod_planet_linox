@@ -47,11 +47,12 @@ local __MODULE__ = {
     }
   end,
 
-  technology_icon_linox_mod = function(technology_icon, size)
+  technology_icon_linox_mod = function(technology_icon, size, tint)
     return {
       {
         icon = technology_icon,
         icon_size = size,
+        tint = tint,
       },
       {
         icon = "__linox__/graphics/icons/planet-linox-64.png",

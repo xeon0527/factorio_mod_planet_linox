@@ -48,6 +48,25 @@ __MODULE__.create_rocketsilo_foundation = function()
     x = 17.5, y = 8.5, radius = 9 }
 end
 
+__MODULE__.create_ground_platform_expansion = function()
+  local surface = game.get_surface(__LINOX_SURFACE__.ground);
+  if not surface then return end
+
+  if surface.get_tile(-17, -17).name ~= "linox-tile_linox-foundation" then
+    u_surface.fill_tile { surface = surface, tile_name = __rocketsilo_foundation_tile,
+      x1 = -17, y1 = -17, x2 = 16, y2 = -14 }
+
+    u_surface.fill_tile { surface = surface, tile_name = __rocketsilo_foundation_tile,
+      x1 = -17, y1 = -13, x2 = -14, y2 = 12 }
+
+      u_surface.fill_tile { surface = surface, tile_name = __rocketsilo_foundation_tile,
+      x1 = 13, y1 = -12, x2 = 16, y2 = 12 }
+
+    u_surface.fill_tile { surface = surface, tile_name = __rocketsilo_foundation_tile,
+      x1 = -17, y1 = 13, x2 = 16, y2 = 16 }
+  end
+end
+
 __MODULE__.create_building = function()
   local surface = game.get_surface(__LINOX_SURFACE__.ground);
   if not surface then return end

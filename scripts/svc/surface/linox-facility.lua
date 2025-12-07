@@ -188,12 +188,10 @@ __MODULE__.expand_facility = function(level)
   surface.force_generate_chunk_requests()
 
   if level == 1 then
-    local create_present = surface.get_tile(0, -64).name == "linox-tile_out-of-map"
+    if surface.get_tile(0, -64).name ~= "linox-tile_out-of-map" then return end
 
     factory_builder.create_corridor(surface, {x = 0, y = -13}, "up", 37);
     factory_builder.create(surface, {x = 0, y = -64}, size);
-
-    if not create_present then return end
 
     local bp_entity = surface.create_entity{name = 'item-on-ground', position= {0, -64}, stack = 'blueprint'}
     if bp_entity then 
@@ -299,31 +297,45 @@ __MODULE__.expand_facility = function(level)
     end
 
   elseif level == 2 then
-    factory_builder.create_corridor(surface, {x = 13, y = 0}, "right", 37);
-    factory_builder.create(surface, {x = 64, y = 0}, size);
+    if surface.get_tile(64, 0).name == "linox-tile_out-of-map" then
+      factory_builder.create_corridor(surface, {x = 13, y = 0}, "right", 37);
+      factory_builder.create(surface, {x = 64, y = 0}, size);
+    end
   elseif level == 3 then
-    factory_builder.create_corridor(surface, {x = 0, y = 13}, "down", 37);
-    factory_builder.create(surface, {x = 0, y = 64}, size);
+    if surface.get_tile(0, 64).name == "linox-tile_out-of-map" then
+      factory_builder.create_corridor(surface, {x = 0, y = 13}, "down", 37);
+      factory_builder.create(surface, {x = 0, y = 64}, size);
+    end
   elseif level == 4 then
-    factory_builder.create_corridor(surface, {x = -13, y = 0}, "left", 37);
-    factory_builder.create(surface, {x = -64, y = 0}, size);
+    if surface.get_tile(-64, 0).name == "linox-tile_out-of-map" then
+      factory_builder.create_corridor(surface, {x = -13, y = 0}, "left", 37);
+      factory_builder.create(surface, {x = -64, y = 0}, size);
+    end
 
   elseif level == 5 then
-    factory_builder.create_corridor(surface, {x = 49, y = -64}, "left", 35);
-    factory_builder.create_corridor(surface, {x = 64, y = -49}, "down", 35);
-    factory_builder.create(surface, {x = 64, y = -64}, 10);
+    if surface.get_tile(64, -64).name == "linox-tile_out-of-map" then
+      factory_builder.create_corridor(surface, {x = 49, y = -64}, "left", 35);
+      factory_builder.create_corridor(surface, {x = 64, y = -49}, "down", 35);
+      factory_builder.create(surface, {x = 64, y = -64}, 10);
+    end
   elseif level == 6 then
-    factory_builder.create_corridor(surface, {x = 49, y = 64}, "left", 35);
-    factory_builder.create_corridor(surface, {x = 64, y = 49}, "up", 35);
-    factory_builder.create(surface, {x = 64, y = 64}, 10);
+    if surface.get_tile(64, 64).name == "linox-tile_out-of-map" then
+      factory_builder.create_corridor(surface, {x = 49, y = 64}, "left", 35);
+      factory_builder.create_corridor(surface, {x = 64, y = 49}, "up", 35);
+      factory_builder.create(surface, {x = 64, y = 64}, 10);
+    end
   elseif level == 7 then
-    factory_builder.create_corridor(surface, {x = -49, y = 64}, "right", 35);
-    factory_builder.create_corridor(surface, {x = -64, y = 49}, "up", 35);
-    factory_builder.create(surface, {x = -64, y = 64}, 10);
+    if surface.get_tile(-64, 64).name == "linox-tile_out-of-map" then
+      factory_builder.create_corridor(surface, {x = -49, y = 64}, "right", 35);
+      factory_builder.create_corridor(surface, {x = -64, y = 49}, "up", 35);
+      factory_builder.create(surface, {x = -64, y = 64}, 10);
+    end
   elseif level == 8 then
-    factory_builder.create_corridor(surface, {x = -49, y = -64}, "right", 35);
-    factory_builder.create_corridor(surface, {x = -64, y = -49}, "down", 35);
-    factory_builder.create(surface, {x = -64, y = -64}, 10);
+    if surface.get_tile(-64, -64).name == "linox-tile_out-of-map" then
+      factory_builder.create_corridor(surface, {x = -49, y = -64}, "right", 35);
+      factory_builder.create_corridor(surface, {x = -64, y = -49}, "down", 35);
+      factory_builder.create(surface, {x = -64, y = -64}, 10);
+    end
   end
 end;
 

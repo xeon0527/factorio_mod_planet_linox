@@ -13,5 +13,19 @@ data:extend {
     results = {{type="item", name="samarium-powder", amount=2}},
     --allow_decomposition = false,
     allow_productivity = true,
+
+    surface_conditions =
+    {
+      {
+        property = "magnetic-field",
+        min = 1600,
+        max = 1600,
+      },
+      {
+        property = "gravity",
+        min = 2,
+        max = 2
+      }
+    },
   },
 }

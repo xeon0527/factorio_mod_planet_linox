@@ -56,7 +56,6 @@ data:extend {
     ingredients =
     {
       {type = "item", name = "exoskeleton-equipment", amount = 1},
-      {type = "item", name = "electric-engine-unit", amount = 15},
       {type = "item", name = "tungsten-plate", amount = 10},
       {type = "item", name = "tungsten-gear-wheel", amount = 10},
       {type = "item", name = "tungsten-stick", amount = 10},

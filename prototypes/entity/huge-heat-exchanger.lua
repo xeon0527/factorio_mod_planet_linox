@@ -33,19 +33,19 @@ data:extend {
       {type = "item", name = "pipe", amount = 100},
       {type = "item", name = "copper-plate", amount = 1000},
     },
-    surface_conditions =
-    {
-      {
-        property = "magnetic-field",
-        min = 1600,
-        max = 1600,
-      },
-      {
-        property = "gravity",
-        min = 2,
-        max = 2
-      },
-    },
+    --surface_conditions =
+    --{
+    --  {
+    --    property = "magnetic-field",
+    --    min = 1600,
+    --    max = 1600,
+    --  },
+    --  {
+    --    property = "gravity",
+    --    min = 2,
+    --    max = 2
+    --  },
+    --},
     results = {{type = "item", name = "linox-building_huge-heat-exchanger", amount = 1}},
   },
 

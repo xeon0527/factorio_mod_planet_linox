@@ -86,7 +86,7 @@ local function __on_built_entity(event)
       end
     end
 
-    entity.destroy{raise_destroy = false};
+    entity.destroy{raise_destroy = true};
   end
 end
 
@@ -126,6 +126,7 @@ end
 UTIL_create_event_handler(defines.events.on_player_mined_entity,  __on_destroy_entity);
 UTIL_create_event_handler(defines.events.on_robot_mined_entity,   __on_destroy_entity);
 UTIL_create_event_handler(defines.events.on_entity_died,          __on_destroy_entity);
+UTIL_create_event_handler(defines.events.script_raised_destroy,   __on_destroy_entity);
 
 local __MODULE__ = {}
 

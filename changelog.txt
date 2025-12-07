@@ -1,4 +1,30 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.4
+Date: 8. 12. 2025
+  Minor Features:
+    - Added a personal setting for "Enable elevator boarding alert."
+    - A research for expanding the Ground Platform has been added.
+
+  Bugfixes:
+    - Placement restriction logic has been updated to prevent potential compatibility issues with other mods.
+    - Fixed the missing localization string for item_name.linox-tool_badchest-area-viewer.
+    - Fixed missing surface production restrictions on certain intermediate products.
+
+  Balancing:
+    - The Mantle Extractor’s power consumption has been significantly reduced from 100 MW to 25 MW.
+    - Electric Engine Units are no longer required when crafting the Dysprosium Exoskeleton.
+    - Core Roboport no longer requires Processing Units in its recipe.
+    - Most Linox end-tier specialty items no longer have surface restrictions and can now be produced on any surface as long as the required materials are available.
+
+  Changes:
+    - Linox terrain is no longer regenerated when a research-completed event occurs.
+    - Linox Supercomputer has been added as a prerequisite for certain technologies requiring the Lava Data Card, though it has minimal impact on actual gameplay progression.
+
+  Compatibility:
+    - Compatibility support for Compact Circuits.
+    - Changed it so that the mod no longer forcibly alters the default settings of the Recursive Blueprints Mod.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.0.3
 Date: 6. 12. 2025
   Bugfixes:

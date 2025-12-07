@@ -55,6 +55,29 @@ data:extend {
     ignore_tech_cost_multiplier = true,
   },
 
+  {
+    type = "technology",
+    name = "linox-technology_ground-platform-expansion",
+    icons = util_icon.technology_icon_linox_mod("__space-age__/graphics/technology/foundation.png", 256, {1.0, 0.66, 0.66}),
+    prerequisites = {
+      "linox-technology_build-data-catalog",
+      "linox-technology_rocket-silo-foundation",
+    },
+    unit =
+    {
+      count = 1000,
+      ingredients =
+      {
+        {"linox-item_lava-data-card", 1},
+        {"linox-item_rare-earth-data-card", 1},
+        {"linox-item_samarium-data-card", 1},
+        {"linox-item_dysprosium-data-card", 1},
+      },
+      time = 60
+    },
+    ignore_tech_cost_multiplier = true,
+  },
+
 
 
   {

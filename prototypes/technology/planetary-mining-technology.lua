@@ -49,7 +49,7 @@ data:extend {
         type = "technology",
         name = "linox-technology_stone-extraction",
         icons = util_icon.technology_icon_linox_mod("__base__/graphics/icons/stone.png", 64),
-        prerequisites = {"linox-technology_planetary-mining-technology"},
+        prerequisites = {"linox-technology_planetary-mining-technology", "linox-technology_linox-supercomputer"},
         effects =
         {
           {
@@ -79,7 +79,7 @@ data:extend {
       name = "linox-technology_mantle-extraction",
       icon = "__space-exploration-graphics__/graphics/technology/core-miner.png",
       icon_size = 128,
-      prerequisites = {"linox-technology_planetary-mining-technology"},
+      prerequisites = {"linox-technology_planetary-mining-technology", "linox-technology_linox-supercomputer"},
       effects =
       {
         {

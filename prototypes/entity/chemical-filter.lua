@@ -170,19 +170,19 @@ data:extend {
       {type = "item", name = "samarium", amount = 2},
       {type = "item", name = "dysprosium-powder", amount = 2},
     },
-    surface_conditions =
-    {
-      {
-        property = "magnetic-field",
-        min = 1600,
-        max = 1600,
-      },
-      {
-        property = "gravity",
-        min = 2,
-        max = 2
-      },
-    },
+    --surface_conditions =
+    --{
+    --  {
+    --    property = "magnetic-field",
+    --    min = 1600,
+    --    max = 1600,
+    --  },
+    --  {
+    --    property = "gravity",
+    --    min = 2,
+    --    max = 2
+    --  },
+    --},
     results = {{type = "item", name = "linox-building_chemical-filter", amount = 1}}
   },
 }

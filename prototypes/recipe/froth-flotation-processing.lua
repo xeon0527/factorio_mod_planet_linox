@@ -32,5 +32,19 @@ data:extend {
       {type = "item", name = "hydrophobic-rare-earth-powder", probability = 0.5,amount_min = 1, amount_max = 2},
     },
     allow_productivity = true,
+
+    surface_conditions =
+    {
+      {
+        property = "magnetic-field",
+        min = 1600,
+        max = 1600,
+      },
+      {
+        property = "gravity",
+        min = 2,
+        max = 2
+      }
+    },
   },
 }

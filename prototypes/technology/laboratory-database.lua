@@ -156,7 +156,7 @@ data:extend {
       type = "technology",
       name = "linox-technology_enhanced-space-engineering",
       icons = util_icon.technology_icon_linox_mod("__base__/graphics/technology/rocket-silo.png", 256),
-      prerequisites = {"linox-technology_laboratory-database"},
+      prerequisites = {"linox-technology_laboratory-database", "linox-technology_linox-supercomputer"},
       unit =
       {
         count = 500,

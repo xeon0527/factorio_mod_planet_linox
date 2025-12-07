@@ -31,7 +31,7 @@ data:extend {
     pumping_speed = 8.333334,
     fluid_source_offset = { 0, 0 },
     tile_buildability_rules = nil,
-    energy_usage = "100MW",
+    energy_usage = "25MW",
     vector_to_place_result = { 0, -5.85 },
     --module_slots = 4,
 
@@ -180,19 +180,19 @@ local recipe = {
     {type = "item", name = "concrete", amount = 100},
     {type = "item", name = "pipe", amount = 500},
   },
-  surface_conditions =
-    {
-      {
-        property = "magnetic-field",
-        min = 1600,
-        max = 1600,
-      },
-      {
-        property = "gravity",
-        min = 2,
-        max = 2
-      },
-    },
+  --surface_conditions =
+  --{
+  --  {
+  --    property = "magnetic-field",
+  --    min = 1600,
+  --    max = 1600,
+  --  },
+  --  {
+  --    property = "gravity",
+  --    min = 2,
+  --    max = 2
+  --  },
+  --},
   results = {{type="item", name="linox-building_mantle-extractor", amount=1}},
   auto_recycle = true,
 }

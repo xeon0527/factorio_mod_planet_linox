@@ -165,19 +165,19 @@ local recipe = {
     {type = "item", name = "iron-plate", amount = 10},
     {type = "item", name = "copper-plate", amount = 10},
   },
-  surface_conditions =
-    {
-      {
-        property = "magnetic-field",
-        min = 1600,
-        max = 1600,
-      },
-      {
-        property = "gravity",
-        min = 2,
-        max = 2
-      },
-    },
+  --surface_conditions =
+  --{
+  --  {
+  --    property = "magnetic-field",
+  --    min = 1600,
+  --    max = 1600,
+  --  },
+  --  {
+  --    property = "gravity",
+  --    min = 2,
+  --    max = 2
+  --  },
+  --},
   results = {{type="item", name="linox-building_linox-supercomputer", amount=1}},
 }
 

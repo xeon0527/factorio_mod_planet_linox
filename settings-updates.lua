@@ -1,3 +1,3 @@
 --data.raw["string-setting"]["recursive-blueprints-area"].hidden = true
-data.raw["string-setting"]["recursive-blueprints-area"].default_value = "center"
-data.raw["string-setting"]["recursive-blueprints-area"].allowed_values = {"center"}
+--data.raw["string-setting"]["recursive-blueprints-area"].default_value = "center"
+--data.raw["string-setting"]["recursive-blueprints-area"].allowed_values = {"center"}

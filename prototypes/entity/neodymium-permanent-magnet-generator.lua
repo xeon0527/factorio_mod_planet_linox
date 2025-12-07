@@ -153,19 +153,19 @@ data:extend {
       {type = "item", name = "dysprosium-powder", amount = 5},
       {type = "item", name = "samarium", amount = 25},
     },
-    surface_conditions =
-    {
-      {
-        property = "magnetic-field",
-        min = 1600,
-        max = 1600,
-      },
-      {
-        property = "gravity",
-        min = 2,
-        max = 2
-      },
-    },
+    --surface_conditions =
+    --{
+    --  {
+    --    property = "magnetic-field",
+    --    min = 1600,
+    --    max = 1600,
+    --  },
+    --  {
+    --    property = "gravity",
+    --    min = 2,
+    --    max = 2
+    --  },
+    --},
     results = {{type = "item", name = "linox-building_neodymium-permanent-magnet-generator", amount = 1}},
   },
 

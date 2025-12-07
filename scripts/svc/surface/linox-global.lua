@@ -28,6 +28,13 @@ build_filter.add_entity_type("linox-tile_linox-hazard-facility-platform", filter
 build_filter.add_entity_name("linox-tile_linox-facility-platform",        "linox-building_core-roboport")
 build_filter.add_entity_name("linox-tile_linox-hazard-facility-platform", "linox-building_core-roboport")
 
+if script.active_mods["compaktcircuit"] then
+  build_filter.add_entity_name("linox-tile_linox-facility-platform",        "compaktcircuit-processor")
+  build_filter.add_entity_name("linox-tile_linox-facility-platform",        "compaktcircuit-processor_1x1")
+  build_filter.add_entity_name("linox-tile_linox-hazard-facility-platform", "compaktcircuit-processor")
+  build_filter.add_entity_name("linox-tile_linox-hazard-facility-platform", "compaktcircuit-processor_1x1")
+end
+
 
 -- Linox 건설 제한
 events.create_build_entity_handler(function(event)
@@ -65,13 +72,17 @@ UTIL_create_event_handler("linox-custom-event_on-enter-elevator", function(event
     if player.surface.name == __LINOX_SURFACE__.ground then
       if pos.x >= -5 and pos.x <= 5 and pos.y >= -5 and pos.y <= 5 then
         --player.print("엘리베이터를 타고 내부 시설로 들어갔다.");
-        player.print({"system.elevator-down"});
+        if settings.get_player_settings(player)["linox-settings_elevator-boarding-alert"].value then
+          player.print({"system.elevator-down"});
+        end
         util_surface.teleport(player, {{pos.x - 4, pos.y - 4}, {pos.x + 4, pos.y + 4}}, UTIL_ensure_surface(__LINOX_SURFACE__.facility))
       end
     elseif player.surface.name == __LINOX_SURFACE__.facility then
       if pos.x >= -5 and pos.x <= 5 and pos.y >= -5 and pos.y <= 5 then
         --player.print("엘리베이터를 타고 표면으로 올라갔다.");
-        player.print({"system.elevator-up"});
+        if settings.get_player_settings(player)["linox-settings_elevator-boarding-alert"].value then
+          player.print({"system.elevator-up"});
+        end
         util_surface.teleport(player, {{pos.x - 4, pos.y - 4}, {pos.x + 4, pos.y + 4}}, UTIL_ensure_surface(__LINOX_SURFACE__.ground))
       end
     end

@@ -76,19 +76,19 @@ data:extend {
       {type = "item", name = "samarium", amount = 100},
       {type = "item", name = "dysprosium-powder", amount = 100},
     },
-    surface_conditions =
-    {
-      {
-        property = "magnetic-field",
-        min = 1600,
-        max = 1600,
-      },
-      {
-        property = "gravity",
-        min = 2,
-        max = 2
-      },
-    },
+    --surface_conditions =
+    --{
+    --  {
+    --    property = "magnetic-field",
+    --    min = 1600,
+    --    max = 1600,
+    --  },
+    --  {
+    --    property = "gravity",
+    --    min = 2,
+    --    max = 2
+    --  },
+    --},
     energy_required = 240,
     results = {{type="item", name="linox-building_advanced-rocket-silo", amount=1}},
     requester_paste_multiplier = 1

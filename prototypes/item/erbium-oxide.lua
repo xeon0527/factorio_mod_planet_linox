@@ -37,5 +37,19 @@ data:extend {
     },
     main_product = "erbium-oxide",
     allow_productivity = true,
+
+    surface_conditions =
+    {
+      {
+        property = "magnetic-field",
+        min = 1600,
+        max = 1600,
+      },
+      {
+        property = "gravity",
+        min = 2,
+        max = 2
+      }
+    },
   }
 }
