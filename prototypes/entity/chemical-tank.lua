@@ -40,7 +40,7 @@ data:extend {
       type = "electric",
       usage_priority = "secondary-input",
       drain = "50kW",
-      emissions_per_minute = { pollution = 1 }
+      emissions_per_minute = { pollution = 4 }
     },
     forced_symmetry = "horizontal",
     
@@ -51,6 +51,7 @@ data:extend {
     {
       {
         production_type = "input",
+        pipe_picture = require("__space-age__.prototypes.entity.electromagnetic-plant-pictures").pipe_pictures,
         pipe_covers = pipecoverspictures(),
         volume = 200,
         secondary_draw_orders = { north = -1 },
@@ -58,6 +59,7 @@ data:extend {
       },
       {
         production_type = "input",
+        pipe_picture = require("__space-age__.prototypes.entity.electromagnetic-plant-pictures").pipe_pictures,
         pipe_covers = pipecoverspictures(),
         volume = 200,
         secondary_draw_orders = { north = -1 },
@@ -65,6 +67,7 @@ data:extend {
       },
       {
         production_type = "output",
+        pipe_picture = require("__space-age__.prototypes.entity.electromagnetic-plant-pictures").pipe_pictures,
         pipe_covers = pipecoverspictures(),
         volume = 100,
         secondary_draw_orders = { north = -1 },
@@ -72,6 +75,7 @@ data:extend {
       },
       {
         production_type = "output",
+        pipe_picture = require("__space-age__.prototypes.entity.electromagnetic-plant-pictures").pipe_pictures,
         pipe_covers = pipecoverspictures(),
         volume = 100,
         secondary_draw_orders = { north = -1 },

@@ -17,7 +17,7 @@ data:extend {
     prerequisites = {
       "planet-discovery-vulcanus",
       "construction-robotics",
-      "logistic-system",
+      --"logistic-system",
       "metallurgic-science-pack",
       "circuit-network",
     },

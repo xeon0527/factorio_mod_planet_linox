@@ -38,7 +38,7 @@ data:extend {
       type = "electric",
       usage_priority = "secondary-input",
       drain = "50kW",
-      emissions_per_minute = { pollution = 1 }
+      emissions_per_minute = { pollution = 4 }
     },
 
     --circuit_wire_max_distance = 10,

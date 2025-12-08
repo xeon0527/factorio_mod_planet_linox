@@ -1,4 +1,24 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.5
+Date: 9. 12. 2025
+  Minor Features:
+    - Some technology icons have been updated with new visuals.
+    - Some Tips and Tricks text entries have been revised to be more accurate and reduce misunderstandings.
+    - The pipe connector rendering for the chemical tank has been improved.
+    - A "Remove Logistic System" setting has been added. Enabling this removes all dependencies on the logistic system. However, note that early-game example setups will also no longer function correctly.
+    - I’ve added the “Removing collision boxes from vanilla circuit devices” setting. When enabled, vanilla circuit devices won’t block movement. This setting is ignored if the "Squeak Through 2" mod is active.
+
+  Balancing:
+    - The movement speed bonus of the Dysprosium Exoskeleton has been increased from 50% to 70%.
+    - The production output of the Erbium Data Card recipe has been increased from 4 to 10.
+    - The production output of the Neodymium Data Card recipe has been increased from 4 to 10.
+    - The pollution values of certain Linox production buildings have been adjusted to more reasonable levels.
+    - The pressure requirement for the Mantle Extractor has been removed.
+
+  Compatibility:
+    - A compatibility setting for Moshine has been added. When enabled, neodymium mined on the Moshine planet can be immediately processed into neodymium powder.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.0.4
 Date: 8. 12. 2025
   Minor Features:

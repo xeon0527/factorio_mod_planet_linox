@@ -4,7 +4,7 @@ data:extend {
   {
     type = "technology",
     name = "linox-technology_facility-upgrade",
-    icons = util_icon.technology_icon_script_research("__base__/graphics/technology/gate.png", 256),
+    icons = util_icon.technology_icon_script_research("__linox__/graphics/technology/facility-upgrade.png", 500),
     essential = true,
     prerequisites = {"linox-technology_exploring-linox-landing-site"},
     research_trigger = {

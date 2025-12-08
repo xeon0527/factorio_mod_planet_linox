@@ -4,7 +4,7 @@ data:extend {
   {
     type = "technology",
     name = "linox-technology_laboratory-database",
-    icons = util_icon.technology_icon_script_research("__base__/graphics/technology/space-science-pack.png", 256),
+    icons = util_icon.technology_icon_script_research("__linox__/graphics/technology/laboratory-database.png", 500),
     essential = true,
     prerequisites = {"linox-technology_exploring-linox-landing-site"},
     research_trigger = {

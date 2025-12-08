@@ -223,9 +223,11 @@ __MODULE__.expand_facility = function(level)
         stor[1].insert{ name = "pipe", count = 33 }
         stor[1].insert{ name = "speed-module-3", count = 26 }
         stor[1].insert{ name = "bulk-inserter", count = 16 }
-        stor[1].insert{ name = "requester-chest", count = 4 }
-        stor[1].insert{ name = "active-provider-chest", count = 5 }
-        stor[1].insert{ name = "beacon", count = 10 }
+        if not settings.startup["linox-settings_remove-logistic-system"].value then
+          stor[1].insert{ name = "requester-chest", count = 4 }
+          stor[1].insert{ name = "active-provider-chest", count = 5 }
+        end
+        stor[1].insert{ name = "beacon", count = 20 }
         stor[1].insert{ name = "pipe-to-ground", count = 1 }
         stor[1].insert{ name = "turbo-transport-belt", count = 12 }
         stor[1].insert{ name = "turbo-underground-belt", count = 5 }
@@ -287,13 +289,15 @@ __MODULE__.expand_facility = function(level)
       box6.insert{name = "linox-building_fluid-elevator", count = 5};
       box6.insert{name = "linox-building_cargo-elevator", count = 5};
       box6.insert{name = "bulk-inserter", count = 200};
-      box6.insert{name = "requester-chest", count = 25 }
-      box6.insert{name = "active-provider-chest", count = 25 }
+      if not settings.startup["linox-settings_remove-logistic-system"].value then
+        box6.insert{name = "requester-chest", count = 25 }
+        box6.insert{name = "active-provider-chest", count = 25 }
+      end
       box6.insert{name = "storage-chest", count = 25 }
       box6.insert{name = "beacon", count = 5 }
-      box6.insert{name = "speed-module-2", count = 25 }
-      box6.insert{name = "productivity-module-2", count = 25 }
-      box6.insert{name = "efficiency-module-2", count = 25 }
+      box6.insert{name = "speed-module-2", count = 50 }
+      box6.insert{name = "productivity-module-2", count = 50 }
+      box6.insert{name = "efficiency-module-2", count = 50 }
     end
 
   elseif level == 2 then

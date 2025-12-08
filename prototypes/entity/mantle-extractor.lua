@@ -36,7 +36,7 @@ data:extend {
     --module_slots = 4,
 
     surface_conditions = {
-      { property = "pressure", min = 10 },
+      --{ property = "pressure", min = 10 },
       { property = "gravity", min = 1 }
     },
     

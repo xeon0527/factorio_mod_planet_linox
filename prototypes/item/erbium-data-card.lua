@@ -51,7 +51,7 @@ local recipe = {
         max = 2
       }
     },
-  results = {{type="item", name="linox-item_erbium-data-card", amount=4}},
+  results = {{type="item", name="linox-item_erbium-data-card", amount=10}},
   allow_productivity = true,
   auto_recycle = false,
 }
