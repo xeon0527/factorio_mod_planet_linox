@@ -101,7 +101,7 @@ data:extend {
       {
         type = "technology",
         name = "linox-technology_turbo-pump",
-        icons = util_icon.technology_icon_linox_mod("__base__/graphics/technology/fluid-handling.png", 256),
+        icons = util_icon.technology_icon_linox_mod("__base__/graphics/technology/fluid-handling.png", 256, { 222, 232, 107 }),
         prerequisites = {
           "linox-technology_samarium-data-card",
         },
@@ -119,6 +119,33 @@ data:extend {
         effects =
         {
           { type = "unlock-recipe", recipe = "linox-building_turbo-pump" },
+        },
+        ignore_tech_cost_multiplier = true,
+      },
+      {
+        type = "technology",
+        name = "linox-technology_samarium-robotics",
+        icons = util_icon.technology_icon_linox_mod("__base__/graphics/technology/robotics.png", 256, { 222, 232, 107 }),
+        prerequisites = {
+          "linox-technology_samarium-data-card",
+          "construction-robotics",
+          "logistic-robotics",
+        },
+        unit =
+        {
+          count = 750,
+          ingredients =
+          {
+            {"linox-item_lava-data-card", 1},
+            {"linox-item_rare-earth-data-card", 1},
+            {"linox-item_samarium-data-card", 1},
+          },
+          time = 60
+        },
+        effects =
+        {
+          { type = "unlock-recipe", recipe = "linox_samarium-logistic-robot" },
+          { type = "unlock-recipe", recipe = "linox_samarium-construction-robot" },
         },
         ignore_tech_cost_multiplier = true,
       },
@@ -455,7 +482,7 @@ data:extend {
       {
         type = "technology",
         name = "linox-technology_dysprosium-exoskeleton-equipment",
-        icons = util_icon.technology_icon_constant_equipment("__base__/graphics/technology/exoskeleton-equipment.png", 256, {175,175,0}),
+        icons = util_icon.technology_icon_constant_equipment("__base__/graphics/technology/exoskeleton-equipment.png", 256, { 1.0, 0.66, 0.66 }),
         prerequisites = {
           "linox-technology_dysprosium-data-card",
           "exoskeleton-equipment",
@@ -474,6 +501,33 @@ data:extend {
         effects =
         {
           { type = "unlock-recipe", recipe = "dysprosium-exoskeleton-equipment" },
+        },
+        ignore_tech_cost_multiplier = true,
+      },
+
+      {
+        type = "technology",
+        name = "linox-technology_dysprosium-electric-motor-robot",
+        icons = util_icon.technology_icon_constant_battery("__base__/graphics/technology/worker-robots-speed.png", 256, { 1.0, 0.66, 0.66 }),
+        prerequisites = {
+          "linox-technology_dysprosium-data-card",
+          "construction-robotics",
+          "logistic-robotics",
+        },
+        unit =
+        {
+          count = 1000,
+          ingredients =
+          {
+            {"linox-item_lava-data-card", 1},
+            {"linox-item_rare-earth-data-card", 1},
+            {"linox-item_dysprosium-data-card", 1},
+          },
+          time = 60
+        },
+        effects =
+        {
+          { type = "worker-robot-battery", modifier = 0.25 },
         },
         ignore_tech_cost_multiplier = true,
       },

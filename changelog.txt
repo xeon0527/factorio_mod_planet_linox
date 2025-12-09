@@ -1,4 +1,26 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.0
+Date: 10. 12. 2025
+  Major Features:
+    - Samarium Robotics technology has been added. Samarium robots move three times faster than standard robots and have higher HP and fire immunity.
+    - Added the "Dysprosium Electric Motor Robot" technology. Researching this technology increases robot battery capacity by 25%.
+
+  Minor Features:
+    - Some technology icons have been updated with new visuals.
+
+  Bugfixes:
+    - Fixed an issue where the Mantle Extractor was being pipetted before the Offshore Pump.
+
+  Changes:
+    - The tint color of the Turbo Pump has been changed.
+    - The tint color of the Dysprosium Exoskeleton has been changed.
+    - Improved the map colors of tiles.
+
+  Balancing:
+    - A requirement of at least 1% magnetic field has been added to the construction conditions for the Mantle Extractor.
+    - The Sintering Machine’s module slots have been increased from 4 to 5.
+    - Circuit cable connections are now allowed on the Sintering Machine.
+---------------------------------------------------------------------------------------------------
 Version: 1.0.5
 Date: 9. 12. 2025
   Minor Features:

@@ -16,6 +16,8 @@ require("prototypes.entity.linox-supercomputer")
 require("prototypes.entity.mantle-extractor")
 require("prototypes.entity.neodymium-permanent-magnet-generator")
 require("prototypes.entity.outlet")
+require("prototypes.entity.samarium-construction-robot")
+require("prototypes.entity.samarium-logistic-robot")
 require("prototypes.entity.sintering-machine")
 require("prototypes.entity.sulfuric-acid-pumpjack")
 require("prototypes.entity.turbo-pump");

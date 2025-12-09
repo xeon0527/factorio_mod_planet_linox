@@ -1,5 +1,5 @@
 local item_sounds = require("__base__.prototypes.item_sounds")
-local tint = {175,175,0}
+local tint = { 1.0, 0.66, 0.66 };
 
 data:extend {
   {

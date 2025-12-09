@@ -4,7 +4,7 @@ data:extend {
   {
     type = "technology",
     name = "linox-technology_planetary-mining-technology",
-    icons = util_icon.technology_icon_script_research("__space-age__/graphics/technology/big-mining-drill.png", 256),
+    icons = util_icon.technology_icon_script_research("__linox__/graphics/technology/planetary-mining-technology.png", 500),
     essential = true,
     prerequisites = {"linox-technology_exploring-linox-landing-site"},
     research_trigger = {

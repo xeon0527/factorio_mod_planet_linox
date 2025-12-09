@@ -30,7 +30,7 @@ data:extend {
     fast_replaceable_group = "assembling-machine",
     crafting_speed = 1,
     crafting_categories = { "linox-recipe-category_sintering" },
-    module_slots = 4,
+    module_slots = 5,
 
     energy_usage = "450kW",
     energy_source =
@@ -41,8 +41,8 @@ data:extend {
       emissions_per_minute = { pollution = 4 }
     },
 
-    --circuit_wire_max_distance = 10,
-    --circuit_connector = circuit_connector_definitions["assembling-machine"],
+    circuit_wire_max_distance = 10,
+    circuit_connector = circuit_connector_definitions["assembling-machine"],
 
     graphics_set =
     {

@@ -36,7 +36,7 @@ data:extend {
     --module_slots = 4,
 
     surface_conditions = {
-      --{ property = "pressure", min = 10 },
+      { property = "magnetic-field", min = 1 },
       { property = "gravity", min = 1 }
     },
     
@@ -160,7 +160,7 @@ data:extend {
     weight = 1 * tons,
     place_result = "linox-building_mantle-extractor",
     subgroup = "extraction-machine",
-    order = "a[items]-d[mantle-extractor]",
+    order = "b[fluids]-b[offshore-pump]",
     default_import_location = "linox-planet_linox",
   },
 }

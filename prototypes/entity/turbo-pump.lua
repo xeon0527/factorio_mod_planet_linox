@@ -1,5 +1,5 @@
 ---@diagnostic disable: assign-type-mismatch
-local tint = {1.0, 0.66, 0.66};
+local tint = { 222, 232, 107 }
 
 local entity = table.deepcopy(data.raw["pump"]["pump"]);
 entity.name = "linox-building_turbo-pump";
