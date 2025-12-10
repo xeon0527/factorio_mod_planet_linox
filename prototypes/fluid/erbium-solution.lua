@@ -42,11 +42,11 @@ data:extend {
       {type = "fluid", name = "high-concentration-erbium-solution", amount = 100},
       {type = "fluid", name = "steam", amount = 3900},
     },
-    energy_required = 10,
+    energy_required = 3,
     results =
     {
-      {type = "fluid", name = "erbium-solution", amount = 10},
-      {type = "fluid", name = "waste-water", amount = 390},
+      {type = "fluid", name = "erbium-solution", amount = 25},
+      {type = "fluid", name = "waste-water", amount = 375},
     },
 
     main_product = "erbium-solution",

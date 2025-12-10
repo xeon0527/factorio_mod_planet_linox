@@ -28,8 +28,8 @@ data:extend {
   },
 }
 
---if mods["any-planet-start"] then
------@diagnostic disable-next-line: undefined-global
---  APS.add_choice("linox-planet_linox")
---end
+if mods["any-planet-start"] then
+---@diagnostic disable-next-line: undefined-global
+  APS.add_choice("linox-planet_linox")
+end
 

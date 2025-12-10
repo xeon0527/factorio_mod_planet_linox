@@ -1,4 +1,17 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.1
+Date: 11. 12. 2025
+  Balancing:
+    - The production yield and crafting speed of the Neodymium and Erbium recipe trees have been slightly increased, allowing for more efficient production.
+    - The maximum flight range of Samarium construction and logistics robots has been reduced. They now require more energy compared to standard robots.
+
+  Changes:
+    - The mod no longer forces specific settings in Recursive Blueprints Mod.
+
+  Compatibility:
+    - "Any Planet Start" is now supported. It’s very rough to play, but the game is at least fully progression-compatible.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.1.0
 Date: 10. 12. 2025
   Major Features:
@@ -20,6 +33,7 @@ Date: 10. 12. 2025
     - A requirement of at least 1% magnetic field has been added to the construction conditions for the Mantle Extractor.
     - The Sintering Machine’s module slots have been increased from 4 to 5.
     - Circuit cable connections are now allowed on the Sintering Machine.
+
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.5
 Date: 9. 12. 2025

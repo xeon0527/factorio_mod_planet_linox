@@ -52,11 +52,11 @@ data:extend {
       {type = "fluid", name = "low-concentration-neodymium-solution", amount = 100},
       {type = "fluid", name = "petroleum-gas", amount = 400},
     },
-    energy_required = 5,
+    energy_required = 2,
     results =
     {
-      {type = "fluid", name = "high-concentration-neodymium-solution", amount = 10},
-      {type = "fluid", name = "waste-water", amount = 490},
+      {type = "fluid", name = "high-concentration-neodymium-solution", amount = 25},
+      {type = "fluid", name = "waste-water", amount = 475},
     },
 
     main_product = "high-concentration-neodymium-solution",

@@ -1,4 +1,4 @@
-Warning: Up to version 1.0.2, the Power Converter had desync issues. Please update to version 1.0.5.
+Warning: Up to version 1.0.2, the Power Converter had desync issues. Please update to the latest version.
 ==================================================
 - - -
 Planet Linox - Probably the smallest planet in Factorio.
@@ -49,7 +49,10 @@ Rewards
 >It improves rare earth production. and as a small bonus, it also reduces pollution.  
   
  * Sintering machine Productivity
->Improves the productivity of the sintering machine. It seems like more comes out than the materials you put in… could this be called "creation"?
+>Improves the productivity of the sintering machine. It seems like more comes out than the materials you put in… could this be called "creation"?  
+  
+ * Samarium Robotics
+>By harnessing Samarium’s high-temperature properties, flying robots can gain enhanced durability and fire immunity, and temporarily operate at 300% overload. It’s like “eat fast, poop fast.”  
 - - -
 Recommended companion mods
 ==================================================

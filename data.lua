@@ -22,11 +22,12 @@ require("prototypes.collision-layer")
 
 --local constants = data.raw["utility-constants"].default
 --constants.max_fluid_flow=200
---if mods["any-planet-start"] then
------@diagnostic disable-next-line: undefined-global
---  APS.add_planet {
---    name = "linox-planet_linox",
---    filename = "__linox__/scripts/aps.lua",
---    technology = "linox-technology_planet-discovery-linox",
---  }
---end
+
+if mods["any-planet-start"] then
+---@diagnostic disable-next-line: undefined-global
+  APS.add_planet {
+    name = "linox-planet_linox",
+    filename = "__linox__/scripts/aps.lua",
+    technology = "linox-technology_planet-discovery-linox",
+  }
+end

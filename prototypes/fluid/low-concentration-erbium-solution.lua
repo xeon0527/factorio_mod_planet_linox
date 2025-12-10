@@ -52,11 +52,11 @@ data:extend {
       {type = "item", name = "hydrophilic-rare-earth-powder", amount = 1},
       {type = "fluid", name = "sulfuric-acid", amount = 100},
     },
-    energy_required = 3,
+    energy_required = 1,
     results =
     {
-      {type = "fluid", name = "low-concentration-erbium-solution", amount = 10},
-      {type = "fluid", name = "waste-water", amount = 90},
+      {type = "fluid", name = "low-concentration-erbium-solution", amount = 25},
+      {type = "fluid", name = "waste-water", amount = 75},
     },
 
     main_product = "low-concentration-erbium-solution",
