@@ -53,6 +53,9 @@ Rewards
   
  * Samarium Robotics
 >By harnessing Samarium’s high-temperature properties, flying robots can gain enhanced durability and fire immunity, and temporarily operate at 300% overload. It’s like “eat fast, poop fast.”  
+  
+ * Neodymium permanent magnet inserter
+>By harnessing the immense torque of neodymium permanent-magnet motors, inserter performance can be boosted to revolutionary levels. Their arms move so fast that it’s nearly impossible to track them with the naked eye. You might even get dizzy—so please, kids, don’t try this at home.
 - - -
 Recommended companion mods
 ==================================================
@@ -64,6 +67,7 @@ Compatible Mods
 ==================================================
  * [Pelagos](https://mods.factorio.com/mod/pelagos) - In some processes, a "Calciner" can be used.
  * [Moshine](https://mods.factorio.com/mod/Moshine) - The Neodymium Crushing setting can be enabled.
+ * [Any Planet Start](https://mods.factorio.com/mod/any-planet-start) - Any Planet Start is officially supported.
 - - -
 Thank you for playing.
 ==================================================

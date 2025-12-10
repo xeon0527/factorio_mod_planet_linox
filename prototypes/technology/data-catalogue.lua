@@ -216,6 +216,41 @@ data:extend {
 
   {
     type = "technology",
+    name = "linox-technology_neodymium-permanent-magnet-inserter",
+    icons = {
+      {
+        icon = "__linox__/graphics/technology/neodymium-inserter.png",
+        icon_size = 256,
+      },
+    },
+    prerequisites = {
+      "linox-technology_neodymium-permanent-magnet",
+      "stack-inserter",
+    },
+    unit =
+    {
+      count = 1500,
+      ingredients =
+      {
+        {"linox-item_lava-data-card", 1},
+        {"linox-item_rare-earth-data-card", 1},
+        {"linox-item_samarium-data-card", 1},
+        {"linox-item_dysprosium-data-card", 1},
+        {"linox-item_neodymium-data-card", 1},
+      },
+      time = 60
+    },
+    effects =
+    {
+      { type = "unlock-recipe", recipe = "linox-building_neodymium-bulk-inserter" },
+      { type = "unlock-recipe", recipe = "linox-building_neodymium-stack-inserter" },
+    },
+    ignore_tech_cost_multiplier = true,
+  },
+
+
+  {
+    type = "technology",
     name = "linox-technology_erbium-extraction",
     icon = "__linox__/graphics/technology/erbium-extraction.png",
     icon_size = 500,

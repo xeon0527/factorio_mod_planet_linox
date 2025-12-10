@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.2.0
+Date: 11. 12. 2025
+  Major Features:
+    - Neodymium Bulk Inserters and Neodymium Stack Inserters have been added. Inserters that use neodymium operate at three times the speed of their regular counterparts.
+
+  Balancing:
+    - The rocket transport capacity of Samarium has been increased from 50 to 500 units.
+    - The rocket transport capacity of neodymium permanent magnets has been increased from 100 to 250 units.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.1.1
 Date: 11. 12. 2025
   Balancing:
