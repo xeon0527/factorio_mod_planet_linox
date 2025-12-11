@@ -149,3 +149,32 @@ data:extend {
     protected_from_tile_building = false,
   },
 }
+
+local entity = table.deepcopy(data.raw["electric-pole"]["substation"])
+entity.name = "linox-special_circuit-pole"
+entity.flags = {
+  "not-rotatable",
+  "placeable-off-grid",
+  "not-repairable",
+  "not-deconstructable",
+  "not-blueprintable",
+  "not-flammable",
+  "no-automated-item-removal",
+  "no-automated-item-insertion",
+  "not-upgradable",
+  "not-in-kill-statistics",
+  "not-in-made-in",
+}
+entity.minable = nil
+entity.max_health = 1000
+entity.resistances = nil
+entity.selection_box = {{-1, -3}, {1, 1}}
+entity.maximum_wire_distance = 64
+entity.supply_area_distance = 0
+entity.pictures.layers[1].tint = {0,1,0}
+entity.hidden = true
+entity.hidden_in_factoriopedia = true
+entity.collision_mask = {layers = {}}
+entity.selection_priority = 255
+
+data:extend { entity }

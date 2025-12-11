@@ -26,6 +26,27 @@ data:extend {
     setting_type = "startup",
     default_value = true
   },
+
+  {
+    type = "bool-setting",
+    name = "linox-settings_allow-hopper-launcher",
+    setting_type = "startup",
+    default_value = true
+  },
+
+  {
+    type = "bool-setting",
+    name = "linox-settings_disconnect-aai-signal-transmission",
+    setting_type = "startup",
+    default_value = false
+  },
+
+  {
+    type = "bool-setting",
+    name = "linox-settings_disable-aai-signal-transmission",
+    setting_type = "startup",
+    default_value = false
+  },
 }
 
 if mods["any-planet-start"] then

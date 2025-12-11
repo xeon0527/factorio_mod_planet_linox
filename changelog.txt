@@ -1,4 +1,18 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.3.0
+Date: 12. 12. 2025
+  Major Features:
+    - A cable adapter has been added to the Cargo Landing Pad. This adapter allows circuit networks to be used between two surfaces and enables viewing of power network statistics.
+    - AAI Signal Transmission has been added to the Erbium tech tree. If you do not wish to use AAI Signal Transmission or prefer not to modify it through Linox, you can fully disable or opt out of it in the Settings.
+
+  Changes:
+    - The tint color of the Outlet has been changed.
+    - Mod solar panels are now recognized during the first interaction with L.O.R.A.X.
+
+  Compatibility:
+    - Compatibility and configuration options for the Planet Hopper Mod have been added.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.2.0
 Date: 11. 12. 2025
   Major Features:

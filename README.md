@@ -68,6 +68,7 @@ Compatible Mods
  * [Pelagos](https://mods.factorio.com/mod/pelagos) - In some processes, a "Calciner" can be used.
  * [Moshine](https://mods.factorio.com/mod/Moshine) - The Neodymium Crushing setting can be enabled.
  * [Any Planet Start](https://mods.factorio.com/mod/any-planet-start) - Any Planet Start is officially supported.
+ * [Planet Hopper](https://mods.factorio.com/mod/Planet-Hopper) - You can configure it so that the Hopper Launcher can be placed on terminal platform tiles.
 - - -
 Thank you for playing.
 ==================================================

@@ -1,6 +1,6 @@
 local item_sounds = require("__base__.prototypes.item_sounds")
 
-local tint = {1, 0.66, 0.66}
+local tint = { 222, 232, 107 }
 local entity = table.deepcopy(data.raw["offshore-pump"]["offshore-pump"]);
 
 entity.graphics_set.animation.north.layers[1].tint  = tint

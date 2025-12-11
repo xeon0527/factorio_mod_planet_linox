@@ -28,6 +28,11 @@ build_filter.add_entity_type("linox-tile_linox-hazard-facility-platform", filter
 build_filter.add_entity_name("linox-tile_linox-facility-platform",        "linox-building_core-roboport")
 build_filter.add_entity_name("linox-tile_linox-hazard-facility-platform", "linox-building_core-roboport")
 
+if script.active_mods["Planet-Hopper"] and settings.startup["linox-settings_allow-hopper-launcher"].value then
+  build_filter.add_entity_name("linox-tile_linox-terminal-platform",        "planet-hopper-launcher")
+  build_filter.add_entity_name("linox-tile_linox-hazard-terminal-platform", "planet-hopper-launcher")
+end
+
 if script.active_mods["compaktcircuit"] then
   build_filter.add_entity_name("linox-tile_linox-facility-platform",        "compaktcircuit-processor")
   build_filter.add_entity_name("linox-tile_linox-facility-platform",        "compaktcircuit-processor_1x1")
@@ -46,8 +51,12 @@ events.create_build_entity_handler(function(event)
     local tiles = UTIL_get_entity_tiles(event.entity)
 
     if e_type == "rocket-silo" and e_name ~= "linox-building_advanced-rocket-silo" then
-      --player.print("리녹스에서는 고급 로켓 사일로만 사용할 수 있습니다.");
+      if script.active_mods["Planet-Hopper"] and settings.startup["linox-settings_allow-hopper-launcher"].value and e_name == "planet-hopper-launcher" then
+        return true
+      end
+
       if player then
+        --player.print("리녹스에서는 고급 로켓 사일로만 사용할 수 있습니다.");
         player.print{"", "[img=virtual-signal.signal-alert] ", {"system.rocket-silo-limit"}}
       end
       return false
@@ -108,16 +117,25 @@ UTIL_create_event_handler(defines.events.on_cargo_pod_finished_ascending, functi
   end
 end)
 
-
 __MODULE__.connect_surfaces = function()
   local linox_A = game.get_surface(__LINOX_SURFACE__.ground)
   local linox_B = game.get_surface(__LINOX_SURFACE__.facility)
   if linox_A and linox_B then
-    local lppn1 = UTIL_ensure_entity(linox_A, { name = "linox-hidden_electric-pole"})
-    local lppn2 = UTIL_ensure_entity(linox_B, { name = "linox-hidden_electric-pole"})
+    --local lppn1 = UTIL_ensure_entity(linox_A, { name = "linox-hidden_electric-pole"})
+    --local lppn2 = UTIL_ensure_entity(linox_B, { name = "linox-hidden_electric-pole"})
+    local lppn1 = linox_A.find_entity("linox-special_circuit-pole", {-2,2})
+    local lppn2 = linox_B.find_entity("linox-special_circuit-pole", {-2,2})
     if lppn1 and lppn2 then
       local lppn1_connector = lppn1.get_wire_connector(defines.wire_connector_id.pole_copper, true);
       local lppn2_connector = lppn2.get_wire_connector(defines.wire_connector_id.pole_copper, true);
+      lppn1_connector.connect_to(lppn2_connector, false);
+
+      lppn1_connector = lppn1.get_wire_connector(defines.wire_connector_id.circuit_red, true);
+      lppn2_connector = lppn2.get_wire_connector(defines.wire_connector_id.circuit_red, true);
+      lppn1_connector.connect_to(lppn2_connector, false);
+
+      lppn1_connector = lppn1.get_wire_connector(defines.wire_connector_id.circuit_green, true);
+      lppn2_connector = lppn2.get_wire_connector(defines.wire_connector_id.circuit_green, true);
       lppn1_connector.connect_to(lppn2_connector, false);
     end
   end

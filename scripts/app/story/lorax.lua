@@ -49,7 +49,7 @@ end)
 
 local function __running_lorax()
   local surface = linox_ground.get()
-  return surface and (#surface.find_entities_filtered{name="solar-panel"} >= 3)
+  return surface and (#surface.find_entities_filtered{type="solar-panel"} >= 3)
 end
 
 __MODULE__.show = function(player)

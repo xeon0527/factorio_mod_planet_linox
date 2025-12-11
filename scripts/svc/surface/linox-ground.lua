@@ -109,6 +109,11 @@ __MODULE__.create_building = function()
   cargo_pad.minable = false;
   cargo_pad.operable = false;
 
+  local pole = UTIL_ensure_entity(surface, { name = "linox-special_circuit-pole", position = {-2,2}})
+  pole.destructible = false
+  pole.minable = false
+  pole.rotatable = false
+
   UTIL_ensure_entity(surface, {
     name = "crash-site-spaceship-wreck-medium-1",
     force = "neutral",

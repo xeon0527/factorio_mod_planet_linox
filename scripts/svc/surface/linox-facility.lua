@@ -98,6 +98,11 @@ UTIL_create_event_handler(defines.events.on_surface_created, function(event)
     cargo_pad.minable = false;
     cargo_pad.operable = false;
 
+    local pole = UTIL_ensure_entity(surface, { name = "linox-special_circuit-pole", position = {-2,2}})
+    pole.destructible = false
+    pole.minable = false
+    pole.rotatable = false
+
 
     -- pumpjack 생성
     local pumpjack = UTIL_ensure_entity(surface, {

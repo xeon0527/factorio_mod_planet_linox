@@ -4,6 +4,19 @@ entity.name = "linox-building_cargo-landing-pad";
 entity.inventory_size = 40;
 entity.trash_inventory_size = 10;
 entity.radar_range = 5;
+entity.flags = {
+  "not-rotatable",
+  "placeable-off-grid",
+  "not-repairable",
+  "not-deconstructable",
+  "not-blueprintable",
+  "not-flammable",
+  "no-automated-item-removal",
+  "no-automated-item-insertion",
+  "not-upgradable",
+  "not-in-kill-statistics",
+  "not-in-made-in",
+}
 
 local tint = { 1.0, 0.66, 0.66 };
 for _, v1 in pairs(entity.graphics_set.connections) do

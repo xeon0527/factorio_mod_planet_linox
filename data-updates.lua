@@ -65,42 +65,74 @@ if not settings.startup["linox-settings_remove-logistic-system"].value then
 end
 
 if mods["Moshine"] and settings.startup["linox-settings_enable-moshine-neodymium-recipe"].value then
-data:extend {
-  {
-    type = "recipe",
-    name = "linox-moshine-recipe_neodymium-crushing",
-    icons = util_icon.recipe_icon_linox("__Moshine__/graphics/icons/neodymium.png", 64),
-    ingredients = {{type = "item", name = "neodymium", amount = 10}},
-    results = {{type="item", name="neodymium-powder", amount = 1}},
-    allow_productivity = true,
-    enabled = false,
-  },
-  {
-    type = "technology",
-    name = "linox-moshine-technology_neodymium-crushing",
-    icon = "__Moshine__/graphics/technology/moshine-tech-magnet.png",
-    icon_size = 256,
-    prerequisites = {
-      "linox-technology_neodymium-extraction",
-    },
-    unit =
+  data:extend {
     {
-      count = 250,
+      type = "recipe",
+      name = "linox-moshine-recipe_neodymium-crushing",
+      icons = util_icon.recipe_icon_linox("__Moshine__/graphics/icons/neodymium.png", 64),
+      ingredients = {{type = "item", name = "neodymium", amount = 10}},
+      results = {{type="item", name="neodymium-powder", amount = 1}},
+      allow_productivity = true,
+      enabled = false,
+    },
+    {
+      type = "technology",
+      name = "linox-moshine-technology_neodymium-crushing",
+      icon = "__Moshine__/graphics/technology/moshine-tech-magnet.png",
+      icon_size = 256,
+      prerequisites = {
+        "linox-technology_neodymium-extraction",
+      },
+      unit =
+      {
+        count = 250,
+        ingredients =
+        {
+          {"linox-item_lava-data-card", 1},
+          {"linox-item_rare-earth-data-card", 1},
+          {"linox-item_samarium-data-card", 1},
+          {"linox-item_dysprosium-data-card", 1},
+        },
+        time = 60
+      },
+      effects =
+      {
+        { type = "unlock-recipe", recipe = "linox-moshine-recipe_neodymium-crushing" },
+      },
+      ignore_tech_cost_multiplier = true,
+      essential = true,
+    },
+  }
+end
+
+if mods["aai-signal-transmission"] then
+  if settings.startup["linox-settings_disable-aai-signal-transmission"].value then
+    data.raw.technology["aai-signal-transmission"] = nil
+    data.raw.recipe["aai-signal-sender"] = nil
+    data.raw.recipe["aai-signal-receiver"] = nil
+
+  elseif not settings.startup["linox-settings_disconnect-aai-signal-transmission"].value then
+    local tech = data.raw.technology["aai-signal-transmission"]
+    tech.prerequisites = {
+      "processing-unit",
+      "electric-engine",
+      "circuit-network",
+      "linox-technology_erbium-data-card",
+    }
+    tech.unit = {
+      count = 1000,
       ingredients =
       {
         {"linox-item_lava-data-card", 1},
         {"linox-item_rare-earth-data-card", 1},
         {"linox-item_samarium-data-card", 1},
         {"linox-item_dysprosium-data-card", 1},
+        {"linox-item_erbium-data-card", 1},
       },
       time = 60
-    },
-    effects =
-    {
-      { type = "unlock-recipe", recipe = "linox-moshine-recipe_neodymium-crushing" },
-    },
-    ignore_tech_cost_multiplier = true,
-    essential = true,
-  },
-}
+    }
+
+    table.insert(data.raw.recipe["aai-signal-sender"].ingredients, {type = "item", name = "erbium-powder", amount = 10})
+    table.insert(data.raw.recipe["aai-signal-receiver"].ingredients, {type = "item", name = "erbium-powder", amount = 10})
+  end
 end
