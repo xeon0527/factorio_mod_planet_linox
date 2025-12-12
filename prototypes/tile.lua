@@ -46,13 +46,20 @@ local transition = {
   },
   --mask_layout =
   --{
-  --  --inner_corner =
-  --  --{
-  --  --  spritesheet = "__linox__/graphics/terrain/tutorial-grid-inner-corner-mask.png",
-  --  --  count = 4,
-  --  --  tile_height = 2,
-  --  --  scale = 0.5
-  --  --},
+  --  outer_corner =
+  --  {
+  --    spritesheet = "__linox__/graphics/terrain/tutorial-grid-outer-corner-mask.png",
+  --    count = 4,
+  --    tile_height = 2,
+  --    scale = 0.5
+  --  },
+  --  inner_corner =
+  --  {
+  --    spritesheet = "__linox__/graphics/terrain/tutorial-grid-inner-corner-mask.png",
+  --    count = 4,
+  --    tile_height = 2,
+  --    scale = 0.5
+  --  },
   --  side =
   --  {
   --    spritesheet = "__linox__/graphics/terrain/tutorial-grid-side-mask.png",
@@ -60,12 +67,12 @@ local transition = {
   --    tile_height = 2,
   --    scale = 0.5
   --  },
-  --  --o_transition =
-  --  --{
-  --  --  spritesheet = "__linox__/graphics/terrain/tutorial-grid-o-mask.png",
-  --  --  count = 2,
-  --  --  scale = 0.5
-  --  --}
+  --  o_transition =
+  --  {
+  --    spritesheet = "__linox__/graphics/terrain/tutorial-grid-o-mask.png",
+  --    count = 2,
+  --    scale = 0.5
+  --  }
   --}
 }
 
@@ -119,6 +126,7 @@ tile.variants.material_background = {
 tile.map_color = {57, 39, 26}
 tile.tint = { 0.66, 0.66, 0.66 }
 data:extend{tile}
+
 
 
 

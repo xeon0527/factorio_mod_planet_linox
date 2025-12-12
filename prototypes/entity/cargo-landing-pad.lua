@@ -11,8 +11,6 @@ entity.flags = {
   "not-deconstructable",
   "not-blueprintable",
   "not-flammable",
-  "no-automated-item-removal",
-  "no-automated-item-insertion",
   "not-upgradable",
   "not-in-kill-statistics",
   "not-in-made-in",
