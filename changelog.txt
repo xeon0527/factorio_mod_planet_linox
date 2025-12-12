@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.4.1
+Date: 12. 12. 2025
+  Bugfixes:
+    - The issue where the AAI Signal Transmission research was affected by the cost multiplier has been fixed.
+
+  Balancing:
+    - The Outlet’s operating speed has been reduced from 5 to 1. It can now dispose of 100 fluid per second.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.4.0
 Date: 12. 12. 2025
   Major Features:
