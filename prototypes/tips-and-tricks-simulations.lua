@@ -35,6 +35,8 @@ __MODULE__.linox_exploration_log_2 = {
   init_update_count = 120,
   planet = "linox-planet_linox",
   init = [[
+    require("__linox__/scripts/util")
+    
     local surface = game.surfaces[1]
     game.simulation.camera_position = {0, 0}
     game.simulation.camera_zoom = 0.7

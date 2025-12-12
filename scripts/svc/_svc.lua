@@ -1,12 +1,13 @@
 -- Service Layer Scripts
+local __PATH__ = "scripts.svc."
 
-require("scripts.svc.npc")
-require("scripts.svc.database")
+require(__PATH__.."npc")
+require(__PATH__.."database")
 
-require("scripts.svc.gui.dialog")
+require(__PATH__.."gui.dialog")
 
-require("scripts.svc.surface.linox-facility")
-require("scripts.svc.surface.linox-global")
-require("scripts.svc.surface.linox-ground")
+require(__PATH__.."surface.linox-facility")
+require(__PATH__.."surface.linox-global")
+require(__PATH__.."surface.linox-ground")
 
-require("scripts.svc.simulation.power-converter")
+require(__PATH__.."simulation.power-converter")

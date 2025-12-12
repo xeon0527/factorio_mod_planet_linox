@@ -49,8 +49,4 @@ data:extend {
   },
 }
 
-if mods["any-planet-start"] then
----@diagnostic disable-next-line: undefined-global
-  APS.add_choice("linox-planet_linox")
-end
-
+require("compatibility.any-planet-start").settings()

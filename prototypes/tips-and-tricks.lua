@@ -1,6 +1,6 @@
 local simulation = require("prototypes.tips-and-tricks-simulations")
 
-data:extend({
+data:extend {
   {
 		type = "tips-and-tricks-item-category",
 		name = "linox-tips-and-tricks_category",
@@ -210,19 +210,4 @@ data:extend({
       technology = "linox-technology_power-converter"
     },
   },
-
-
-  --{
-  --  type = "tips-and-tricks-item",
-  --  name = "linox-tips-and-tricks_power-converter",
-  --  tag = "[item=accumulator]",
-  --  category = "linox-tips-and-tricks_category",
-  --  order = "zd",
-  --  indent = 1,
-  --  trigger =
-  --  {
-  --    type = "research",
-  --    technology = "linox-technology_planetary-power-network"
-  --  },
-  --},
-})
+}

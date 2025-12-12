@@ -1,6 +1,8 @@
 local db = require("scripts.svc.database");
 local linox_ground = require("scripts.svc.surface.linox-ground")
 local linox_facility = require("scripts.svc.surface.linox-facility")
+local rb_book = require("scripts.svc.surface.sample.book")
+local rb_bp = require("scripts.svc.surface.sample.bp")
 
 --DRV_storage_create("story.flag.cargo_approval", false)
 --DRV_storage_create("story.lorax", nil)
@@ -108,6 +110,7 @@ __MODULE__.show = function(player)
     dialog.add_talk(player, dialog.talker.partner, {"npc-talk.lorax_s5-0_t0"})
     dialog.add_select(player, "1", {"npc-talk.lorax_s5-0_s0"}, dialog.talker.player);
     dialog.add_select(player, "2", {"npc-talk.lorax_s5-0_s1"}, dialog.talker.player);
+    dialog.add_select(player, "3", {"npc-talk.lorax_s5-0_s2"}, dialog.talker.player);
   end
 end
 
@@ -395,6 +398,7 @@ UTIL_create_event_handler("linox-custom-event_gui-dialog-on-select", function(ev
     if sel_id == "1" then
       dialog.set_temp_data(player, "5-3-1")
       script.raise_event("linox-custom-event_gui-dialog-on-select", { player = player, select_id = "1" });
+
     elseif sel_id == "2" then
       dialog.close(player);
       
@@ -474,6 +478,24 @@ UTIL_create_event_handler("linox-custom-event_gui-dialog-on-select", function(ev
         }
       );
       techshop.refresh(player)
+
+    elseif sel_id == "3" then
+      dialog.add_talk(player, dialog.talker.partner, {"npc-talk.lorax_s5-3_t0"})
+      dialog.add_talk(player, dialog.talker.partner, {"npc-talk.lorax_s5-3_t1"})
+      dialog.add_talk(player, dialog.talker.partner, {"npc-talk.lorax_s5-3_t2"})
+      dialog.add_select(player, "0", {"npc-talk.lorax_end"});
+
+      local inv = game.create_inventory(1)
+      inv.insert{name = "blueprint"}
+      inv[1].import_stack(rb_bp)
+      player.insert(inv[1])
+      inv.destroy()
+
+      inv = game.create_inventory(1)
+      inv.insert{name = "blueprint"}
+      inv[1].import_stack(rb_book)
+      player.insert(inv[1])
+      inv.destroy()
     end
   end
 end)

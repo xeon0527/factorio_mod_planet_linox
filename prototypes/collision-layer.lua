@@ -1,4 +1,4 @@
-data:extend{
+data:extend {
   {
     type = "collision-layer",
     name = "linox-collision-layer_flying",

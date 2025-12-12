@@ -1,4 +1,4 @@
-data:extend({
+data:extend {
   {
     type = "shortcut",
     name = "linox-shortcut_enter-elevator",
@@ -10,4 +10,4 @@ data:extend({
     small_icon = "__base__/graphics/icons/shortcut-toolbar/mip/copy-x24.png",
     small_icon_size = 24
   },
-})
+}

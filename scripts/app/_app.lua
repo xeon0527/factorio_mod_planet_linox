@@ -1,5 +1,6 @@
 -- Application Layer Scripts
+local __PATH__ = "scripts.app."
 
-require("scripts.app.technology")
-require("scripts.app.story.npc")
-require("scripts.app.story.lorax")
+require(__PATH__.."technology")
+require(__PATH__.."story.npc")
+require(__PATH__.."story.lorax")

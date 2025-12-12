@@ -1,5 +1,5 @@
 ---@diagnostic disable: undefined-global
-data:extend{
+data:extend {
   {
     type = "corpse",
     name = "neodymium-bulk-inserter-remnants",

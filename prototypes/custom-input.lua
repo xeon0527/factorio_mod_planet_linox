@@ -1,4 +1,4 @@
-data:extend({
+data:extend {
   {
     type = "custom-input",
     name = "linox-custom-input_click",
@@ -16,4 +16,4 @@ data:extend({
     key_sequence = "",
     linked_game_control = "toggle-driving"
   },
-})
+}
