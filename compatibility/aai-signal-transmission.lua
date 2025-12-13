@@ -29,8 +29,8 @@ __MODULE__.data_update = function()
       }
       tech.ignore_tech_cost_multiplier = true
   
-      table.insert(data.raw.recipe["aai-signal-sender"].ingredients, {type = "item", name = "erbium-powder", amount = 10})
-      table.insert(data.raw.recipe["aai-signal-receiver"].ingredients, {type = "item", name = "erbium-powder", amount = 10})
+      table.insert(data.raw.recipe["aai-signal-sender"].ingredients, {type = "item", name = "erbium-powder", amount = 5})
+      table.insert(data.raw.recipe["aai-signal-receiver"].ingredients, {type = "item", name = "erbium-powder", amount = 5})
     end
   end
 end

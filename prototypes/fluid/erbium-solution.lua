@@ -7,7 +7,7 @@ data:extend {
     icon = "__linox__/graphics/icons/erbium-solution.png",
     icon_size = 64,
     subgroup = "fluid",
-    --order = "b[new-fluid]-e[aquilo]-a[ammoniacal-solution]",
+    order = "linox-erbium-c",
     default_temperature = 15,
 
     base_color = tint,
@@ -21,7 +21,7 @@ data:extend {
     icon_size = 64,
     category = "linox-recipe-category_chemical-tank",
     subgroup = "fluid-recipes",
-    order = "d[other-chemistry]",
+    order = "linox-erbium-c",
     auto_recycle = false,
     enabled = false,
     surface_conditions =
@@ -40,7 +40,7 @@ data:extend {
     ingredients =
     {
       {type = "fluid", name = "high-concentration-erbium-solution", amount = 100},
-      {type = "fluid", name = "steam", amount = 3900},
+      {type = "fluid", name = "steam", amount = 3000},
     },
     energy_required = 3,
     results =

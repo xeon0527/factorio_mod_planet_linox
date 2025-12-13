@@ -12,7 +12,7 @@ data:extend {
       }
     },
     subgroup = "fluid",
-    --order = "b[new-fluid]-e[aquilo]-a[ammoniacal-solution]",
+    order = "linox-erbium-a",
     default_temperature = 15,
 
     base_color = tint,
@@ -31,7 +31,7 @@ data:extend {
     },
     category = "chemistry-or-cryogenics",
     subgroup = "fluid-recipes",
-    order = "d[other-chemistry]",
+    order = "linox-erbium-a",
     auto_recycle = false,
     enabled = false,
     surface_conditions =
@@ -52,7 +52,7 @@ data:extend {
       {type = "item", name = "hydrophilic-rare-earth-powder", amount = 1},
       {type = "fluid", name = "sulfuric-acid", amount = 100},
     },
-    energy_required = 1,
+    energy_required = 2,
     results =
     {
       {type = "fluid", name = "low-concentration-erbium-solution", amount = 25},

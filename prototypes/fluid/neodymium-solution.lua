@@ -7,7 +7,7 @@ data:extend {
     icon = "__linox__/graphics/icons/neodymium-solution.png",
     icon_size = 64,
     subgroup = "fluid",
-    --order = "b[new-fluid]-e[aquilo]-a[ammoniacal-solution]",
+    order = "linox-neodymium-c",
     default_temperature = 15,
 
     base_color = tint,
@@ -21,7 +21,7 @@ data:extend {
     icon_size = 64,
     category = "linox-recipe-category_chemical-tank",
     subgroup = "fluid-recipes",
-    order = "d[other-chemistry]",
+    order = "linox-neodymium-c",
     auto_recycle = false,
     enabled = false,
     surface_conditions =
@@ -40,13 +40,13 @@ data:extend {
     ingredients =
     {
       {type = "fluid", name = "high-concentration-neodymium-solution", amount = 100},
-      {type = "fluid", name = "water", amount = 900},
+      {type = "fluid", name = "water", amount = 300},
     },
     energy_required = 3,
     results =
     {
       {type = "fluid", name = "neodymium-solution", amount = 25},
-      {type = "fluid", name = "waste-water", amount = 975},
+      {type = "fluid", name = "waste-water", amount = 375},
     },
 
     main_product = "neodymium-solution",

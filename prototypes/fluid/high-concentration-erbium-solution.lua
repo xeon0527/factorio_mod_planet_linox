@@ -12,7 +12,7 @@ data:extend {
       },
     },
     subgroup = "fluid",
-    --order = "b[new-fluid]-e[aquilo]-a[ammoniacal-solution]",
+    order = "linox-erbium-b",
     default_temperature = 15,
 
     base_color = tint,
@@ -31,7 +31,7 @@ data:extend {
     },
     category = "chemistry-or-cryogenics",
     subgroup = "fluid-recipes",
-    order = "d[other-chemistry]",
+    order = "linox-erbium-b",
     auto_recycle = false,
     enabled = false,
     surface_conditions =

@@ -24,11 +24,11 @@ data:extend {
     type = "recipe",
     name = "neodymium-powder",
     category = "smelting",
-    energy_required = 3,
+    energy_required = 1,
     enabled = false,
     ingredients =
     {
-      {type = "item", name = "neodymium-oxide", amount = 2},
+      {type = "item", name = "neodymium-oxide", amount = 1},
     },
     results = {
       {type = "item", name = "neodymium-powder", amount = 1},

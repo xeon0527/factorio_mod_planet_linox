@@ -61,7 +61,7 @@ data:extend {
     ingredients =
     {
       {type = "item", name = "beacon", amount = 1},
-      {type = "item", name = "erbium-powder", amount = 4},
+      {type = "item", name = "erbium-powder", amount = 2},
     },
     --surface_conditions = {
     --  {

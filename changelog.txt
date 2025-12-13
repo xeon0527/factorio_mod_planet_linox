@@ -1,4 +1,25 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.4.3
+Date: 13. 12. 2025
+  Balancing:
+    - The High Concentration Neodymium Solution recipe’s Petroleum Gas requirement has been reduced from 400 to 200. As a result, the Wastewater output has also been decreased from 475 to 275.
+    - The Neodymium Solution recipe’s Water requirement has been significantly reduced from 900 to 300. Accordingly, the Wastewater output has also been reduced from 975 to 375.
+    - The Erbium Solution recipe’s Steam requirement has been reduced from 3,900 to 3,000.
+    - The production time of Neodymium and Erbium Solutions has been increased to a minimum of 2 seconds.
+    - The Erbium Powder recipe’s Erbium Oxide requirement has been reduced from 2 to 1.
+    - The Neodymium Powder recipe’s Neodymium Oxide requirement has been reduced from 2 to 1.
+    - The Erbium Beacon recipe’s Erbium Powder requirement has been reduced from 4 to 2.
+    - The Erbium Powder requirement for AAI Signal Sender and AAI Signal Receiver has been reduced from 10 to 5.
+    - The Neodymium Bulk Inserter recipe’s Neodymium Permanent Magnet requirement has been reduced from 2 to 1.
+    - The Neodymium Stack Inserter recipe’s Neodymium Permanent Magnet requirement has been reduced from 2 to 1.
+    - The Neodymium Data Card and Erbium Data Card requirements have been removed from Expanding Factory 6 and 7 research.
+    - The output of the Neodymium Data Card recipe has been reduced from 10 to 5.
+    - The output of the Erbium Data Card recipe has been reduced from 10 to 5.
+
+  Changes:
+    - The colors of “High-Concentration Neodymium Solution” and “Low-Concentration Neodymium Solution” have been swapped, making it easier to distinguish the high-concentration solution at a glance.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.4.2
 Date: 13. 12. 2025
   Bugfixes:

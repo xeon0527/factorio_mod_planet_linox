@@ -132,7 +132,7 @@ data:extend {
     {
       {type = "item", name = "tungsten-gear-wheel", amount = 15},
       {type = "item", name = "tungsten-stick", amount = 5},
-      {type = "item", name = "neodymium-permanent-magnet", amount = 2},
+      {type = "item", name = "neodymium-permanent-magnet", amount = 1},
       {type = "item", name = "bulk-inserter", amount = 1}
     },
     results = {{type="item", name="linox-building_neodymium-bulk-inserter", amount=1}}

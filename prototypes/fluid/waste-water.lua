@@ -14,7 +14,7 @@ data:extend {
       }
     },
     subgroup = "fluid",
-    --order = "b[new-fluid]-e[aquilo]-a[ammoniacal-solution]",
+    order = "linox-wastewater",
     default_temperature = 15,
 
     base_color = tint,

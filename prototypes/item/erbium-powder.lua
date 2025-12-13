@@ -24,11 +24,11 @@ data:extend {
     type = "recipe",
     name = "erbium-powder",
     category = "smelting",
-    energy_required = 3,
+    energy_required = 1,
     enabled = false,
     ingredients =
     {
-      {type = "item", name = "erbium-oxide", amount = 2},
+      {type = "item", name = "erbium-oxide", amount = 1},
     },
     results = {
       {type = "item", name = "erbium-powder", amount = 1},

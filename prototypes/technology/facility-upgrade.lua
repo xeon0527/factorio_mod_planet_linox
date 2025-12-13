@@ -152,8 +152,6 @@ data:extend {
                 {"linox-item_rare-earth-data-card", 1},
                 {"linox-item_samarium-data-card", 1},
                 {"linox-item_dysprosium-data-card", 1},
-                {"linox-item_neodymium-data-card", 1},
-                {"linox-item_erbium-data-card", 1},
               },
               time = 60
             },
@@ -177,8 +175,6 @@ data:extend {
                 {"linox-item_rare-earth-data-card", 1},
                 {"linox-item_samarium-data-card", 1},
                 {"linox-item_dysprosium-data-card", 1},
-                {"linox-item_neodymium-data-card", 1},
-                {"linox-item_erbium-data-card", 1},
               },
               time = 60
             },

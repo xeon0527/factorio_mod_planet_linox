@@ -1,4 +1,4 @@
-local tint = {175, 175, 175}
+local tint = {110, 110, 110}
 
 data:extend {
   {
@@ -12,7 +12,7 @@ data:extend {
       },
     },
     subgroup = "fluid",
-    --order = "b[new-fluid]-e[aquilo]-a[ammoniacal-solution]",
+    order = "linox-neodymium-b",
     default_temperature = 15,
 
     base_color = tint,
@@ -31,7 +31,7 @@ data:extend {
     },
     category = "chemistry-or-cryogenics",
     subgroup = "fluid-recipes",
-    order = "d[other-chemistry]",
+    order = "linox-neodymium-b",
     auto_recycle = false,
     enabled = false,
     surface_conditions =
@@ -50,13 +50,13 @@ data:extend {
     ingredients =
     {
       {type = "fluid", name = "low-concentration-neodymium-solution", amount = 100},
-      {type = "fluid", name = "petroleum-gas", amount = 400},
+      {type = "fluid", name = "petroleum-gas", amount = 200},
     },
     energy_required = 2,
     results =
     {
       {type = "fluid", name = "high-concentration-neodymium-solution", amount = 25},
-      {type = "fluid", name = "waste-water", amount = 475},
+      {type = "fluid", name = "waste-water", amount = 275},
     },
 
     main_product = "high-concentration-neodymium-solution",
