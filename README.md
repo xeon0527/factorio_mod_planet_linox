@@ -79,4 +79,6 @@ Special Thanks
  * Earendel - Thank you for providing the Space Exploration assets. (https://www.patreon.com/earendel, https://discord.gg/ymjUVMv)
  * Hurricane046 - Thank you for providing high-quality Factorio-style graphics.
  * Efremiros - Thank you for providing the Russian translation.
- * [Natha](https://mods.factorio.com/user/natha) - You provided an idea for connecting the two surfaces. Thank you.
+ * [Natha](https://mods.factorio.com/user/natha) - Provided an idea for connecting the two surfaces. Thank you.
+ * [FoxLBA](https://mods.factorio.com/user/FoxLBA) - Thank you for maintaining the Recursive Blueprint System, which is a core mechanic of Linox.
+ * Skunky - Thank you for providing the example circuit designs and various ideas.
