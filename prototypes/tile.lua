@@ -171,6 +171,7 @@ tile.variants.material_background = {
   count = 8,
   scale = 0.5,
 }
+tile.collision_mask.layers["linox-collision-layer_terminal"] = true
 tile.map_color = { 0.07, 0.07, 0.07 }
 tile.tint = { 0.33, 0.33, 0.33 }
 data:extend{tile}
@@ -194,6 +195,7 @@ tile.variants.material_background = {
   count = 8,
   scale = 0.5,
 }
+tile.collision_mask.layers["linox-collision-layer_terminal"] = true
 tile.map_color = { 0.386, 0.153, 0.121 }
 tile.tint = { 0.66, 0.25, 0.25 }
 data:extend{tile}

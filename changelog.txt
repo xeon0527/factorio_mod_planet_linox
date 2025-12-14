@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.4.5
+Date: 14. 12. 2025
+  Bugfixes:
+    - Fixed incorrect collision detection for the Linox Terminal Pipe and Linox Terminal Belt.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.4.4
 Date: 14. 12. 2025
   Bugfixes:

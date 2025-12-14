@@ -24,6 +24,16 @@ data:extend {
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     damaged_trigger_effect = hit_effects.entity(),
 
+    tile_buildability_rules = {
+      {
+        area = {{-0.4, -0.4}, {0.4, 0.4}},
+        required_tiles = {
+          layers = {
+            ["linox-collision-layer_terminal"] = true},
+          }
+      }
+    },
+
     fluid_box =
     {
       volume = 100,
