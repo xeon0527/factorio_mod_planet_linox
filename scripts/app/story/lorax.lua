@@ -372,6 +372,7 @@ UTIL_create_event_handler("linox-custom-event_gui-dialog-on-select", function(ev
       dialog.add_talk(player, dialog.talker.partner, {"npc-talk.lorax_s3-6-2_t2"})
       dialog.add_select(player, "1", {"npc-talk.lorax_back"});
 
+      player.force.script_trigger_research("linox-technology_recursive-blueprint");
       player.force.script_trigger_research("linox-technology_facility-factoryizing");
     end
   elseif scene_id == 4 then
@@ -422,13 +423,13 @@ UTIL_create_event_handler("linox-custom-event_gui-dialog-on-select", function(ev
         }
       );
 
-      techshop.add_tech(player,
-        "linox-sprite_recursive-blueprint",
-        "linox-technology_recursive-blueprint",
-        {
-          ["electronic-circuit"] = 500,
-        }
-      );
+      --techshop.add_tech(player,
+      --  "linox-sprite_recursive-blueprint",
+      --  "linox-technology_recursive-blueprint",
+      --  {
+      --    ["electronic-circuit"] = 500,
+      --  }
+      --);
 
       techshop.add_tech(player,
         "linox-sprite_expanding-factory",

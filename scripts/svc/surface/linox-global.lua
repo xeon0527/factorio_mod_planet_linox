@@ -17,6 +17,9 @@ build_filter.add_entity_type("linox-tile_linox-hazard-terminal-platform", filter
 build_filter.add_entity_type("linox-tile_linox-corridor",                 filter_entity_types)
 build_filter.add_entity_type("linox-tile_linox-datacenter",               filter_entity_types)
 
+build_filter.add_entity_name("linox-tile_linox-terminal-platform",        "linox-building_outlet")
+build_filter.add_entity_name("linox-tile_linox-hazard-terminal-platform", "linox-building_outlet")
+
 table.insert(filter_entity_types, "container")
 table.insert(filter_entity_types, "logistic-container")
 table.insert(filter_entity_types, "storage-tank")

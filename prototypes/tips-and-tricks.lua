@@ -188,7 +188,7 @@ data:extend {
     name = "linox-tips-and-tricks_power-converter",
     tag = "[item=accumulator]",
     category = "linox-tips-and-tricks_category",
-    order = "zai",
+    order = "zaj",
     indent = 1,
     image = "__linox__/graphics/tips-and-tricks/power-converter.png",
     trigger =
@@ -202,7 +202,7 @@ data:extend {
     name = "linox-tips-and-tricks_reactive-power",
     tag = "[entity=behemoth-worm-turret]",
     category = "linox-tips-and-tricks_category",
-    order = "zaia",
+    order = "zaja",
     indent = 2,
     trigger =
     {

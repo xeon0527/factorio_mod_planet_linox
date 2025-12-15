@@ -19,7 +19,7 @@ data:extend {
       prerequisites = {"linox-technology_laboratory-database"},
       research_trigger = {
         type = "scripted",
-        trigger_description = {"technology-description.linox-technology-trigger-description_lorax-purchase"}
+        trigger_description = {"technology-description.linox-technology-trigger-description_lorax-talking"}
       },
       effects =
       {

@@ -1,3 +1,5 @@
+local tint = { 222, 232, 107 }
+
 for _, fluid in pairs(data.raw.fluid) do
   if string.sub(fluid.name, 1, 9) ~= "parameter" and fluid.name ~= "fluid-unknown" then
     data:extend {
@@ -13,8 +15,12 @@ for _, fluid in pairs(data.raw.fluid) do
         ingredients = {
           { type = "fluid", name = fluid.name, amount = 100 },
         },
-        icon = "__base__/graphics/icons/offshore-pump.png",
-        icon_size = 64,
+        icons = {{
+          icon = "__base__/graphics/icons/offshore-pump.png",
+          tint = tint,
+        }},
+        --icon = "__base__/graphics/icons/offshore-pump.png",
+        --icon_size = 64,
         results = {},
       }
     }

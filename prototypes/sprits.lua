@@ -21,12 +21,12 @@ data:extend {
     size = 256,
   },
 
-  {
-    type = "sprite",
-    name = "linox-sprite_recursive-blueprint",
-    filename = "__rec-blue-plus__/graphics/blueprint-deployer-icon.png",
-    size = 64,
-  },
+  --{
+  --  type = "sprite",
+  --  name = "linox-sprite_recursive-blueprint",
+  --  filename = "__rec-blue-plus__/graphics/blueprint-deployer-icon.png",
+  --  size = 64,
+  --},
 
   {
     type = "sprite",
