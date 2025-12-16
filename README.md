@@ -81,4 +81,4 @@ Special Thanks
  * Efremiros - Thank you for providing the Russian translation.
  * [Natha](https://mods.factorio.com/user/natha) - Provided an idea for connecting the two surfaces. Thank you.
  * [FoxLBA](https://mods.factorio.com/user/FoxLBA) - Thank you for maintaining the Recursive Blueprint System, which is a core mechanic of Linox.
- * Skunky - Thank you for providing the example circuit designs and various ideas.
+ * SkunkMaster - Thank you for providing the example circuit designs and various ideas.

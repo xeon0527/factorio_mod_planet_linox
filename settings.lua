@@ -47,6 +47,22 @@ data:extend {
     setting_type = "startup",
     default_value = false
   },
+
+  {
+    type = "string-setting",
+    name = "linox-settings_rbp-example-global-language",
+    setting_type = "runtime-global",
+    default_value = "english",
+    allowed_values = {"english", "korean", "russian"},
+  },
+
+  {
+    type = "string-setting",
+    name = "linox-settings_rbp-example-local-language",
+    setting_type = "runtime-per-user",
+    default_value = "english",
+    allowed_values = {"english", "korean", "russian"},
+  },
 }
 
 require("compatibility.any-planet-start").settings()

@@ -1,8 +1,7 @@
 local db = require("scripts.svc.database");
 local linox_ground = require("scripts.svc.surface.linox-ground")
 local linox_facility = require("scripts.svc.surface.linox-facility")
-local rb_book = require("scripts.svc.surface.sample.book")
-local rb_bp = require("scripts.svc.surface.sample.bp")
+local rbp_example = require("global.rbp-example")
 
 --DRV_storage_create("story.flag.cargo_approval", false)
 --DRV_storage_create("story.lorax", nil)
@@ -486,17 +485,9 @@ UTIL_create_event_handler("linox-custom-event_gui-dialog-on-select", function(ev
       dialog.add_talk(player, dialog.talker.partner, {"npc-talk.lorax_s5-3_t2"})
       dialog.add_select(player, "0", {"npc-talk.lorax_end"});
 
-      local inv = game.create_inventory(1)
-      inv.insert{name = "blueprint"}
-      inv[1].import_stack(rb_bp)
-      player.insert(inv[1])
-      inv.destroy()
-
-      inv = game.create_inventory(1)
-      inv.insert{name = "blueprint"}
-      inv[1].import_stack(rb_book)
-      player.insert(inv[1])
-      inv.destroy()
+      local inv = player.get_main_inventory()
+      rbp_example.create_book(inv)
+      rbp_example.create_localization_blueprint_item(inv, settings.get_player_settings(player)["linox-settings_rbp-example-local-language"].value)
     end
   end
 end)

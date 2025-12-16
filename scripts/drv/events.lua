@@ -66,6 +66,10 @@ local function __on_built_entity(event)
 
   -- 이벤트가 취소되면 Player에게 아이템을 반환하거나 바닥에 떨어뜨림.
   if cancel and event.consumed_items then
+    if player and player.admin then
+      return
+    end
+
     local items = event.consumed_items.get_contents();
     if player then
       if event_data.set_cancel_message then

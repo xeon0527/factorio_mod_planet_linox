@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.5.0
+Date: 17. 12. 2025
+  Major Features:
+    - The Recursive Blueprint examples have been revamped. They are now easier to use, include more features, and should be simpler to understand. The circuit design was provided by SkunkMaster. Thank you!
+    - The new Recursive Blueprint examples include detailed explanations and support localization for all languages supported by the mod. Be sure to check the settings.
+    - The Tips and Tricks content has been updated to match the new Recursive Blueprint example.
+
+  Bugfixes:
+    - Fixed an issue where the Cargo Loss Tip text was missing from the English localization table.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.4.6
 Date: 15. 12. 2025
   Minor Features:
