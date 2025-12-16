@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.5.1
+Date: 17. 12. 2025
+  Bugfixes:
+    - Fixed an issue where construction restrictions did not apply to players with admin privileges or in single-player mode.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.5.0
 Date: 17. 12. 2025
   Major Features:
