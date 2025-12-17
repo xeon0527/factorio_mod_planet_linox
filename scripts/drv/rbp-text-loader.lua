@@ -67,6 +67,7 @@ UTIL_create_event_handler(defines.events.on_string_translated, function(event)
   if not p or not event.translated or not storage["rbp-text-loader"].requests[event.id] == nil then return end
 
   local req = storage["rbp-text-loader"].requests[event.id]
+  if req == nil then return end
   storage["rbp-text-loader"].requests[event.id] = nil
 
   if event.localised_string[1] == "rbp-example.language-code" then
