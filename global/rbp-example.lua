@@ -1,8 +1,7 @@
 ---@diagnostic disable: param-type-mismatch
 local rbp_code = require("global.rbp-example.rbp-new")
-local rbp_string = require("global.rbp-example.string")
 local rbp_tat = require("global.rbp-example.rbp-tat")
-
+local rbp_locale = require("scripts.drv.rbp-text-loader")
 
 local function __is_combinator(name)
   return name == "arithmetic-combinator" or
@@ -24,14 +23,8 @@ __MODULE__.create_book = function(inventory, book_code)
   inv.destroy()
 end
 
-__MODULE__.create_localization_blueprint_item = function(inventory, language)
-  local lang = language
-  if lang == nil then lang = "english" end
-
-  local loc = rbp_string[language]
-  if loc == nil then
-    loc = rbp_string["english"]
-  end
+__MODULE__.create_localization_blueprint_item = function(inventory, locale)
+  local loc = rbp_locale.get_all_text(locale)
 
   local inv = game.create_inventory(1)
   inv.insert { name = "blueprint" }
@@ -64,9 +57,9 @@ __MODULE__.create_localization_blueprint_item = function(inventory, language)
 end
 
 
-__MODULE__.build = function(surface, position)
+__MODULE__.build = function(surface, position, locale)
   local inv = game.create_inventory(1)
-  __MODULE__.create_localization_blueprint_item(inv, settings.global["linox-settings_rbp-example-global-language"].value)
+  __MODULE__.create_localization_blueprint_item(inv, locale)
 
   local bp_entities = inv[1].build_blueprint{
     surface = surface,

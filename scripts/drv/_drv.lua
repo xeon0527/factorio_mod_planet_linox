@@ -8,6 +8,7 @@ require(__PATH__.."storage")
 require(__PATH__.."build-filter")
 
 require(__PATH__.."badchest-area-viewer")
+require(__PATH__.."rbp-text-loader")
 require(__PATH__.."linox.installation.cargo-elevator")
 require(__PATH__.."linox.installation.fluid-elevator")
 require(__PATH__.."linox.installation.network-terminal")

@@ -487,7 +487,13 @@ UTIL_create_event_handler("linox-custom-event_gui-dialog-on-select", function(ev
 
       local inv = player.get_main_inventory()
       rbp_example.create_book(inv)
-      rbp_example.create_localization_blueprint_item(inv, settings.get_player_settings(player)["linox-settings_rbp-example-local-language"].value)
+
+      local loc = settings.get_player_settings(player)["linox-settings_rbp-example-local-language"].value
+      if loc == "auto" then
+        rbp_example.create_localization_blueprint_item(inv, player.locale)
+      else
+        rbp_example.create_localization_blueprint_item(inv, loc)
+      end
     end
   end
 end)

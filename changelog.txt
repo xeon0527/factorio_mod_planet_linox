@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.5.2
+Date: 18. 12. 2025
+  Minor Features:
+    - The Global Language Setting has been renamed to Multiplayer Language Setting. As a result, this setting is no longer used in single-player mode.
+    - An Auto option has been added to both Multiplayer Language Setting and Local Language Setting. When set to Auto, the initially selected language will be used automatically.
+    - The blueprint localization system has been reworked to leverage Factorio’s built-in localization system. As a result, crashes or bugs may occur, so please report any issues you encounter.
+
+  Bugfixes:
+    - Fixed an issue where some tips were being cut off in the Russian version of the Recursive Blueprint examples.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.5.1
 Date: 17. 12. 2025
   Bugfixes:

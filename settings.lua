@@ -50,18 +50,18 @@ data:extend {
 
   {
     type = "string-setting",
-    name = "linox-settings_rbp-example-global-language",
+    name = "linox-settings_rbp-example-multiplay-language",
     setting_type = "runtime-global",
-    default_value = "english",
-    allowed_values = {"english", "korean", "russian"},
+    default_value = "auto",
+    allowed_values = {"auto", "en", "ko", "ru"},
   },
 
   {
     type = "string-setting",
     name = "linox-settings_rbp-example-local-language",
     setting_type = "runtime-per-user",
-    default_value = "english",
-    allowed_values = {"english", "korean", "russian"},
+    default_value = "auto",
+    allowed_values = {"auto", "en", "ko", "ru"},
   },
 }
 

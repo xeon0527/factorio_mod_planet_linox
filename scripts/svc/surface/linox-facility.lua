@@ -1,3 +1,4 @@
+---@diagnostic disable: need-check-nil, cast-local-type
 local linox_map_gen   = require("prototypes.planet.map-gen")
 local linox_global    = require("scripts.svc.surface.linox-global")
 local factory_builder = require("scripts.svc.surface.builder.factory-builder")
@@ -198,7 +199,20 @@ __MODULE__.expand_facility = function(level)
     factory_builder.create_corridor(surface, {x = 0, y = -13}, "up", 37);
     factory_builder.create(surface, {x = 0, y = -64}, size);
 
-    rbp_example.build(surface, {x = 0, y = -64})
+    local loc = "en"
+    if game.is_multiplayer() then
+      loc = settings.global["linox-settings_rbp-example-multiplay-language"].value
+      if loc == "auto" then
+        loc = rbp_example.get_first_locale()
+      end
+    else
+      local p = game.get_player(1)
+      loc = p.mod_settings["linox-settings_rbp-example-local-language"].value
+      if loc  == "auto" then
+        loc = p.locale
+      end
+    end
+    rbp_example.build(surface, {x = 0, y = -64}, loc)
 
     local stor = surface.find_entities_filtered{name = "storage-chest", position = { 0, -64 }, radius = 25}
     if stor then
