@@ -106,7 +106,7 @@ end)
 
 bootstrap.create_game_start_handler(function()
   if not game.is_multiplayer() and not game.simulation then
-    __request_locale(game.get_player(1))
+    __request_locale(game.connected_players[1])
   end
 end)
 
