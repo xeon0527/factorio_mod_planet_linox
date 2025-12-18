@@ -1,6 +1,6 @@
 ---@diagnostic disable: param-type-mismatch
-local rbp_code = require("global.rbp-example.rbp-new")
-local rbp_tat = require("global.rbp-example.rbp-tat")
+local rbp_code = require("modules.rbp-example.blueprint.new")
+local rbp_tat = require("modules.rbp-example.blueprint.tat")
 local rbp_locale = require("scripts.drv.rbp-text-loader")
 
 local function __is_combinator(name)
@@ -28,7 +28,7 @@ __MODULE__.create_localization_blueprint_item = function(inventory, locale)
 
   local inv = game.create_inventory(1)
   inv.insert { name = "blueprint" }
-  inv[1].import_stack(rbp_code.full)
+  inv[1].import_stack(rbp_code.blueprint)
   local bp = inv[1]
 
   bp.blueprint_description = "Made by SkunkMaster"
@@ -81,7 +81,7 @@ end
 __MODULE__.build_TAT = function(surface, position)
   local inv = game.create_inventory(1)
   inv.insert { name = "blueprint" }
-  inv[1].import_stack(rbp_tat.full)
+  inv[1].import_stack(rbp_tat.blueprint)
 
   local bp_entities = inv[1].build_blueprint{
     surface = surface,

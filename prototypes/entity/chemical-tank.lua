@@ -44,7 +44,7 @@ data:extend {
     },
     forced_symmetry = "horizontal",
 
-    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_wire_max_distance = 10,
     circuit_connector = circuit_connector_definitions["electromagnetic-plant"],
     
     fluid_boxes =

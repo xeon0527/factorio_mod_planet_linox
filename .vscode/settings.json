@@ -17,4 +17,7 @@
     "universal_connector_template",
     "PlanetsLib"
   ],
+  "Lua.diagnostics.disable": [
+    "different-requires"
+  ],
 }

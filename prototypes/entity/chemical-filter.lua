@@ -43,7 +43,7 @@ data:extend {
       fade_out_ticks = 20
     },
 
-    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_wire_max_distance = 10,
     circuit_connector = circuit_connector_definitions["biochamber"],
 
     fluid_boxes =

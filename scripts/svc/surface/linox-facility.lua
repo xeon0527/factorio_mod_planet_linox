@@ -4,7 +4,7 @@ local linox_global    = require("scripts.svc.surface.linox-global")
 local factory_builder = require("scripts.svc.surface.builder.factory-builder")
 local util_surface    = require("scripts.util.surface")
 
-local rbp_example = require("global.rbp-example")
+local rbp_example = require("modules.rbp-example._rbp-example")
 
 local __MODULE__ = {};
 

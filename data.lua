@@ -12,13 +12,10 @@ require("prototypes.collision-layer")
 require("prototypes.corpse")
 require("prototypes.custom-event")
 require("prototypes.custom-input")
-require("prototypes.equipment")
 require("prototypes.recipe-category")
 require("prototypes.shortcuts")
 require("prototypes.sprits")
 require("prototypes.tile")
-require("prototypes.tips-and-tricks")
+require("modules/tips-and-tricks/_tips-and-tricks")
 
-
-
-require("compatibility.any-planet-start").data()
+require("modules/compatibility/any-planet-start").data()

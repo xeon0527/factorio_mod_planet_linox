@@ -36,11 +36,6 @@ __MODULE__.data_update = function()
   data.raw["tips-and-tricks-item"]["recursive-bp-offset-tool"].indent = 2
   data.raw["tips-and-tricks-item"]["recursive-bp-offset-tool"].order = "zaic"
 
-  --data.raw["recipe"]["blueprint-deployer"].ingredients = {
-  --  {type = "item", name = "electronic-circuit", amount = 1},
-  --  {type = "item", name = "iron-plate", amount = 10},
-  --}
-
   data.raw["recipe"]["blueprint-deployer2"].ingredients = {
     {type = "item", name = "electronic-circuit", amount = 1},
     {type = "item", name = "iron-plate", amount = 10},

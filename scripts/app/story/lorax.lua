@@ -1,7 +1,7 @@
 local db = require("scripts.svc.database");
 local linox_ground = require("scripts.svc.surface.linox-ground")
 local linox_facility = require("scripts.svc.surface.linox-facility")
-local rbp_example = require("global.rbp-example")
+local rbp_example = require("modules.rbp-example._rbp-example")
 
 --DRV_storage_create("story.flag.cargo_approval", false)
 --DRV_storage_create("story.lorax", nil)

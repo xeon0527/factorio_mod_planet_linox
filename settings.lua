@@ -65,4 +65,4 @@ data:extend {
   },
 }
 
-require("compatibility.any-planet-start").settings()
+require("modules/compatibility/any-planet-start").settings()
