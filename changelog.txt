@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.5.5
+Date: 18. 12. 2025
+  Changes:
+    - Circuit cable connections are now supported for the Chemical Tank and Chemical Filter.
+    - The “Neodymium Crushing” recipe obtained through the collaboration research with the Moshine planet can now be used in the Crusher.
+
+  Bugfixes:
+    - Fixed an issue where an error appeared related to the upgrade flag of linox-hidden_electric-pole.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.5.4
 Date: 18. 12. 2025
   Bugfixes:

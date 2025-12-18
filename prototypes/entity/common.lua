@@ -176,5 +176,6 @@ entity.hidden = true
 entity.hidden_in_factoriopedia = true
 entity.collision_mask = {layers = {}}
 entity.selection_priority = 255
+entity.next_upgrade = nil
 
 data:extend { entity }

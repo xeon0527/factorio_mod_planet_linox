@@ -1,4 +1,4 @@
----@diagnostic disable: assign-type-mismatch
+---@diagnostic disable: assign-type-mismatch, undefined-global
 local hit_effects = require("__base__.prototypes.entity.hit-effects")
 local item_sounds = require("__base__.prototypes.item_sounds")
 
@@ -43,10 +43,10 @@ data:extend {
       emissions_per_minute = { pollution = 4 }
     },
     forced_symmetry = "horizontal",
-    
-    --circuit_wire_max_distance = 10,
-    --circuit_connector = circuit_connector_definitions["assembling-machine"],
 
+    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["electromagnetic-plant"],
+    
     fluid_boxes =
     {
       {

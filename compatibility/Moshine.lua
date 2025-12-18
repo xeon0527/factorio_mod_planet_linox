@@ -13,6 +13,7 @@ __MODULE__.data_update = function()
         results = {{type="item", name="neodymium-powder", amount = 1}},
         allow_productivity = true,
         enabled = false,
+        category = "crushing",
       },
       {
         type = "technology",
