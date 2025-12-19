@@ -90,7 +90,7 @@ UTIL_create_event_handler(defines.events.on_surface_created, function(event)
 
     -- cargo landing pad 생성
     local cargo_pad = UTIL_ensure_entity(surface, {
-      name = "linox-building_cargo-landing-pad",
+      name = "linox-special_facility-elevator",
       position = {0,0},
       force = "neutral",
       create_build_effect_smoke = false,
@@ -99,7 +99,7 @@ UTIL_create_event_handler(defines.events.on_surface_created, function(event)
     cargo_pad.minable = false;
     cargo_pad.operable = false;
 
-    local pole = UTIL_ensure_entity(surface, { name = "linox-special_circuit-pole", position = {-2,2}})
+    local pole = UTIL_ensure_entity(surface, { name = "linox-special_circuit-pole", position = {0,2}})
     pole.destructible = false
     pole.minable = false
     pole.rotatable = false
@@ -340,5 +340,30 @@ __MODULE__.expand_facility = function(level)
     end
   end
 end;
+
+__MODULE__.create_outer_corridor = function()
+  local surface = game.get_surface(__LINOX_SURFACE__.facility);
+  if not surface then return end
+
+  if surface.get_tile(-96, -96).name ~= "linox-tile_out-of-map" then return end
+
+  surface.request_to_generate_chunks({0, 0}, 10)
+  surface.force_generate_chunk_requests()
+
+  factory_builder.create_corridor(surface, {x = -99, y = -96}, "right", 198)
+  factory_builder.create_corridor(surface, {x = 96, y = -98}, "down", 197)
+  factory_builder.create_corridor(surface, {x = 98, y = 96}, "left", 197)
+  factory_builder.create_corridor(surface, {x = -96, y = 98}, "up", 196)
+
+  factory_builder.create_corridor(surface, {x = -94, y = -96}, "right", 1)
+  factory_builder.create_corridor(surface, {x = -94, y = 96}, "right", 1)
+  factory_builder.create_corridor(surface, {x = 93, y = -96}, "right", 1)
+  factory_builder.create_corridor(surface, {x = 96, y = 93}, "down", 1)
+
+  factory_builder.create_corridor(surface, {x = 0, y = -78}, "up", 16)
+  factory_builder.create_corridor(surface, {x = 0, y = 78}, "down", 16)
+  factory_builder.create_corridor(surface, {x = -78, y = 0}, "left", 16)
+  factory_builder.create_corridor(surface, {x = 78, y = 0}, "right", 16)
+end
 
 return __MODULE__;

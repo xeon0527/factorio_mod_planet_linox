@@ -39,9 +39,10 @@ data:extend {
     energy_source =
     {
       type = "electric",
-      usage_priority = "secondary-input"
+      usage_priority = "secondary-input",
+      drain = "250kW",
     },
-    energy_usage = "250kW",
+    energy_usage = "1000kW",
     researching_speed = 5,
 
     inputs =

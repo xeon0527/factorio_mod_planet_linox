@@ -9,7 +9,7 @@ __MODULE__.data_update = function()
         type = "recipe",
         name = "linox-moshine-recipe_neodymium-crushing",
         icons = util_icon.recipe_icon_linox("__Moshine__/graphics/icons/neodymium.png", 64),
-        ingredients = {{type = "item", name = "neodymium", amount = 10}},
+        ingredients = {{type = "item", name = "neodymium", amount = 2}},
         results = {{type="item", name="neodymium-powder", amount = 1}},
         allow_productivity = true,
         enabled = false,

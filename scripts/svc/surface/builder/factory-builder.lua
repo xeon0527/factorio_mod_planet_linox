@@ -156,5 +156,4 @@ __MODULE__.create_corridor = function(surface, start_pos, direction, length)
   surface.set_tiles(tiles, true, false);
 end
 
-
 return __MODULE__

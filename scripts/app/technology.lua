@@ -69,6 +69,10 @@ local function __update_technology(event)
   if tech["linox-technology_power-converter"].researched then
     UTIL_ensure_entity(linox_facility.get(), { name = "linox-hidden_reactive-power"}).energy = 1 * 1000 * 1000 * 1000;
   end
+
+  if tech["linox-technology_outer-corridor-open"].researched then
+    linox_facility.create_outer_corridor();
+  end
 end
 
 UTIL_create_event_handler(defines.events.on_research_finished, __update_technology)

@@ -4,6 +4,8 @@ entity.name = "linox-building_cargo-landing-pad";
 entity.inventory_size = 40;
 entity.trash_inventory_size = 10;
 entity.radar_range = 5;
+entity.minable = nil
+entity.map_color = { 1, 1, 1 }
 entity.flags = {
   "not-rotatable",
   "placeable-off-grid",

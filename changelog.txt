@@ -1,4 +1,24 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.5.6
+Date: 19. 12. 2025
+  Major Features:
+    - An infinite research for Power Converter Capacity has been added, providing 2.5 GJ of energy storage per level.
+    - The Outer Corridor Open research has been added.
+
+  Minor Features:
+    - The Cargo Landing Pads in Linox’s underground facilities have been replaced with Space Elevators from the Space Exploration Mod, retaining the same functionality.
+    - The description of the Linox Cargo Landing Pad on the surface now includes a note about the elevator boarding shortcut key.
+    - Radars can now be placed on Linox Facility Platforms.
+
+  Balancing:
+    - The Neodymium Data Card and Erbium Data Card requirements have been removed from the research prerequisites for Expanding Factory 5.
+    - The power consumption of the Chemical tank has been increased to a maximum of 750kW
+    - The power consumption of the Chemical filter has been increased to a maximum of 750kW
+    - The power consumption of the Sintering machine has been increased to a maximum of 850kW
+    - The power consumption of the Linox Supercomputer has been significantly increased to a maximum of 1.25 MW.
+    - The Neodymium requirement for the Neodymium Crushing recipe has been significantly reduced from 10 to 2.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.5.5
 Date: 18. 12. 2025
   Changes:

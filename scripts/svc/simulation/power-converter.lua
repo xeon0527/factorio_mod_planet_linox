@@ -60,8 +60,10 @@ bootstrap.create_tick_handler(function()
     
     local pc_entity = power_converter.get_power_converter()
     if enable_control ~= 0 then
-      reactive_power.power_usage = reactive_power_usage --math.abs(current_tick_consume - inductor_tick_output);
-      pc_entity.electric_buffer_size = (5 * 1000 * 1000 * 1000)
+      reactive_power.power_usage = reactive_power_usage
+
+      local tech = game.forces["player"].technologies["linox-technology_planetary-power-converter-capacity"]
+      pc_entity.electric_buffer_size = (5 + ((tech.level - 1) * 2.5)) * 1000 * 1000 * 1000
     else
       reactive_power.power_usage = 0
       pc_entity.electric_buffer_size = 0

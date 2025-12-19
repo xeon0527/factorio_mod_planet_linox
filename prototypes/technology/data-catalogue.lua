@@ -411,4 +411,57 @@ data:extend {
     upgrade = true,
     ignore_tech_cost_multiplier = true,
   },
+
+  {
+    type = "technology",
+    name = "linox-technology_planetary-power-converter-capacity",
+    icon = "__space-exploration-graphics__/graphics/technology/accumulator.png",
+    icon_size = 128,
+    prerequisites = {
+      "linox-technology_erbium-data-card",
+      "linox-technology_neodymium-data-card",
+    },
+    unit =
+    {
+      count_formula = "2^(L-1)*1000",
+      ingredients =
+      {
+        {"linox-item_lava-data-card", 1},
+        {"linox-item_rare-earth-data-card", 1},
+        {"linox-item_samarium-data-card", 1},
+        {"linox-item_dysprosium-data-card", 1},
+        {"linox-item_neodymium-data-card", 1},
+        {"linox-item_erbium-data-card", 1},
+      },
+      time = 60
+    },
+    max_level = "infinite",
+    upgrade = true,
+    ignore_tech_cost_multiplier = true,
+  },
+
+  {
+    type = "technology",
+    name = "linox-technology_outer-corridor-open",
+    icon = "__linox__/graphics/technology/expanding-factory.png",
+    icon_size = 500,
+    prerequisites = {
+      "linox-technology_expanding-factory-7",
+    },
+    unit =
+    {
+      count = 1500,
+      ingredients =
+      {
+        {"linox-item_lava-data-card", 1},
+        {"linox-item_rare-earth-data-card", 1},
+        {"linox-item_samarium-data-card", 1},
+        {"linox-item_dysprosium-data-card", 1},
+        {"linox-item_neodymium-data-card", 1},
+        {"linox-item_erbium-data-card", 1},
+      },
+      time = 60
+    },
+    ignore_tech_cost_multiplier = true,
+  },
 }

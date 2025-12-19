@@ -40,28 +40,33 @@ surface.create_entity{
 }
 
 surface.create_entity{
+  name = "radar",
+  position = {-7, 1},
+}
+
+surface.create_entity{
   name = "active-provider-chest",
-  position = {-5, 1},
+  position = {-4, 1},
 }
 
 surface.create_entity{
   name = "passive-provider-chest",
-  position = {-3, 1},
+  position = {-2, 1},
 }
 
 surface.create_entity{
   name = "storage-chest",
-  position = {-1, 1},
+  position = {0, 1},
 }
 
 surface.create_entity{
   name = "buffer-chest",
-  position = {1, 1},
+  position = {2, 1},
 }
 
 surface.create_entity{
   name = "requester-chest",
-  position = {3, 1},
+  position = {4, 1},
 }
 
 surface.create_entity{

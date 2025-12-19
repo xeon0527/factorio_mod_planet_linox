@@ -32,12 +32,12 @@ data:extend {
     crafting_categories = { "linox-recipe-category_sintering" },
     module_slots = 5,
 
-    energy_usage = "450kW",
+    energy_usage = "700kW",
     energy_source =
     {
       type = "electric",
       usage_priority = "secondary-input",
-      drain = "50kW",
+      drain = "150kW",
       emissions_per_minute = { pollution = 4 }
     },
 

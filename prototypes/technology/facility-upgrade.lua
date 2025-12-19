@@ -140,8 +140,6 @@ data:extend {
             icon_size = 500,
             prerequisites = {
               "linox-technology_expanding-factory-5",
-              "linox-technology_neodymium-data-card",
-              "linox-technology_erbium-data-card",
             },
             unit =
             {
@@ -198,85 +196,6 @@ data:extend {
       ignore_tech_cost_multiplier = true,
       essential = true,
     },
-    --{
-    --  type = "technology",
-    --  name = "linox-technology_planetary-power-network",
-    --  icon = "__base__/graphics/technology/electric-energy-distribution-1.png",
-    --  icon_size = 256,
-    --  prerequisites = {"linox-technology_facility-upgrade"},
-    --  unit =
-    --  {
-    --    count = 250,
-    --    ingredients =
-    --    {
-    --      {"automation-science-pack", 1},
-    --      {"logistic-science-pack", 1},
-    --      {"chemical-science-pack", 1},
-    --      {"military-science-pack", 1},
-    --      {"production-science-pack", 1},
-    --      {"utility-science-pack", 1},
-    --      {"space-science-pack", 1},
-    --      {"metallurgic-science-pack", 1},
-    --    },
-    --    time = 60
-    --  }
-    --},
-    --  {
-    --    type = "technology",
-    --    name = "linox-technology_planetary-power-network-capacity",
-    --    icon = "__base__/graphics/technology/electric-energy-distribution-1.png",
-    --    icon_size = 256,
-    --    prerequisites = {"linox-technology_planetary-power-network"},
-    --    unit =
-    --    {
-    --      count_formula = "2^(L-1)*1000",
-    --      ingredients =
-    --      {
-    --        {"automation-science-pack", 1},
-    --        {"logistic-science-pack", 1},
-    --        {"chemical-science-pack", 1},
-    --        {"military-science-pack", 1},
-    --        {"production-science-pack", 1},
-    --        {"utility-science-pack", 1},
-    --        {"space-science-pack", 1},
-    --        {"metallurgic-science-pack", 1},
-    --      },
-    --      time = 60
-    --    },
-    --    max_level = "infinite",
-    --    upgrade = true,
-    --  },
-
-
-
-      --{
-      --  type = "technology",
-      --  name = "linox-technology_expanding-factory",
-      --  icon = "__base__/graphics/technology/stone-wall.png",
-      --  icon_size = 256,
-      --  prerequisites = {
-      --    "linox-technology_facility-upgrade",
-      --    "linox-technology_facility-factoryizing"
-      --  },
-      --  unit =
-      --  {
-      --    count_formula = "2^(L-1)*1000",
-      --    ingredients =
-      --    {
-      --      {"automation-science-pack", 1},
-      --      {"logistic-science-pack", 1},
-      --      {"chemical-science-pack", 1},
-      --      {"military-science-pack", 1},
-      --      {"production-science-pack", 1},
-      --      {"utility-science-pack", 1},
-      --      {"space-science-pack", 1},
-      --      {"metallurgic-science-pack", 1},
-      --    },
-      --    time = 60
-      --  },
-      --  max_level = 7,
-      --  upgrade = true,
-      --},
     {
       type = "technology",
       name = "linox-technology-cargo-elevator",

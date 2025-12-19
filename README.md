@@ -1,5 +1,4 @@
-Warning: Up to version 1.0.2, the Power Converter had desync issues. Please update to the latest version.
-==================================================
+[![foundrygg.com](https://img.shields.io/badge/foundrygg-4a1402?style=for-the-badge&logo=vercel&logoColor=white)](https://foundrygg.com)[![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/HgYANakDmY)
 - - -
 Planet Linox - Probably the smallest planet in Factorio.
 ==================================================

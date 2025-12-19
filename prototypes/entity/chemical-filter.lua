@@ -28,9 +28,10 @@ data:extend {
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = { pollution = 4 }
+      emissions_per_minute = { pollution = 4 },
+      drain = "50kW",
     },
-    energy_usage = "210kW",
+    energy_usage = "700kW",
 
     impact_category = "metal-large",
 

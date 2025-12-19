@@ -34,7 +34,7 @@ data:extend {
     crafting_categories = { "linox-recipe-category_chemical-tank" },
     module_slots = 4,
 
-    energy_usage = "250kW",
+    energy_usage = "700kW",
     energy_source =
     {
       type = "electric",
