@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.5.7
+Date: 20. 12. 2025
+  Bugfixes:
+    - Recently, a compatibility issue occurred with Krastorio 2 Spaced Out after the Recursive Blueprints Mod added the BAD Chest Area Viewer tool that previously existed in Linox. This issue has been resolved by removing the original BAD Chest Area Viewer from Linox.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.5.6
 Date: 19. 12. 2025
   Major Features:
