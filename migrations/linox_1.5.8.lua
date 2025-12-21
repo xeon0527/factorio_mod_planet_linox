@@ -1,0 +1,1 @@
+require("scripts.svc.surface.linox-global").connect_surfaces()

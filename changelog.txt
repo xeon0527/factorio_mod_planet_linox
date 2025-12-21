@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.5.9
+Date: 22. 12. 2025
+  Bugfixes:
+    - Fixed a bug where the power and circuit networks between the surface and the facility were not connected correctly.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.5.8
 Date: 21. 12. 2025
   Major Features:

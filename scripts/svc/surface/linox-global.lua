@@ -129,8 +129,8 @@ __MODULE__.connect_surfaces = function()
   if linox_A and linox_B then
     --local lppn1 = UTIL_ensure_entity(linox_A, { name = "linox-hidden_electric-pole"})
     --local lppn2 = UTIL_ensure_entity(linox_B, { name = "linox-hidden_electric-pole"})
-    local lppn1 = linox_A.find_entity("linox-special_circuit-pole", {-2,2})
-    local lppn2 = linox_B.find_entity("linox-special_circuit-pole", {-2,2})
+    local lppn1 = linox_A.find_entity("linox-special_circuit-pole", {0,2})
+    local lppn2 = linox_B.find_entity("linox-special_circuit-pole", {0,2})
     if lppn1 and lppn2 then
       local lppn1_connector = lppn1.get_wire_connector(defines.wire_connector_id.pole_copper, true);
       local lppn2_connector = lppn2.get_wire_connector(defines.wire_connector_id.pole_copper, true);
