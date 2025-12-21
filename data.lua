@@ -19,3 +19,4 @@ require("prototypes.tile")
 require("modules/tips-and-tricks/_tips-and-tricks")
 
 require("modules/compatibility/any-planet-start").data()
+require("modules/compatibility/multi_surface_promethium_plate_recipe").data()

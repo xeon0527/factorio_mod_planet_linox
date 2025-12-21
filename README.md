@@ -68,6 +68,7 @@ Compatible Mods
  * [Moshine](https://mods.factorio.com/mod/Moshine) - The Neodymium Crushing setting can be enabled.
  * [Any Planet Start](https://mods.factorio.com/mod/any-planet-start) - Any Planet Start is officially supported.
  * [Planet Hopper](https://mods.factorio.com/mod/Planet-Hopper) - You can configure it so that the Hopper Launcher can be placed on terminal platform tiles.
+ * [Multi-Surface Promethium Plate Recipe](https://mods.factorio.com/mod/multi_surface_promethium_plate_recipe) - This is a project where all planets participate in a single Promethium recipe chain. Every planet contributes to the production of the Promethium science pack.
 - - -
 Thank you for playing.
 ==================================================
