@@ -18,12 +18,14 @@ data:extend {
       "not-in-made-in",
     },
     map_color = { 1, 1, 1 },
+    hidden = true,
+    hidden_in_factoriopedia = true,
 
     collision_box = {{-3.9, -3.9}, {3.9, 3.9}},
     selection_box = {{-4, -4}, {4, 4}},
     collision_mask = {layers={item=true, object=true, player=true, water_tile=true, elevated_rail=true, is_object=true, is_lower_object=true}},
-
-    max_health = 1000,
+    
+    max_health = 5000,
 
     render_layer = "object",
     pictures = {

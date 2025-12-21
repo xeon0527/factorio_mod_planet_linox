@@ -1,20 +1,20 @@
 local util = require("util")
 local db = require("scripts.svc.database")
 
-local prefix_name = "linox-gui-dialog"
+local __PREFIX = "linox-gui-dialog"
 local __MODULE__ = {}
 
 local function __get_session(player)
-  return db.get_player(player, prefix_name.."-session", {});
+  return db.get_player(player, __PREFIX.."-session", {});
 end
 
 local function __remove_session(player)
-  db.set_player(player, prefix_name.."-session", nil);
+  db.set_player(player, __PREFIX.."-session", nil);
 end
 
 local function __is_gui_opened(player)
   for _, gui in pairs(player.gui.screen.children) do
-    if gui.valid and gui.name == (prefix_name.."-frame") then
+    if gui.valid and gui.name == (__PREFIX.."-frame") then
       return true
     end
   end
@@ -27,13 +27,13 @@ UTIL_create_event_handler(defines.events.on_gui_click, function(event)
   local player = game.players[event.player_index];
 
   -- 좌클릭만 인식, name이 linox-ui-dialog로 시작되는 엘리먼트만 인식
-  if element.valid and event.button == defines.mouse_button_type.left and util.string_starts_with(element.name, prefix_name) then
+  if element.valid and event.button == defines.mouse_button_type.left and util.string_starts_with(element.name, __PREFIX) then
     local session = __get_session(player);
 
-    if element.name == prefix_name.."-close" or session == nil then
+    if element.name == __PREFIX.."-close" or session == nil then
       __MODULE__.close(player);
     else
-      local strStart = string.find(element.name, prefix_name.."-talk-select", 1, true)
+      local strStart = string.find(element.name, __PREFIX.."-talk-select", 1, true)
       if strStart == 1 then
         local datas = UTIL_string_split(element.name, "::::");
 
@@ -58,7 +58,7 @@ UTIL_create_event_handler(defines.events.on_gui_click, function(event)
 end)
 
 UTIL_create_event_handler(defines.events.on_gui_closed, function(event)
-  if event.player_index and event.element and event.element.valid and event.element.name == prefix_name.."-frame" then
+  if event.player_index and event.element and event.element.valid and event.element.name == __PREFIX.."-frame" then
     __MODULE__.close(game.get_player(event.player_index));
   end
 end)
@@ -74,14 +74,14 @@ __MODULE__.talker = {
 }
 
 
-__MODULE__.create = function(player, caption, session_name, sprite)
+__MODULE__.create = function(player, caption, session_name, sprite, session_data)
   if __is_gui_opened(player) then return false end
 
   __MODULE__.close(player);
 
   local frame = player.gui.screen.add {
     type = "frame",
-    name = prefix_name.."-frame",
+    name = __PREFIX.."-frame",
     direction = "vertical",
   }
   frame.style.width = 800;
@@ -117,7 +117,7 @@ __MODULE__.create = function(player, caption, session_name, sprite)
 
       local title_close = title_flow.add {
         type = "button",
-        name = prefix_name.."-close",
+        name = __PREFIX.."-close",
         caption = "[virtual-signal=shape-diagonal-cross]",
         style = "red_button",
         mouse_button_filter = {"left"},
@@ -151,21 +151,22 @@ __MODULE__.create = function(player, caption, session_name, sprite)
         }
         dialog_log_list.style.horizontally_stretchable = true;
   
-  db.set_player(player, prefix_name.."-session", {
+  db.set_player(player, __PREFIX.."-session", {
     name = session_name,
     frame = frame,
     partner_image = partner_image,
     log_scroll = dialog_log_scroll,
     log_list = dialog_log_list,
     temp_data = nil,
+    session_data = session_data,
   });
   return true
 end
 
 __MODULE__.close = function(player)
   if player ~= nil then
-    if player.gui.screen[prefix_name.."-frame"] then
-      player.gui.screen[prefix_name.."-frame"].destroy();
+    if player.gui.screen[__PREFIX.."-frame"] then
+      player.gui.screen[__PREFIX.."-frame"].destroy();
 
       script.raise_event("linox-custom-event_gui-dialog-on-close", {
         player = player,
@@ -225,7 +226,7 @@ __MODULE__.add_select = function(player, id, text, talker)
 
   local talk_button = frame.add{
     type = "button",
-    name = prefix_name.."-talk-select::::"..session.name.."::::"..id.."::::".._talker,
+    name = __PREFIX.."-talk-select::::"..session.name.."::::"..id.."::::".._talker,
     caption = text,
     style = "green_button",
     tooltip = "",
@@ -247,12 +248,20 @@ __MODULE__.set_temp_data = function(player, temp_data)
   __get_session(player).temp_data = temp_data
 end
 
+__MODULE__.get_session_data = function(player)
+  return __get_session(player).session_data
+end
+
+__MODULE__.set_session_data = function(player, session_data)
+  __get_session(player).session_data = session_data
+end
+
 __MODULE__.clear_select = function(player)
   local session = __get_session(player);
   local frame = session.frame;
 
   for _, child in pairs(frame.children) do
-    if util.string_starts_with(child.name, prefix_name.."-talk-select") then
+    if util.string_starts_with(child.name, __PREFIX.."-talk-select") then
       child.destroy();
     end
   end

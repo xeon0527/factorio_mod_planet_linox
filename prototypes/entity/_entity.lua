@@ -1,6 +1,7 @@
 local __PATH__ = "prototypes.entity."
 
 require(__PATH__.."special.facility-elevator");
+require(__PATH__.."special.emergency-escape-shuttle");
 
 require(__PATH__.."npc.lorax");
 require(__PATH__.."npc.network-terminal");

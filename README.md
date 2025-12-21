@@ -60,7 +60,7 @@ Recommended companion mods
 ==================================================
  * [Blueprint Sandboxes](https://mods.factorio.com/mod/blueprint-sandboxes) - It makes editing blueprints significantly easier.
  * [Squeak Through 2](https://mods.factorio.com/mod/squeak-through-2) - Since space is extremely limited, being able to walk between buildings makes gameplay much more comfortable.
- * [Compact circuits](https://mods.factorio.com/mod/compaktcircuit) - On Linox, circuit builds can feel overwhelmingly bulky. This mod solves that problem entirely.
+ * [Compact circuits](https://mods.factorio.com/mod/compaktcircuit) - (For advanced users) On Linox, circuit builds can feel overwhelmingly bulky. This mod solves that problem entirely.
 - - -
 Compatible Mods
 ==================================================

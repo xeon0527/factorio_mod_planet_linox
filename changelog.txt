@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.5.8
+Date: 21. 12. 2025
+  Major Features:
+    - An escape shuttle has been added, allowing players to leave Linox. Three shuttles are provided at the upper-left of the Cargo Landing Pad when Linox is unlocked. Using the shuttle resets your inventory and lets you escape to Vulcanus. The escape shuttle can be removed by either dismantling it or destroying it.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.5.7
 Date: 20. 12. 2025
   Bugfixes:

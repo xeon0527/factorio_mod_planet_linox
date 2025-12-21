@@ -143,6 +143,24 @@ __MODULE__.create_building = function()
     force = "neutral",
     position = { 4, 9 }
   }).insert{name = "solar-panel", count = 6};
+
+  UTIL_ensure_entity(surface, {
+    name = "linox-special_emergency-escape-shuttle",
+    force = "neutral",
+    position = { -11, -11 }
+  })
+
+  UTIL_ensure_entity(surface, {
+    name = "linox-special_emergency-escape-shuttle",
+    force = "neutral",
+    position = { -8, -11 }
+  })
+
+  UTIL_ensure_entity(surface, {
+    name = "linox-special_emergency-escape-shuttle",
+    force = "neutral",
+    position = { -10, -9 }
+  })
 end
 
 
