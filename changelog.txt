@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.5.11
+Date: 22. 12. 2025
+  Changes:
+    - The issue with the Recursive Blueprints Mod has been resolved, so grid alignment is no longer required. Accordingly, the grid alignment settings for the example blueprints have been removed.
+
+  Bugfixes:
+    - Fixed a major error in the Description of the Recursive Blueprint examples. There were issues with the Russian and English localizations.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.5.10
 Date: 22. 12. 2025
   Compatibility:
