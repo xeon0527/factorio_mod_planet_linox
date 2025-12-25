@@ -33,7 +33,7 @@ data:extend {
     },
     results = {
       {type = "item", name = "erbium-oxide", amount = 1},
-      {type = "fluid", name = "waste-water", amount = 299},
+      {type = "fluid", name = "waste-water", amount = 299, ignored_by_productivity = 299},
     },
     main_product = "erbium-oxide",
     allow_productivity = true,

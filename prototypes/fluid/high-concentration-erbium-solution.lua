@@ -56,7 +56,7 @@ data:extend {
     results =
     {
       {type = "fluid", name = "high-concentration-erbium-solution", amount = 25},
-      {type = "fluid", name = "waste-water", amount = 275},
+      {type = "fluid", name = "waste-water", amount = 275, ignored_by_productivity = 275},
     },
 
     main_product = "high-concentration-erbium-solution",

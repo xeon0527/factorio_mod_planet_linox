@@ -46,7 +46,7 @@ data:extend {
     results =
     {
       {type = "fluid", name = "neodymium-solution", amount = 25},
-      {type = "fluid", name = "waste-water", amount = 375},
+      {type = "fluid", name = "waste-water", amount = 375, ignored_by_productivity = 375},
     },
 
     main_product = "neodymium-solution",

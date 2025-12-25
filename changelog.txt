@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.6.1
+Date: 26. 12. 2025
+  Bugfixes:
+    - Fixed an issue where facility elevators would take damage due to problems in the previous version’s migration logic.
+
+  Balancing:
+    - The Erbium Solution recipe’s Steam requirement has been reduced from 3,000 to 1,000, and the Wastewater output has also decreased from 375 to 175.
+    - Wastewater production in all recipes is no longer affected by productivity bonuses.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.6.0
 Date: 25. 12. 2025
   Major Features:

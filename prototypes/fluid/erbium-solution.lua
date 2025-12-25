@@ -40,13 +40,13 @@ data:extend {
     ingredients =
     {
       {type = "fluid", name = "high-concentration-erbium-solution", amount = 100},
-      {type = "fluid", name = "steam", amount = 3000},
+      {type = "fluid", name = "steam", amount = 1000},
     },
     energy_required = 3,
     results =
     {
       {type = "fluid", name = "erbium-solution", amount = 25},
-      {type = "fluid", name = "waste-water", amount = 375},
+      {type = "fluid", name = "waste-water", amount = 175, ignored_by_productivity = 175},
     },
 
     main_product = "erbium-solution",
