@@ -19,4 +19,8 @@ data:extend {
     type = "recipe-category",
     name = "linox-recipe-category_chemical-filter"
   },
+  {
+    type = "recipe-category",
+    name = "linox-recipe-category_internel-pipeline"
+  },
 }

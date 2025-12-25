@@ -4,6 +4,7 @@ require(__PATH__.."advanced-acid-neutralisation");
 require(__PATH__.."basic-material-sintering-processing");
 require(__PATH__.."casting-stone-brick");
 require(__PATH__.."froth-flotation-processing");
+require(__PATH__.."internel-pipeline");
 require(__PATH__.."linox-petrochemicals");
 require(__PATH__.."low-temp-separation-of-calcium");
 require(__PATH__.."rare-earth-refining");

@@ -30,7 +30,7 @@ data:extend {
     source_inventory_size = 0,
 		result_inventory_size = 0,
     crafting_categories = { "linox-recipe-category_outlet" },
-    crafting_speed = 1,
+    crafting_speed = 2,
     corpse = "offshore-pump-remnants",
     dying_explosion = "offshore-pump-explosion",
     fluid_source_offset = {0, -1},

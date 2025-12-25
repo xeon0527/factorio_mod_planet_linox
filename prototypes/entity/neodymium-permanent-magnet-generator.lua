@@ -53,14 +53,14 @@ data:extend {
       minimum_temperature = 100.0,
       pipe_connections = {
         {
-          position = { 0, 4 },
-          flow_direction = "input-output",
-          direction = defines.direction.south
-        },
-        {
           position = { 0, -4 },
           flow_direction = "input-output",
           direction = defines.direction.north
+        },
+        {
+          position = { 0, 4 },
+          flow_direction = "input-output",
+          direction = defines.direction.south
         },
       },
       production_type = "input-output"
@@ -108,6 +108,48 @@ data:extend {
           scale = 0.45,
         },
         fan_east,
+        {
+          filename = "__base__/graphics/entity/pipe-covers/pipe-cover-south.png",
+          width = 128,
+          height = 128,
+          scale = 0.45,
+          shift = util.by_pixel(43, 114),
+          frame_count = 1,
+          line_length = 1,
+          repeat_count = 4,
+        },
+        {
+          filename = "__base__/graphics/entity/pipe-covers/pipe-cover-south-shadow.png",
+          width = 128,
+          height = 128,
+          scale = 0.45,
+          draw_as_shadow = true,
+          shift = util.by_pixel(43, 114),
+          frame_count = 1,
+          line_length = 1,
+          repeat_count = 4,
+        },
+        {
+          filename = "__base__/graphics/entity/pipe-covers/pipe-cover-south.png",
+          width = 128,
+          height = 128,
+          scale = 0.45,
+          shift = util.by_pixel(-43, 114),
+          frame_count = 1,
+          line_length = 1,
+          repeat_count = 4,
+        },
+        {
+          filename = "__base__/graphics/entity/pipe-covers/pipe-cover-south-shadow.png",
+          width = 128,
+          height = 128,
+          scale = 0.45,
+          draw_as_shadow = true,
+          shift = util.by_pixel(-43, 114),
+          frame_count = 1,
+          line_length = 1,
+          repeat_count = 4,
+        },
       }
     },
     vertical_animation = {

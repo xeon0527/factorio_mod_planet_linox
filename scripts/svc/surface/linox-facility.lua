@@ -63,30 +63,18 @@ UTIL_create_event_handler(defines.events.on_surface_created, function(event)
       tile_name = "linox-tile_linox-datacenter",
       x1 = -21,
       y1 = -21,
-      x2 = -14,
-      y2 = -11,
+      x2 = -4,
+      y2 = -14,
     }
 
-    -- Network Terminal
     util_surface.fill_tile {
       surface = surface,
       tile_name = "linox-tile_linox-datacenter",
-      x1 = 13,
-      y1 = -17,
-      x2 = 16,
-      y2 = -11,
-    }
-
-    -- power converter
-    util_surface.fill_tile {
-      surface = surface,
-      tile_name = "linox-tile_linox-datacenter",
-      x1 = -17,
-      y1 = 9,
+      x1 = -21,
+      y1 = -13,
       x2 = -14,
-      y2 = 16,
+      y2 = -4,
     }
-
 
     -- cargo landing pad 생성
     local cargo_pad = UTIL_ensure_entity(surface, {
@@ -103,30 +91,6 @@ UTIL_create_event_handler(defines.events.on_surface_created, function(event)
     pole.destructible = false
     pole.minable = false
     pole.rotatable = false
-
-
-    -- pumpjack 생성
-    local pumpjack = UTIL_ensure_entity(surface, {
-      name = "linox-building_deep-oil-pumpjack",
-      position = { -10.5, 10.5 },
-      force = "enemy",
-      create_build_effect_smoke = false,
-      direction = defines.direction.south,
-    });
-    pumpjack.destructible = false;
-    pumpjack.minable = false;
-    pumpjack.rotatable = false;
-
-    pumpjack = UTIL_ensure_entity(surface, {
-      name = "linox-building_sulfuric-acid-pumpjack",
-      position = { 10.5, 10.5 },
-      force = "enemy",
-      create_build_effect_smoke = false,
-      direction = defines.direction.south,
-    });
-    pumpjack.destructible = false;
-    pumpjack.minable = false;
-    pumpjack.rotatable = false;
 
     local force = game.forces["player"]
     local tech = force.technologies
@@ -148,16 +112,6 @@ end
 
 __MODULE__.create = function()
   return UTIL_ensure_surface(__LINOX_SURFACE__.facility)
-end
-
-__MODULE__.obtain_pumpjacks = function()
-  local surface = __MODULE__.get()
-
-  local pumpjack = surface.find_entity("linox-building_deep-oil-pumpjack", { -10.5, 10.5 })
-  if pumpjack then pumpjack.force = "player" end
-
-  pumpjack = surface.find_entity("linox-building_sulfuric-acid-pumpjack", { 10.5, 10.5 })
-  if pumpjack then pumpjack.force = "player" end
 end
 
 __MODULE__.create_radar = function()

@@ -4,6 +4,7 @@ data:extend {
   {
     type = "technology",
     name = "linox-technology_facility-upgrade",
+    order = "linox",
     icons = util_icon.technology_icon_script_research("__linox__/graphics/technology/facility-upgrade.png", 500),
     essential = true,
     prerequisites = {"linox-technology_exploring-linox-landing-site"},
@@ -15,6 +16,7 @@ data:extend {
     {
       type = "technology",
       name = "linox-technology_get-cargo-landing-pad",
+      order = "linox",
       icons = util_icon.technology_icon_script_research("__space-age__/graphics/technology/space-platform.png", 256),
       prerequisites = {"linox-technology_exploring-linox-landing-site"},
       research_trigger = {
@@ -25,6 +27,7 @@ data:extend {
     {
       type = "technology",
       name = "linox-technology_facility-factoryizing",
+      order = "linox",
       icons = util_icon.technology_icon_script_research("__linox__/graphics/technology/facility-factoryizing.png", 512),
       prerequisites = {"linox-technology_facility-upgrade"},
       research_trigger = {
@@ -35,6 +38,7 @@ data:extend {
       {
         type = "technology",
         name = "linox-technology_expanding-factory-1",
+        order = "linox",
         icons = util_icon.technology_icon_script_research("__linox__/graphics/technology/expanding-factory.png", 500),
         prerequisites = {
           "linox-technology_facility-factoryizing"
@@ -48,6 +52,7 @@ data:extend {
         {
           type = "technology",
           name = "linox-technology_expanding-factory-2",
+          order = "linox",
           icon = "__linox__/graphics/technology/expanding-factory.png",
           icon_size = 500,
           prerequisites = {
@@ -68,6 +73,7 @@ data:extend {
           {
             type = "technology",
             name = "linox-technology_expanding-factory-3",
+            order = "linox",
             icon = "__linox__/graphics/technology/expanding-factory.png",
             icon_size = 500,
             prerequisites = {
@@ -88,6 +94,7 @@ data:extend {
           {
             type = "technology",
             name = "linox-technology_expanding-factory-4",
+            order = "linox",
             icon = "__linox__/graphics/technology/expanding-factory.png",
             icon_size = 500,
             prerequisites = {
@@ -113,6 +120,7 @@ data:extend {
           {
             type = "technology",
             name = "linox-technology_expanding-factory-5",
+            order = "linox",
             icon = "__linox__/graphics/technology/expanding-factory.png",
             icon_size = 500,
             prerequisites = {
@@ -136,6 +144,7 @@ data:extend {
           {
             type = "technology",
             name = "linox-technology_expanding-factory-6",
+            order = "linox",
             icon = "__linox__/graphics/technology/expanding-factory.png",
             icon_size = 500,
             prerequisites = {
@@ -159,6 +168,7 @@ data:extend {
           {
             type = "technology",
             name = "linox-technology_expanding-factory-7",
+            order = "linox",
             icon = "__linox__/graphics/technology/expanding-factory.png",
             icon_size = 500,
             prerequisites = {
@@ -182,6 +192,7 @@ data:extend {
     {
       type = "technology",
       name = "linox-technology_rocket-silo-foundation",
+      order = "linox",
       icons = util_icon.technology_icon_linox_mod("__space-age__/graphics/technology/foundation.png", 256),
       prerequisites = {"linox-technology_facility-upgrade", "linox-technology_enhanced-space-engineering"},
       unit =
@@ -199,6 +210,7 @@ data:extend {
     {
       type = "technology",
       name = "linox-technology-cargo-elevator",
+      order = "linox",
       icons = util_icon.technology_icon_linox_mod("__base__/graphics/technology/engine.png", 256),
       prerequisites = {
         "linox-technology_facility-upgrade",
@@ -231,6 +243,7 @@ data:extend {
     {
       type = "technology",
       name = "linox-technology_power-converter",
+      order = "linox",
       icons = util_icon.technology_icon_script_research("__base__/graphics/technology/electric-energy-acumulators.png", 256),
       prerequisites = {"linox-technology_rare-earth-refining"},
       research_trigger = {

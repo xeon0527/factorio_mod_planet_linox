@@ -1,7 +1,7 @@
 local linox_ground = require("scripts.svc.surface.linox-ground")
 local linox_facility = require("scripts.svc.surface.linox-facility")
 local linox_global = require("scripts.svc.surface.linox-global")
-
+local pipeline_builder = require("scripts.svc.surface.builder.internel-pipeline-builder")
 
 local function __update_technology(event)
   local force = game.forces["player"]
@@ -62,9 +62,45 @@ local function __update_technology(event)
     linox_ground.create_ground_platform_expansion();
   end
 
+
+
+  local pipeline_count = 0
+
   if tech["linox-technology_ultra-deep-drilling"].researched then
-    linox_facility.obtain_pumpjacks();
+    pipeline_count = pipeline_count + 2
   end
+
+  if tech["linox-technology_adding-pipeline_samarium"].researched then
+    pipeline_count = pipeline_count + 1
+  end
+
+  if tech["linox-technology_adding-pipeline_dysprosium"].researched then
+    pipeline_count = pipeline_count + 1
+  end
+
+  if tech["linox-technology_adding-pipeline_neodymium"].researched then
+    pipeline_count = pipeline_count + 1
+  end
+
+  if tech["linox-technology_adding-pipeline_erbium"].researched then
+    pipeline_count = pipeline_count + 1
+  end
+
+  if pipeline_count > 0 and linox_facility.get() then
+    local current_pipeline_count = linox_facility.get().count_entities_filtered{name = "linox-special_internel-pipeline"}
+    local pos_lim = 1 - current_pipeline_count
+
+    for _i = current_pipeline_count, pipeline_count - 1 do
+      if pos_lim > 0 then
+        pipeline_builder.create(true)
+        pos_lim = pos_lim - 1
+      else
+        pipeline_builder.create()
+      end
+    end
+  end
+
+
 
   if tech["linox-technology_power-converter"].researched then
     UTIL_ensure_entity(linox_facility.get(), { name = "linox-hidden_reactive-power"}).energy = 1 * 1000 * 1000 * 1000;

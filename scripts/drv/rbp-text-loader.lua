@@ -124,7 +124,8 @@ end)
 local __MODULE__ = {}
 
 __MODULE__.get_first_locale = function()
-  return storage["rbp-text-loader"].locale[1]
+  local k, v = next(storage["rbp-text-loader"].locale)
+  return v
 end
 
 __MODULE__.get_all_text = function(locale)

@@ -4,6 +4,7 @@ data:extend {
   {
     type = "technology",
     name = "linox-technology_chemical-particle-filtering",
+    order = "linox",
     icon = "__linox__/graphics/technology/chemical-filter.png",
     icon_size = 640,
     prerequisites = {
@@ -31,6 +32,7 @@ data:extend {
   {
     type = "technology",
     name = "linox-technology_waste-water-treatment",
+    order = "linox",
     icons = util_icon.technology_icon_linox_mod("__space-age__/graphics/technology/fish-breeding.png", 256),
     prerequisites = {
       "linox-technology_build-data-catalog",
@@ -58,6 +60,7 @@ data:extend {
   {
     type = "technology",
     name = "linox-technology_ground-platform-expansion",
+    order = "linox",
     icons = util_icon.technology_icon_linox_mod("__space-age__/graphics/technology/foundation.png", 256, {1.0, 0.66, 0.66}),
     prerequisites = {
       "linox-technology_build-data-catalog",
@@ -83,6 +86,7 @@ data:extend {
   {
     type = "technology",
     name = "linox-technology_neodymium-extraction",
+    order = "linox",
     icon = "__linox__/graphics/technology/neodymium-extraction.png",
     icon_size = 500,
     prerequisites = {
@@ -115,6 +119,7 @@ data:extend {
   {
     type = "technology",
     name = "linox-technology_neodymium-data-card",
+    order = "linox",
     icons = {
       {
         icon = "__space-exploration-graphics__/graphics/technology/catalogue/base-catalogue-2.png",
@@ -151,6 +156,7 @@ data:extend {
   {
     type = "technology",
     name = "linox-technology_neodymium-permanent-magnet",
+    order = "linox",
     icons = {
       {
         icon = "__linox__/graphics/technology/white-cube.png",
@@ -183,6 +189,7 @@ data:extend {
   {
     type = "technology",
     name = "linox-technology_neodymium-permanent-magnet-generator",
+    order = "linox",
     icons = {
       {
         icon = "__space-exploration-graphics__/graphics/technology/big-turbine.png",
@@ -217,6 +224,7 @@ data:extend {
   {
     type = "technology",
     name = "linox-technology_neodymium-permanent-magnet-inserter",
+    order = "linox",
     icons = {
       {
         icon = "__linox__/graphics/technology/neodymium-inserter.png",
@@ -252,6 +260,7 @@ data:extend {
   {
     type = "technology",
     name = "linox-technology_erbium-extraction",
+    order = "linox",
     icon = "__linox__/graphics/technology/erbium-extraction.png",
     icon_size = 500,
     prerequisites = {
@@ -284,6 +293,7 @@ data:extend {
   {
     type = "technology",
     name = "linox-technology_erbium-data-card",
+    order = "linox",
     icon = "__space-exploration-graphics__/graphics/technology/catalogue/energy-catalogue-2.png",
     icon_size = 128,
     prerequisites = {
@@ -312,6 +322,7 @@ data:extend {
   {
     type = "technology",
     name = "linox-technology_erbium-beacon",
+    order = "linox",
     icon = "__space-exploration-graphics__/graphics/technology/wide-beacon.png",
     icon_size = 128,
     prerequisites = {
@@ -341,6 +352,7 @@ data:extend {
   {
     type = "technology",
     name = "linox-technology_rare-earth-powder-productivity",
+    order = "linox",
     icons = util.technology_icon_constant_recipe_productivity("__linox__/graphics/technology/rare-earth-refining.png"),
     prerequisites = {
       "linox-technology_erbium-data-card",
@@ -376,6 +388,7 @@ data:extend {
   {
     type = "technology",
     name = "linox-technology_sintering-machine-productivity",
+    order = "linox",
     icons = util_icon.technology_icon_constant_recipe_productivity("__linox__/graphics/technology/sintering-machine.png", 640),
     prerequisites = {
       "linox-technology_erbium-data-card",
@@ -405,6 +418,7 @@ data:extend {
       { type = "change-recipe-productivity", recipe = "linox-recipe_sintering-iron-stick", change = 0.1 },
       { type = "change-recipe-productivity", recipe = "linox-recipe_sintering-copper-plate", change = 0.1 },
       { type = "change-recipe-productivity", recipe = "linox-recipe_sintering-copper-cable", change = 0.1 },
+      { type = "change-recipe-productivity", recipe = "linox-recipe_sintering-steel-plate", change = 0.1 },
       { type = "change-recipe-productivity", recipe = "linox-recipe_sintered-carbide", change = 0.1 },
     },
     max_level = "infinite",
@@ -415,6 +429,7 @@ data:extend {
   {
     type = "technology",
     name = "linox-technology_planetary-power-converter-capacity",
+    order = "linox",
     icon = "__space-exploration-graphics__/graphics/technology/accumulator.png",
     icon_size = 128,
     prerequisites = {
@@ -443,6 +458,7 @@ data:extend {
   {
     type = "technology",
     name = "linox-technology_outer-corridor-open",
+    order = "linox",
     icon = "__linox__/graphics/technology/expanding-factory.png",
     icon_size = 500,
     prerequisites = {
@@ -462,6 +478,39 @@ data:extend {
       },
       time = 60
     },
+    ignore_tech_cost_multiplier = true,
+  },
+
+  {
+    type = "technology",
+    name = "linox-technology_pipeline-productivity",
+    order = "linox",
+    icons = util_icon.technology_icon_constant_mining_productivity("__space-exploration-graphics__/graphics/technology/radiator-blue.png", 128),
+    prerequisites = {
+      "linox-technology_erbium-data-card",
+      "linox-technology_neodymium-data-card",
+    },
+    unit =
+    {
+      count_formula = "L*1000",
+      ingredients =
+      {
+        {"linox-item_lava-data-card", 1},
+        {"linox-item_rare-earth-data-card", 1},
+        {"linox-item_samarium-data-card", 1},
+        {"linox-item_dysprosium-data-card", 1},
+        {"linox-item_neodymium-data-card", 1},
+        {"linox-item_erbium-data-card", 1},
+      },
+      time = 60
+    },
+    effects =
+    {
+      { type = "change-recipe-productivity", recipe = "linox-recipe_internel-pipeline_crude-oil", change = 0.1 },
+      { type = "change-recipe-productivity", recipe = "linox-recipe_internel-pipeline_sulfuric-acid", change = 0.1 },
+    },
+    max_level = "infinite",
+    upgrade = true,
     ignore_tech_cost_multiplier = true,
   },
 }

@@ -4,7 +4,7 @@ UTIL_create_event_handler("linox-custom-event_on-surface-complete", function(eve
   local surface = event.surface;
   if surface.name == __LINOX_SURFACE__.facility then
     npc.create(npc.type.lorax, surface, {x = -17, y = -17});
-    npc.create(npc.type.network_terminal, surface, {x = 15, y = -15});
-    npc.create(npc.type.power_converter, surface, {x = -15, y = 15});
+    npc.create(npc.type.network_terminal, surface, {x = -8, y = -17});
+    npc.create(npc.type.power_converter, surface, {x = -17, y = -6});
   end
 end)

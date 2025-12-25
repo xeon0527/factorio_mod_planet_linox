@@ -1,4 +1,24 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.6.0
+Date: 25. 12. 2025
+  Major Features:
+    - The Deep Drilling Facility Pipeline has been added, and up to 6 of them can be installed. As a result, the existing pumpjacks have been removed.
+    - The Deep Drilling Facility Productivity technology has been added.
+    - The positions of L.O.R.A.X, the Network Terminal, and the Power Converter have been moved to the upper-left. The previous area has been cleared, and during this process, the circuit entities connected to the Network Terminal and Power Converter will be removed, so please take note.
+    - A Steel Plate recipe has been added to the Sintering Machine recipes.
+
+  Balancing:
+    - The “Low Temp Separation of Calcium” recipe can now be used in the Cryogenic Plant.
+    - The operating speed of the Outlet has been increased to 2.
+
+  Changes:
+    - Fixed an issue where the pipe section appeared cut off in the side image of the Neodymium Permanent Magnet Generator.
+    - The order of Linox technologies has been adjusted so they are grouped more closely together.
+
+  Bugfixes:
+    - Fixed a bug where the blueprint localization logic could cause a crash depending on the language settings.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.5.11
 Date: 22. 12. 2025
   Changes:

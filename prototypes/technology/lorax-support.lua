@@ -4,6 +4,7 @@ data:extend {
   {
     type = "technology",
     name = "linox-technology_lorax-support",
+    order = "linox",
     icons = {
       {
         icon = "__space-exploration-graphics__/graphics/technology/supercomputer-3.png",
@@ -56,6 +57,7 @@ data:extend {
   {
     type = "technology",
     name = "linox-technology_build-data-catalog",
+    order = "linox",
     icons = util_icon.technology_icon_script_research("__space-exploration-graphics__/graphics/technology/catalogue/universal-catalogue.png", 128),
     icon = "__space-exploration-graphics__/graphics/technology/catalogue/universal-catalogue.png",
     icon_size = 128,

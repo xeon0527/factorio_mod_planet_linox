@@ -80,4 +80,21 @@ data:extend {
     auto_recycle = false,
     allow_productivity = true,
   },
+
+  {
+    type = "recipe",
+    name = "linox-recipe_sintering-steel-plate",
+    icons = util_icon.recipe_icon_sintering("__base__/graphics/icons/steel-plate.png", 64),
+    energy_required = 3,
+    enabled = false,
+    category = "linox-recipe-category_sintering",
+    ingredients =
+    {
+      {type = "item", name = "iron-ore", amount = 1},
+    },
+    results = {{type="item", name="steel-plate", amount = 1}},
+    auto_recycle = false,
+    allow_productivity = true,
+    emissions_multiplier = 3,
+  },
 }

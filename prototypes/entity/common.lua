@@ -59,23 +59,6 @@ data:extend {
       },
     },
   },
-  --{
-  --  type = "accumulator",
-  --  name = "linox-entity_planetary-power-network",
-  --  icon = "__base__/graphics/icons/accumulator.png",
-  --  selectable_in_game = false,
-  --  flags = {"not-on-map", "hide-alt-info", "not-deconstructable", "not-blueprintable"},
-  --  hidden = true,
-  --  collision_mask = {layers = {}},
-  --  energy_source =
-  --  {
-  --    type = "electric",
-  --    buffer_capacity = "5GJ",
-  --    usage_priority = "tertiary",
-  --    input_flow_limit = "5GW",
-  --    output_flow_limit = "5GW"
-  --  },
-  --},
   {
     type = "electric-energy-interface",
     name = "linox-hidden_reactive-power",

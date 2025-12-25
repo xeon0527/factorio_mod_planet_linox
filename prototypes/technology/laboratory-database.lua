@@ -4,6 +4,7 @@ data:extend {
   {
     type = "technology",
     name = "linox-technology_laboratory-database",
+    order = "linox",
     icons = util_icon.technology_icon_script_research("__linox__/graphics/technology/laboratory-database.png", 500),
     essential = true,
     prerequisites = {"linox-technology_exploring-linox-landing-site"},
@@ -15,6 +16,7 @@ data:extend {
     {
       type = "technology",
       name = "linox-technology_recursive-blueprint",
+      order = "linox",
       icons = util_icon.technology_icon_script_research("__rec-blue-plus__/graphics/blueprint-deployer-icon.png", 64),
       prerequisites = {"linox-technology_laboratory-database"},
       research_trigger = {
@@ -32,6 +34,7 @@ data:extend {
     {
       type = "technology",
       name = "linox-technology_linox-supercomputer",
+      order = "linox",
       icons = util_icon.technology_icon_script_research("__space-exploration-graphics__/graphics/technology/supercomputer-3.png", 128),
       prerequisites = {"linox-technology_laboratory-database"},
       research_trigger = {
@@ -50,6 +53,7 @@ data:extend {
     {
       type = "technology",
       name = "linox-technology_linox-petrochemicals",
+      order = "linox",
       icons = util_icon.technology_icon_linox_mod("__base__/graphics/technology/oil-processing.png", 256),
       prerequisites = {"linox-technology_ultra-deep-drilling"},
       unit =
@@ -65,12 +69,18 @@ data:extend {
       {
         { type = "unlock-recipe", recipe = "linox-recipe_rapid-distillation" },
         { type = "unlock-recipe", recipe = "linox-recipe_lava-based-rocket-fuel" },
+        {
+          type = "nothing",
+          icons = util_icon.icon_constant_recipe_productivity("__space-exploration-graphics__/graphics/icons/radiator-blue.png", 64),
+          effect_description = {"technology-icon-description.internel-pipeline-add-1"},
+        },
       },
       ignore_tech_cost_multiplier = true,
     },
     {
       type = "technology",
       name = "linox-technology_samarium-data-card",
+      order = "linox",
       icon = "__space-exploration-graphics__/graphics/technology/catalogue/biological-catalogue-2.png",
       icon_size = 128,
       prerequisites = {
@@ -95,12 +105,10 @@ data:extend {
       ignore_tech_cost_multiplier = true,
       essential = true,
     },
-
-
-
       {
         type = "technology",
         name = "linox-technology_turbo-pump",
+        order = "linox",
         icons = util_icon.technology_icon_linox_mod("__base__/graphics/technology/fluid-handling.png", 256, { 222, 232, 107 }),
         prerequisites = {
           "linox-technology_samarium-data-card",
@@ -125,6 +133,7 @@ data:extend {
       {
         type = "technology",
         name = "linox-technology_samarium-robotics",
+        order = "linox",
         icons = util_icon.technology_icon_linox_mod("__base__/graphics/technology/robotics.png", 256, { 222, 232, 107 }),
         prerequisites = {
           "linox-technology_samarium-data-card",
@@ -152,6 +161,7 @@ data:extend {
       {
         type = "technology",
         name = "linox-technology_core-roboport",
+        order = "linox",
         icon = "__space-exploration-graphics__/graphics/technology/supercharger.png",
         icon_size = 128,
         prerequisites = {
@@ -182,6 +192,7 @@ data:extend {
     {
       type = "technology",
       name = "linox-technology_enhanced-space-engineering",
+      order = "linox",
       icons = util_icon.technology_icon_linox_mod("__base__/graphics/technology/rocket-silo.png", 256),
       prerequisites = {"linox-technology_laboratory-database", "linox-technology_linox-supercomputer"},
       unit =
@@ -198,6 +209,7 @@ data:extend {
       {
         type = "technology",
         name = "linox-technology_advanced-rocket-silo",
+        order = "linox",
         icons = {
           {
             icon = "__base__/graphics/technology/rocket-silo.png",
@@ -238,6 +250,7 @@ data:extend {
       {
         type = "technology",
         name = "linox-technology_safety-of-entering-orbit",
+        order = "linox",
         icons = util_icon.technology_icon_linox_mod("__space-age__/graphics/technology/rocket-part-productivity.png", 256),
         prerequisites = {
           "linox-technology_enhanced-space-engineering",
@@ -261,6 +274,7 @@ data:extend {
       {
         type = "technology",
         name = "linox-technology_sintering-machine",
+        order = "linox",
         icon = "__linox__/graphics/technology/sintering-machine.png",
         icon_size = 640,
         prerequisites = {
@@ -289,6 +303,7 @@ data:extend {
       {
         type = "technology",
         name = "linox-technology_tungsten-sintering-processing",
+        order = "linox",
         icons = {
           {
             icon = "__linox__/graphics/technology/sintering-machine.png",
@@ -348,6 +363,7 @@ data:extend {
       {
         type = "technology",
         name = "linox-technology_basic-material-sintering-processing",
+        order = "linox",
         icons = {
           {
             icon = "__linox__/graphics/technology/sintering-machine.png",
@@ -391,6 +407,7 @@ data:extend {
           { type = "unlock-recipe", recipe = "linox-recipe_sintering-iron-stick" },
           { type = "unlock-recipe", recipe = "linox-recipe_sintering-copper-plate" },
           { type = "unlock-recipe", recipe = "linox-recipe_sintering-copper-cable" },
+          { type = "unlock-recipe", recipe = "linox-recipe_sintering-steel-plate" },
         },
         ignore_tech_cost_multiplier = true,
       },
@@ -398,6 +415,7 @@ data:extend {
       {
         type = "technology",
         name = "linox-technology_froth-flotation-processing",
+        order = "linox",
         icon = "__linox__/graphics/technology/chemical-tank.png",
         icon_size = 640,
         prerequisites = {
@@ -426,6 +444,7 @@ data:extend {
       {
         type = "technology",
         name = "linox-technology_dysprosium-extraction",
+        order = "linox",
         icons = {
           {
             icon = "__linox__/graphics/technology/white-powder.png",
@@ -456,6 +475,7 @@ data:extend {
       {
         type = "technology",
         name = "linox-technology_dysprosium-data-card",
+        order = "linox",
         icon = "__space-exploration-graphics__/graphics/technology/catalogue/material-catalogue-2.png",
         icon_size = 128,
         prerequisites = {
@@ -482,6 +502,7 @@ data:extend {
       {
         type = "technology",
         name = "linox-technology_dysprosium-exoskeleton-equipment",
+        order = "linox",
         icons = util_icon.technology_icon_constant_equipment("__base__/graphics/technology/exoskeleton-equipment.png", 256, { 1.0, 0.66, 0.66 }),
         prerequisites = {
           "linox-technology_dysprosium-data-card",
@@ -508,6 +529,7 @@ data:extend {
       {
         type = "technology",
         name = "linox-technology_dysprosium-electric-motor-robot",
+        order = "linox",
         icons = util_icon.technology_icon_constant_battery("__base__/graphics/technology/worker-robots-speed.png", 256, { 1.0, 0.66, 0.66 }),
         prerequisites = {
           "linox-technology_dysprosium-data-card",
