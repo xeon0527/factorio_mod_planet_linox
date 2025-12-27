@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.6.3
+Date: 28. 12. 2025
+  Bugfixes:
+    - Fixed an issue where crafting the Chemical Tank incorrectly required Samarium and Dysprosium Powder.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.6.2
 Date: 27. 12. 2025
   Minor Features:

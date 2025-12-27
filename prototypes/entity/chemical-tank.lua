@@ -172,8 +172,6 @@ data:extend {
       {type = "item", name = "tungsten-plate", amount = 10},
       {type = "item", name = "tungsten-gear-wheel", amount = 10},
       {type = "item", name = "tungsten-stick", amount = 10},
-      {type = "item", name = "samarium", amount = 2},
-      {type = "item", name = "dysprosium-powder", amount = 2},
     },
     --surface_conditions =
     --{
