@@ -20,3 +20,10 @@ require("modules/tips-and-tricks/_tips-and-tricks")
 
 require("modules/compatibility/any-planet-start").data()
 require("modules/compatibility/multi_surface_promethium_plate_recipe").data()
+
+
+--local recipes = {}
+--for k, v in pairs(data.raw["recipe"]) do
+--end
+--
+--local tech = data.raw["technology"]["linox-technology_sintering-machine-productivity"]

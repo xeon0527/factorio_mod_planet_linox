@@ -396,7 +396,7 @@ data:extend {
     },
     unit =
     {
-      count_formula = "L*1000",
+      count_formula = "L*1500",
       ingredients =
       {
         {"linox-item_lava-data-card", 1},
@@ -420,8 +420,83 @@ data:extend {
       { type = "change-recipe-productivity", recipe = "linox-recipe_sintering-copper-cable", change = 0.1 },
       { type = "change-recipe-productivity", recipe = "linox-recipe_sintering-steel-plate", change = 0.1 },
       { type = "change-recipe-productivity", recipe = "linox-recipe_sintered-carbide", change = 0.1 },
+      { type = "change-recipe-productivity", recipe = "samarium", change = 0.1 },
+      { type = "change-recipe-productivity", recipe = "neodymium-permanent-magnet", change = 0.1 },
     },
-    max_level = "infinite",
+    max_level = 50,
+    upgrade = true,
+    ignore_tech_cost_multiplier = true,
+  },
+
+  {
+    type = "technology",
+    name = "linox-technology_chemical-tank-productivity",
+    order = "linox",
+    icons = util_icon.technology_icon_constant_recipe_productivity("__linox__/graphics/technology/chemical-tank.png", 640),
+    prerequisites = {
+      "linox-technology_erbium-data-card",
+      "linox-technology_neodymium-data-card",
+    },
+    unit =
+    {
+      count_formula = "L*1500",
+      ingredients =
+      {
+        {"linox-item_lava-data-card", 1},
+        {"linox-item_rare-earth-data-card", 1},
+        {"linox-item_samarium-data-card", 1},
+        {"linox-item_dysprosium-data-card", 1},
+        {"linox-item_neodymium-data-card", 1},
+        {"linox-item_erbium-data-card", 1},
+      },
+      time = 60
+    },
+    effects =
+    {
+      { type = "change-recipe-productivity", recipe = "erbium-solution", change = 0.1 },
+      { type = "change-recipe-productivity", recipe = "neodymium-solution", change = 0.1 },
+      { type = "change-recipe-productivity", recipe = "dysprosium-powder", change = 0.1 },
+      { type = "change-recipe-productivity", recipe = "linox-recipe_chemical-tank_heavy-oil-cracking", change = 0.1 },
+      { type = "change-recipe-productivity", recipe = "linox-recipe_chemical-tank_light-oil-cracking", change = 0.1 },
+      { type = "change-recipe-productivity", recipe = "linox-recipe_chemical-tank_sulfuric-acid", change = 0.1 },
+      { type = "change-recipe-productivity", recipe = "linox-recipe_chemical-tank_lubricant", change = 0.1 },
+      { type = "change-recipe-productivity", recipe = "linox-recipe_froth-flotation-processing", change = 0.1 },
+    },
+    max_level = 50,
+    upgrade = true,
+    ignore_tech_cost_multiplier = true,
+  },
+
+  {
+    type = "technology",
+    name = "linox-technology_chemical-filter-productivity",
+    order = "linox",
+    icons = util_icon.technology_icon_constant_recipe_productivity("__linox__/graphics/technology/chemical-filter.png", 640),
+    prerequisites = {
+      "linox-technology_erbium-data-card",
+      "linox-technology_neodymium-data-card",
+    },
+    unit =
+    {
+      count_formula = "L*1500",
+      ingredients =
+      {
+        {"linox-item_lava-data-card", 1},
+        {"linox-item_rare-earth-data-card", 1},
+        {"linox-item_samarium-data-card", 1},
+        {"linox-item_dysprosium-data-card", 1},
+        {"linox-item_neodymium-data-card", 1},
+        {"linox-item_erbium-data-card", 1},
+      },
+      time = 60
+    },
+    effects =
+    {
+      { type = "change-recipe-productivity", recipe = "erbium-oxide", change = 0.1 },
+      { type = "change-recipe-productivity", recipe = "neodymium-oxide", change = 0.1 },
+      { type = "change-recipe-productivity", recipe = "linox-recipe_chemical-filter_holmium-solution", change = 0.1 },
+    },
+    max_level = 50,
     upgrade = true,
     ignore_tech_cost_multiplier = true,
   },

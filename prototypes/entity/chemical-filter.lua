@@ -1,6 +1,19 @@
 ---@diagnostic disable: assign-type-mismatch
+local tint = { 1.0, 0.33, 0.33 };
 local hit_effects = require("__base__.prototypes.entity.hit-effects")
 local item_sounds = require("__base__.prototypes.item_sounds")
+
+local pipe_pic = table.deepcopy(require("__space-age__.prototypes.entity.electromagnetic-plant-pictures").pipe_pictures)
+pipe_pic.north.layers[2] = nil
+pipe_pic.east.layers[2] = nil
+pipe_pic.south.layers[2] = nil
+pipe_pic.west.layers[2] = nil
+
+local pipe_covers = table.deepcopy(pipecoverspictures())
+pipe_covers.north.layers[2] = nil
+pipe_covers.east.layers[2] = nil
+pipe_covers.south.layers[2] = nil
+pipe_covers.west.layers[2] = nil
 
 data:extend {
   {
@@ -19,7 +32,7 @@ data:extend {
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     damaged_trigger_effect = hit_effects.entity(),
     drawing_box_vertical_extension = 0.4,
-    module_slots = 3,
+    module_slots = 5,
     allowed_effects = {"consumption", "speed", "productivity", "pollution", "quality"},
 
     crafting_categories = {"linox-recipe-category_chemical-filter"},
@@ -51,8 +64,10 @@ data:extend {
     {
       {
         production_type = "input",
-        pipe_covers = pipecoverspictures(),
+        pipe_picture = pipe_pic,
+        pipe_covers = pipe_covers,
         volume = 1000,
+        secondary_draw_orders = { north = -1 },
         pipe_connections =
         {
           {
@@ -64,8 +79,10 @@ data:extend {
       },
       {
         production_type = "input",
-        pipe_covers = pipecoverspictures(),
+        pipe_picture = pipe_pic,
+        pipe_covers = pipe_covers,
         volume = 1000,
+        secondary_draw_orders = { north = -1 },
         pipe_connections =
         {
           {
@@ -77,8 +94,10 @@ data:extend {
       },
       {
         production_type = "output",
-        pipe_covers = pipecoverspictures(),
+        pipe_picture = pipe_pic,
+        pipe_covers = pipe_covers,
         volume = 100,
+        secondary_draw_orders = { north = -1 },
         pipe_connections =
         {
           {
@@ -90,8 +109,10 @@ data:extend {
       },
       {
         production_type = "output",
-        pipe_covers = pipecoverspictures(),
+        pipe_picture = pipe_pic,
+        pipe_covers = pipe_covers,
         volume = 100,
+        secondary_draw_orders = { north = -1 },
         pipe_connections =
         {
           {
@@ -102,6 +123,7 @@ data:extend {
         }
       }
     },
+    fluid_boxes_off_when_no_fluid_recipe = true,
 
     graphics_set =
     {
@@ -117,7 +139,7 @@ data:extend {
             scale = 0.5,
             frame_count = 60,
             line_length = 10,
-            shift = util.by_pixel(0, -16),
+            shift = util.by_pixel(0, -8),
           },
           {
             filename = "__linox__/graphics/entity/chemical-filter/scrubber-color1.png",
@@ -127,7 +149,8 @@ data:extend {
             scale = 0.5,
             frame_count = 60,
             line_length = 10,
-            shift = util.by_pixel(0, -16),
+            shift = util.by_pixel(0, -8),
+            tint = tint,
           },
           {
             filename = "__linox__/graphics/entity/chemical-filter/scrubber-shadow.png",
@@ -137,7 +160,7 @@ data:extend {
             frame_count = 1,
             repeat_count = 60,
             draw_as_shadow = true,
-            shift = util.by_pixel(0, -16),
+            shift = util.by_pixel(0, -8),
           },
         }
       }

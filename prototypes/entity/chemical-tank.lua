@@ -1,3 +1,5 @@
+local tint = { 1.0, 0.33, 0.33 };
+
 ---@diagnostic disable: assign-type-mismatch, undefined-global
 local hit_effects = require("__base__.prototypes.entity.hit-effects")
 local item_sounds = require("__base__.prototypes.item_sounds")
@@ -32,7 +34,7 @@ data:extend {
     fast_replaceable_group = "assembling-machine",
     crafting_speed = 1,
     crafting_categories = { "linox-recipe-category_chemical-tank" },
-    module_slots = 4,
+    module_slots = 5,
 
     energy_usage = "700kW",
     energy_source =
@@ -53,7 +55,7 @@ data:extend {
         production_type = "input",
         pipe_picture = require("__space-age__.prototypes.entity.electromagnetic-plant-pictures").pipe_pictures,
         pipe_covers = pipecoverspictures(),
-        volume = 200,
+        volume = 1000,
         secondary_draw_orders = { north = -1 },
         pipe_connections = {{ flow_direction="input-output", direction = defines.direction.west, position = {-1.5, 0.5} }}
       },
@@ -61,7 +63,7 @@ data:extend {
         production_type = "input",
         pipe_picture = require("__space-age__.prototypes.entity.electromagnetic-plant-pictures").pipe_pictures,
         pipe_covers = pipecoverspictures(),
-        volume = 200,
+        volume = 1000,
         secondary_draw_orders = { north = -1 },
         pipe_connections = {{ flow_direction="input-output", direction = defines.direction.east, position = {1.5, -0.5} }}
       },
@@ -120,6 +122,7 @@ data:extend {
             frame_count = 60,
             line_length = 8,
             shift = util.by_pixel(0, -16),
+            tint = tint,
           },
           {
             filename = "__linox__/graphics/entity/chemical-tank/oxidizer-hr-emission-1.png",
@@ -169,6 +172,8 @@ data:extend {
       {type = "item", name = "tungsten-plate", amount = 10},
       {type = "item", name = "tungsten-gear-wheel", amount = 10},
       {type = "item", name = "tungsten-stick", amount = 10},
+      {type = "item", name = "samarium", amount = 2},
+      {type = "item", name = "dysprosium-powder", amount = 2},
     },
     --surface_conditions =
     --{

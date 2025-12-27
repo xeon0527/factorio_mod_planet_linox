@@ -1,4 +1,25 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.6.2
+Date: 27. 12. 2025
+  Minor Features:
+    - Neodymium permanent magnet and Samarium recipes now benefit from the Sintering machine productivity upgrade bonus.
+    - Sintering machine recipe productivity can now be increased up to a maximum of 500%.
+    - Some chemical recipes have been added to the Chemical Tank. These recipes do not require any research to unlock.
+    - A Holmium Solution recipe has been added to the Chemical Filter. This recipe does not require any research to unlock.
+    - A Chemical tank Base productivity technology has been added. The maximum level is 50.
+    - A Chemical filter Base productivity technology has been added. The maximum level is 50.
+
+  Balancing:
+    - Neodymium permanent magnets and samarium can no longer be broken down in recyclers.
+    - The Chemical tank’s module slots have been increased to five.
+    - The Chemical filter’s module slots have been increased to five.
+
+  Changes:
+    - The tint color of the Chemical tank has been changed to red.
+    - The tint color of the Chemical filter has been changed to red.
+    - Improved the fluid input/output pipe visuals of the Chemical Filter, fixing awkward-looking parts.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.6.1
 Date: 26. 12. 2025
   Bugfixes:

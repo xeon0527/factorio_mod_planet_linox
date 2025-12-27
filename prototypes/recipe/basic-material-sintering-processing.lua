@@ -15,6 +15,7 @@ data:extend {
     results = {{type="item", name="iron-plate", amount = 2}},
     auto_recycle = false,
     allow_productivity = true,
+    maximum_productivity = 5.0,
   },
 
   {
@@ -31,6 +32,7 @@ data:extend {
     results = {{type="item", name="iron-gear-wheel", amount = 2}},
     auto_recycle = false,
     allow_productivity = true,
+    maximum_productivity = 5.0,
   },
 
   {
@@ -47,6 +49,7 @@ data:extend {
     results = {{type="item", name="iron-stick", amount = 4}},
     auto_recycle = false,
     allow_productivity = true,
+    maximum_productivity = 5.0,
   },
 
   {
@@ -63,6 +66,7 @@ data:extend {
     results = {{type="item", name="copper-plate", amount = 2}},
     auto_recycle = false,
     allow_productivity = true,
+    maximum_productivity = 5.0,
   },
 
   {
@@ -79,6 +83,7 @@ data:extend {
     results = {{type="item", name="copper-cable", amount = 4}},
     auto_recycle = false,
     allow_productivity = true,
+    maximum_productivity = 5.0,
   },
 
   {
@@ -96,5 +101,6 @@ data:extend {
     auto_recycle = false,
     allow_productivity = true,
     emissions_multiplier = 3,
+    maximum_productivity = 5.0,
   },
 }

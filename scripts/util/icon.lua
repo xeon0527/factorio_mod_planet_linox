@@ -97,6 +97,40 @@ local __MODULE__ = {
     }
   end,
 
+  recipe_icon_chemical_tank = function(recipe_icon, size, tint)
+    return {
+      {
+        icon = recipe_icon,
+        icon_size = size,
+        tint = tint,
+      },
+      {
+        icon = "__linox__/graphics/icons/chemical-tank.png",
+        icon_size = 64,
+        scale = 0.25,
+        shift = {10, 10},
+        floating = true
+      }
+    }
+  end,
+
+  recipe_icon_chemical_filter = function(recipe_icon, size, tint)
+    return {
+      {
+        icon = recipe_icon,
+        icon_size = size,
+        tint = tint,
+      },
+      {
+        icon = "__linox__/graphics/icons/chemical-filter.png",
+        icon_size = 64,
+        scale = 0.25,
+        shift = {10, 10},
+        floating = true
+      }
+    }
+  end,
+
   technology_icon_constant_equipment = function(technology_icon, size, tint)
     local icons =
     {

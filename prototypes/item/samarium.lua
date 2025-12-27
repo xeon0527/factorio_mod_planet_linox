@@ -30,6 +30,8 @@ data:extend {
     },
     results = {{type="item", name="samarium", amount=1}},
     allow_productivity = true,
+    auto_recycle = false,
+    maximum_productivity = 5.0,
 
     surface_conditions =
     {

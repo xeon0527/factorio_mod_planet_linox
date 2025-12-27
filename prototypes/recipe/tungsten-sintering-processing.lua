@@ -15,6 +15,7 @@ data:extend {
     results = {{type="item", name="tungsten-plate", amount=1}},
     auto_recycle = false,
     allow_productivity = true,
+    maximum_productivity = 5.0,
   },
 
   {
@@ -31,6 +32,7 @@ data:extend {
     results = {{type="item", name="tungsten-gear-wheel", amount=1}},
     auto_recycle = false,
     allow_productivity = true,
+    maximum_productivity = 5.0,
   },
 
   {
@@ -47,5 +49,6 @@ data:extend {
     results = {{type="item", name="tungsten-stick", amount=2}},
     auto_recycle = false,
     allow_productivity = true,
+    maximum_productivity = 5.0,
   },
 }

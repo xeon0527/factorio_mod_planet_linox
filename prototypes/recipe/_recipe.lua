@@ -3,6 +3,8 @@ local __PATH__ = "prototypes.recipe."
 require(__PATH__.."advanced-acid-neutralisation");
 require(__PATH__.."basic-material-sintering-processing");
 require(__PATH__.."casting-stone-brick");
+require(__PATH__.."chemical-filter-recipe");
+require(__PATH__.."chemical-tank-recipe");
 require(__PATH__.."froth-flotation-processing");
 require(__PATH__.."internel-pipeline");
 require(__PATH__.."linox-petrochemicals");

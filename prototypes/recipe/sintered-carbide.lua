@@ -16,5 +16,6 @@ data:extend {
     results = {{type="item", name="tungsten-carbide", amount = 1}},
     auto_recycle = false,
     allow_productivity = true,
+    maximum_productivity = 5.0,
   },
 }
