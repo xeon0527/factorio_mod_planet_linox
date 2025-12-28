@@ -3,6 +3,7 @@ local linox_map_gen   = require("prototypes.planet.map-gen")
 local linox_global    = require("scripts.svc.surface.linox-global")
 local factory_builder = require("scripts.svc.surface.builder.factory-builder")
 local util_surface    = require("scripts.util.surface")
+local bootstrap = require("scripts.drv.bootstrap")
 
 local rbp_example = require("modules.rbp-example._rbp-example")
 
@@ -11,6 +12,13 @@ local __MODULE__ = {};
 local __base_foundation_tile  = "linox-tile_linox-terminal-platform"
 local __base_border_tile      = "linox-tile_linox-hazard-terminal-platform"
 
+bootstrap.create_init_handler(function()
+  local surface = __MODULE__.get()
+  if surface then
+    -- init 시점에 Linox Facility Surface가 존재하면 아주 높은 확률로 손상된 Surface임. 따라서 제거하는게 좋음.
+    game.delete_surface(surface)
+  end
+end)
 
 UTIL_create_event_handler(defines.events.on_surface_created, function(event)
   local surface = game.get_surface(event.surface_index);

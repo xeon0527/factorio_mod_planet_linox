@@ -69,11 +69,6 @@ data:extend {
       {
         { type = "unlock-recipe", recipe = "linox-recipe_rapid-distillation" },
         { type = "unlock-recipe", recipe = "linox-recipe_lava-based-rocket-fuel" },
-        {
-          type = "nothing",
-          icons = util_icon.icon_constant_recipe_productivity("__space-exploration-graphics__/graphics/icons/radiator-blue.png", 64),
-          effect_description = {"technology-icon-description.internel-pipeline-add-1"},
-        },
       },
       ignore_tech_cost_multiplier = true,
     },

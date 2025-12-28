@@ -36,6 +36,9 @@ data:extend {
     collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
 
+    circuit_wire_max_distance = 10,
+    circuit_connector = circuit_connector_definitions["biochamber"],
+
     fluid_boxes = {
       {
         production_type = "output",

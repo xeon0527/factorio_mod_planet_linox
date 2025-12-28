@@ -123,12 +123,35 @@ UTIL_create_event_handler(defines.events.on_cargo_pod_finished_ascending, functi
   end
 end)
 
+
+UTIL_create_event_handler(defines.events.on_pre_surface_deleted, function(event)
+  local surface = game.get_surface(event.surface_index)
+  if not surface then return end
+
+  if surface.name == __LINOX_SURFACE__.ground or surface.name == __LINOX_SURFACE__.facility then
+    local f = game.forces["player"]
+    for k, v in pairs(f.technologies) do
+      if util.string_starts_with(v.name, "linox-technology_") then
+        v.researched = false
+      end
+    end
+
+    surface = game.get_surface(__LINOX_SURFACE__.ground)
+    if surface and not surface.deletable then
+      game.delete_surface(surface)
+    end
+
+    surface = game.get_surface(__LINOX_SURFACE__.facility)
+    if surface and not surface.deletable then
+      game.delete_surface(surface)
+    end
+  end
+end)
+
 __MODULE__.connect_surfaces = function()
   local linox_A = game.get_surface(__LINOX_SURFACE__.ground)
   local linox_B = game.get_surface(__LINOX_SURFACE__.facility)
   if linox_A and linox_B then
-    --local lppn1 = UTIL_ensure_entity(linox_A, { name = "linox-hidden_electric-pole"})
-    --local lppn2 = UTIL_ensure_entity(linox_B, { name = "linox-hidden_electric-pole"})
     local lppn1 = linox_A.find_entity("linox-special_circuit-pole", {0,2})
     local lppn2 = linox_B.find_entity("linox-special_circuit-pole", {0,2})
     if lppn1 and lppn2 then

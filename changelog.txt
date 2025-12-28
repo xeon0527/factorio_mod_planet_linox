@@ -1,4 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.6.4
+Date: 29. 12. 2025
+  Minor Features:
+    - Circuit cable connections are now supported on the Deep Drilling Facility Pipeline.
+
+  Bugfixes:
+    - Fixed an error in the Linox Petrochemicals technology description where it incorrectly stated that a new pipeline was provided.
+
+  Changes:
+    - If a corrupted Linox Facility Surface exists immediately after adding the Linox mod, it will now be removed automatically.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.6.3
 Date: 28. 12. 2025
   Bugfixes:

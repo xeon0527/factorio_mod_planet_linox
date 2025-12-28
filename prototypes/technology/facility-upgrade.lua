@@ -209,7 +209,7 @@ data:extend {
     },
     {
       type = "technology",
-      name = "linox-technology-cargo-elevator",
+      name = "linox-technology_cargo-elevator",
       order = "linox",
       icons = util_icon.technology_icon_linox_mod("__base__/graphics/technology/engine.png", 256),
       prerequisites = {
