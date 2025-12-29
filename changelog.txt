@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.6.5
+Date: 29. 12. 2025
+  Bugfixes:
+    - Fixed an issue where a locale error caused a crash when talking to L.O.R.A.X in multiplayer.
+
+  Changes:
+    - The Mantle Extractor entity has been changed to be based on the assembling machine prototype. As a result, its placement direction and orientation may be incorrect, so please make sure to check it after applying the update.
+    - The production time of Samarium robots has been adjusted to 0.25 seconds
+
+---------------------------------------------------------------------------------------------------
 Version: 1.6.4
 Date: 29. 12. 2025
   Minor Features:

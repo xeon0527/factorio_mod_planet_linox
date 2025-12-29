@@ -1,3 +1,4 @@
+---@diagnostic disable: assign-type-mismatch
 local shadow =
 {
   filename = "__space-exploration-graphics-3__/graphics/entity/core-miner/core-miner-shadow.png",
@@ -15,7 +16,7 @@ shadow_anim.repeat_count = 30;
 
 data:extend {
   {
-    type = "offshore-pump",
+    type = "assembling-machine",
     name = "linox-building_mantle-extractor",
     icon = "__space-exploration-graphics__/graphics/icons/core-miner.png",
     icon_size = 64,
@@ -28,33 +29,49 @@ data:extend {
     collision_mask = {layers={item=true, object=true, player=true, water_tile=true, elevated_rail=true, is_object=true, is_lower_object=true, meltable=true}},
     selection_box = {{-5.5, -5.5}, {5.5, 5.5}},
     damaged_trigger_effect = require ("__base__.prototypes.entity.hit-effects").entity(),
-    pumping_speed = 8.333334,
-    fluid_source_offset = { 0, 0 },
+    
+    crafting_speed = 1,
+    crafting_categories = { "linox-recipe-category_mantle-extractor" },
+
     tile_buildability_rules = nil,
-    energy_usage = "25MW",
+    energy_usage = "20MW",
     vector_to_place_result = { 0, -5.85 },
+
+    fixed_recipe = "linox-recipe_mantle-extractor_lava",
     --module_slots = 4,
 
     surface_conditions = {
       { property = "magnetic-field", min = 1 },
       { property = "gravity", min = 1 }
     },
-    
-    fluid_box =
-    {
-      filter = "lava",
-      volume = 100,
-      pipe_covers = pipecoverspictures(),
-      production_type = "output",
-      pipe_connections =
+
+    fluid_boxes = {
       {
-        {
-          position = {0, -5.05 },
----@diagnostic disable-next-line: assign-type-mismatch
-          direction = defines.direction.north,
-          flow_direction = "output"
-        }
-      }
+        production_type = "output",
+        pipe_picture = require("__space-age__.prototypes.entity.electromagnetic-plant-pictures").pipe_pictures,
+        pipe_covers = pipecoverspictures(),
+        volume = 1000,
+        secondary_draw_orders = { north = -1 },
+        pipe_connections = {{ flow_direction="output", position = {0, -5.05}, direction = defines.direction.north }},
+      },
+      --{
+      --  production_type = "output",
+      --  pipe_covers = pipecoverspictures(),
+      --  volume = 1000,
+      --  pipe_connections = {{ flow_direction="output", position = {0, 5.05}, direction = defines.direction.south }},
+      --},
+      --{
+      --  production_type = "output",
+      --  pipe_covers = pipecoverspictures(),
+      --  volume = 1000,
+      --  pipe_connections = {{ flow_direction="output", position = {5.05, 0}, direction = defines.direction.east }},
+      --},
+      --{
+      --  production_type = "output",
+      --  pipe_covers = pipecoverspictures(),
+      --  volume = 1000,
+      --  pipe_connections = {{ flow_direction="output", position = {-5.05, 0}, direction = defines.direction.west }},
+      --},
     },
 
 
@@ -144,6 +161,7 @@ data:extend {
       type = "electric",
       usage_priority = "secondary-input",
       emissions_per_minute = { pollution = 350 },
+      drain = "5MW",
     },
   }
 }
@@ -180,21 +198,25 @@ local recipe = {
     {type = "item", name = "concrete", amount = 100},
     {type = "item", name = "pipe", amount = 500},
   },
-  --surface_conditions =
-  --{
-  --  {
-  --    property = "magnetic-field",
-  --    min = 1600,
-  --    max = 1600,
-  --  },
-  --  {
-  --    property = "gravity",
-  --    min = 2,
-  --    max = 2
-  --  },
-  --},
+
   results = {{type="item", name="linox-building_mantle-extractor", amount=1}},
   auto_recycle = true,
 }
 
-data:extend { recipe, }
+data:extend
+{
+  recipe,
+  {
+    type = "recipe",
+    name = "linox-recipe_mantle-extractor_lava",
+    energy_required = 1,
+    enabled = true,
+    hidden_in_factoriopedia = true,
+    category = "linox-recipe-category_mantle-extractor",
+    results = {
+      { type = "fluid", name = "lava", amount = 500 },
+    },
+    localised_name = {"fluid-name.lava"},
+  },
+}
+

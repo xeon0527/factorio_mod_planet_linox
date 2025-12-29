@@ -3,7 +3,8 @@ local linox_map_gen   = require("prototypes.planet.map-gen")
 local linox_global    = require("scripts.svc.surface.linox-global")
 local factory_builder = require("scripts.svc.surface.builder.factory-builder")
 local util_surface    = require("scripts.util.surface")
-local bootstrap = require("scripts.drv.bootstrap")
+local bootstrap       = require("scripts.drv.bootstrap")
+local rbp_text_loader = require("scripts.drv.rbp-text-loader")
 
 local rbp_example = require("modules.rbp-example._rbp-example")
 
@@ -165,7 +166,7 @@ __MODULE__.expand_facility = function(level)
     if game.is_multiplayer() then
       loc = settings.global["linox-settings_rbp-example-multiplay-language"].value
       if loc == "auto" then
-        loc = rbp_example.get_first_locale()
+        loc = rbp_text_loader.get_first_locale()
       end
     else
       local p = game.connected_players[1]

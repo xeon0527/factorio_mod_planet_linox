@@ -56,6 +56,7 @@ data:extend {
   {
     type = "recipe",
     name = "linox_samarium-logistic-robot",
+    energy_required = 0.25,
     enabled = false,
     ingredients =
     {

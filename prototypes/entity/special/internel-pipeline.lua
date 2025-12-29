@@ -26,7 +26,6 @@ data:extend {
     },
 
     max_health = 1000,
-    --allowed_effects = {"speed", "productivity"},
 
     crafting_speed = 1,
     crafting_categories = { "linox-recipe-category_internel-pipeline" },
