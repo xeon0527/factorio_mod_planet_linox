@@ -49,6 +49,13 @@ data:extend {
   },
 
   {
+    type = "bool-setting",
+    name = "linox-settings_compatibility-distribution-request-planner",
+    setting_type = "startup",
+    default_value = true,
+  },
+
+  {
     type = "string-setting",
     name = "linox-settings_rbp-example-multiplay-language",
     setting_type = "runtime-global",

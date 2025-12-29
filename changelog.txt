@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.6.6
+Date: 29. 12. 2025
+  Major Features:
+    - The Distribution Request Planner shortcut tool has been integrated. This tool allows you to easily configure logistic request chests. Special thanks to hsp9513, the developer of the mod, for their cooperation.
+
+  Bugfixes:
+    - Fixed an issue where the text key for the Reactive Power Entity was incorrect.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.6.5
 Date: 29. 12. 2025
   Bugfixes:
