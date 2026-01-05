@@ -104,11 +104,11 @@ bootstrap.create_configuration_changed_handler(function()
   end
 end)
 
-bootstrap.create_init_handler(function()
-  if not game.is_multiplayer() and not game.simulation then
-    __request_locale(game.connected_players[1])
-  end
-end)
+--bootstrap.create_init_handler(function()
+--  --if not game.is_multiplayer() and not game.simulation then
+--  --  __request_locale(game.connected_players[1])
+--  --end
+--end)
 
 bootstrap.create_configuration_changed_handler(function()
   if not game.is_multiplayer() and not game.simulation then
