@@ -1,4 +1,18 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.6.7
+Date: 5. 1. 2026
+  Bugfixes:
+    - Fixed an issue where the Lava recipe of the Mantle Extractor was being exposed.
+    - Fixed an issue where the Neodymium Stack Inserter could freeze. Neodymium Inserters should no longer freeze.
+    - An issue that caused problems during desynchronization debugging due to an incorrect internal initialization method has been fixed.
+
+  Balancing:
+    - The Solid Fuel cost of the Lava-based Rocket Fuel recipe has been increased from 2 to 8.
+
+  Compatibility:
+    - Compatibility with the Even Pickier Dollies mod has been added. Some special entities can no longer be moved.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.6.6
 Date: 29. 12. 2025
   Major Features:

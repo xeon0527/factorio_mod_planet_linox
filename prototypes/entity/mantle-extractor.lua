@@ -212,6 +212,7 @@ data:extend
     energy_required = 1,
     enabled = true,
     hidden_in_factoriopedia = true,
+    hidden = true,
     category = "linox-recipe-category_mantle-extractor",
     results = {
       { type = "fluid", name = "lava", amount = 500 },

@@ -41,7 +41,7 @@ data:extend {
     ingredients =
     {
       { type = "fluid", name = "lava", amount = 100 },
-      { type = "item", name = "solid-fuel", amount = 2, },
+      { type = "item", name = "solid-fuel", amount = 8, },
     },
     results = {
       { type = "item", name = "rocket-fuel", amount = 1 },

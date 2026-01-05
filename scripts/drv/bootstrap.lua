@@ -1,10 +1,10 @@
 __DRV_BOOTSTRAP_HANDLERS__ = {
-  start_complete = false,
+  --start_complete = false,
   on_init = {},
   on_configuration_changed = {},
   on_load = {},
   on_tick = {},
-  game_start = {},
+  --game_start = {},
 }
 
 script.on_init(function()
@@ -32,13 +32,13 @@ script.on_nth_tick(1, function()
     hdrs();
   end
 
-  if not __DRV_BOOTSTRAP_HANDLERS__.start_complete then
-    for _, hdrs in pairs(__DRV_BOOTSTRAP_HANDLERS__.game_start) do
-      hdrs();
-    end
+  --if not __DRV_BOOTSTRAP_HANDLERS__.start_complete then
+  --  for _, hdrs in pairs(__DRV_BOOTSTRAP_HANDLERS__.game_start) do
+  --    hdrs();
+  --  end
 
-    __DRV_BOOTSTRAP_HANDLERS__.start_complete = true
-  end
+  --  __DRV_BOOTSTRAP_HANDLERS__.start_complete = true
+  --end
 end)
 
 
@@ -60,8 +60,8 @@ __MODULE__.create_tick_handler = function(handler)
   table.insert(__DRV_BOOTSTRAP_HANDLERS__.on_tick, handler);
 end
 
-__MODULE__.create_game_start_handler = function(handler)
-  table.insert(__DRV_BOOTSTRAP_HANDLERS__.game_start, handler);
-end
+--__MODULE__.create_game_start_handler = function(handler)
+--  table.insert(__DRV_BOOTSTRAP_HANDLERS__.game_start, handler);
+--end
 
 return __MODULE__;

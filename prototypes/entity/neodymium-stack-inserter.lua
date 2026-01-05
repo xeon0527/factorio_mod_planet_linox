@@ -40,7 +40,6 @@ data:extend {
       usage_priority = "secondary-input",
       drain = "25kW"--"1kW"
     },
-    heating_energy = "50kW",
     extension_speed = 0.3,--0.1,
     rotation_speed = 0.12,--0.04,
     filter_count = 5,
