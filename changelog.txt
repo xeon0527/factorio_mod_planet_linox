@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.6.9
+Date: 7. 1. 2026
+  Minor Features:
+    - The Power Converter processing logic has been slightly optimized.
+
+  Bugfixes:
+    - Fixed an issue where the Power Converter could cause a game crash when total power consumption exceeded 2.14 GW. The Power Converter system is now limited to handling a maximum of 1 GW of power and reactive power.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.6.8
 Date: 6. 1. 2026
   Bugfixes:

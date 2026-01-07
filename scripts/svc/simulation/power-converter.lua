@@ -3,7 +3,9 @@ local power_converter = require("scripts.drv.linox.installation.power-converter"
 local inductor = require("scripts.drv.simulation.inductor")
 local surface_facility = require("scripts.svc.surface.linox-facility")
 
-local voltage = 1000.0;
+local voltage = 1000.0
+local GJ = 1000.0 * 1000.0 * 1000.0
+local tick_GJ = GJ / 60.0
 
 local function __get_total_consume(surface)
   local consume = 0.0
@@ -44,12 +46,15 @@ bootstrap.create_tick_handler(function()
     inductor.tick();
 
     -- Inductor의 Tick당 Power Output을 계산
-    local inductor_tick_output = (inductor.current / 60.0) * voltage;
+    local inductor_tick_output = (inductor.current * 0.01666666666666666666666666666667) * voltage;
     --if inductor_tick_output < 0.0 then inductor_tick_output = 0.0 end
 
     -- reactive power의 값을 total consume에서 제외함.
     local data = __get_total_consume(surface)
     local current_tick_consume = data - reactive_power.power_usage;
+    if current_tick_consume > tick_GJ then
+      current_tick_consume = tick_GJ
+    end
 
     -- 실제 total consume과 inductor 출력의 오차만큼 reactive power를 추가. 오차를 보정하지 않으면 최대 2배의 소비전력이 발생.
     -- 그러나 inductor 모듈의 전기 사양 상 1GJ을 넘는 출력은 낼 수 없음.
@@ -63,7 +68,7 @@ bootstrap.create_tick_handler(function()
       reactive_power.power_usage = reactive_power_usage
 
       local tech = game.forces["player"].technologies["linox-technology_planetary-power-converter-capacity"]
-      pc_entity.electric_buffer_size = (5 + ((tech.level - 1) * 2.5)) * 1000 * 1000 * 1000
+      pc_entity.electric_buffer_size = (5.0 + ((tech.level - 1) * 2.5)) * GJ
     else
       reactive_power.power_usage = 0
       pc_entity.electric_buffer_size = 0
