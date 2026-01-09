@@ -110,11 +110,11 @@ end)
 --  --end
 --end)
 
-bootstrap.create_configuration_changed_handler(function()
-  if not game.is_multiplayer() and not game.simulation then
-    __request_locale(game.connected_players[1])
-  end
-end)
+--bootstrap.create_configuration_changed_handler(function()
+--  if not game.is_multiplayer() and not game.simulation then
+--    __request_locale(game.connected_players[1])
+--  end
+--end)
 
 UTIL_create_event_handler(defines.events.on_player_joined_game, function(event)
   local p = game.get_player(event.player_index)

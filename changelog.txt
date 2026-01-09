@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.6.10
+Date: 10. 1. 2026
+  Bugfixes:
+    - Fixed an issue where the game could crash during loading under certain conditions.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.6.9
 Date: 7. 1. 2026
   Minor Features:
