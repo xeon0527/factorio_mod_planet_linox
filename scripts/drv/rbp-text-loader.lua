@@ -98,9 +98,14 @@ end)
 
 bootstrap.create_configuration_changed_handler(function()
   -- 모드 버전이 변경된 경우 locale 초기화
+  -- 이렇게 안하면 locale 데이터가 변경되었을 때 변경사항이 적용이 안됨
   if storage["rbp-text-loader"] then
     storage["rbp-text-loader"].requests = {}
     storage["rbp-text-loader"].locale = {}
+  end
+
+  if not game.is_multiplayer() and not game.simulation and #game.connected_players > 0 then
+    __request_locale(game.connected_players[1])
   end
 end)
 
@@ -116,10 +121,10 @@ end)
 --  end
 --end)
 
-UTIL_create_event_handler(defines.events.on_player_joined_game, function(event)
-  local p = game.get_player(event.player_index)
-  __request_locale(p)
-end)
+--UTIL_create_event_handler(defines.events.on_player_joined_game, function(event)
+  --local p = game.get_player(event.player_index)
+  --__request_locale(p)
+--end)
 
 UTIL_create_event_handler(defines.events.on_player_locale_changed, function(event)
   local p = game.get_player(event.player_index)
