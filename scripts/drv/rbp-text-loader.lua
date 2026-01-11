@@ -82,7 +82,10 @@ UTIL_create_event_handler(defines.events.on_string_translated, function(event)
 
     -- 만약 틀린 값이면 해당 locale의 번역이 없는 것이다. 이 경우에 번역을 요청하면 무조건 영어로 옴.
     -- 만약 영어 테이블이 없는 경우, 영어 테이블을 새로 만든다.
-    elseif not storage["rbp-text-loader"].locale["en"] then
+    --
+    -- 예외사항이 있는데 플레이어가 Join 시엔 무조건 locale이 en으로 뜨지만 플레이어의 locale에 텍스트가 있으면 en으로 요청해도
+    -- 해당 유저의 locale로 텍스트가 들어옴.
+    elseif not storage["rbp-text-loader"].locale["en"] and ((p.locale == "en" and event.result == "en") or p.locale ~= "en") then
       storage["rbp-text-loader"].locale[p.locale] = "none"
       storage["rbp-text-loader"].locale["en"] = {}
       for _, v in pairs(p.request_translations(__string_key)) do
@@ -110,21 +113,15 @@ bootstrap.create_configuration_changed_handler(function()
 end)
 
 --bootstrap.create_init_handler(function()
---  --if not game.is_multiplayer() and not game.simulation then
---  --  __request_locale(game.connected_players[1])
---  --end
---end)
-
---bootstrap.create_configuration_changed_handler(function()
---  if not game.is_multiplayer() and not game.simulation then
+--  if not game.is_multiplayer() and not game.simulation and #game.connected_players > 0 then
 --    __request_locale(game.connected_players[1])
 --  end
 --end)
 
---UTIL_create_event_handler(defines.events.on_player_joined_game, function(event)
-  --local p = game.get_player(event.player_index)
-  --__request_locale(p)
---end)
+UTIL_create_event_handler(defines.events.on_player_joined_game, function(event)
+  local p = game.get_player(event.player_index)
+  __request_locale(p)
+end)
 
 UTIL_create_event_handler(defines.events.on_player_locale_changed, function(event)
   local p = game.get_player(event.player_index)

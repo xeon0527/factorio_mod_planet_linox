@@ -1,4 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.6.13
+Date: 11. 1. 2026
+  Bugfixes:
+    - Fixed an issue where upgrading an oil pipeline and then expanding the Linox corridor would overwrite the edge, making the pipeline unusable.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.6.12
+Date: 11. 1. 2026
+  Bugfixes:
+    - Fixed an issue where a locale error could cause the game to crash.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.6.11
 Date: 10. 1. 2026
   Bugfixes:
