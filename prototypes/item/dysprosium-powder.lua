@@ -37,6 +37,7 @@ data:extend {
     allow_productivity = true,
     --allow_quality = false,
     main_product = "dysprosium-powder",
+    maximum_productivity = 5.0,
 
     surface_conditions =
     {

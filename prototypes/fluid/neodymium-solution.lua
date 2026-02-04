@@ -50,6 +50,7 @@ data:extend {
     },
 
     main_product = "neodymium-solution",
+    maximum_productivity = 5.0,
 
     allow_productivity = true,
   },

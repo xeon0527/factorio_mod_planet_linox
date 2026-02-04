@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.6.14
+Date: 4. 2. 2026
+  Bugfixes:
+    - Fixed an issue where the chemical filter could not use the holmium solution production recipe.
+    - Fixed an issue where some Chemical Tank recipes had a maximum productivity of 300%.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.6.13
 Date: 11. 1. 2026
   Bugfixes:

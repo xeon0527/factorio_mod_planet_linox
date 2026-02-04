@@ -50,6 +50,7 @@ data:extend {
     },
 
     main_product = "erbium-solution",
+    maximum_productivity = 5.0,
 
     allow_productivity = true,
   },

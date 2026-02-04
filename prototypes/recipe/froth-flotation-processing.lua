@@ -32,6 +32,7 @@ data:extend {
       {type = "item", name = "hydrophobic-rare-earth-powder", probability = 0.5,amount_min = 1, amount_max = 2},
     },
     allow_productivity = true,
+    maximum_productivity = 5.0,
 
     surface_conditions =
     {

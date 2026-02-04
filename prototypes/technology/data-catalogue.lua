@@ -25,6 +25,7 @@ data:extend {
     effects =
     {
       { type = "unlock-recipe", recipe = "linox-building_chemical-filter" },
+      { type = "unlock-recipe", recipe = "linox-recipe_chemical-filter_holmium-solution" },
     },
     ignore_tech_cost_multiplier = true,
   },
