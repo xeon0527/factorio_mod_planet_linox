@@ -6,7 +6,6 @@ data:extend {
     name = "linox-technology_facility-upgrade",
     order = "linox",
     icons = util_icon.technology_icon_script_research("__linox__/graphics/technology/facility-upgrade.png", 500),
-    essential = true,
     prerequisites = {"linox-technology_exploring-linox-landing-site"},
     research_trigger = {
       type = "scripted",
@@ -205,7 +204,6 @@ data:extend {
         time = 60
       },
       ignore_tech_cost_multiplier = true,
-      essential = true,
     },
     {
       type = "technology",
@@ -237,7 +235,6 @@ data:extend {
         time = 60
       },
       ignore_tech_cost_multiplier = true,
-      essential = true,
     },
 
     {

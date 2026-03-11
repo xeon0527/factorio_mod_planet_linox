@@ -6,7 +6,6 @@ data:extend {
     name = "linox-technology_planetary-mining-technology",
     order = "linox",
     icons = util_icon.technology_icon_script_research("__linox__/graphics/technology/planetary-mining-technology.png", 500),
-    essential = true,
     prerequisites = {"linox-technology_exploring-linox-landing-site"},
     research_trigger = {
       type = "scripted",

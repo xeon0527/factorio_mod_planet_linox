@@ -40,7 +40,6 @@ __MODULE__.data_update = function()
           { type = "unlock-recipe", recipe = "linox-moshine-recipe_neodymium-crushing" },
         },
         ignore_tech_cost_multiplier = true,
-        essential = true,
       },
     }
   end

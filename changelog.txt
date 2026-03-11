@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.6.15
+Date: 10. 3. 2026
+  Minor Features:
+    - Reorganized the Essential Technology settings to better align with the vanilla game standards.
+    - Changed so that the Lava Data Card can be produced in the Electromagnetic Plant.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.6.14
 Date: 4. 2. 2026
   Bugfixes:

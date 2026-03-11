@@ -28,7 +28,7 @@ data:extend {
 local recipe = {
   type = "recipe",
   name = "linox-item_lava-data-card",
-  category = "crafting-with-fluid",
+  category = "electronics-or-assembling",
   energy_required = 2,
   enabled = false,
   ingredients =

@@ -6,7 +6,6 @@ data:extend {
     name = "linox-technology_laboratory-database",
     order = "linox",
     icons = util_icon.technology_icon_script_research("__linox__/graphics/technology/laboratory-database.png", 500),
-    essential = true,
     prerequisites = {"linox-technology_exploring-linox-landing-site"},
     research_trigger = {
       type = "scripted",
@@ -29,7 +28,6 @@ data:extend {
         { type = "unlock-recipe", recipe = "blueprint-deployer2" },
         { type = "unlock-recipe", recipe = "recursive-blueprints-scanner" },
       },
-      essential = true,
     },
     {
       type = "technology",
@@ -219,7 +217,6 @@ data:extend {
             floating = true
           }
         },
-        essential = true,
         prerequisites = {
           "linox-technology_dysprosium-data-card",
           "linox-technology_samarium-data-card",
@@ -292,7 +289,6 @@ data:extend {
           { type = "unlock-recipe", recipe = "samarium" },
         },
         ignore_tech_cost_multiplier = true,
-        essential = true,
       },
 
       {
@@ -433,7 +429,6 @@ data:extend {
           { type = "unlock-recipe", recipe = "linox-recipe_froth-flotation-processing" },
         },
         ignore_tech_cost_multiplier = true,
-        essential = true,
       },
 
       {
