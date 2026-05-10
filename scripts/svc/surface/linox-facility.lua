@@ -168,7 +168,7 @@ __MODULE__.expand_facility = function(level)
       if loc == "auto" then
         loc = rbp_text_loader.get_first_locale()
       end
-    else
+    elseif #game.connected_players > 0 then
       local p = game.connected_players[1]
       loc = p.mod_settings["linox-settings_rbp-example-local-language"].value
       if loc  == "auto" then

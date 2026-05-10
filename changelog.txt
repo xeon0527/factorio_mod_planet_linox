@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.6.16
+Date: 10. 5. 2026
+  Bugfixes:
+    - Changed the behavior so that if locale data fails to load, a Locale Load Failed text is displayed instead of causing a game crash.
+
+  Changes:
+    - Added zhuyifei1999 as a creator of the blueprint examples.
+---------------------------------------------------------------------------------------------------
 Version: 1.6.15
 Date: 10. 3. 2026
   Minor Features:

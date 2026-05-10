@@ -31,23 +31,34 @@ __MODULE__.create_localization_blueprint_item = function(inventory, locale)
   inv[1].import_stack(rbp_code.blueprint)
   local bp = inv[1]
 
-  bp.blueprint_description = "Made by SkunkMaster"
+  bp.blueprint_description = "Made by SkunkMaster and zhuyifei1999"
 
   local entities = bp.get_blueprint_entities()
-  for _, e in pairs(entities) do
-    if __is_combinator(e.name) then
-      for id, txt in pairs(loc) do
-        local idid = "{"..id.."}"
-        if e.player_description == idid then
-          e.player_description = txt
+  
+  if loc then
+    for _, e in pairs(entities) do
+      if __is_combinator(e.name) then
+        for id, txt in pairs(loc) do
+          local idid = "{"..id.."}"
+          if e.player_description == idid then
+            e.player_description = txt
+          end
+        end
+      elseif e.name == "display-panel" then
+        for id, txt in pairs(loc) do
+          local idid = "{"..id.."}"
+          if e.text == idid then
+            e.text = txt
+          end
         end
       end
-    elseif e.name == "display-panel" then
-      for id, txt in pairs(loc) do
-        local idid = "{"..id.."}"
-        if e.text == idid then
-          e.text = txt
-        end
+    end
+  else
+    for _, e in pairs(entities) do
+      if __is_combinator(e.name) then
+        e.player_description = ""
+      elseif e.name == "display-panel" then
+        e.text = "Locale Load Fail"
       end
     end
   end
