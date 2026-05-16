@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.6.17
+Date: 16. 5. 2026
+  Minor Features:
+    - Added a message recommending players check the Tips and Tricks when entering a planet for the first time.
+    - Fixed an issue where some recipes were unnecessarily displayed in player crafting.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.6.16
 Date: 10. 5. 2026
   Bugfixes:

@@ -221,6 +221,7 @@ UTIL_create_event_handler(defines.events.on_cargo_pod_delivered_cargo, function(
       if not storage.story.flag.visited_linox then
         --game.print("착륙 패드를 수색해보니 내부 시설로 내려가는 수상한 엘리베이터를 발견할 수 있었다.");
         game.print({"system.elevator-found"});
+        game.print({"system.game-tip"});
         storage.story.flag.visited_linox = true;
       end
     end
