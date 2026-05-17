@@ -38,4 +38,4 @@ surface.create_entity{
   create_build_effect_smoke = false,
 }
   
-UTIL_ensure_entity(surface, { name = "linox-special_circuit-pole", position = {-2,2}})
+UTIL_ensure_entity(surface, { name = "linox-special_circuit-pole", position = {0,2}})

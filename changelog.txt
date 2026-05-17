@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.6.18
+Date: 18. 5. 2026
+  Minor Features:
+    - Adjusted some of the dialogue with L.O.R.A.X to make it more helpful for game progression.
+    - Fixed an issue where some objects shown in Tips and Tricks were outdated versions.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.6.17
 Date: 16. 5. 2026
   Minor Features:

@@ -284,6 +284,7 @@ UTIL_create_event_handler("linox-custom-event_gui-dialog-on-select", function(ev
       dialog.add_talk(player, dialog.talker.partner, {"npc-talk.lorax_s3-2_t2"})
       dialog.add_talk(player, dialog.talker.partner, {"npc-talk.lorax_s3-2_t3"})
       dialog.add_talk(player, dialog.talker.partner, {"npc-talk.lorax_s3-2_t4"})
+      dialog.add_talk(player, dialog.talker.partner, {"npc-talk.lorax_s3-2_t5"})
       dialog.add_select(player, "2-1", {"npc-talk.lorax_s3-2_s0"}, dialog.talker.player);
 
     elseif sel_id == "2-1" then
@@ -367,8 +368,13 @@ UTIL_create_event_handler("linox-custom-event_gui-dialog-on-select", function(ev
 
     elseif sel_id == "6-2" then
       dialog.add_talk(player, dialog.talker.partner, {"npc-talk.lorax_s3-6-2_t0"})
-      dialog.add_talk(player, dialog.talker.partner, {"npc-talk.lorax_s3-6-2_t1"})
-      dialog.add_talk(player, dialog.talker.partner, {"npc-talk.lorax_s3-6-2_t2"})
+      dialog.add_select(player, "6-3", {"npc-talk.lorax_s3-6-2_s0"}, dialog.talker.player)
+
+    elseif sel_id == "6-3" then
+      dialog.add_talk(player, dialog.talker.partner, {"npc-talk.lorax_s3-6-3_t0"})
+      dialog.add_talk(player, dialog.talker.partner, {"npc-talk.lorax_s3-6-3_t1"})
+      dialog.add_talk(player, dialog.talker.partner, {"npc-talk.lorax_s3-6-3_t2"})
+      dialog.add_talk(player, dialog.talker.partner, {"npc-talk.lorax_s3-6-3_t3"})
       dialog.add_select(player, "1", {"npc-talk.lorax_back"});
 
       player.force.script_trigger_research("linox-technology_recursive-blueprint");

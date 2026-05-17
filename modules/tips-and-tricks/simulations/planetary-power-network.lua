@@ -42,7 +42,7 @@ surface.create_entity{
   create_build_effect_smoke = false,
 }
 
-local pole = UTIL_ensure_entity(surface, { name = "linox-special_circuit-pole", position = {-2,2}})
+local pole = UTIL_ensure_entity(surface, { name = "linox-special_circuit-pole", position = {0,2}})
 pole.destructible = false
 pole.minable = false
 pole.rotatable = false
@@ -86,12 +86,12 @@ end
 surface2.set_tiles(modify_tiles);
 
 surface2.create_entity{
-  name = "linox-building_cargo-landing-pad",
+  name = "linox-special_facility-elevator",
   position = {0,0},
   create_build_effect_smoke = false,
 }
 
-local pole2 = UTIL_ensure_entity(surface2, { name = "linox-special_circuit-pole", position = {-2,2}})
+local pole2 = UTIL_ensure_entity(surface2, { name = "linox-special_circuit-pole", position = {0,2}})
 pole2.destructible = false
 pole2.minable = false
 pole2.rotatable = false
