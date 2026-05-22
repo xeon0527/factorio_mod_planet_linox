@@ -138,3 +138,5 @@ data:extend {
     results = {{type="item", name="linox-building_neodymium-bulk-inserter", amount=1}}
   },
 }
+
+data.raw["inserter"]["bulk-inserter"].next_upgrade = "linox-building_neodymium-bulk-inserter"

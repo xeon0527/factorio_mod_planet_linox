@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.6.19
+Date: 22. 5. 2026
+  Minor Features:
+    - Bulk Inserters and Stack Inserters can now be upgraded to Neodymium Inserters.
+
+  Changes:
+    - Distribution Request Planner is no longer required as a mandatory dependency.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.6.18
 Date: 18. 5. 2026
   Minor Features:

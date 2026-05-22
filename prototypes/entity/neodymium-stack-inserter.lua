@@ -182,3 +182,4 @@ data:extend {
     results = {{type="item", name="linox-building_neodymium-stack-inserter", amount=1}}
   },
 }
+data.raw["inserter"]["stack-inserter"].next_upgrade = "linox-building_neodymium-stack-inserter"
