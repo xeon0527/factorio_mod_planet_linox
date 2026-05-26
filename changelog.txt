@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.6.20
+Date: 26. 5. 2026
+  Bugfixes:
+    - Fixed an issue where the maximum productivity for the Erbium Oxide and Neodymium Oxide recipes was not set correctly.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.6.19
 Date: 22. 5. 2026
   Minor Features:

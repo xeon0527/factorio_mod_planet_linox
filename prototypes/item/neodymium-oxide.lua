@@ -37,6 +37,7 @@ data:extend {
     },
     main_product = "neodymium-oxide",
     allow_productivity = true,
+    maximum_productivity = 5.0,
 
     surface_conditions =
     {
