@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.6.21
+Date: 5. 6. 2026
+  Changes:
+    - Increased the number of Core Roboports provided at the start from 10 to 12.
+
+  Bugfixes:
+    - Fixed an issue where high quality Terminal Belts and Terminal Pipes were not functioning correctly.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.6.20
 Date: 26. 5. 2026
   Bugfixes:

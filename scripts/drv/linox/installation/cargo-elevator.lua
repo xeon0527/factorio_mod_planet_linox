@@ -15,37 +15,6 @@ local function __draw_error(surface, position, up)
     sprite_name =  "linox-sprite_cargo-up-icon"
   end
 
-  --rendering.draw_rectangle{
-  --  color = {1, 1, 1},
-  --  left_top = { 
-  --    -(0.5 - 0.0625) + position.x,
-  --    -(0.5 - 0.0625) + position.y,
-  --  },
-  --  right_bottom = {
-  --    (0.5 - 0.0625) + position.x,
-  --    (0.5 - 0.0625) + position.y,
-  --  },
-  --  width = 3,
-  --  surface = surface,
-  --  target = mark_entity,
-  --}.bring_to_front()
---
-  --rendering.draw_rectangle{
-  --  color = {1, 0, 0},
-  --  left_top = { 
-  --    -(0.5 - 0.0625) + position.x,
-  --    -(0.5 - 0.0625) + position.y,
-  --  },
-  --  right_bottom = {
-  --    (0.5 - 0.0625) + position.x,
-  --    (0.5 - 0.0625) + position.y,
-  --  },
-  --  width = 3,
-  --  surface = surface,
-  --  target = mark_entity,
-  --  blink_interval = 30,
-  --}.bring_to_front()
-
   rendering.draw_sprite{
     sprite = "linox-sprite_cargo-frame-icon",
     x_scale = 0.5,
@@ -112,7 +81,12 @@ drv_events.create_build_entity_handler(function(event)
 
   local up = (surface_src.name == __LINOX_SURFACE__.ground) == (entity.linked_belt_type == "output")
 
-  local entity_dst = surface_dst.find_entity(__entity_name, entity.position);
+  local fe = surface_dst.find_entities_filtered{name = __entity_name, position = entity.position}
+  local entity_dst = nil
+  if fe and #fe > 0 then
+    entity_dst = fe[1]
+  end
+
   if entity_dst == nil then
     __draw_error(surface_src, entity.position, up)
     __draw_error(surface_dst, entity.position, up)
@@ -147,9 +121,12 @@ drv_events.create_destroy_entity_handler(function(event)
 
   if not surface_dst then return end
 
-  --entity.disconnect_linked_belts();
+  local fe = surface_dst.find_entities_filtered{name = __entity_name, position = entity.position}
+  local entity_dst = nil
+  if fe and #fe > 0 then
+    entity_dst = fe[1]
+  end
 
-  local entity_dst = surface_dst.find_entity(__entity_name, entity.position);
   if entity_dst then
     local up = (surface_dst.name == __LINOX_SURFACE__.ground) == (entity_dst.linked_belt_type == "output")
     entity_dst.disconnect_linked_belts();

@@ -73,7 +73,12 @@ drv_events.create_build_entity_handler(function(event)
   
   if not surface_dst then return end
 
-  local entity_dst = surface_dst.find_entity(__entity_name, entity.position);
+  local fe = surface_dst.find_entities_filtered{name = __entity_name, position = entity.position}
+  local entity_dst = nil
+  if fe and #fe > 0 then
+    entity_dst = fe[1]
+  end
+
   if entity_dst == nil then
     __draw_error(surface_src, entity.position)
     __draw_error(surface_dst, entity.position)
@@ -102,7 +107,12 @@ drv_events.create_destroy_entity_handler(function(event)
 
   if not surface_dst then return end
 
-  local entity_dst = surface_dst.find_entity(__entity_name, entity.position);
+  local fe = surface_dst.find_entities_filtered{name = __entity_name, position = entity.position}
+  local entity_dst = nil
+  if fe and #fe > 0 then
+    entity_dst = fe[1]
+  end
+
   if entity_dst then
     entity.fluidbox.remove_linked_connection(__link_id)
     __draw_error(surface_src, entity.position)

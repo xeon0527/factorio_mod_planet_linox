@@ -222,7 +222,7 @@ __MODULE__.expand_facility = function(level)
     if box3 then
       box3.insert{name = "logistic-robot", count = 500};
       box3.insert{name = "construction-robot", count = 500};
-      box3.insert{name = "linox-building_core-roboport", count = 10};
+      box3.insert{name = "linox-building_core-roboport", count = 12};
       box3.insert{name = "electric-engine-unit", count = 250};
     end
 
