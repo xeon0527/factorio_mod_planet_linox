@@ -107,8 +107,8 @@ end)
 UTIL_create_event_handler(defines.events.on_cargo_pod_finished_ascending, function(event)
   local pod = event.cargo_pod;
   if event.player_index == nil and pod.cargo_pod_destination.type == defines.cargo_destination.station then
-    local station = pod.cargo_pod_destination.station;
-    if station.type == "cargo-landing-pad" and station.surface.name == __LINOX_SURFACE__.ground then
+    local station = pod.cargo_pod_destination.station
+    if station and station.type == "cargo-landing-pad" and station.surface.name == __LINOX_SURFACE__.ground then
       local tech = game.forces["player"].technologies["linox-technology_safety-of-entering-orbit"];
       if not tech.researched then 
         local inv = pod.get_inventory(defines.inventory.cargo_unit)
