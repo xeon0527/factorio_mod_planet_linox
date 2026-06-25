@@ -1,4 +1,19 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.6.23
+Date: 25. 6. 2026
+  Changes:
+    - Chemical Tank recipes are now only enabled after the Chemical Tank has been unlocked.
+
+  Bugfixes:
+    - Fixed an issue where atomic bombs could destroy Linox terrain.
+    - Fixed a string error in the tooltip of the Linox Cargo Landing Pad.
+    - Fixed an inconsistency in the name of the Safety of Entering Orbit research in the Cargo Loss Tips and Tricks entry.
+    - Fixed an issue where the Recursive Blueprint Tips and Tricks entry could cause errors under certain conditions.
+
+  Compatibility:
+    - Added compatibility for K2 Spaced Out so that Samarium robots correctly inherit the performance adjustments made by the mod.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.6.22
 Date: 11. 6. 2026
   Bugfixes:

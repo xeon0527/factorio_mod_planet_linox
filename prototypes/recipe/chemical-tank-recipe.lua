@@ -5,7 +5,7 @@ data:extend {
     type = "recipe",
     name = "linox-recipe_chemical-tank_heavy-oil-cracking",
     category = "linox-recipe-category_chemical-tank",
-    enabled = true,
+    enabled = false,
     energy_required = 1,
     ingredients =
     {
@@ -37,7 +37,7 @@ data:extend {
     type = "recipe",
     name = "linox-recipe_chemical-tank_light-oil-cracking",
     category = "linox-recipe-category_chemical-tank",
-    enabled = true,
+    enabled = false,
     energy_required = 1,
     ingredients =
     {
@@ -71,7 +71,7 @@ data:extend {
     subgroup = "fluid-recipes",
     order = "c[oil-products]-b[sulfuric-acid]",
     energy_required = 1,
-    enabled = true,
+    enabled = false,
     localised_name = {"", {"entity-name.linox-building_chemical-tank"}, " - ", {"fluid-name.sulfuric-acid"}},
     icons = util_icon.recipe_icon_chemical_tank("__base__/graphics/icons/fluid/sulfuric-acid.png", 64),
     ingredients =
@@ -99,7 +99,7 @@ data:extend {
     type = "recipe",
     name = "linox-recipe_chemical-tank_lubricant",
     category = "linox-recipe-category_chemical-tank",
-    enabled = true,
+    enabled = false,
     localised_name = {"", {"entity-name.linox-building_chemical-tank"}, " - ", {"fluid-name.lubricant"}},
     icons = util_icon.recipe_icon_chemical_tank("__base__/graphics/icons/fluid/lubricant.png", 64),
     energy_required = 1,

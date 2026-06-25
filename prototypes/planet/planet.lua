@@ -47,7 +47,8 @@ PlanetsLib:extend {
       ["magnetic-field"] = __LINOX_PLANET__.magnetic_field,
       ["solar-power"] = __LINOX_PLANET__.solar_power,
       pressure = __LINOX_PLANET__.pressure,
-      gravity = __LINOX_PLANET__.gravity
+      gravity = __LINOX_PLANET__.gravity,
+      ["linox-no-nuke"] = 1,
     },
 
     --lightning_properties =

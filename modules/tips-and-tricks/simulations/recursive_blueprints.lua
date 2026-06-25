@@ -27,7 +27,9 @@ local techs = {
   "inserter-capacity-bonus-7",
 }
 for _, tech in pairs(techs) do
-  game.forces.player.technologies[tech].researched = true
+  if game.forces.player.technologies[tech] then
+    game.forces.player.technologies[tech].researched = true
+  end
 end
 
 

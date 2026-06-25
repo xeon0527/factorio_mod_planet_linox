@@ -32,10 +32,11 @@ UTIL_create_event_handler(defines.events.on_surface_created, function(event)
     surface.map_gen_settings = settings;
 
     surface.localised_name = { "space-location-name."..__LINOX_SURFACE__.facility }
-    surface.set_property("gravity", __LINOX_PLANET__.gravity);
-    surface.set_property("magnetic-field", __LINOX_PLANET__.magnetic_field);
-    surface.set_property("solar-power", 0);
-    surface.set_property("pressure", __LINOX_PLANET__.pressure);
+    surface.set_property("gravity", __LINOX_PLANET__.gravity)
+    surface.set_property("magnetic-field", __LINOX_PLANET__.magnetic_field)
+    surface.set_property("solar-power", 0)
+    surface.set_property("pressure", __LINOX_PLANET__.pressure)
+    surface.set_property("linox-no-nuke", 1)
     surface.create_global_electric_network();
 
     __MODULE__.set_lighting(false)

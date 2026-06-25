@@ -427,6 +427,11 @@ data:extend {
         {
           { type = "unlock-recipe", recipe = "linox-building_chemical-tank" },
           { type = "unlock-recipe", recipe = "linox-recipe_froth-flotation-processing" },
+          
+          { type = "unlock-recipe", recipe = "linox-recipe_chemical-tank_heavy-oil-cracking" },
+          { type = "unlock-recipe", recipe = "linox-recipe_chemical-tank_light-oil-cracking" },
+          { type = "unlock-recipe", recipe = "linox-recipe_chemical-tank_sulfuric-acid" },
+          { type = "unlock-recipe", recipe = "linox-recipe_chemical-tank_lubricant" },
         },
         ignore_tech_cost_multiplier = true,
       },

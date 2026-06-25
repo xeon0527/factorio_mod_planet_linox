@@ -15,6 +15,7 @@ require("prototypes.custom-input")
 require("prototypes.recipe-category")
 require("prototypes.shortcuts")
 require("prototypes.sprits")
+require("prototypes.surface-property")
 require("prototypes.tile")
 require("modules/tips-and-tricks/_tips-and-tricks")
 
