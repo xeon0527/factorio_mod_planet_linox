@@ -15,13 +15,13 @@ __MODULE__.control = function()
       tech["landfill"].researched = true
       tech["fluid-handling"].researched = true
       tech["oil-processing"].researched = true
-      
-      --tech["logistic-robotics"].researched = true
-      --tech["construction-robotics"].researched = true
-      --if not settings.startup["linox-settings_remove-logistic-system"].value then
-      --  tech["logistic-system"].researched = true
-      --end
-      
+
+      tech["logistic-robotics"].researched = true
+      tech["construction-robotics"].researched = true
+      if not settings.startup["linox-settings_remove-logistic-system"].value then
+        tech["logistic-system"].researched = true
+      end
+
       tech["calcite-processing"].researched = true
       tech["tungsten-carbide"].researched = true
       tech["foundry"].researched = true
@@ -30,6 +30,9 @@ __MODULE__.control = function()
       tech["worker-robots-speed-1"].researched = true
       tech["worker-robots-speed-2"].researched = true
       tech["worker-robots-speed-3"].researched = true
+
+      tech["inserter-capacity-bonus-1"].researched = true
+      tech["inserter-capacity-bonus-2"].researched = true
     end
   end)
 end

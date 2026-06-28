@@ -44,3 +44,8 @@ table.insert(data.raw["explosion"]["nuke-effects-space"].surface_conditions, {
   min = 0,
   max = 0,
 })
+
+table.insert(data.raw["technology"]["foundry"].effects, {
+  type = "unlock-recipe",
+  recipe = "linox-recipe_linox-foundry"
+})
