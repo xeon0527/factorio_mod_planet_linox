@@ -6,6 +6,6 @@ if linox_facility.get() then
   local entity = UTIL_ensure_entity(surface, {name = "linox-special_facility-elevator", position = {0,0}})
   entity.health = entity.max_health 
   entity.destructible = false
-  entity.minable = false
+  entity.minable_flag = false
   entity.operable = false
 end

@@ -7,7 +7,7 @@ data:extend {
     icons = util_icon.recipe_icon_sintering("__space-age__/graphics/icons/tungsten-carbide.png", 64),
     energy_required = 1,
     enabled = false,
-    category = "linox-recipe-category_sintering",
+    categories = {"linox-recipe-category_sintering"},
     ingredients =
     {
       {type = "item", name = "coal", amount = 4},

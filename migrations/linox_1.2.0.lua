@@ -12,7 +12,7 @@ if linox_ground.get() then
 
   entity = UTIL_ensure_entity(surface, { name = "linox-special_circuit-pole", position = {-2,2}})
   entity.destructible = false
-  entity.minable = false
+  entity.minable_flag = false
   entity.rotatable = false
 end
 
@@ -26,7 +26,7 @@ if linox_facility.get() then
 
   entity = UTIL_ensure_entity(surface, { name = "linox-special_circuit-pole", position = {-2,2}})
   entity.destructible = false
-  entity.minable = false
+  entity.minable_flag = false
   entity.rotatable = false
 end
 

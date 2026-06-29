@@ -27,7 +27,7 @@ data:extend {
 local recipe = {
   type = "recipe",
   name = "linox-item_erbium-data-card",
-  category = "electronics-or-assembling",
+  categories = {"crafting-with-fluid", "electromagnetics"},
   energy_required = 5,
   enabled = false,
   ingredients =

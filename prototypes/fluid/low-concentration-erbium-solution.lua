@@ -29,7 +29,7 @@ data:extend {
         tint = tint,
       }
     },
-    category = "chemistry-or-cryogenics",
+    categories = {"chemistry", "cryogenics"},
     subgroup = "fluid-recipes",
     order = "linox-erbium-a",
     auto_recycle = false,

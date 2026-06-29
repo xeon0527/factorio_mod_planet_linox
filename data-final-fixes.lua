@@ -6,7 +6,7 @@ for _, fluid in pairs(data.raw.fluid) do
       {
         type = "recipe",
         name = fluid.name.."-outlet",
-        category = "linox-recipe-category_outlet",
+        categories = {"linox-recipe-category_outlet"},
         enabled = true,
         hidden_in_factoriopedia = true,
         hide_from_player_crafting = true,

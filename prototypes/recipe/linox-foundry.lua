@@ -5,7 +5,7 @@ data:extend {
     type = "recipe",
     name = "linox-recipe_linox-foundry",
     icons = util_icon.recipe_icon_linox("__space-age__/graphics/icons/foundry.png", 64),
-    category = "metallurgy-or-assembling",
+    categories = {"metallurgy", "crafting-with-fluid"},
     enabled = false,
     ingredients =
     {

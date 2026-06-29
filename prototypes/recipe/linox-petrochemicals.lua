@@ -7,7 +7,7 @@ data:extend {
     icons = util_icon.recipe_icon_linox("__base__/graphics/icons/fluid/coal-liquefaction.png", 64),
     energy_required = 5,
     enabled = false,
-    category = "oil-processing",
+    categories = {"oil-processing"},
     ingredients =
     {
       {type = "fluid", name = "lava", amount = 150, fluidbox_index = 1},
@@ -37,7 +37,7 @@ data:extend {
     icons = util_icon.recipe_icon_linox("__base__/graphics/icons/rocket-fuel.png", 64),
     energy_required = 5,
     enabled = false,
-    category = "chemistry",
+    categories = {"chemistry"},
     ingredients =
     {
       { type = "fluid", name = "lava", amount = 100 },

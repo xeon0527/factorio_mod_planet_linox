@@ -94,12 +94,12 @@ UTIL_create_event_handler(defines.events.on_surface_created, function(event)
       create_build_effect_smoke = false,
     });
     cargo_pad.destructible = false;
-    cargo_pad.minable = false;
+    cargo_pad.minable_flag = false;
     cargo_pad.operable = false;
 
     local pole = UTIL_ensure_entity(surface, { name = "linox-special_circuit-pole", position = {0,2}})
     pole.destructible = false
-    pole.minable = false
+    pole.minable_flag = false
     pole.rotatable = false
 
     local force = game.forces["player"]
@@ -134,7 +134,7 @@ __MODULE__.create_radar = function()
     create_build_effect_smoke = false,
   })
   radar.destructible = false;
-  radar.minable = false;
+  radar.minable_flag = false;
   radar.operable = false;
 end
 

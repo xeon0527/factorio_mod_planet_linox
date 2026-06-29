@@ -44,7 +44,7 @@ surface.create_entity{
 
 local pole = UTIL_ensure_entity(surface, { name = "linox-special_circuit-pole", position = {0,2}})
 pole.destructible = false
-pole.minable = false
+pole.minable_flag = false
 pole.rotatable = false
 
 for _, x in pairs({-10.5, -7.5, -4.5, -1.5, 1.5, 4.5, 7.5, 10.5}) do
@@ -93,7 +93,7 @@ surface2.create_entity{
 
 local pole2 = UTIL_ensure_entity(surface2, { name = "linox-special_circuit-pole", position = {0,2}})
 pole2.destructible = false
-pole2.minable = false
+pole2.minable_flag = false
 pole2.rotatable = false
 
 for i = -5.5, 3.5, 1 do

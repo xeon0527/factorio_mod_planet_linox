@@ -23,7 +23,7 @@ data:extend {
   {
     type = "recipe",
     name = "neodymium-oxide",
-    category = "linox-recipe-category_chemical-filter",
+    categories = {"linox-recipe-category_chemical-filter"},
     energy_required = 2,
     enabled = false,
     ingredients =

@@ -6,7 +6,7 @@ data:extend {
     energy_required = 1,
     enabled = false,
     auto_recycle = false,
-    category = "chemistry-or-cryogenics",
+    categories = {"chemistry", "cryogenics"},
     surface_conditions =
     {
       {

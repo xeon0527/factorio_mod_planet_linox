@@ -20,7 +20,7 @@ data:extend {
     energy_required = 2,
     enabled = false,
     auto_recycle = false,
-    category = "linox-recipe-category_chemical-tank",
+    categories = {"linox-recipe-category_chemical-tank"},
     ingredients =
     {
       {type = "item", name = "rare-earth-powder", amount = 2},
@@ -28,8 +28,8 @@ data:extend {
       {type = "fluid", name = "water", amount = 100},
     },
     results = {
-      {type = "item", name = "hydrophilic-rare-earth-powder", probability = 0.5, amount_min = 1, amount_max = 2},
-      {type = "item", name = "hydrophobic-rare-earth-powder", probability = 0.5,amount_min = 1, amount_max = 2},
+      {type = "item", name = "hydrophilic-rare-earth-powder", shared_probability = { min = 0, max = 0.5 }, amount_min = 1, amount_max = 2},
+      {type = "item", name = "hydrophobic-rare-earth-powder", shared_probability = { min = 0.5, max = 1 }, amount_min = 1, amount_max = 2},
     },
     allow_productivity = true,
     maximum_productivity = 5.0,

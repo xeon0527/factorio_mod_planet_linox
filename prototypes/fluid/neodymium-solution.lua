@@ -19,7 +19,7 @@ data:extend {
     name = "neodymium-solution",
     icon = "__linox__/graphics/icons/neodymium-solution.png",
     icon_size = 64,
-    category = "linox-recipe-category_chemical-tank",
+    categories = {"linox-recipe-category_chemical-tank"},
     subgroup = "fluid-recipes",
     order = "linox-neodymium-c",
     auto_recycle = false,

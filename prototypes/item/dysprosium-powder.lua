@@ -21,7 +21,7 @@ data:extend {
   {
     type = "recipe",
     name = "dysprosium-powder",
-    category = "linox-recipe-category_chemical-tank",
+    categories = {"linox-recipe-category_chemical-tank"},
     energy_required = 5,
     enabled = false,
     ingredients =
@@ -31,8 +31,8 @@ data:extend {
       {type = "fluid", name = "water", amount = 100},
     },
     results = {
-      {type = "item", name = "dysprosium-powder", probability = 0.5, amount = 1},
-      {type = "item", name = "stone", probability = 0.5, amount = 1}
+      {type = "item", name = "dysprosium-powder", shared_probability = { min = 0, max = 0.5 }, amount = 1},
+      {type = "item", name = "stone", shared_probability = { min = 0.5, max = 1 }, amount = 1}
     },
     allow_productivity = true,
     --allow_quality = false,

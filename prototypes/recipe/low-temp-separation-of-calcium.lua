@@ -6,7 +6,7 @@ local recipe = {
   icons = util_icon.recipe_icon_linox("__space-age__/graphics/icons/calcite.png", 64),
   energy_required = 3,
   enabled = false,
-  category = "chemistry-or-cryogenics",
+  categories = {"chemistry", "cryogenics"},
   ingredients =
   {
     {type = "fluid", name = "lava", amount = 250},

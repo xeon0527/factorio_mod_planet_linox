@@ -7,7 +7,7 @@ data:extend {
     icons = util_icon.recipe_icon_sintering("__space-age__/graphics/icons/tungsten-plate.png", 64),
     energy_required = 1,
     enabled = false,
-    category = "linox-recipe-category_sintering",
+    categories = {"linox-recipe-category_sintering"},
     ingredients =
     {
       {type = "item", name = "tungsten-ore", amount = 2},
@@ -24,7 +24,7 @@ data:extend {
     icons = util_icon.recipe_icon_sintering("__base__/graphics/icons/iron-gear-wheel.png", 64, {1.0, 0.66, 1.0}),
     energy_required = 1,
     enabled = false,
-    category = "linox-recipe-category_sintering",
+    categories = {"linox-recipe-category_sintering"},
     ingredients =
     {
       {type = "item", name = "tungsten-ore", amount = 2},
@@ -41,7 +41,7 @@ data:extend {
     icons = util_icon.recipe_icon_sintering("__base__/graphics/icons/iron-stick.png", 64, {1.0, 0.66, 1.0}),
     energy_required = 1,
     enabled = false,
-    category = "linox-recipe-category_sintering",
+    categories = {"linox-recipe-category_sintering"},
     ingredients =
     {
       {type = "item", name = "tungsten-ore", amount = 2},

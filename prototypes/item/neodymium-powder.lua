@@ -23,7 +23,7 @@ data:extend {
   {
     type = "recipe",
     name = "neodymium-powder",
-    category = "smelting",
+    categories = {"smelting"},
     energy_required = 1,
     enabled = false,
     ingredients =

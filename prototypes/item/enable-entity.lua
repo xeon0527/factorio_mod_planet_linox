@@ -20,7 +20,7 @@ data:extend {
   {
     type = "recipe",
     name = "linox-recipe_enable-entity",
-    category = "linox-recipe-category_enable-entity",
+    categories = {"linox-recipe-category_enable-entity"},
     energy_required = 100000000000000000000000,
     enabled = true,
     ingredients = {{type = "item", name = "linox-item_enable-entity", amount = 1}},

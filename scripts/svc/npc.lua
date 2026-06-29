@@ -38,7 +38,7 @@ local function __create_lorax(surface, position)
 
   if entity_lorax then
     entity_lorax.destructible = false;
-    entity_lorax.minable = false;
+    entity_lorax.minable_flag = false;
     entity_lorax.rotatable = false;
     entity_lorax.operable = false;
     rendering.draw_text{
@@ -65,10 +65,10 @@ local function __create_network_terminal(surface, position)
   };
 
   if entity_network_terminal then
-    entity_network_terminal.destructible = false;
-    entity_network_terminal.minable = false;
-    entity_network_terminal.rotatable = false;
-    entity_network_terminal.operable = false;
+    entity_network_terminal.destructible = false
+    entity_network_terminal.rotatable = false
+    entity_network_terminal.operable = false
+    entity_network_terminal.minable_flag = false
     rendering.draw_text{
       text = {"entity-name."..__MODULE__.type.network_terminal},
       surface = surface,
@@ -93,10 +93,10 @@ local function __create_power_converter(surface, position)
   };
 
   if entity then
-    entity.destructible = false;
-    entity.minable = false;
-    entity.rotatable = false;
-    entity.operable = false;
+    entity.destructible = false
+    entity.rotatable = false
+    entity.operable = false
+    entity.minable_flag = false
 
     --entity.electric_buffer_size = 0
     --entity.power_production = 0

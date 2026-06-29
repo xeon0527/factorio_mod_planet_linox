@@ -23,7 +23,7 @@ data:extend {
   {
     type = "recipe",
     name = "erbium-powder",
-    category = "smelting",
+    categories = {"smelting"},
     energy_required = 1,
     enabled = false,
     ingredients =

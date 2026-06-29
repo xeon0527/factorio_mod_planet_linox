@@ -76,7 +76,7 @@ __MODULE__.create = function(position_limit)
           create_build_effect_smoke = false,
         });
         entity.destructible = false;
-        entity.minable = false;
+        entity.minable_flag = false;
         return
       end
     end

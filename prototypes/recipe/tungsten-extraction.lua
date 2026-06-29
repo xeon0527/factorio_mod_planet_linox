@@ -9,7 +9,7 @@ data:extend {
     order = "c[tungsten]-aa",
     energy_required = 8,
     enabled = false,
-    category = "metallurgy",
+    categories = {"metallurgy"},
     surface_conditions =
     {
       {

@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.7.0
+Date: 29. 6. 2026
+  Compatibility:
+    - Updated for compatibility with Factorio 2.1. Compatibility with Factorio 2.1 has not yet been fully verified. Game crashes or other critical bugs may still occur. Please play with caution, and if you encounter any issues, we would greatly appreciate a bug report.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.6.24
 Date: 29. 6. 2026
   Minor Features:

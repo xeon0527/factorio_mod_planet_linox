@@ -19,7 +19,7 @@ data:extend {
     name = "erbium-solution",
     icon = "__linox__/graphics/icons/erbium-solution.png",
     icon_size = 64,
-    category = "linox-recipe-category_chemical-tank",
+    categories = {"linox-recipe-category_chemical-tank"},
     subgroup = "fluid-recipes",
     order = "linox-erbium-c",
     auto_recycle = false,

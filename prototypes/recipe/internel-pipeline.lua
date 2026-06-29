@@ -5,7 +5,7 @@ data:extend {
     energy_required = 1,
     enabled = true,
     hidden_in_factoriopedia = true,
-    category = "linox-recipe-category_internel-pipeline",
+    categories = {"linox-recipe-category_internel-pipeline"},
     hide_from_player_crafting = true,
     results = {
       { type = "fluid", name = "crude-oil", amount = 1000 },
@@ -19,7 +19,7 @@ data:extend {
     energy_required = 1,
     enabled = true,
     hidden_in_factoriopedia = true,
-    category = "linox-recipe-category_internel-pipeline",
+    categories = {"linox-recipe-category_internel-pipeline"},
     hide_from_player_crafting = true,
     results = {
       { type = "fluid", name = "sulfuric-acid", amount = 1000 },

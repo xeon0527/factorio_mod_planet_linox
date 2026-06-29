@@ -5,7 +5,7 @@ data:extend {
     type = "recipe",
     name = "linox-recipe_advanced-acid-neutralisation",
     icons = util_icon.recipe_icon_linox("__space-age__/graphics/icons/fluid/acid-neutralisation.png", 64),
-    category = "chemistry-or-cryogenics",
+    categories = {"chemistry", "cryogenics"},
     subgroup = "fluid-recipes",
     order = "d[other-chemistry]-aa[acid-neutralisation]",
     auto_recycle = false,

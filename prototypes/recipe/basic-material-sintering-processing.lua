@@ -7,7 +7,7 @@ data:extend {
     icons = util_icon.recipe_icon_sintering("__base__/graphics/icons/iron-plate.png", 64),
     energy_required = 1,
     enabled = false,
-    category = "linox-recipe-category_sintering",
+    categories = {"linox-recipe-category_sintering"},
     ingredients =
     {
       {type = "item", name = "iron-ore", amount = 1},
@@ -24,7 +24,7 @@ data:extend {
     icons = util_icon.recipe_icon_sintering("__base__/graphics/icons/iron-gear-wheel.png", 64),
     energy_required = 1,
     enabled = false,
-    category = "linox-recipe-category_sintering",
+    categories = {"linox-recipe-category_sintering"},
     ingredients =
     {
       {type = "item", name = "iron-ore", amount = 1},
@@ -41,7 +41,7 @@ data:extend {
     icons = util_icon.recipe_icon_sintering("__base__/graphics/icons/iron-stick.png", 64),
     energy_required = 1,
     enabled = false,
-    category = "linox-recipe-category_sintering",
+    categories = {"linox-recipe-category_sintering"},
     ingredients =
     {
       {type = "item", name = "iron-ore", amount = 1},
@@ -58,7 +58,7 @@ data:extend {
     icons = util_icon.recipe_icon_sintering("__base__/graphics/icons/copper-plate.png", 64),
     energy_required = 1,
     enabled = false,
-    category = "linox-recipe-category_sintering",
+    categories = {"linox-recipe-category_sintering"},
     ingredients =
     {
       {type = "item", name = "copper-ore", amount = 1},
@@ -75,7 +75,7 @@ data:extend {
     icons = util_icon.recipe_icon_sintering("__base__/graphics/icons/copper-cable.png", 64),
     energy_required = 1,
     enabled = false,
-    category = "linox-recipe-category_sintering",
+    categories = {"linox-recipe-category_sintering"},
     ingredients =
     {
       {type = "item", name = "copper-ore", amount = 1},
@@ -92,7 +92,7 @@ data:extend {
     icons = util_icon.recipe_icon_sintering("__base__/graphics/icons/steel-plate.png", 64),
     energy_required = 3,
     enabled = false,
-    category = "linox-recipe-category_sintering",
+    categories = {"linox-recipe-category_sintering"},
     ingredients =
     {
       {type = "item", name = "iron-ore", amount = 1},

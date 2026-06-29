@@ -5,7 +5,7 @@ data:extend {
     type = "recipe",
     name = "linox-recipe_chemical-filter_holmium-solution",
     localised_name = {"", {"entity-name.linox-building_chemical-filter"}, " - ", {"fluid-name.holmium-solution"}},
-    category = "linox-recipe-category_chemical-filter",
+    categories = {"linox-recipe-category_chemical-filter"},
     subgroup = "fulgora-processes",
     order = "b[holmium]-b[holmium-solution]",
     auto_recycle = false,

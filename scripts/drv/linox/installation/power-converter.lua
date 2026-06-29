@@ -38,7 +38,7 @@ bootstrap.create_tick_handler(function()
         create_build_effect_smoke = false,
       }
       __DRV_LINOX_POWER_CONVERTER_INPUT_ENTITY__.destructible = false;
-      __DRV_LINOX_POWER_CONVERTER_INPUT_ENTITY__.minable = false;
+      __DRV_LINOX_POWER_CONVERTER_INPUT_ENTITY__.minable_flag = false;
       __DRV_LINOX_POWER_CONVERTER_INPUT_ENTITY__.rotatable = false;
       __DRV_LINOX_POWER_CONVERTER_INPUT_ENTITY__.operable = false;
     end
@@ -56,7 +56,7 @@ bootstrap.create_tick_handler(function()
         create_build_effect_smoke = false,
       }
       __DRV_LINOX_POWER_CONVERTER_OUTPUT_ENTITY__.destructible = false;
-      __DRV_LINOX_POWER_CONVERTER_OUTPUT_ENTITY__.minable = false;
+      __DRV_LINOX_POWER_CONVERTER_OUTPUT_ENTITY__.minable_flag = false;
       __DRV_LINOX_POWER_CONVERTER_OUTPUT_ENTITY__.rotatable = false;
       __DRV_LINOX_POWER_CONVERTER_OUTPUT_ENTITY__.operable = false;
     end

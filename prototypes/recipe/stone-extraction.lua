@@ -7,7 +7,7 @@ data:extend {
     icons = util_icon.recipe_icon_linox("__base__/graphics/icons/stone.png", 64),
     energy_required = 12,
     enabled = false,
-    category = "metallurgy",
+    categories = {"metallurgy"},
     ingredients =
     {
       {type = "fluid", name = "lava", amount = 500},

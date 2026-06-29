@@ -5,7 +5,7 @@ data:extend {
     energy_required = 3,
     enabled = false,
     auto_recycle = false,
-    category = "centrifuging",
+    categories = {"centrifuging"},
     ingredients =
     {
       {type = "item", name = "rare-earth-powder", amount = 5},

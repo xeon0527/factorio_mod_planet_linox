@@ -19,13 +19,15 @@ entity.flags = {
 }
 
 local tint = { 1.0, 0.66, 0.66 };
-for _, v1 in pairs(entity.graphics_set.connections) do
+for _, v1 in pairs(entity.graphics_set.connections.tileset) do
   for _, v2 in pairs(v1) do
     for _, v3 in pairs(v2) do
-      if v3.layers then
-        v3.layers[1].tint = tint;
-      else
-        v3.tint = tint;
+      for _, v4 in pairs(v3) do
+        if v4.layers then
+          v4.layers[1].tint = tint;
+        else
+          v4.tint = tint;
+        end
       end
     end
   end

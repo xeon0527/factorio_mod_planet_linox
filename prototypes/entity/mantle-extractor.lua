@@ -31,7 +31,7 @@ data:extend {
     damaged_trigger_effect = require ("__base__.prototypes.entity.hit-effects").entity(),
     
     crafting_speed = 1,
-    crafting_categories = { "linox-recipe-category_mantle-extractor" },
+    crafting_categories = {"linox-recipe-category_mantle-extractor"},
 
     tile_buildability_rules = nil,
     energy_usage = "20MW",
@@ -213,7 +213,7 @@ data:extend
     enabled = true,
     hidden_in_factoriopedia = true,
     hidden = true,
-    category = "linox-recipe-category_mantle-extractor",
+    categories = {"linox-recipe-category_mantle-extractor"},
     results = {
       { type = "fluid", name = "lava", amount = 500 },
     },

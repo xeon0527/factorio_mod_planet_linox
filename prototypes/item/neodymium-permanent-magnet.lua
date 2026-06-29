@@ -23,7 +23,7 @@ data:extend {
   {
     type = "recipe",
     name = "neodymium-permanent-magnet",
-    category = "linox-recipe-category_sintering",
+    categories = {"linox-recipe-category_sintering"},
     energy_required = 5,
     enabled = false,
     ingredients =
