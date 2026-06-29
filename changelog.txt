@@ -1,7 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.7.2
+Date: 29. 6. 2026
+  Bugfixes:
+    - Fixed a graphical issue that occurred when playing with Moshine.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.7.1
 Date: 29. 6. 2026
-  Compatibility:
+  Bugfixes:
     - Fixed an issue that caused errors when playing with the Moshine.
 
 ---------------------------------------------------------------------------------------------------

@@ -18,7 +18,7 @@ __MODULE__.data_update = function()
       {
         type = "technology",
         name = "linox-moshine-technology_neodymium-crushing",
-        icon = "__Moshine__/graphics/technology/moshine-tech-magnet.png",
+        icon = "__Moshine-assets__/graphics/technology/moshine-tech-magnet.png",
         icon_size = 256,
         prerequisites = {
           "linox-technology_neodymium-extraction",
