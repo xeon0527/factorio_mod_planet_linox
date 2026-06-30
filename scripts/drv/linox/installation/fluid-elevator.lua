@@ -85,7 +85,7 @@ drv_events.create_build_entity_handler(function(event)
   else
     __remove_error(surface_src, entity.position)
     __remove_error(surface_dst, entity.position)
-    entity.fluidbox.add_linked_connection(__link_id, entity_dst, __link_id);
+    entity.add_fluid_box_linked_connection(__link_id, entity_dst, __link_id);
   end
 end)
 
@@ -114,7 +114,7 @@ drv_events.create_destroy_entity_handler(function(event)
   end
 
   if entity_dst then
-    entity.fluidbox.remove_linked_connection(__link_id)
+    entity.remove_fluid_box_linked_connection(__link_id)
     __draw_error(surface_src, entity.position)
     __draw_error(surface_dst, entity.position)
   else

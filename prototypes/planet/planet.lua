@@ -158,7 +158,6 @@ rp.platform_backdrop.parallax_strength = { 0.9, 0.9 }
 rp.platform_backdrop.atmosphere_thickness = 0.005
 rp.platform_backdrop.emission_scalar = 5
 rp.platform_backdrop.cloud_panning_rate = 5
-rp.platform_backdrop.hero_clouds_are_emissive = true
 
 rp.platform_backdrop.planet_surface = {
   filename = "__linox__/graphics/planet/linox.png",

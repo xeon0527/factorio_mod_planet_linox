@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.7.4
+Date: 30. 6. 2026
+  Bugfixes:
+    - Fixed a game crash that could occur when connecting Terminal Pipe.
+
+  Changes:
+    - Changed AAI Signal Transmission from an optional dependency to a recommended mod.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.7.3
 Date: 30. 6. 2026
   Minor Features:
