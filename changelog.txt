@@ -1,4 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.7.3
+Date: 30. 6. 2026
+  Minor Features:
+    - Updated the mod to use the new planet rendering introduced in Factorio 2.1.
+
+  Bugfixes:
+    - Fixed an issue where players could disconnect the special electric pole connection between the surface and underground layers.
+
+  Balancing:
+    - Adjusted the Calcite requirement for the Advanced Acid Neutralisation recipe to 8.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.7.2
 Date: 29. 6. 2026
   Bugfixes:

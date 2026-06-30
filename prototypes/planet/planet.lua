@@ -129,7 +129,7 @@ PlanetsLib:extend {
 
 
     asteroid_spawn_influence = 10,
-    asteroid_spawn_definitions = asteroid_util.spawn_definitions(asteroid_util.nauvis_vulcanus, 0.9)
+    asteroid_spawn_definitions = asteroid_util.spawn_definitions(asteroid_util.nauvis_vulcanus, 0.9),
   },
 }
 
@@ -147,3 +147,29 @@ data:extend {
     asteroid_spawn_definitions = asteroid_util.spawn_definitions(asteroid_util.nauvis_vulcanus)
   },
 }
+
+local rp = util.table.deepcopy(data.raw.planet["vulcanus"].platform_surface_render_parameters)
+rp.platform_backdrop.atmosphere_color = {1, 0.5, 0, 0.1}
+rp.platform_backdrop.cloudiness = 0.4
+rp.platform_backdrop.light_color = {1, 0.66, 0}
+rp.platform_backdrop.light_intensity_contrast = 0.7
+rp.platform_backdrop.cloud_flow_seconds = 3
+rp.platform_backdrop.parallax_strength = { 0.9, 0.9 }
+rp.platform_backdrop.atmosphere_thickness = 0.005
+rp.platform_backdrop.emission_scalar = 5
+rp.platform_backdrop.cloud_panning_rate = 5
+rp.platform_backdrop.hero_clouds_are_emissive = true
+
+rp.platform_backdrop.planet_surface = {
+  filename = "__linox__/graphics/planet/linox.png",
+  width = 2048,
+  height = 1024
+}
+
+rp.platform_backdrop.planet_emission = {
+  filename = "__linox__/graphics/planet/linox.png",
+  width = 2048,
+  height = 1024
+}
+
+data.raw.planet["linox-planet_linox"].platform_surface_render_parameters = rp

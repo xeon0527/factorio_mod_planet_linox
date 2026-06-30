@@ -157,15 +157,15 @@ __MODULE__.connect_surfaces = function()
     if lppn1 and lppn2 then
       local lppn1_connector = lppn1.get_wire_connector(defines.wire_connector_id.pole_copper, true);
       local lppn2_connector = lppn2.get_wire_connector(defines.wire_connector_id.pole_copper, true);
-      lppn1_connector.connect_to(lppn2_connector, false);
+      lppn1_connector.connect_to(lppn2_connector, false, defines.wire_origin.script);
 
       lppn1_connector = lppn1.get_wire_connector(defines.wire_connector_id.circuit_red, true);
       lppn2_connector = lppn2.get_wire_connector(defines.wire_connector_id.circuit_red, true);
-      lppn1_connector.connect_to(lppn2_connector, false);
+      lppn1_connector.connect_to(lppn2_connector, false, defines.wire_origin.script);
 
       lppn1_connector = lppn1.get_wire_connector(defines.wire_connector_id.circuit_green, true);
       lppn2_connector = lppn2.get_wire_connector(defines.wire_connector_id.circuit_green, true);
-      lppn1_connector.connect_to(lppn2_connector, false);
+      lppn1_connector.connect_to(lppn2_connector, false, defines.wire_origin.script);
     end
   end
 end

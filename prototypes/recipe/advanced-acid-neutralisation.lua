@@ -25,7 +25,7 @@ data:extend {
     },
     ingredients =
     {
-      {type = "item", name = "calcite", amount = 1},
+      {type = "item", name = "calcite", amount = 8},
       {type = "fluid", name = "sulfuric-acid", amount = 500},
     },
     energy_required = 5,
