@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.8.9
+Date: 6. 9. 2026
+  Bugfixes:
+    - Fixed an issue where the K2SO Mod and Linox Science Pack Settings were conflicting.
+
+  Translation:
+    - Updated the zh-CN locale.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.8.8
 Date: 25. 8. 2026
   Balancing:

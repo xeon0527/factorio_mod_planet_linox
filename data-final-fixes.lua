@@ -32,11 +32,19 @@ end
 local function _add_science_pack()
   for _, lab in pairs(data.raw["lab"]) do
     if lab.inputs then
+      local cry_pro = false
+      local no_linox_pack = true
       for _, inputs in pairs(lab.inputs) do
         if inputs == "cryogenic-science-pack" or inputs == "promethium-science-pack" then
-          table.insert(lab.inputs, "linox-item_linox-science-pack")
+          cry_pro = true
+        elseif inputs == "linox-item_linox-science-pack" then
+          no_linox_pack = false
           break
         end
+      end
+
+      if cry_pro and no_linox_pack then
+        table.insert(lab.inputs, "linox-item_linox-science-pack")
       end
     end
   end
