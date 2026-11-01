@@ -5,7 +5,7 @@ data:extend {
     type = "technology",
     name = "linox-technology_planet-discovery-linox",
     order = "linox",
-    icons = PlanetsLib.technology_icon_constant_planet("__linox__/graphics/icons/planet-linox.png", 512),
+    icons = PlanetsLib.technology_icon_constant_planet("__linox__/graphics/icons/planet-linox.png", 512, 0.88),
     essential = true,
     effects =
     {
