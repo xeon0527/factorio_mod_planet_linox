@@ -7,10 +7,10 @@ local blank_image = {
     shift = { 0, 0 },
 }
 local charging_offsets = {}
-local radius = 2
+local radius = 1.6
 for i = 1, 20 do
   local a = i/20
-  table.insert(charging_offsets, {math.sin(a * 2 * math.pi) * radius, -0.5 + (math.cos(a * 2 * math.pi) * radius * 0.5)})
+  table.insert(charging_offsets, {math.sin(a * 2 * math.pi) * radius, 0.2 + (math.cos(a * 2 * math.pi) * radius * 0.5)})
 end
 
 data:extend({
@@ -51,13 +51,14 @@ data:extend({
         },
       }
     },
+    
     surface_conditions = {
       { property = "pressure", min = 10 },
       { property = "gravity", min = 1 }
     },
     base_animation = blank_image,
     base_patch = blank_image,
-    charge_approach_distance = 4,
+    charge_approach_distance = 2,
     charging_energy = "5MW",
     charging_offsets = charging_offsets,
     collision_box = { { -0.8, -0.8 }, { 0.8, 0.8 } },
@@ -113,8 +114,10 @@ data:extend({
       { type = "fire", percent = 100 },
       { type = "electric", percent = 100 }
     },
-    spawn_and_station_height = -0.1,
-    stationing_offset = {0,0},
+    spawn_and_station_height = -0, -- How far down they will go when going into the hatch
+    stationing_offset = {0,-0.9}, -- the point they will park before heading down into the hatch
+    stationing_render_layer_swap_height = 0.0,
+    robots_shrink_when_entering_and_exiting = true,
     impact_category = "metal",
     water_reflection = {
       orientation_to_variation = false,
