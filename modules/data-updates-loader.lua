@@ -42,39 +42,27 @@ local function _SETTINGS_surface_condition()
 end
 
 local function _nuke_destruction_prevention()
-  if data.raw["explosion"]["nuke-effects-nauvis"].surface_conditions then
-    table.insert(data.raw["explosion"]["nuke-effects-nauvis"].surface_conditions, {
-      property = "linox-no-nuke",
-      min = 0,
-      max = 0,
-    })
-  else
-    data.raw["explosion"]["nuke-effects-nauvis"].surface_conditions = {
-      {
-        property = "linox-no-nuke",
-        min = 0,
-        max = 0,
-      }
-    }
+  local property = {
+    property = "linox-no-nuke",
+    min = 0,
+    max = 0,
+  }
+
+  local explosions = {
+    "nuke-effects-nauvis",
+    "nuke-effects-aquilo",
+    "nuke-effects-vulcanus",
+    "nuke-effects-space"
+  }
+
+
+  for _, exp in pairs(explosions) do
+    if data.raw["explosion"][exp].surface_conditions == nil then
+      data.raw["explosion"][exp].surface_conditions = {}
+    end
+
+    table.insert(data.raw["explosion"][exp].surface_conditions, property)
   end
-  
-  table.insert(data.raw["explosion"]["nuke-effects-aquilo"].surface_conditions, {
-    property = "linox-no-nuke",
-    min = 0,
-    max = 0,
-  })
-  
-  table.insert(data.raw["explosion"]["nuke-effects-vulcanus"].surface_conditions, {
-    property = "linox-no-nuke",
-    min = 0,
-    max = 0,
-  })
-  
-  table.insert(data.raw["explosion"]["nuke-effects-space"].surface_conditions, {
-    property = "linox-no-nuke",
-    min = 0,
-    max = 0,
-  })
 end
 
 local function _SETTINGS_disable_mantle_extractor()
